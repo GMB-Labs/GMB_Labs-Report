@@ -760,7 +760,7 @@ Frank gestiona sus consultas con herramientas básicas como Excel y WhatsApp, lo
 
 Mike enfrenta una experiencia fragmentada y poco eficiente en su camino hacia una mejor alimentación y rendimiento físico. Registra sus comidas con fotos desordenadas, sigue rutinas de influencers sin supervisión profesional y recopila información de forma manual o incompleta. Al momento de asistir a una consulta, no cuenta con datos precisos ni organizados para evaluar su progreso. Esto le genera frustración, dudas sobre su avance real y desmotivación por no ver resultados claros.
 
-![As-is Scenario Mapping – Frank Zane](src/img/cap2/asis2.jpg)
+![As-is Scenario Mapping – Mike Mentzer](src/img/cap2/asis2.jpg)
 
 \newpage
 

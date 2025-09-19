@@ -107,13 +107,51 @@ pandoc-latex-environment:
 
 # Capítulo III: Requirements Specification  
 
+Este capítulo presenta la especificación detallada de los requisitos del sistema, la cual constituye la base para su diseño, implementación y evaluación. Su propósito es traducir las necesidades detectadas durante el proceso de investigación en características concretas que debe cumplir la solución tecnológica. Esta especificación actúa como un acuerdo claro entre el equipo de desarrollo y los stakeholders, garantizando que todas las funcionalidades estén alineadas con las expectativas del usuario final y con los objetivos del proyecto.
+
+Los requisitos se derivaron de entrevistas, análisis de flujos actuales y observación contextual, y están organizados en dos categorías principales: requisitos funcionales, que describen los comportamientos y capacidades esperadas del sistema; y requisitos no funcionales, que definen criterios de calidad como usabilidad, rendimiento y seguridad.
+
+Una especificación de requisitos centrada en el usuario es fundamental para lograr productos útiles, usables y deseables. Como destaca Benyon (2014), comprender las tareas, contextos y motivaciones de los usuarios permite diseñar soluciones que verdaderamente resuelven problemas reales y se integran naturalmente en sus rutinas
+
+![Recurso extraído de Canva](src/img/cap3/requirements-specification-intro.png)
+
+\newpage
+
+
 ## To-Be Scenario Mapping  
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis erat urna at fringilla aptent interdum, pharetra sagittis aliquam inceptos venenatis cum vivamus. Curae maecenas aliquam venenatis urna ligula integer mollis ullamcorper et dis vehicula, purus eu ridiculus blandit cubilia cursus imperdiet convallis eget feugiat. Ornare montes sem potenti risus a cum felis nec, proin phasellus est lacinia primis nisl iaculis posuere, torquent curabitur egestas aptent imperdiet integer vestibulum.
+En esta sección se presenta el escenario futuro esperado (To-Be), una representación visual y narrativa de cómo se transformará la experiencia del usuario con la incorporación de la solución tecnológica propuesta. A partir del análisis de los escenarios actuales (As-Is) y las necesidades detectadas, se define un flujo mejorado que elimina las fricciones, automatiza tareas repetitivas y facilita la interacción entre pacientes y profesionales de la salud.
+
+\vspace{1em}
+
+**To-Be Scenario – Frank Zane (Nutricionista clínico-deportivo)**
+
+Con la implementación de la app, Mike comienza su día tomando una foto de su desayuno, y la inteligencia artificial reconoce automáticamente los alimentos y estima las cantidades. Luego, registra su rutina de ejercicios, la cual es procesada por el sistema para estimar calorías quemadas. A lo largo del día, visualiza su progreso a través de gráficos, ajusta los registros si es necesario y mantiene un control activo de su balance calórico.
+
+Al asistir a su consulta médica o nutricional, Mike ya no necesita recordar ni justificar su comportamiento alimentario con fotos dispersas o suposiciones. Puede compartir desde la app un historial completo y confiable, lo que refuerza su confianza y disciplina, y permite al profesional tomar decisiones más precisas.
+
+![To-Be Scenario Mapping – Frank Zane](src/img/cap3/tobe1.jpg)
+
+Este escenario evidencia una transformación en su relación con la alimentación y la salud: pasa de la incertidumbre y frustración, a la autonomía, control y motivación sostenida gracias al uso de una solución tecnológica centrada en el usuario.
+
+
+\newpage
+
+**To-Be Scenario – Mike Mentzer (Paciente joven-adulto)**
+
+En la consulta, Frank accede desde el panel web al perfil de su paciente, donde encuentra registros diarios organizados automáticamente: consumo calórico, distribución de macronutrientes, peso, rutinas de ejercicio, y notas relevantes. Esta información, recolectada de forma continua por el paciente a través de la app, permite a Frank realizar un análisis detallado sin necesidad de recopilar manualmente datos dispersos.
+
+Gracias a esta integración, puede ajustar recomendaciones desde el mismo sistema y enviarlas directamente al paciente, quien las recibe de forma clara en su aplicación móvil. Además, monitorea el cumplimiento en tiempo real y detecta desviaciones a tiempo, lo que permite intervenir proactivamente para mejorar la adherencia.
+
+![To-Be Scenario Mapping – Mike Mentzer](src/img/cap3/tobe2.jpg)
+
+El nuevo flujo no solo optimiza el tiempo de consulta, sino que fortalece la relación entre profesional y paciente, al basarse en datos objetivos, precisos y procesados automáticamente. Frank ya no depende de la memoria del paciente ni de herramientas improvisadas: ahora toma decisiones informadas y personaliza sus planes con mayor eficacia.
+
+\newpage
 
 ## User Stories 
 
-**Requisitos Funcionales**
+*Requisitos Funcionales*
 
 \begin{longtable}{|m{5cm}|m{10cm}|}
 \hline
@@ -130,13 +168,15 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis e
 \textbf{RF-11} & Dashboard web para nutricionista con filtros y métricas semanales \\ \hline
 \end{longtable}
 
-**Requisitos No Funcionales**
+*Requisitos No Funcionales*
 
-\begin{longtable}{|m{5cm}|m{10cm}|}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{10cm}|}
 \hline
 \textbf{RNF-01} & Tiempo de respuesta operacionales comunes < 2 segundos en web y móvil \\ \hline
 \textbf{RNF-02} & Seguridad: cifrado de datos en tránsito, autenticación segura, permisos según rol \\ \hline
-\textbf{RNF-03} & Disponibilidad: sistema accesible al menos 99.5% del tiempo \\ \hline
+\textbf{RNF-03} & Disponibilidad: sistema accesible al menos 99.5\% del tiempo \\ \hline
 \textbf{RNF-04} & Privacidad: cumplimiento de normativas locales de protección de datos \\ \hline
 \textbf{RNF-05} & Usabilidad: interfaz intuitiva, navegación clara, adecuada para jóvenes y profesionales \\ \hline
 \textbf{RNF-06} & Accesibilidad: soporte para discapacidades visuales, tamaño de texto ajustable \\ \hline
@@ -145,7 +185,12 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis e
 \textbf{RNF-09} & Mantenibilidad: código modular, logs, observabilidad, facilidad para implementar mejoras \\ \hline
 \textbf{RNF-10} & Localización adicional de múltiples idiomas \\ \hline
 \textbf{RNF-11} & Personalización visual como modo oscuro y temas configurables \\ \hline
-\end{longtable}
+\end{tabular}
+\end{center}
+\end{table}
+
+
+**Épicas**
 
 \begin{longtable}{|m{5cm}|m{10cm}|}
 \hline
