@@ -572,17 +572,24 @@ Finalmente, advierte que el éxito de Foodlytics dependerá de su facilidad de u
 \begin{center}
 \begin{tabular}{|p{5cm}|p{6cm}|}
 \hline
-\textbf{Nombre y Apellido}    & n \\ \hline
-\textbf{Edad}                 & n \\ \hline
-\textbf{Ubicación geográfica} & n \\ \hline
-\textbf{Cargo}                & n \\ \hline
-\textbf{Tiempo de entrevista} & 00:00 - 10:34 \\ \hline
+\textbf{Nombre y Apellido}    & Elizabeth Quedina \\ \hline
+\textbf{Edad}                 & 59 años \\ \hline
+\textbf{Ubicación geográfica} & Lima, Perú \\ \hline
+\textbf{Cargo}                & Contadora \\ \hline
+\textbf{Tiempo de entrevista} & 30:34 - 35:14 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 
 **Resumen de la entrevista**
 
+Elizabeth Quedina, de 59 años, trabaja como contadora y muestra un interés creciente en mejorar su alimentación. Actualmente, sus visitas al nutricionista son esporádicas —aproximadamente una vez al año— y se basa principalmente en un recetario inicial para organizar sus comidas, reduciendo el consumo de arroz y priorizando verduras según las indicaciones médicas. Reconoce que no utiliza aplicaciones móviles para el control de la dieta ni herramientas de seguimiento, lo que limita la precisión de sus registros.
+
+Al describir sus hábitos, menciona que suele recordar mentalmente qué alimentos puede consumir y organiza sus comidas de forma intuitiva, sin un control sistemático. Considera que una aplicación con inteligencia artificial que calcule automáticamente calorías y macronutrientes a partir de fotos sería muy útil, ya que le permitiría llevar un control más práctico y constante. Además, valora positivamente la posibilidad de recibir notificaciones automáticas como recordatorios de comidas o alertas sobre metas nutricionales, pues admite que con frecuencia se olvida de comer de manera ordenada debido a su carga laboral.
+
+Destaca que la facilidad de uso y la precisión de los datos son los factores que más le generarían confianza en una app de este tipo. Está dispuesta a pagar por el servicio siempre que la aplicación le proporcione horarios claros, alarmas para recordarle qué alimentos consumir y reportes sobre sus progresos semanales. Señala que dejaría de usarla únicamente si logra cumplir sus metas nutricionales, aunque reconoce que el control alimenticio debería ser un proceso continuo.
+
+Finalmente, Elizabeth enfatiza que una aplicación como Foodlytics no solo simplificaría su rutina, sino que también se convertiría en un apoyo motivacional para mantener hábitos saludables en el tiempo.
 
 
 ![Imagen extraída del video de entrevistas](src/img/cap2/EntrevistaS21.png)
@@ -595,17 +602,25 @@ Finalmente, advierte que el éxito de Foodlytics dependerá de su facilidad de u
 \begin{center}
 \begin{tabular}{|p{5cm}|p{6cm}|}
 \hline
-\textbf{Nombre y Apellido}    & n \\ \hline
-\textbf{Edad}                 & n \\ \hline
-\textbf{Ubicación geográfica} & n \\ \hline
-\textbf{Cargo}                & n \\ \hline
+\textbf{Nombre y Apellido}    & Carlos Sánchez \\ \hline
+\textbf{Edad}                 & 22 años \\ \hline
+\textbf{Ubicación geográfica} & Lima, Perú \\ \hline
+\textbf{Cargo}                & Estudiante de Ingeniería en la UPC \\ \hline
 \textbf{Tiempo de entrevista} & 00:00 - 10:34 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 
 **Resumen de la entrevista**
+Carlos Sánchez, estudiante de 22 años en la Universidad Peruana de Ciencias Aplicadas (UPC), visita al nutricionista una o dos veces cada seis meses. Actualmente utiliza aplicaciones digitales como MyFitnessPal para registrar su alimentación diaria y la app vinculada a su balanza digital para monitorear su peso. Además, emplea una pulsera inteligente para medir calorías quemadas y calidad de sueño.
 
+Reconoce que seguir los planes nutricionales le resulta difícil por falta de tiempo y por el esfuerzo que requiere cocinar y medir calorías. Estas limitaciones lo llevan con frecuencia a recurrir a comida rápida o snacks poco saludables. Identifica el tiempo y la organización como sus principales frustraciones al intentar mejorar su alimentación.
+
+Valora positivamente la idea de una aplicación que, mediante fotos, calcule automáticamente calorías y macronutrientes, ya que le ahorraría el proceso de pesar y medir alimentos. Considera fundamental la precisión de los datos, pues desconfía cuando las apps presentan valores diferentes a los empaques de los productos. También vería útil recibir notificaciones automáticas de recordatorios de comidas y metas nutricionales, dado que suele olvidar mantener su dieta.
+
+Está dispuesto a pagar por la aplicación siempre que garantice precisión y facilidad de uso. Además, sugiere que se incorporen funcionalidades adicionales, como recomendaciones personalizadas ajustadas al presupuesto, lo cual sería de gran ayuda para estudiantes. Sobre los reportes de progreso, prefiere un esquema combinado: reportes semanales para seguimiento inmediato y uno mensual más completo para evaluar resultados generales.
+
+Concluye que su permanencia en el uso de la aplicación dependería de que los cálculos sean confiables y la experiencia de usuario sencilla. De ser así, afirma que la adoptaría de manera continua.
 
 
 ![Imagen extraída del video de entrevistas](src/img/cap2/EntrevistaS22.png)
@@ -638,9 +653,141 @@ Finalmente, advierte que el éxito de Foodlytics dependerá de su facilidad de u
 
 ### Análisis de entrevistas
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis erat urna at fringilla aptent interdum, pharetra sagittis aliquam inceptos venenatis cum vivamus. Curae maecenas aliquam venenatis urna ligula integer mollis ullamcorper et dis vehicula, purus eu ridiculus blandit cubilia cursus imperdiet convallis eget feugiat. Ornare montes sem potenti risus a cum felis nec, proin phasellus est lacinia primis nisl iaculis posuere, torquent curabitur egestas aptent imperdiet integer vestibulum.
+:::
+**Segmento Objetivo 1:** Médicos nutricionistas o del deporte
+:::
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis erat urna at fringilla aptent interdum, pharetra sagittis aliquam inceptos venenatis cum vivamus. Curae maecenas aliquam venenatis urna ligula integer mollis ullamcorper et dis vehicula, purus eu ridiculus blandit cubilia cursus imperdiet convallis eget feugiat. Ornare montes sem potenti risus a cum felis nec, proin phasellus est lacinia primis nisl iaculis posuere, torquent curabitur egestas aptent imperdiet integer vestibulum.
+**Perfil Demográfico**
+
+- **Edades:** Entre 29 y 50 años, con un promedio aproximado de 36 años.
+
+- **Ubicación geográfica:** Principalmente en ciudades urbanas como Trujillo y Lima.
+
+**Cargos ocupados:**
+
+- Nutricionista clínica con especialización en oncología.
+
+- Nutricionista en hospital público.
+
+- Nutricionista deportiva en clínica privada.
+
+Este segmento está compuesto por profesionales con formación especializada y más de 10 años de experiencia promedio. Desempeñan labores en hospitales, clínicas y consultas privadas, atendiendo tanto a pacientes con enfermedades crónicas como a deportistas y población general.
+
+**Experiencia y Conocimientos sobre Nutrición Digital**
+
+Los nutricionistas entrevistados muestran un panorama mixto respecto al uso de tecnología. Aunque en algunos contextos ya emplean aplicaciones institucionales o el *SGSS* (Sistema de Gestión de Servicios de Salud), estas plataformas aún presentan limitaciones de usabilidad y adaptación a la práctica clínica cotidiana. La mayoría depende de herramientas básicas como hojas de cálculo, notas manuales o incluso *WhatsApp* para el envío de fotos de comidas por parte de los pacientes.
+
+Los principales problemas identificados fueron:
+
+- Información incompleta o poco confiable entregada por los pacientes (olvidos, estimaciones imprecisas).
+
+- Falta de adaptación cultural de las apps globales, que no incluyen alimentos locales peruanos.
+
+- Alto costo y poca accesibilidad de sistemas digitales especializados.
+
+- Escasa automatización en el cálculo de calorías, macronutrientes y reportes clínicos.
+
+**Herramientas y Tecnología Actual**
+
+- **Herramientas usadas:**
+
+  - SGSS en hospitales públicos (registro administrativo y clínico).
+
+  - Aplicaciones institucionales en fase inicial de implementación.
+
+  - Google Drive y hojas de Excel como registros complementarios.
+
+  - Comunicación por WhatsApp para recibir evidencia de consumo alimenticio.
+
+- **Brechas tecnológicas:**
+
+  - Ausencia de un sistema integral que combine IA, registro fotográfico y panel clínico.
+
+  - Dificultad para obtener datos antropométricos y bioquímicos integrados en un mismo espacio.
+
+  - Falta de trazabilidad en el seguimiento entre consulta presencial y rutina diaria del paciente.
+
+
+**Intereses y Necesidades Tecnológicas**
+
+Los nutricionistas entrevistados destacan el interés por una solución como Foodlytics, siempre que responda a sus necesidades reales:
+
+- **Necesidades principales:**
+
+  - Registro fotográfico con análisis automático de calorías y macronutrientes.
+
+  - Base de datos confiable con alimentos peruanos y locales.
+
+  - Panel clínico web que permita ver evolución de peso, talla y reportes de adherencia.
+
+  - Módulos complementarios para antecedentes médicos, medicamentos y suplementos.
+
+  - Recordatorios y alertas motivacionales para mejorar la adherencia del paciente.
+
+- **Valor percibido:**
+
+  - Ahorro de tiempo en la consulta.
+
+  - Reportes clínicos más completos y confiables.
+
+  - Mejora de la adherencia y motivación de los pacientes.
+
+  - Reputación profesional al integrar tecnología moderna en la práctica clínica.
+
+- **Viabilidad económica:**
+
+  Aunque los costos son un factor crítico, se percibe que clínicas privadas y pacientes con interés en nutrición deportiva estarían dispuestos a invertir, siempre que la herramienta ofrezca beneficios claros y medibles.
+
+**Preferencias y Comportamientos**
+
+- **Comportamientos actuales:**
+
+  - Uso combinado de registros manuales y herramientas digitales básicas.
+
+  - Comunicación directa con pacientes vía WhatsApp.
+
+  - Control antropométrico periódico con reportes físicos.
+
+- **Cambios que buscan:**
+
+  - Un sistema automatizado que reduzca la dependencia de reportes manuales.
+
+  - Integración de todos los datos del paciente en una sola plataforma.
+
+  - Soporte a la toma de decisiones con reportes visuales y objetivos.
+
+En síntesis, los nutricionistas constituyen un segmento dispuesto a adoptar soluciones tecnológicas siempre que sean prácticas, confiables y culturalmente adaptadas. Una aplicación como Foodlytics tiene el potencial de convertirse en un aliado clave en la modernización de la nutrición clínica y deportiva en el Perú.
+
+**Estadísticas y Porcentajes**
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico1.png)
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico2.png)
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico3.png)
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico4.png)
+
+\newpage
+
+**Análisis de datos**
+
+Las entrevistas realizadas permitieron identificar coincidencias importantes en el perfil y necesidades de los nutricionistas. Un hallazgo clave es que todos utilizan herramientas digitales básicas (Excel, WhatsApp, SGSS) pero reconocen que estas son insuficientes para garantizar precisión, trazabilidad y adherencia del paciente.
+
+En cuanto al acceso tecnológico, se observa un uso diversificado de dispositivos: dos de las entrevistadas utilizan iOS y una Android en móviles, mientras que en laptops predominan los entornos de Windows (66.7%) frente a MacOS (33.3%). Esto sugiere que la plataforma debe ser multiplataforma y priorizar la accesibilidad en entornos comunes.
+
+Respecto a las funcionalidades más mencionadas, destacan:
+
+Registro fotográfico con IA y análisis automático de nutrientes, visto como la solución al principal dolor de los nutricionistas: la falta de precisión en reportes de pacientes.
+
+Paneles clínicos con reportes automáticos y datos antropométricos, mencionados como clave para ahorrar tiempo y personalizar tratamientos.
+
+Alertas y recordatorios motivacionales, percibidos como esenciales para combatir la falta de constancia de los pacientes.
+
+::: note
+En síntesis, los datos muestran que existe una brecha clara entre el nivel de digitalización actual y las necesidades clínicas de los nutricionistas. Aunque cuentan con herramientas básicas, la falta de precisión y personalización limita su efectividad. Una solución como Foodlytics, que combine IA para reconocimiento de alimentos, paneles clínicos adaptados al contexto peruano y mecanismos de motivación para pacientes, podría cerrar esta brecha y posicionarse como una herramienta estratégica para el sector.
+:::
+
 
 
 ## Needfinding

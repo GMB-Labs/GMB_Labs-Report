@@ -105,44 +105,66 @@ pandoc-latex-environment:
   importantblock: [important]
 ---
 
-# Capítulo IV: Strategic-Level Software Design.  
+# Capítulo IV: Strategic-Level Software Design  
 
-## Strategic-Level Attribute-Driven Design.  
+El diseño estratégico del software es una etapa crítica que define las bases técnicas sobre las que se construirá la solución. En este capítulo, se presenta la arquitectura conceptual de FoodLytics, con el propósito de optimizar la relación entre nutricionistas y pacientes a través del seguimiento automatizado de la alimentación.
 
-### Design Purpose.  
+Para definir la estructura de alto nivel del sistema, se han empleado metodologías como *Attribute-Driven Design (ADD)* y *Domain-Driven Design (DDD)*. Estas permiten alinear la arquitectura técnica con los atributos de calidad clave del sistema —como precisión, usabilidad, escalabilidad y seguridad de datos— al mismo tiempo que se asegura que cada módulo responda al dominio real de la nutrición clínica y deportiva.
 
-### Attribute-Driven Design Inputs.  
+Finalmente, se ha utilizado el modelo C4 para representar de forma visual y jerárquica los niveles de abstracción del sistema, desde su contexto general hasta los contenedores que lo componen. Todo este marco estratégico no solo orienta el desarrollo técnico de FoodLytics, sino que también garantiza su sostenibilidad, escalabilidad y alineación con los objetivos de GMB LABS como startup de innovación en salud.
 
-#### Primary Functionality (Primary User Stories).  
+![Recurso extraído de Canva](src/img/cap4/software-design-intro.png)
 
-#### Quality attribute Scenarios.  
+\newpage
+
+## Strategic-Level Attribute-Driven Design  
+
+El diseño estratégico de la solución parte del enfoque Attribute-Driven Design (ADD), el cual busca alinear la arquitectura del sistema con los atributos de calidad más relevantes para los usuarios y el negocio. Este enfoque permite tomar decisiones arquitectónicas fundamentadas en los requerimientos no funcionales críticos como rendimiento, escalabilidad, disponibilidad, usabilidad y mantenibilidad, aspectos esenciales para el éxito de FoodLytics en un entorno clínico y deportivo exigente.
+
+A continuación, se presenta el propósito del diseño, seguido por los drivers de arquitectura, escenarios de calidad esperados y sus implicancias en el diseño estructural del sistema.
+
+### Design Purpose  
+
+El propósito del diseño arquitectónico de FoodLytics es construir una solución tecnológica sólida, centrada en la experiencia del usuario, que permita mejorar el seguimiento nutricional entre profesionales y pacientes. La aplicación está compuesta por una arquitectura monolítica modular, que permite mantener una estructura unificada pero organizada en módulos funcionales claramente definidos.
+
+Esta elección responde a la necesidad de facilitar el desarrollo inicial, mantener la cohesión del sistema y permitir la escalabilidad progresiva conforme evolucionen los requerimientos del negocio. Cada módulo del sistema (gestión de usuarios, reconocimiento de alimentos, cálculo nutricional, monitoreo de progreso, entre otros) está diseñado de forma desacoplada dentro del monolito, lo que permite realizar mantenimientos o mejoras sin afectar la totalidad de la aplicación.
+
+Desde el lado del paciente, la aplicación móvil permite registrar sus comidas mediante fotografías, mientras que en el lado profesional, la plataforma web facilita el análisis del historial alimenticio, la personalización de dietas y el seguimiento del progreso. Ambos entornos se comunican con una misma base de datos y lógica de negocio, asegurando coherencia, sincronización inmediata y simplicidad operativa.
+
+Este diseño busca garantizar atributos clave como usabilidad, mantenibilidad, escalabilidad funcional y tiempo de respuesta adecuado, en un entorno donde la precisión nutricional y la agilidad clínica son fundamentales.
+
+### Attribute-Driven Design Inputs  
+
+#### Primary Functionality (Primary User Stories)  
+
+#### Quality attribute Scenarios 
 
 #### Constraints. 6/40 V1.0  
 
-### Architectural Drivers Backlog.  
+### Architectural Drivers Backlog 
 
-### Architectural Design Decisions.  
+### Architectural Design Decisions 
 
-### Quality Attribute Scenario Refinements.  
+### Quality Attribute Scenario Refinements  
 
-## Strategic-Level Domain-Driven Design.  
+## Strategic-Level Domain-Driven Design  
 
-### EventStorming.  
+### EventStorming
 
-### Candidate Context Discovery.  
+### Candidate Context Discovery 
 
-### Domain Message Flows Modeling.  
+### Domain Message Flows Modeling
 
-### Bounded Context Canvases.  
+### Bounded Context Canvases 
 
-### Context Mapping.  
+### Context Mapping 
 
-## Software Architecture.  
+## Software Architecture 
 
-### Software Architecture System Landscape Diagram.  
+### Software Architecture System Landscape Diagram
 
-### Software Architecture Context Level Diagrams.  
+### Software Architecture Context Level Diagrams  
 
-### Software Architecture Container Level Diagrams.  
+### Software Architecture Container Level Diagrams  
 
-### Software Architecture Deployment Diagrams.
+### Software Architecture Deployment Diagrams

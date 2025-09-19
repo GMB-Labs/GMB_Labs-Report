@@ -149,48 +149,113 @@ El nuevo flujo no solo optimiza el tiempo de consulta, sino que fortalece la rel
 
 \newpage
 
-## User Stories 
+## Requsitos Funcionales y No Funcionales
 
-*Requisitos Funcionales*
+En el desarrollo de software, los requisitos funcionales y no funcionales son la base para definir lo que el sistema debe hacer y cómo debe comportarse.
 
-\begin{longtable}{|m{5cm}|m{10cm}|}
+Los requisitos funcionales (RF) describen los servicios, procesos o comportamientos específicos que el sistema debe realizar para satisfacer las necesidades de los usuarios. Es decir, responden al qué hace el sistema, por ejemplo: registro de usuarios, gestión de pacientes o generación de reportes.
+
+En cambio, los requisitos no funcionales (RNF) establecen las propiedades de calidad que debe cumplir el sistema, tales como rendimiento, seguridad, usabilidad, escalabilidad o disponibilidad. En otras palabras, indican el cómo debe funcionar el sistema, garantizando que la experiencia del usuario y la operación técnica sean confiables y seguras.
+
+En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear expectativas entre usuarios y desarrolladores, y sirven como base para el diseño, implementación y validación del software
+
+\newpage
+
+### Requisitos Funcionales
+
+\begin{longtable}{|p{1.5cm}|p{14cm}|}
 \hline
-\textbf{RF-01} & Autenticación de usuario (registro, inicio/cierre de sesión) \\ \hline
-\textbf{RF-02} & Gestión del perfil del nutricionista y paciente \\ \hline
-\textbf{RF-03} & Registro de comidas con foto y reconocimiento mediante IA \\ \hline
-\textbf{RF-04} & Modificación manual de comidas detectadas incorrectamente \\ \hline
-\textbf{RF-05} & Visualización diaria de calorías y macros consumidos \\ \hline
-\textbf{RF-06} & Registro de peso y cálculo automático del IMC \\ \hline
-\textbf{RF-07} & Generación de reportes históricos (peso, consumo vs gasto calórico) \\ \hline
-\textbf{RF-08} & Notificaciones para registrar comidas y alertas de déficit/exceso calórico \\ \hline
-\textbf{RF-09} & Sincronización diaria en lote de datos locales al backend con manejo de duplicados \\ \hline
-\textbf{RF-10} & Integración de conteo de pasos físicos (hardware / librería) \\ \hline
-\textbf{RF-11} & Dashboard web para nutricionista con filtros y métricas semanales \\ \hline
+\textbf{ID} & \textbf{Requisito funcional} \\
+\hline
+\textbf{RF-01} & El paciente debe poder registrarse con sus datos básicos, para crear su cuenta. \\
+\hline
+\textbf{RF-03} & El usuario debe poder iniciar y cerrar sesión de forma segura, para proteger su información. \\
+\hline
+\textbf{RF-05} & El paciente debe poder editar su perfil con edad, peso, talla y objetivos, para mantener datos actualizados. \\
+\hline
+\textbf{RF-07} & El paciente debe poder registrar comidas mediante foto con reconocimiento por IA, para acelerar el ingreso de alimentos. \\
+\hline
+\textbf{RF-08} & El paciente debe poder corregir manualmente alimentos o porciones detectadas, para asegurar precisión. \\
+\hline
+\textbf{RF-10} & El paciente debe poder ver un resumen diario de calorías y macros, para monitorear su consumo. \\
+\hline
+\textbf{RF-11} & El paciente debe poder consultar un historial semanal de comidas y balance calórico, para revisar tendencias. \\
+\hline
+\textbf{RF-12} & El paciente debe poder registrar actividad física manual con tipo, duración e intensidad, para completar su gasto energético. \\
+\hline
+\textbf{RF-15} & El paciente debe poder registrar su peso periódicamente, para hacer seguimiento de su progreso. \\
+\hline
+\textbf{RF-16} & El paciente debe poder ver el cálculo automático del IMC, para conocer su clasificación. \\
+\hline
+\textbf{RF-18} & El nutricionista debe poder crear planes de dieta personalizados, para guiar al paciente. \\
+\hline
+\textbf{RF-22} & El nutricionista debe poder visualizar un dashboard con métricas semanales por paciente, para evaluar el progreso. \\
+\hline
+\textbf{RF-24} & El nutricionista debe poder generar reportes descargables en PDF o CSV, para compartir o archivar resultados. \\
+\hline
+\textbf{RF-25} & El paciente debe poder recibir notificaciones para registrar comidas, para mantener constancia diaria. \\
+\hline
+\textbf{RF-28} & El paciente debe poder sincronizar en un envío diario sus datos locales al backend, para actualizar su historial. \\
+\hline
 \end{longtable}
 
-*Requisitos No Funcionales*
+\newpage
 
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|p{5cm}|p{10cm}|}
+### Requisitos No Funcionales
+
+\begin{longtable}{|p{1.5cm}|p{9cm}|p{4.5cm}|}
 \hline
-\textbf{RNF-01} & Tiempo de respuesta operacionales comunes < 2 segundos en web y móvil \\ \hline
-\textbf{RNF-02} & Seguridad: cifrado de datos en tránsito, autenticación segura, permisos según rol \\ \hline
-\textbf{RNF-03} & Disponibilidad: sistema accesible al menos 99.5\% del tiempo \\ \hline
-\textbf{RNF-04} & Privacidad: cumplimiento de normativas locales de protección de datos \\ \hline
-\textbf{RNF-05} & Usabilidad: interfaz intuitiva, navegación clara, adecuada para jóvenes y profesionales \\ \hline
-\textbf{RNF-06} & Accesibilidad: soporte para discapacidades visuales, tamaño de texto ajustable \\ \hline
-\textbf{RNF-07} & Multiplataforma: soporte iOS y Android para la app móvil; navegadores modernos para web \\ \hline
-\textbf{RNF-08} & Escalabilidad: backend debe soportar crecimiento de usuarios sin degradar desempeño \\ \hline
-\textbf{RNF-09} & Mantenibilidad: código modular, logs, observabilidad, facilidad para implementar mejoras \\ \hline
-\textbf{RNF-10} & Localización adicional de múltiples idiomas \\ \hline
-\textbf{RNF-11} & Personalización visual como modo oscuro y temas configurables \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
+\textbf{ID} & \textbf{Requisito no funcional} & \textbf{Atributo de calidad} \\
+\hline
+RNF-01 & El sistema debe soportar hasta 10,000 usuarios concurrentes con una latencia menor a 300 ms en operaciones críticas. & Rendimiento \\
+\hline
+RNF-02 & Toda comunicación de datos entre cliente, servidor y dispositivos debe realizarse mediante HTTPS con TLS 1.3. & Seguridad \\
+\hline
+RNF-03 & El sistema debe estar disponible al menos el 99.9\% del tiempo durante horario laboral. & Disponibilidad \\
+\hline
+RNF-04 & Los tiempos de carga de la interfaz móvil y web no deben superar los 2 segundos en conexión 4G promedio. & Rendimiento \\
+\hline
+RNF-05 & El sistema debe registrar eventos críticos en logs estructurados, accesibles y auditables. & Observabilidad \\
+\hline
+RNF-06 & El backend debe ser escalable horizontalmente para soportar el crecimiento de usuarios sin caídas notables. & Escalabilidad \\
+\hline
+RNF-07 & Los datos sensibles de pacientes y nutricionistas deben almacenarse cifrados en reposo con AES-256. & Seguridad \\
+\hline
+RNF-08 & La interfaz debe ser intuitiva y accesible, cumpliendo con las pautas WCAG 2.1 AA. & Usabilidad/Accesibilidad \\
+\hline
+RNF-09 & El sistema debe ser compatible con navegadores modernos (Chrome, Firefox, Edge, Safari) y dispositivos iOS/Android. & Compatibilidad \\
+\hline
+RNF-10 & El sistema debe permitir recuperación ante fallos con RPO \(\leq 15\) min y RTO \(\leq 1\) hora. & Disponibilidad/Confiabilidad \\
+\hline
+RNF-11 & El código debe estar modularizado para facilitar mantenibilidad y despliegue de nuevas funciones. & Mantenibilidad \\
+\hline
+RNF-12 & Se deben realizar copias de seguridad automáticas de la base de datos al menos una vez al día. & Confiabilidad \\
+\hline
+RNF-13 & El sistema debe implementar control de acceso basado en roles (RBAC) para diferenciar permisos entre pacientes y nutricionistas. & Seguridad \\
+\hline
+RNF-14 & El sistema debe garantizar integridad de datos evitando duplicados en procesos de sincronización. & Confiabilidad \\
+\hline
+RNF-15 & El sistema debe cumplir con la Ley de Protección de Datos Personales (Perú) y estándares internacionales como GDPR. & Regulatorio/Seguridad \\
+\hline
+RNF-16 & El sistema debe permitir monitoreo en tiempo real de métricas de rendimiento, uso de CPU, memoria y errores. & Observabilidad \\
+\hline
+RNF-17 & El diseño debe considerar modo oscuro y opciones de personalización sin afectar la usabilidad. & Usabilidad \\
+\hline
+RNF-18 & El sistema debe estar preparado para soportar integración futura con wearables (ej. smartbands). & Escalabilidad/Compatibilidad \\
+\hline
+RNF-19 & El sistema debe soportar despliegue en contenedores Docker para facilitar portabilidad entre entornos. & Portabilidad \\
+\hline
+RNF-20 & El sistema debe contar con documentación técnica y manuales de usuario claros y actualizados. & Mantenibilidad/Usabilidad \\
+\hline
+\end{longtable}
 
+\newpage
 
-**Épicas**
+## User Stories 
+
+En esta sección se operacionalizan los requisitos de *Foodlytics* en *User Stories* organizadas por épicas y canales (Landing Page, Web Application, Mobile Application) más un bloque técnico de plataforma. Cada historia sigue el formato \emph{Como–Quiero–Para} y se acompaña de criterios de aceptación en estilo \emph{Given–When–Then}, lo que permite verificación objetiva, estimación y planificación de sprints. La codificación (LP/WEB/MOB/T) preserva la trazabilidad con los requisitos funcionales y no funcionales definidos para la solución. De forma transversal, las historias consideran seguridad y privacidad (consentimiento, cifrado, auditoría), accesibilidad y rendimiento; además, reflejan capacidades clave del producto (registro de ingestas con IA, cálculo de macros/IMC, reportes y alertas) coherentes con la arquitectura objetivo (monolito modular) y la hoja de ruta. Esta estructura facilita priorización, cobertura de casos y evidencia de cumplimiento para la evaluación académica.
+
+**Epics**
 
 \begin{longtable}{|m{5cm}|m{10cm}|}
 \hline
@@ -398,11 +463,2053 @@ TUS-47 & Estado de sincronización visible para el usuario \\ \hline
 TUS-48 & Parámetro de hora de corte configurable por zona \\ \hline
 \end{longtable}
 
+\newpage
+
+### *Landing Page US*
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{4cm}|p{5cm}|p{1cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Título}} & \multicolumn{1}{c|}{\textbf{Descripción}} & \multicolumn{1}{c|}{\textbf{Criterios de Aceptación}} & \multicolumn{1}{c|}{\textbf{Epic}} \\
+\hline
+
+LP-US01 & Visualización de propuesta de valor clara &
+\textbf{Como} visitante, \textbf{quiero} visualizar claramente la propuesta de valor de la aplicación, \textbf{para} comprender el problema que resuelve y cómo me beneficia. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Comprensión al primer acceso}\\
+\textbf{Dado que} el visitante accede a la landing page\\
+\textbf{cuando} se carga la sección principal\\
+\textbf{entonces} comprende el propósito y beneficios del producto sin ambigüedad.\\[0.2em]
+
+\textbf{Escenario 2: Mensaje complementario}\\
+\textbf{Dado que} el visitante no identifica la propuesta de valor\\
+\textbf{cuando} revisa el contenido expandido\\
+\textbf{entonces} obtiene un mensaje aclaratorio con el problema y el beneficio clave.\\[0.2em]
+
+\textbf{Escenario 3: Consistencia entre dispositivos}\\
+\textbf{Dado que} el visitante usa móvil o escritorio\\
+\textbf{cuando} visualiza la propuesta de valor\\
+\textbf{entonces} el mensaje se mantiene claro y equivalente en ambos contextos.
+\end{tabular}
+& LP-EP01\\
+\hline
+
+LP-US02 & Identificación de segmento médico &
+\textbf{Como} visitante del segmento médico, \textbf{quiero} identificar contenido dirigido a mi rol, \textbf{para} entender cómo la solución facilita mi práctica profesional. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Contenido segmentado}\\
+\textbf{Dado que} el visitante pertenece al segmento médico\\
+\textbf{cuando} accede a la landing page\\
+\textbf{entonces} encuentra una sección con beneficios y casos de uso para profesionales.\\[0.2em]
+
+\textbf{Escenario 2: Ampliación de información}\\
+\textbf{Dado que} el visitante médico necesita más detalle\\
+\textbf{cuando} solicita información extendida\\
+\textbf{entonces} el sistema le ofrece un recurso con capacidades y ejemplos clínicos.\\[0.2em]
+
+\textbf{Escenario 3: Diferenciación de perfiles}\\
+\textbf{Dado que} existen varios segmentos\\
+\textbf{cuando} se muestran las opciones de perfil\\
+\textbf{entonces} el contenido médico se diferencia claramente del contenido para pacientes.
+\end{tabular}
+& LP-EP01\\
+\hline
+
+LP-US03 & Identificación de segmento paciente &
+\textbf{Como} visitante paciente, \textbf{quiero} identificar rápidamente el contenido pensado para mí, \textbf{para} saber cómo me ayuda a mejorar mi nutrición y hábitos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Beneficios para pacientes}\\
+\textbf{Dado que} el visitante es paciente\\
+\textbf{cuando} accede a la sección correspondiente\\
+\textbf{entonces} visualiza beneficios y resultados esperados para su contexto.\\[0.2em]
+
+\textbf{Escenario 2: Expectativas y privacidad}\\
+\textbf{Dado que} el visitante necesita claridad sobre datos\\
+\textbf{cuando} revisa la información del segmento paciente\\
+\textbf{entonces} entiende qué datos se usan y con qué finalidad.\\[0.2em]
+
+\textbf{Escenario 3: Próximo paso claro}\\
+\textbf{Dado que} el visitante está interesado\\
+\textbf{cuando} busca cómo avanzar\\
+\textbf{entonces} identifica el siguiente paso para informarse o dejar su interés.
+\end{tabular}
+& LP-EP01\\
+\hline
+
+LP-US04 & Evidencia y testimonios de usuarios &
+\textbf{Como} visitante, \textbf{quiero} revisar evidencia y testimonios verificados, \textbf{para} ganar confianza en la efectividad del producto. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Testimonios disponibles}\\
+\textbf{Dado que} el visitante explora la sección de evidencia\\
+\textbf{cuando} consulta testimonios\\
+\textbf{entonces} encuentra citas atribuidas y resultados reportados.\\[0.2em]
+
+\textbf{Escenario 2: Control de calidad}\\
+\textbf{Dado que} un testimonio no cumple criterios de publicación\\
+\textbf{cuando} el sistema lo valida\\
+\textbf{entonces} el testimonio no se muestra hasta ser corregido.\\[0.2em]
+
+\textbf{Escenario 3: Evidencia cuantitativa}\\
+\textbf{Dado que} el visitante busca datos objetivos\\
+\textbf{cuando} revisa la evidencia\\
+\textbf{entonces} identifica métricas o resultados agregados disponibles.
+\end{tabular}
+& LP-EP01\\
+\hline
+
+LP-US05 & Ruta de producto &
+\textbf{Como} visitante, \textbf{quiero} conocer el estado actual y la evolución del producto, \textbf{para} entender qué recibo hoy y qué mejoras vienen. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Estado y próximas etapas}\\
+\textbf{Dado que} el visitante consulta la ruta de producto\\
+\textbf{cuando} revisa las capacidades actuales y futuras\\
+\textbf{entonces} comprende qué está disponible y qué se planea liberar.\\[0.2em]
+
+\textbf{Escenario 2: Solicitud de información}\\
+\textbf{Dado que} el visitante tiene dudas sobre la ruta\\
+\textbf{cuando} requiere más detalle\\
+\textbf{entonces} obtiene un medio de contacto para profundizar.\\[0.2em]
+
+\textbf{Escenario 3: Actualizaciones trazables}\\
+\textbf{Dado que} existen cambios en la hoja de ruta\\
+\textbf{cuando} el contenido se actualiza\\
+\textbf{entonces} se muestra fecha de última actualización para trazabilidad.
+\end{tabular}
+& LP-EP01\\
+\hline
+
+LP-US06 & Acción principal de conversión &
+\textbf{Como} visitante interesado, \textbf{quiero} iniciar una acción clara de contacto o demo, \textbf{para} comenzar la relación con el equipo. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Conversión exitosa}\\
+\textbf{Dado que} el visitante decide iniciar contacto\\
+\textbf{cuando} completa los datos mínimos requeridos\\
+\textbf{entonces} el sistema registra el interés y confirma la recepción.\\[0.2em]
+
+\textbf{Escenario 2: Datos incompletos}\\
+\textbf{Dado que} el visitante intenta convertir\\
+\textbf{cuando} omite un dato obligatorio\\
+\textbf{entonces} el sistema informa qué dato falta para completar el proceso.\\[0.2em]
+
+\textbf{Escenario 3: Prevención de duplicados}\\
+\textbf{Dado que} el visitante reintenta la conversión en un corto lapso\\
+\textbf{cuando} los datos coinciden con un registro reciente\\
+\textbf{entonces} el sistema evita duplicidad y confirma el registro previo.
+\end{tabular}
+& LP-EP02\\
+\hline
+
+LP-US07 & Captura de interés del médico &
+\textbf{Como} visitante del segmento médico, \textbf{quiero} dejar mis datos profesionales, \textbf{para} ser contactado con información adecuada a mi práctica. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro de interés}\\
+\textbf{Dado que} el visitante médico decide dejar su interés\\
+\textbf{cuando} entrega sus datos profesionales mínimos\\
+\textbf{entonces} el sistema registra el interés con etiqueta de segmento.\\[0.2em]
+
+\textbf{Escenario 2: Consentimiento}\\
+\textbf{Dado que} el visitante proporciona datos de contacto\\
+\textbf{cuando} acepta el uso para fines informativos\\
+\textbf{entonces} el sistema almacena la evidencia de consentimiento.\\[0.2em]
+
+\textbf{Escenario 3: Confirmación}\\
+\textbf{Dado que} el interés se registra\\
+\textbf{cuando} el sistema envía confirmación al correo indicado\\
+\textbf{entonces} el visitante recibe confirmación del registro.
+\end{tabular}
+& LP-EP02\\
+\hline
+
+LP-US08 & Captura de interés del paciente &
+\textbf{Como} visitante paciente, \textbf{quiero} dejar mis datos de contacto, \textbf{para} recibir orientación inicial sobre el producto. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el visitante paciente desea información\\
+\textbf{cuando} entrega los datos mínimos solicitados\\
+\textbf{entonces} el sistema registra el interés con etiqueta de segmento.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} el visitante ingresa datos con formato incorrecto\\
+\textbf{cuando} intenta registrar su interés\\
+\textbf{entonces} el sistema informa el dato inválido y solicita corrección.\\[0.2em]
+
+\textbf{Escenario 3: Confirmación de registro}\\
+\textbf{Dado que} el contacto queda registrado\\
+\textbf{cuando} el sistema confirma la recepción\\
+\textbf{entonces} el visitante conoce el siguiente paso esperado.
+\end{tabular}
+& LP-EP02\\
+\hline
+
+LP-US09 & Información de contacto verificada &
+\textbf{Como} visitante, \textbf{quiero} verificar mi correo (y opcionalmente teléfono), \textbf{para} asegurar que la comunicación posterior sea efectiva. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Verificación de correo}\\
+\textbf{Dado que} el visitante registró su interés\\
+\textbf{cuando} usa el enlace de verificación recibido\\
+\textbf{entonces} su contacto queda verificado.\\[0.2em]
+
+\textbf{Escenario 2: Enlace inválido o vencido}\\
+\textbf{Dado que} el visitante intenta verificar con un enlace no válido\\
+\textbf{cuando} el sistema procesa el token\\
+\textbf{entonces} informa la invalidez y permite solicitar otro.\\[0.2em]
+
+\textbf{Escenario 3: Verificación telefónica opcional}\\
+\textbf{Dado que} el visitante proporciona número telefónico\\
+\textbf{cuando} ingresa el código de verificación\\
+\textbf{entonces} el sistema marca el número como verificado.
+\end{tabular}
+& LP-EP02\\
+\hline
+
+LP-US10 & Ver demo del producto &
+\textbf{Como} visitante, \textbf{quiero} acceder a una demostración del producto, \textbf{para} entender su funcionamiento antes de evaluar una compra. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Acceso a la demo}\\
+\textbf{Dado que} el visitante solicita ver la demo\\
+\textbf{cuando} la demostración está disponible\\
+\textbf{entonces} puede visualizarla sin interrupciones.\\[0.2em]
+
+\textbf{Escenario 2: Registro de interés post-demo}\\
+\textbf{Dado que} el visitante finaliza la demo\\
+\textbf{cuando} desea saber más\\
+\textbf{entonces} el sistema le permite registrar su interés para seguimiento.\\[0.2em]
+
+\textbf{Escenario 3: Accesibilidad de la demo}\\
+\textbf{Dado que} el visitante usa distintos dispositivos\\
+\textbf{cuando} accede a la demostración\\
+\textbf{entonces} puede visualizarla correctamente en móvil y escritorio.
+\end{tabular}
+& LP-EP02\\
+\hline
+
+LP-US11 & Compartir en redes sociales &
+\textbf{Como} visitante, \textbf{quiero} compartir la landing page, \textbf{para} difundir el producto con otros interesados. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Enlace compartible}\\
+\textbf{Dado que} el visitante decide compartir\\
+\textbf{cuando} obtiene el enlace de la página\\
+\textbf{entonces} el enlace funciona y conserva título y descripción del producto.\\[0.2em]
+
+\textbf{Escenario 2: Compatibilidad básica}\\
+\textbf{Dado que} el visitante comparte en redes comunes\\
+\textbf{cuando} publica el enlace\\
+\textbf{entonces} la vista previa contiene nombre y resumen del producto.\\[0.2em]
+
+\textbf{Escenario 3: Trazabilidad de campaña}\\
+\textbf{Dado que} se usan parámetros de campaña\\
+\textbf{cuando} el enlace compartido es visitado\\
+\textbf{entonces} el acceso queda etiquetado para análisis de origen.
+\end{tabular}
+& LP-EP02\\
+\hline
+
+LP-US12 & Acceso a políticas y privacidad vigentes &
+\textbf{Como} visitante, \textbf{quiero} acceder a políticas y privacidad actualizadas, \textbf{para} conocer el uso de mis datos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta de políticas}\\
+\textbf{Dado que} el visitante desea informarse\\
+\textbf{cuando} accede a políticas y privacidad\\
+\textbf{entonces} puede leer contenido vigente y comprensible.\\[0.2em]
+
+\textbf{Escenario 2: Evidencia de aceptación}\\
+\textbf{Dado que} el visitante entrega datos de contacto\\
+\textbf{cuando} acepta el tratamiento para fines informativos\\
+\textbf{entonces} el sistema registra la aceptación con marca temporal.\\[0.2em]
+
+\textbf{Escenario 3: Trazabilidad de cambios}\\
+\textbf{Dado que} las políticas se actualizan\\
+\textbf{cuando} el visitante las consulta\\
+\textbf{entonces} observa la fecha de última actualización.
+\end{tabular}
+& LP-EP03\\
+\hline
+
+LP-US13 & Soporte multiplataforma y rendimiento &
+\textbf{Como} visitante, \textbf{quiero} que la landing funcione correctamente en navegadores y móviles actuales, \textbf{para} navegar sin fricciones. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Compatibilidad esencial}\\
+\textbf{Dado que} el visitante utiliza navegadores modernos\\
+\textbf{cuando} accede a la landing\\
+\textbf{entonces} puede navegar sin errores críticos.\\[0.2em]
+
+\textbf{Escenario 2: Desempeño aceptable}\\
+\textbf{Dado que} la red es móvil 4G promedio\\
+\textbf{cuando} el visitante carga la página\\
+\textbf{entonces} el contenido principal responde en menos de 2 segundos.\\[0.2em]
+
+\textbf{Escenario 3: Degradación controlada}\\
+\textbf{Dado que} el dispositivo es de recursos limitados\\
+\textbf{cuando} se carga la landing\\
+\textbf{entonces} la experiencia se mantiene utilizable sin fallos.
+\end{tabular}
+& LP-EP03\\
+\hline
+
+LP-US14 & Preguntas frecuentes &
+\textbf{Como} visitante, \textbf{quiero} consultar respuestas a dudas comunes, \textbf{para} resolver preguntas rápidamente. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta de FAQs}\\
+\textbf{Dado que} el visitante tiene una duda\\
+\textbf{cuando} consulta la sección de preguntas frecuentes\\
+\textbf{entonces} encuentra respuestas organizadas por tema.\\[0.2em]
+
+\textbf{Escenario 2: Búsqueda temática}\\
+\textbf{Dado que} el visitante necesita una respuesta específica\\
+\textbf{cuando} revisa la categoría relacionada\\
+\textbf{entonces} localiza una respuesta acorde a su consulta.\\[0.2em]
+
+\textbf{Escenario 3: Escalamiento}\\
+\textbf{Dado que} la duda no se resuelve con las FAQs\\
+\textbf{cuando} solicita apoyo\\
+\textbf{entonces} el sistema ofrece un medio de contacto para asistencia.
+\end{tabular}
+& LP-EP03\\
+\hline
+
+LP-US15 & Descubrimiento por buscadores &
+\textbf{Como} visitante que busca la marca, \textbf{quiero} encontrar la landing en buscadores, \textbf{para} acceder fácilmente al sitio. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Página indexable}\\
+\textbf{Dado que} los buscadores rastrean el sitio\\
+\textbf{cuando} analizan la landing\\
+\textbf{entonces} la página es indexable y apta para descubrimiento.\\[0.2em]
+
+\textbf{Escenario 2: Búsqueda por nombre de marca}\\
+\textbf{Dado que} el visitante busca el nombre del producto\\
+\textbf{cuando} revisa resultados\\
+\textbf{entonces} encuentra una referencia a la landing page.\\[0.2em]
+
+\textbf{Escenario 3: Metadatos coherentes}\\
+\textbf{Dado que} la página es compartida o listada en buscadores\\
+\textbf{cuando} se muestra su vista previa\\
+\textbf{entonces} aparecen título y descripción coherentes con el producto.
+\end{tabular}
+& LP-EP03\\
+\hline
+
+\end{longtable}
+
+\newpage
+
+### *Web Application US*
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{4cm}|p{5cm}|p{1cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Título}} & \multicolumn{1}{c|}{\textbf{Descripción}} & \multicolumn{1}{c|}{\textbf{Criterios de Aceptación}} & \multicolumn{1}{c|}{\textbf{Epic}} \\
+\hline
+
+WEB-US01 & Registro de cuenta de nutricionista & \textbf{Como} nutricionista, \textbf{quiero} registrar una cuenta en la plataforma proporcionando mis datos básicos y credenciales, \textbf{para} acceder de manera segura al sistema. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el nutricionista completa el formulario de registro con datos válidos\\
+\textbf{cuando} envía el formulario\\
+\textbf{entonces} el sistema crea la cuenta y envía un correo de confirmación.\\[0.2em]
+
+\textbf{Escenario 2: Datos incompletos}\\
+\textbf{Dado que} el nutricionista no completa todos los campos requeridos\\
+\textbf{cuando} intenta registrar la cuenta\\
+\textbf{entonces} el sistema muestra mensajes de error indicando los campos faltantes.\\[0.2em]
+
+\textbf{Escenario 3: Correo ya registrado}\\
+\textbf{Dado que} el nutricionista ingresa un correo ya existente\\
+\textbf{cuando} envía el formulario de registro\\
+\textbf{entonces} el sistema muestra un mensaje de error indicando duplicidad.\\
+\end{tabular} & WEB-EP01 \\
+\hline
+
+WEB-US03 & Inicio de sesión & \textbf{Como} nutricionista, \textbf{quiero} iniciar sesión en la plataforma con mi correo y contraseña, \textbf{para} acceder a mis pacientes y funcionalidades. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Inicio exitoso}\\
+\textbf{Dado que} el nutricionista tiene una cuenta activa\\
+\textbf{cuando} ingresa correo y contraseña válidos\\
+\textbf{entonces} accede al dashboard principal.\\[0.2em]
+
+\textbf{Escenario 2: Contraseña incorrecta}\\
+\textbf{Dado que} el nutricionista ingresa un correo válido\\
+\textbf{cuando} introduce una contraseña incorrecta\\
+\textbf{entonces} el sistema muestra un mensaje de error.\\[0.2em]
+
+\textbf{Escenario 3: Cuenta no confirmada}\\
+\textbf{Dado que} el nutricionista no confirmó su correo institucional\\
+\textbf{cuando} intenta iniciar sesión\\
+\textbf{entonces} el sistema bloquea el acceso y solicita confirmación previa.\\
+\end{tabular} & WEB-EP01 \\
+\hline
+
+WEB-US04 & Cierre de sesión & \textbf{Como} nutricionista, \textbf{quiero} cerrar sesión en cualquier momento, \textbf{para} proteger la seguridad de mi cuenta. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cierre exitoso}\\
+\textbf{Dado que} el nutricionista está autenticado\\
+\textbf{cuando} selecciona la opción de cerrar sesión\\
+\textbf{entonces} el sistema finaliza la sesión y redirige a la pantalla de inicio.\\[0.2em]
+
+\textbf{Escenario 2: Inactividad prolongada}\\
+\textbf{Dado que} el nutricionista permanece inactivo un tiempo configurado\\
+\textbf{cuando} se excede ese tiempo\\
+\textbf{entonces} el sistema cierra automáticamente la sesión.\\[0.2em]
+
+\textbf{Escenario 3: Intento de acción tras cierre}\\
+\textbf{Dado que} la sesión ya fue cerrada\\
+\textbf{cuando} el nutricionista intenta acceder a un recurso privado\\
+\textbf{entonces} el sistema redirige a la pantalla de inicio de sesión.\\
+\end{tabular} & WEB-EP01 \\
+\hline
+
+WEB-US05 & Recuperación de contraseña & \textbf{Como} nutricionista, \textbf{quiero} recuperar mi contraseña a través de un enlace seguro enviado a mi correo, \textbf{para} restablecer mi acceso a la plataforma. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Solicitud exitosa}\\
+\textbf{Dado que} el nutricionista olvidó su contraseña\\
+\textbf{cuando} solicita la recuperación e ingresa un correo válido\\
+\textbf{entonces} el sistema envía un enlace seguro para restablecer la clave.\\[0.2em]
+
+\textbf{Escenario 2: Correo inválido}\\
+\textbf{Dado que} el nutricionista ingresa un correo inexistente\\
+\textbf{cuando} solicita recuperación\\
+\textbf{entonces} el sistema muestra un mensaje de error.\\[0.2em]
+
+\textbf{Escenario 3: Enlace expirado}\\
+\textbf{Dado que} el nutricionista recibe un enlace caducado\\
+\textbf{cuando} intenta restablecer su contraseña\\
+\textbf{entonces} el sistema indica que debe solicitar uno nuevo.\\
+\end{tabular} & WEB-EP01 \\
+\hline
+
+WEB-US06 & Gestión de perfil & \textbf{Como} nutricionista, \textbf{quiero} actualizar mis datos de perfil como nombre, especialidad y contacto, \textbf{para} mantener mi información actualizada. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Actualización exitosa}\\
+\textbf{Dado que} el nutricionista está autenticado\\
+\textbf{cuando} edita sus datos de perfil con información válida\\
+\textbf{entonces} el sistema guarda los cambios y los refleja inmediatamente.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} el nutricionista ingresa datos inválidos (ejemplo: correo con formato incorrecto)\\
+\textbf{cuando} intenta guardar\\
+\textbf{entonces} el sistema muestra errores de validación.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de cambios}\\
+\textbf{Dado que} el nutricionista inició una edición\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no aplica los cambios y mantiene la información anterior.\\
+\end{tabular} & WEB-EP01 \\
+\hline
+
+WEB-US07 & Registro de pacientes nuevos & \textbf{Como} nutricionista, \textbf{quiero} registrar pacientes con sus datos básicos, \textbf{para} darles seguimiento personalizado. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el nutricionista está autenticado\\
+\textbf{cuando} completa el formulario de nuevo paciente con datos válidos\\
+\textbf{entonces} el sistema guarda el paciente y lo lista en la base.\\[0.2em]
+
+\textbf{Escenario 2: Datos incompletos}\\
+\textbf{Dado que} el formulario está incompleto\\
+\textbf{cuando} el nutricionista intenta guardar\\
+\textbf{entonces} el sistema muestra mensajes de error.\\[0.2em]
+
+\textbf{Escenario 3: Paciente duplicado}\\
+\textbf{Dado que} se registra un paciente con DNI ya existente\\
+\textbf{cuando} se envía el formulario\\
+\textbf{entonces} el sistema alerta que el paciente ya existe.\\
+\end{tabular} & WEB-EP02 \\
+\hline
+
+WEB-US08 & Edición de pacientes & \textbf{Como} nutricionista, \textbf{quiero} editar los datos de mis pacientes, \textbf{para} mantener la información actualizada. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Edición exitosa}\\
+\textbf{Dado que} un paciente está registrado\\
+\textbf{cuando} el nutricionista modifica sus datos\\
+\textbf{entonces} el sistema guarda los cambios y actualiza la ficha.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} el nutricionista ingresa información incorrecta\\
+\textbf{cuando} intenta guardar\\
+\textbf{entonces} el sistema muestra errores de validación.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de cambios}\\
+\textbf{Dado que} el nutricionista inicia la edición\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no aplica modificaciones.\\
+\end{tabular} & WEB-EP02 \\
+\hline
+
+WEB-US09 & Eliminación de pacientes & \textbf{Como} nutricionista, \textbf{quiero} eliminar o desactivar pacientes, \textbf{para} gestionar únicamente a quienes atiendo activamente. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Eliminación exitosa}\\
+\textbf{Dado que} un paciente está en la base\\
+\textbf{cuando} el nutricionista lo elimina\\
+\textbf{entonces} el sistema lo marca como inactivo.\\[0.2em]
+
+\textbf{Escenario 2: Paciente inexistente}\\
+\textbf{Dado que} se intenta eliminar un paciente no registrado\\
+\textbf{cuando} se ejecuta la acción\\
+\textbf{entonces} el sistema muestra un error.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de eliminación}\\
+\textbf{Dado que} el nutricionista inicia el proceso de eliminar\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no realiza cambios.\\
+\end{tabular} & WEB-EP02 \\
+\hline
+
+WEB-US10 & Búsqueda y filtrado de pacientes & \textbf{Como} nutricionista, \textbf{quiero} buscar y filtrar pacientes por nombre o estado, \textbf{para} encontrar rápidamente la información que necesito. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Búsqueda por nombre}\\
+\textbf{Dado que} el nutricionista tiene una lista de pacientes\\
+\textbf{cuando} ingresa un nombre en el buscador\\
+\textbf{entonces} el sistema lista los resultados coincidentes.\\[0.2em]
+
+\textbf{Escenario 2: Filtro por estado}\\
+\textbf{Dado que} existen pacientes activos e inactivos\\
+\textbf{cuando} selecciona un filtro por estado\\
+\textbf{entonces} el sistema muestra solo los pacientes filtrados.\\[0.2em]
+
+\textbf{Escenario 3: Sin resultados}\\
+\textbf{Dado que} no hay coincidencias con el criterio de búsqueda\\
+\textbf{cuando} se ejecuta la búsqueda\\
+\textbf{entonces} el sistema muestra “Sin resultados encontrados”.\\
+\end{tabular} & WEB-EP02 \\
+\hline
+
+WEB-US11 & Visualización de dieta diaria & \textbf{Como} nutricionista, \textbf{quiero} ver los alimentos consumidos por mis pacientes en el día, \textbf{para} evaluar su dieta actual. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Visualización completa}\\
+\textbf{Dado que} el paciente registró alimentos en la app móvil\\
+\textbf{cuando} el nutricionista abre la ficha diaria\\
+\textbf{entonces} el sistema muestra todos los registros.\\[0.2em]
+
+\textbf{Escenario 2: Sin registros}\\
+\textbf{Dado que} no hay alimentos registrados en un día\\
+\textbf{cuando} el nutricionista abre la ficha\\
+\textbf{entonces} el sistema indica “No hay registros para este día”.\\[0.2em]
+
+\textbf{Escenario 3: Error de sincronización}\\
+\textbf{Dado que} hay un problema de sincronización\\
+\textbf{cuando} el nutricionista intenta visualizar\\
+\textbf{entonces} el sistema muestra un aviso de error técnico.\\
+\end{tabular} & WEB-EP03 \\
+\hline
+
+WEB-US12 & Visualización de macros y calorías & \textbf{Como} nutricionista, \textbf{quiero} ver un resumen de macros y calorías aproximadas de mis pacientes, \textbf{para} evaluar su balance energético. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Resumen correcto}\\
+\textbf{Dado que} el paciente tiene alimentos registrados\\
+\textbf{cuando} el nutricionista consulta el resumen\\
+\textbf{entonces} el sistema muestra calorías y macros calculados.\\[0.2em]
+
+\textbf{Escenario 2: Sin datos}\\
+\textbf{Dado que} el paciente no registró comidas\\
+\textbf{cuando} se abre el resumen\\
+\textbf{entonces} se muestra “Sin datos disponibles”.\\[0.2em]
+
+\textbf{Escenario 3: Datos incompletos}\\
+\textbf{Dado que} algunos registros carecen de calorías estimadas\\
+\textbf{cuando} el nutricionista consulta\\
+\textbf{entonces} el sistema advierte que los datos pueden estar incompletos.\\
+\end{tabular} & WEB-EP03 \\
+\hline
+
+WEB-US13 & Historial de calorías consumidas y gastadas & \textbf{Como} nutricionista, \textbf{quiero} visualizar el historial de calorías consumidas y gastadas semanalmente, \textbf{para} hacer seguimiento a la evolución del paciente. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Historial disponible}\\
+\textbf{Dado que} el paciente registró información durante la semana\\
+\textbf{cuando} el nutricionista consulta el historial\\
+\textbf{entonces} el sistema muestra los datos en gráfico y tabla.\\[0.2em]
+
+\textbf{Escenario 2: Semana sin registros}\\
+\textbf{Dado que} el paciente no registró datos\\
+\textbf{cuando} el nutricionista abre el historial\\
+\textbf{entonces} el sistema indica que no hay información disponible.\\[0.2em]
+
+\textbf{Escenario 3: Datos parciales}\\
+\textbf{Dado que} el paciente registró datos solo algunos días\\
+\textbf{cuando} se abre el historial\\
+\textbf{entonces} el sistema muestra la información parcial con aviso.\\
+\end{tabular} & WEB-EP03 \\
+\hline
+
+WEB-US14 & Visualización de rutinas de ejercicio & \textbf{Como} nutricionista, \textbf{quiero} visualizar las rutinas de ejercicio registradas por mis pacientes, \textbf{para} complementar el análisis de la dieta. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Rutinas disponibles}\\
+\textbf{Dado que} el paciente ha registrado rutinas de ejercicio\\
+\textbf{cuando} el nutricionista consulta su ficha\\
+\textbf{entonces} el sistema muestra las rutinas con detalles de duración e intensidad.\\[0.2em]
+
+\textbf{Escenario 2: Sin rutinas registradas}\\
+\textbf{Dado que} el paciente no ha registrado ejercicios\\
+\textbf{cuando} el nutricionista abre la sección de rutinas\\
+\textbf{entonces} el sistema indica que no hay información disponible.\\[0.2em]
+
+\textbf{Escenario 3: Error de sincronización}\\
+\textbf{Dado que} ocurre un problema al recuperar datos de la app móvil\\
+\textbf{cuando} el nutricionista consulta rutinas\\
+\textbf{entonces} el sistema muestra un aviso de error técnico.\\
+\end{tabular} & WEB-EP04 \\
+\hline
+
+WEB-US15 & Visualización de calorías gastadas & \textbf{Como} nutricionista, \textbf{quiero} visualizar las calorías gastadas por mis pacientes, \textbf{para} evaluar su nivel de actividad física. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cálculo exitoso}\\
+\textbf{Dado que} el paciente registró actividades físicas\\
+\textbf{cuando} el nutricionista abre la ficha de calorías gastadas\\
+\textbf{entonces} el sistema muestra el total de calorías quemadas en el día.\\[0.2em]
+
+\textbf{Escenario 2: Sin datos}\\
+\textbf{Dado que} no hay actividades registradas\\
+\textbf{cuando} se abre la ficha\\
+\textbf{entonces} el sistema indica “No hay datos disponibles”.\\[0.2em]
+
+\textbf{Escenario 3: Datos incompletos}\\
+\textbf{Dado que} algunas actividades no registraron calorías estimadas\\
+\textbf{cuando} el nutricionista consulta la ficha\\
+\textbf{entonces} el sistema muestra los datos parciales con un aviso.\\
+\end{tabular} & WEB-EP04 \\
+\hline
+
+WEB-US16 & Creación de rutinas personalizadas & \textbf{Como} nutricionista, \textbf{quiero} crear rutinas de ejercicio personalizadas para mis pacientes, \textbf{para} apoyar su progreso físico. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Creación exitosa}\\
+\textbf{Dado que} el nutricionista define una rutina válida\\
+\textbf{cuando} guarda la rutina\\
+\textbf{entonces} el sistema la asigna al paciente seleccionado.\\[0.2em]
+
+\textbf{Escenario 2: Datos incompletos}\\
+\textbf{Dado que} el nutricionista no completa todos los campos requeridos\\
+\textbf{cuando} intenta guardar la rutina\\
+\textbf{entonces} el sistema muestra mensajes de error.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de creación}\\
+\textbf{Dado que} el nutricionista está creando una rutina\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no guarda los cambios.\\
+\end{tabular} & WEB-EP05 \\
+\hline
+
+WEB-US17 & Asignación de metas nutricionales & \textbf{Como} nutricionista, \textbf{quiero} asignar metas de calorías y macros a mis pacientes, \textbf{para} guiar su plan alimenticio. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Asignación exitosa}\\
+\textbf{Dado que} el nutricionista define valores de calorías y macros válidos\\
+\textbf{cuando} guarda la meta\\
+\textbf{entonces} el sistema asigna la meta al paciente.\\[0.2em]
+
+\textbf{Escenario 2: Valores inválidos}\\
+\textbf{Dado que} el nutricionista ingresa números fuera de rango\\
+\textbf{cuando} intenta guardar\\
+\textbf{entonces} el sistema muestra errores de validación.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de asignación}\\
+\textbf{Dado que} el nutricionista inicia la asignación de metas\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no guarda la información.\\
+\end{tabular} & WEB-EP05 \\
+\hline
+
+WEB-US18 & Registro de recomendaciones específicas & \textbf{Como} nutricionista, \textbf{quiero} registrar recomendaciones personalizadas para cada paciente, \textbf{para} complementar su plan de salud. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el nutricionista ingresa recomendaciones válidas\\
+\textbf{cuando} guarda la información\\
+\textbf{entonces} el sistema muestra las recomendaciones en la ficha del paciente.\\[0.2em]
+
+\textbf{Escenario 2: Campos vacíos}\\
+\textbf{Dado que} no se ingresa texto en el campo de recomendaciones\\
+\textbf{cuando} el nutricionista intenta guardar\\
+\textbf{entonces} el sistema muestra un error.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de registro}\\
+\textbf{Dado que} el nutricionista empieza a escribir recomendaciones\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no guarda los datos.\\
+\end{tabular} & WEB-EP05 \\
+\hline
+
+WEB-US19 & Reporte de evolución de peso & \textbf{Como} nutricionista, \textbf{quiero} generar reportes históricos de peso de mis pacientes, \textbf{para} evaluar su progreso en el tiempo. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Reporte exitoso}\\
+\textbf{Dado que} el paciente tiene registros de peso\\
+\textbf{cuando} el nutricionista solicita un reporte\\
+\textbf{entonces} el sistema genera y muestra el gráfico de evolución.\\[0.2em]
+
+\textbf{Escenario 2: Sin registros}\\
+\textbf{Dado que} el paciente no tiene registros de peso\\
+\textbf{cuando} se intenta generar el reporte\\
+\textbf{entonces} el sistema indica que no hay datos suficientes.\\[0.2em]
+
+\textbf{Escenario 3: Exportación de reporte}\\
+\textbf{Dado que} se genera un reporte de peso\\
+\textbf{cuando} el nutricionista selecciona exportar\\
+\textbf{entonces} el sistema descarga el reporte en PDF.\\
+\end{tabular} & WEB-EP06 \\
+\hline
+
+WEB-US20 & Dashboard de progreso con gráficas & \textbf{Como} nutricionista, \textbf{quiero} acceder a un dashboard de progreso visual, \textbf{para} tener una visión rápida del desempeño de mis pacientes. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Visualización correcta}\\
+\textbf{Dado que} el paciente tiene datos registrados\\
+\textbf{cuando} el nutricionista accede al dashboard\\
+\textbf{entonces} el sistema muestra gráficos de calorías, macros y peso.\\[0.2em]
+
+\textbf{Escenario 2: Sin datos registrados}\\
+\textbf{Dado que} no existen datos\\
+\textbf{cuando} el nutricionista abre el dashboard\\
+\textbf{entonces} el sistema indica que no hay información disponible.\\[0.2em]
+
+\textbf{Escenario 3: Error en carga}\\
+\textbf{Dado que} ocurre un problema en la consulta\\
+\textbf{cuando} el nutricionista abre el dashboard\\
+\textbf{entonces} el sistema muestra un mensaje de error técnico.\\
+\end{tabular} & WEB-EP06 \\
+\hline
+
+WEB-US21 & Generación de reportes descargables & \textbf{Como} nutricionista, \textbf{quiero} generar y descargar reportes en formatos estándar, \textbf{para} compartirlos con mis pacientes o archivarlos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Descarga en PDF}\\
+\textbf{Dado que} el nutricionista genera un reporte\\
+\textbf{cuando} selecciona la opción de exportar en PDF\\
+\textbf{entonces} el sistema descarga el archivo correctamente.\\[0.2em]
+
+\textbf{Escenario 2: Descarga en Excel}\\
+\textbf{Dado que} el nutricionista genera un reporte\\
+\textbf{cuando} selecciona la opción de exportar en Excel\\
+\textbf{entonces} el sistema descarga el archivo correctamente.\\[0.2em]
+
+\textbf{Escenario 3: Error de exportación}\\
+\textbf{Dado que} el sistema presenta un fallo al exportar\\
+\textbf{cuando} se intenta descargar el archivo\\
+\textbf{entonces} se muestra un mensaje de error.\\
+\end{tabular} & WEB-EP06 \\
+\hline
+\end{longtable}
+
+\newpage
+
+### *Mobile Application US*
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{4cm}|p{5cm}|p{1cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Título}} & \multicolumn{1}{c|}{\textbf{Descripción}} & \multicolumn{1}{c|}{\textbf{Criterios de Aceptación}} & \multicolumn{1}{c|}{\textbf{Epic}} \\
+\hline
+
+MOB-US01 & Registro de usuario nuevo & \textbf{Como} paciente, \textbf{quiero} registrarme en la aplicación móvil proporcionando mis datos personales, \textbf{para} crear mi cuenta y acceder a las funcionalidades. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el paciente completa todos los campos obligatorios\\
+\textbf{cuando} envía el formulario de registro\\
+\textbf{entonces} el sistema crea la cuenta y confirma el registro.\\[0.2em]
+
+\textbf{Escenario 2: Campos incompletos}\\
+\textbf{Dado que} el paciente deja campos obligatorios vacíos\\
+\textbf{cuando} intenta registrarse\\
+\textbf{entonces} el sistema muestra mensajes de error.\\[0.2em]
+
+\textbf{Escenario 3: Correo inválido}\\
+\textbf{Dado que} el paciente ingresa un correo no válido\\
+\textbf{cuando} intenta registrar la cuenta\\
+\textbf{entonces} el sistema muestra un mensaje de validación.\\
+\end{tabular} & MOB-EP01 \\
+\hline
+
+MOB-US02 & Inicio de sesión & \textbf{Como} paciente, \textbf{quiero} iniciar sesión en la aplicación móvil con mis credenciales, \textbf{para} acceder a mi información personal. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Inicio exitoso}\\
+\textbf{Dado que} el paciente tiene una cuenta activa\\
+\textbf{cuando} ingresa credenciales correctas\\
+\textbf{entonces} accede al sistema correctamente.\\[0.2em]
+
+\textbf{Escenario 2: Credenciales inválidas}\\
+\textbf{Dado que} el paciente ingresa datos incorrectos\\
+\textbf{cuando} intenta iniciar sesión\\
+\textbf{entonces} el sistema muestra un error de autenticación.\\[0.2em]
+
+\textbf{Escenario 3: Cuenta no confirmada}\\
+\textbf{Dado que} la cuenta no ha sido verificada\\
+\textbf{cuando} el paciente intenta iniciar sesión\\
+\textbf{entonces} el sistema indica que debe confirmar primero su cuenta.\\
+\end{tabular} & MOB-EP01 \\
+\hline
+
+MOB-US03 & Cierre de sesión & \textbf{Como} paciente, \textbf{quiero} cerrar mi sesión de la aplicación móvil, \textbf{para} proteger mi información personal. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cierre exitoso}\\
+\textbf{Dado que} el paciente está autenticado\\
+\textbf{cuando} selecciona la opción de cerrar sesión\\
+\textbf{entonces} el sistema cierra la sesión y redirige a la pantalla inicial.\\[0.2em]
+
+\textbf{Escenario 2: Sesión expirada}\\
+\textbf{Dado que} la sesión ha expirado automáticamente\\
+\textbf{cuando} el paciente intenta interactuar\\
+\textbf{entonces} el sistema redirige a inicio de sesión.\\[0.2em]
+
+\textbf{Escenario 3: Error de red}\\
+\textbf{Dado que} ocurre un fallo al cerrar sesión\\
+\textbf{cuando} el paciente ejecuta la acción\\
+\textbf{entonces} el sistema muestra un mensaje de error.\\
+\end{tabular} & MOB-EP01 \\
+\hline
+
+MOB-US04 & Recuperación de contraseña & \textbf{Como} paciente, \textbf{quiero} recuperar mi contraseña mediante correo electrónico, \textbf{para} restablecer mi acceso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Recuperación exitosa}\\
+\textbf{Dado que} el paciente solicita recuperar contraseña\\
+\textbf{cuando} ingresa su correo válido\\
+\textbf{entonces} el sistema envía un enlace de restablecimiento.\\[0.2em]
+
+\textbf{Escenario 2: Correo inexistente}\\
+\textbf{Dado que} el paciente ingresa un correo no registrado\\
+\textbf{cuando} solicita recuperación\\
+\textbf{entonces} el sistema muestra un error.\\[0.2em]
+
+\textbf{Escenario 3: Enlace expirado}\\
+\textbf{Dado que} el paciente recibe un enlace de recuperación\\
+\textbf{cuando} este ha expirado\\
+\textbf{entonces} el sistema muestra un mensaje de enlace inválido.\\
+\end{tabular} & MOB-EP01 \\
+\hline
+
+MOB-US05 & Gestión de perfil del paciente & \textbf{Como} paciente, \textbf{quiero} gestionar mi perfil personal, \textbf{para} mantener mis datos actualizados. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Actualización exitosa}\\
+\textbf{Dado que} el paciente accede a su perfil\\
+\textbf{cuando} actualiza datos válidos\\
+\textbf{entonces} el sistema guarda los cambios correctamente.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} el paciente ingresa información no válida\\
+\textbf{cuando} intenta guardar\\
+\textbf{entonces} el sistema muestra un error de validación.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de edición}\\
+\textbf{Dado que} el paciente modifica datos\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no guarda los cambios.\\
+\end{tabular} & MOB-EP01 \\
+\hline
+
+MOB-US06 & Resumen diario de calorías y macros & \textbf{Como} paciente, \textbf{quiero} ver un resumen de calorías y macros al iniciar la aplicación, \textbf{para} tomar decisiones rápidas sobre mi dieta. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Resumen con datos completos}\\
+\textbf{Dado que} el paciente ha registrado comidas\\
+\textbf{cuando} abre la app\\
+\textbf{entonces} se muestra un resumen de calorías y macros.\\[0.2em]
+
+\textbf{Escenario 2: Sin datos registrados}\\
+\textbf{Dado que} no hay comidas registradas\\
+\textbf{cuando} el paciente abre la app\\
+\textbf{entonces} se indica que aún no hay información disponible.\\[0.2em]
+
+\textbf{Escenario 3: Error en carga de datos}\\
+\textbf{Dado que} ocurre un problema al consultar el backend\\
+\textbf{cuando} el paciente abre la app\\
+\textbf{entonces} el sistema muestra un aviso de error.\\
+\end{tabular} & MOB-EP02 \\
+\hline
+
+MOB-US07 & Cálculo y visualización de IMC & \textbf{Como} paciente, \textbf{quiero} calcular y visualizar mi IMC en la app, \textbf{para} conocer mi estado de salud general. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cálculo correcto}\\
+\textbf{Dado que} el paciente registra su peso y altura\\
+\textbf{cuando} solicita calcular IMC\\
+\textbf{entonces} el sistema muestra el resultado correctamente.\\[0.2em]
+
+\textbf{Escenario 2: Datos incompletos}\\
+\textbf{Dado que} falta peso o altura\\
+\textbf{cuando} se intenta calcular IMC\\
+\textbf{entonces} el sistema muestra un mensaje de error.\\[0.2em]
+
+\textbf{Escenario 3: Datos inválidos}\\
+\textbf{Dado que} se ingresan valores fuera de rango\\
+\textbf{cuando} se calcula IMC\\
+\textbf{entonces} el sistema alerta que los datos no son válidos.\\
+\end{tabular} & MOB-EP02 \\
+\hline
+
+MOB-US08 & Historial diario con resumen semanal & \textbf{Como} paciente, \textbf{quiero} consultar mi historial de calorías consumidas y gastadas, \textbf{para} evaluar mi progreso semanal. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Historial completo}\\
+\textbf{Dado que} el paciente tiene registros diarios\\
+\textbf{cuando} consulta el historial\\
+\textbf{entonces} el sistema muestra la información con resumen semanal.\\[0.2em]
+
+\textbf{Escenario 2: Sin datos suficientes}\\
+\textbf{Dado que} el paciente solo tiene un registro\\
+\textbf{cuando} consulta el historial\\
+\textbf{entonces} el sistema muestra un aviso de datos insuficientes.\\[0.2em]
+
+\textbf{Escenario 3: Error de consulta}\\
+\textbf{Dado que} ocurre un fallo técnico\\
+\textbf{cuando} se consulta el historial\\
+\textbf{entonces} el sistema muestra un mensaje de error.\\
+\end{tabular} & MOB-EP02 \\
+\hline
+
+MOB-US09 & Registro de comida mediante foto & \textbf{Como} paciente, \textbf{quiero} registrar mis comidas mediante una foto, \textbf{para} que la app identifique alimentos automáticamente. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el paciente sube una foto clara de su comida\\
+\textbf{cuando} la IA procesa la imagen\\
+\textbf{entonces} se muestran los alimentos detectados.\\[0.2em]
+
+\textbf{Escenario 2: Foto inválida}\\
+\textbf{Dado que} la imagen es borrosa o no corresponde a alimentos\\
+\textbf{cuando} se intenta procesar\\
+\textbf{entonces} el sistema indica que no pudo identificar los alimentos.\\[0.2em]
+
+\textbf{Escenario 3: Error de red}\\
+\textbf{Dado que} hay un fallo en la conexión\\
+\textbf{cuando} se sube la foto\\
+\textbf{entonces} el sistema muestra un aviso y permite reintentar.\\
+\end{tabular} & MOB-EP03 \\
+\hline
+
+MOB-US10 & Modificar alimentos o cantidades detectadas & \textbf{Como} paciente, \textbf{quiero} corregir manualmente los alimentos o cantidades detectadas por la IA, \textbf{para} tener un registro más preciso de mi consumo. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Corrección exitosa}\\
+\textbf{Dado que} el paciente revisa la comida detectada\\
+\textbf{cuando} edita alimentos o cantidades\\
+\textbf{entonces} el sistema actualiza el registro correctamente.\\[0.2em]
+
+\textbf{Escenario 2: Eliminación de alimento}\\
+\textbf{Dado que} un alimento fue detectado incorrectamente\\
+\textbf{cuando} el paciente lo elimina\\
+\textbf{entonces} el sistema actualiza el total de calorías y macros.\\[0.2em]
+
+\textbf{Escenario 3: Error al guardar cambios}\\
+\textbf{Dado que} el paciente corrige datos\\
+\textbf{cuando} ocurre un error en la app\\
+\textbf{entonces} el sistema muestra un mensaje de error y mantiene los valores anteriores.\\
+\end{tabular} & MOB-EP03 \\
+\hline
+
+MOB-US11 & Visualización de macros y calorías por comida registrada & \textbf{Como} paciente, \textbf{quiero} ver el detalle de macros y calorías de cada comida registrada, \textbf{para} conocer su impacto en mi dieta diaria. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Visualización correcta}\\
+\textbf{Dado que} el paciente registró una comida\\
+\textbf{cuando} consulta su detalle\\
+\textbf{entonces} el sistema muestra macros y calorías exactas.\\[0.2em]
+
+\textbf{Escenario 2: Comida sin datos completos}\\
+\textbf{Dado que} una comida no tiene todos los nutrientes calculados\\
+\textbf{cuando} el paciente la consulta\\
+\textbf{entonces} el sistema indica qué datos no están disponibles.\\[0.2em]
+
+\textbf{Escenario 3: Error en la carga}\\
+\textbf{Dado que} ocurre un fallo de conexión\\
+\textbf{cuando} el paciente abre la vista de detalle\\
+\textbf{entonces} el sistema muestra un aviso de error.\\
+\end{tabular} & MOB-EP03 \\
+\hline
+
+MOB-US12 & Registro de actividad física manual & \textbf{Como} paciente, \textbf{quiero} registrar manualmente mis actividades físicas, \textbf{para} calcular las calorías gastadas durante el día. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el paciente ingresa una actividad\\
+\textbf{cuando} completa los datos (tipo, duración, intensidad)\\
+\textbf{entonces} el sistema guarda el registro.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} se ingresan valores fuera de rango\\
+\textbf{cuando} el paciente intenta registrar\\
+\textbf{entonces} el sistema muestra un error de validación.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación del registro}\\
+\textbf{Dado que} el paciente inició el llenado\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no guarda cambios.\\
+\end{tabular} & MOB-EP04 \\
+\hline
+
+MOB-US13 & Balance diario de calorías consumidas vs gastadas & \textbf{Como} paciente, \textbf{quiero} visualizar mi balance de calorías consumidas y gastadas, \textbf{para} evaluar si cumplo mis metas nutricionales. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Balance positivo}\\
+\textbf{Dado que} el paciente consumió más calorías de las gastadas\\
+\textbf{cuando} consulta su balance diario\\
+\textbf{entonces} el sistema indica superávit calórico.\\[0.2em]
+
+\textbf{Escenario 2: Balance negativo}\\
+\textbf{Dado que} el paciente gastó más calorías de las consumidas\\
+\textbf{cuando} consulta su balance\\
+\textbf{entonces} el sistema indica déficit calórico.\\[0.2em]
+
+\textbf{Escenario 3: Balance neutro}\\
+\textbf{Dado que} el paciente consumió lo mismo que gastó\\
+\textbf{cuando} consulta su balance\\
+\textbf{entonces} el sistema muestra que está en equilibrio.\\
+\end{tabular} & MOB-EP04 \\
+\hline
+
+MOB-US14 & Registro de pasos y calorías quemadas & \textbf{Como} paciente, \textbf{quiero} sincronizar mis pasos diarios con la app, \textbf{para} conocer las calorías quemadas automáticamente. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Sincronización exitosa}\\
+\textbf{Dado que} el paciente tiene un podómetro o sensor\\
+\textbf{cuando} sincroniza la app\\
+\textbf{entonces} se muestran los pasos y calorías.\\[0.2em]
+
+\textbf{Escenario 2: Sin sensor disponible}\\
+\textbf{Dado que} el dispositivo no soporta conteo de pasos\\
+\textbf{cuando} el paciente intenta sincronizar\\
+\textbf{entonces} el sistema indica que no es posible.\\[0.2em]
+
+\textbf{Escenario 3: Error de conexión}\\
+\textbf{Dado que} hay un problema con el sensor\\
+\textbf{cuando} se intenta sincronizar\\
+\textbf{entonces} la app muestra un mensaje de error.\\
+\end{tabular} & MOB-EP04 \\
+\hline
+
+MOB-US15 & Registro y gráfico de peso & \textbf{Como} paciente, \textbf{quiero} registrar mi peso y visualizarlo en un gráfico, \textbf{para} seguir mi evolución en el tiempo. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} el paciente ingresa su peso\\
+\textbf{cuando} guarda el valor\\
+\textbf{entonces} el sistema lo añade al historial.\\[0.2em]
+
+\textbf{Escenario 2: Datos fuera de rango}\\
+\textbf{Dado que} el paciente ingresa un peso irreal\\
+\textbf{cuando} intenta registrar\\
+\textbf{entonces} el sistema muestra un mensaje de validación.\\[0.2em]
+
+\textbf{Escenario 3: Visualización de gráfico}\\
+\textbf{Dado que} hay varios registros\\
+\textbf{cuando} el paciente consulta la evolución\\
+\textbf{entonces} el sistema genera un gráfico de tendencia.\\
+\end{tabular} & MOB-EP05 \\
+\hline
+
+MOB-US16 & Ajuste de metas diarias según progreso & \textbf{Como} paciente, \textbf{quiero} ajustar mis metas diarias de calorías y macros, \textbf{para} alinearlas a mi progreso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Ajuste exitoso}\\
+\textbf{Dado que} el paciente modifica metas\\
+\textbf{cuando} guarda los cambios\\
+\textbf{entonces} el sistema aplica las nuevas metas.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} el paciente ingresa valores fuera de rango\\
+\textbf{cuando} intenta guardar\\
+\textbf{entonces} el sistema muestra un mensaje de error.\\[0.2em]
+
+\textbf{Escenario 3: Cancelación de cambios}\\
+\textbf{Dado que} el paciente edita metas\\
+\textbf{cuando} cancela la acción\\
+\textbf{entonces} el sistema no aplica modificaciones.\\
+\end{tabular} & MOB-EP05 \\
+\hline
+
+MOB-US17 & Visualización semanal de cumplimiento & \textbf{Como} paciente, \textbf{quiero} visualizar el cumplimiento de mis metas semanales, \textbf{para} confirmar si estoy alcanzando mis objetivos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cumplimiento alto}\\
+\textbf{Dado que} el paciente cumplió la mayoría de metas\\
+\textbf{cuando} consulta el reporte semanal\\
+\textbf{entonces} el sistema indica alto nivel de cumplimiento.\\[0.2em]
+
+\textbf{Escenario 2: Cumplimiento bajo}\\
+\textbf{Dado que} el paciente no alcanzó la mayoría de metas\\
+\textbf{cuando} consulta el reporte semanal\\
+\textbf{entonces} el sistema indica bajo nivel de cumplimiento.\\[0.2em]
+
+\textbf{Escenario 3: Sin datos suficientes}\\
+\textbf{Dado que} hay pocos registros\\
+\textbf{cuando} se consulta la semana\\
+\textbf{entonces} el sistema indica que no hay datos suficientes.\\
+\end{tabular} & MOB-EP05 \\
+\hline
+
+MOB-US18 & Notificaciones para registrar comidas & \textbf{Como} paciente, \textbf{quiero} recibir notificaciones para registrar mis comidas, \textbf{para} mantener constancia en mis registros diarios. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Notificación programada}\\
+\textbf{Dado que} el paciente configuró alertas\\
+\textbf{cuando} llega la hora establecida\\
+\textbf{entonces} el sistema envía una notificación.\\[0.2em]
+
+\textbf{Escenario 2: Notificaciones desactivadas}\\
+\textbf{Dado que} el paciente desactivó recordatorios\\
+\textbf{cuando} llega la hora configurada\\
+\textbf{entonces} no se recibe ninguna alerta.\\[0.2em]
+
+\textbf{Escenario 3: Error de envío}\\
+\textbf{Dado que} ocurre un fallo en el sistema de notificaciones\\
+\textbf{cuando} se debería enviar un recordatorio\\
+\textbf{entonces} no se recibe y se registra el error.\\
+\end{tabular} & MOB-EP06 \\
+\hline
+
+MOB-US19 & Alerta por exceso o déficit calórico & \textbf{Como} paciente, \textbf{quiero} recibir alertas si supero o no alcanzo mis metas calóricas, \textbf{para} ajustar mi consumo diario. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Exceso calórico}\\
+\textbf{Dado que} el paciente supera su meta diaria\\
+\textbf{cuando} registra una comida extra\\
+\textbf{entonces} el sistema envía una alerta de exceso.\\[0.2em]
+
+\textbf{Escenario 2: Déficit calórico}\\
+\textbf{Dado que} el paciente no alcanza su meta diaria\\
+\textbf{cuando} termina el día\\
+\textbf{entonces} el sistema envía una alerta de déficit.\\[0.2em]
+
+\textbf{Escenario 3: Dentro del rango}\\
+\textbf{Dado que} el paciente mantiene su consumo en rango\\
+\textbf{cuando} llega al final del día\\
+\textbf{entonces} no se envía alerta alguna.\\
+\end{tabular} & MOB-EP06 \\
+\hline
+
+MOB-US20 & Notificaciones de consejos personalizados & \textbf{Como} paciente, \textbf{quiero} recibir consejos de nutrición y entrenamiento, \textbf{para} mejorar mis hábitos y cumplir mis objetivos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consejo diario enviado}\\
+\textbf{Dado que} el paciente tiene activadas notificaciones\\
+\textbf{cuando} llega la hora configurada\\
+\textbf{entonces} el sistema envía un consejo personalizado.\\[0.2em]
+
+\textbf{Escenario 2: Consejos desactivados}\\
+\textbf{Dado que} el paciente desactiva consejos\\
+\textbf{cuando} llega la hora\\
+\textbf{entonces} no se recibe notificación.\\[0.2em]
+
+\textbf{Escenario 3: Error en el envío}\\
+\textbf{Dado que} ocurre un fallo en el sistema de notificaciones\\
+\textbf{cuando} debía enviarse un consejo\\
+\textbf{entonces} no se recibe y se registra el error.\\
+\end{tabular} & MOB-EP06 \\
+\hline
+\end{longtable}
+
+\newpage
+
+### *Technical US*
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{4cm}|p{5cm}|p{1cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Título}} & \multicolumn{1}{c|}{\textbf{Descripción}} & \multicolumn{1}{c|}{\textbf{Criterios de Aceptación}} & \multicolumn{1}{c|}{\textbf{Epic}} \\
+\hline
+
+TUS-01 & Registro seguro de usuario & \textbf{Como} Developer, \textbf{quiero} un endpoint para registrar usuarios con validaciones seguras, \textbf{para} asegurar el alta confiable de cuentas nuevas. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} se envía un POST a /users con datos válidos\\
+\textbf{cuando} el sistema valida y crea el usuario\\
+\textbf{entonces} devuelve 201 Created con el ID del usuario.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} se envía un POST con campos vacíos o inválidos\\
+\textbf{cuando} el sistema procesa la solicitud\\
+\textbf{entonces} devuelve 400 Bad Request con mensaje de error.\\[0.2em]
+
+\textbf{Escenario 3: Usuario duplicado}\\
+\textbf{Dado que} ya existe un correo en el sistema\\
+\textbf{cuando} se intenta registrar nuevamente\\
+\textbf{entonces} devuelve 409 Conflict indicando duplicado.\\
+\end{tabular} & T-EP01 \\
+\hline
+
+TUS-02 & Inicio de sesión de usuario & \textbf{Como} Developer, \textbf{quiero} un endpoint de login con autenticación JWT, \textbf{para} permitir acceso seguro a los usuarios registrados. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Login exitoso}\\
+\textbf{Dado que} se envía un POST a /auth/login con credenciales válidas\\
+\textbf{cuando} el sistema autentica al usuario\\
+\textbf{entonces} devuelve 200 OK con un token JWT.\\[0.2em]
+
+\textbf{Escenario 2: Credenciales inválidas}\\
+\textbf{Dado que} se envía un POST con contraseña incorrecta\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 401 Unauthorized.\\[0.2em]
+
+\textbf{Escenario 3: Usuario inactivo}\\
+\textbf{Dado que} el usuario fue desactivado\\
+\textbf{cuando} intenta iniciar sesión\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP01 \\
+\hline
+
+TUS-03 & Cierre de sesión seguro & \textbf{Como} Developer, \textbf{quiero} un endpoint para cerrar sesión invalidando el token, \textbf{para} proteger el acceso posterior. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Logout exitoso}\\
+\textbf{Dado que} se envía un POST a /auth/logout con token válido\\
+\textbf{cuando} el sistema lo invalida\\
+\textbf{entonces} devuelve 200 OK confirmando cierre de sesión.\\[0.2em]
+
+\textbf{Escenario 2: Token inválido}\\
+\textbf{Dado que} se envía un token manipulado\\
+\textbf{cuando} el sistema lo procesa\\
+\textbf{entonces} devuelve 401 Unauthorized.\\[0.2em]
+
+\textbf{Escenario 3: Token ya expirado}\\
+\textbf{Dado que} el token ya caducó\\
+\textbf{cuando} se envía la solicitud de logout\\
+\textbf{entonces} devuelve 400 indicando sesión expirada.\\
+\end{tabular} & T-EP01 \\
+\hline
+
+TUS-04 & Recuperación de contraseña olvidada & \textbf{Como} Developer, \textbf{quiero} un endpoint de recuperación de contraseña, \textbf{para} permitir al usuario restablecer su acceso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Solicitud válida}\\
+\textbf{Dado que} se envía un POST a /auth/recover con correo válido\\
+\textbf{cuando} el sistema valida la existencia del usuario\\
+\textbf{entonces} envía un enlace temporal y devuelve 200 OK.\\[0.2em]
+
+\textbf{Escenario 2: Correo no registrado}\\
+\textbf{Dado que} se envía un correo inexistente\\
+\textbf{cuando} el sistema lo procesa\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Token de recuperación expirado}\\
+\textbf{Dado que} el usuario intenta usar un enlace caducado\\
+\textbf{cuando} el sistema lo valida\\
+\textbf{entonces} devuelve 410 Gone y permite solicitar otro.\\
+\end{tabular} & T-EP01 \\
+\hline
+
+TUS-05 & Actualización de perfil & \textbf{Como} Developer, \textbf{quiero} un endpoint para actualizar información de perfil, \textbf{para} mantener los datos de usuario correctos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Actualización exitosa}\\
+\textbf{Dado que} se envía un PUT a /users/{id} con datos válidos y token\\
+\textbf{cuando} el sistema actualiza la información\\
+\textbf{entonces} devuelve 200 OK con los nuevos datos.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} se envía información con formato incorrecto\\
+\textbf{cuando} el sistema lo procesa\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autenticado}\\
+\textbf{Dado que} no se envía token válido\\
+\textbf{cuando} se intenta actualizar\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP01 \\
+\hline
+
+TUS-06 & Crear paciente nuevo & \textbf{Como} Developer, \textbf{quiero} un endpoint para registrar pacientes, \textbf{para} que los nutricionistas puedan dar de alta nuevos usuarios. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Creación exitosa}\\
+\textbf{Dado que} se envía un POST a /patients con datos válidos y token de nutricionista\\
+\textbf{cuando} el sistema procesa la solicitud\\
+\textbf{entonces} devuelve 201 Created con el ID del paciente.\\[0.2em]
+
+\textbf{Escenario 2: Datos faltantes}\\
+\textbf{Dado que} el cuerpo de la solicitud omite campos obligatorios\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request con detalle de error.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autorizado}\\
+\textbf{Dado que} un rol distinto a nutricionista intenta crear paciente\\
+\textbf{cuando} se procesa la solicitud\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP02 \\
+\hline
+
+TUS-07 & Obtener datos de un paciente & \textbf{Como} Developer, \textbf{quiero} un endpoint GET para obtener información de un paciente, \textbf{para} que el nutricionista consulte detalles individuales. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta exitosa}\\
+\textbf{Dado que} se envía un GET a /patients/{id} con token válido\\
+\textbf{cuando} el sistema encuentra el paciente\\
+\textbf{entonces} devuelve 200 OK con los datos completos.\\[0.2em]
+
+\textbf{Escenario 2: Paciente inexistente}\\
+\textbf{Dado que} el ID no corresponde a ningún registro\\
+\textbf{cuando} el sistema busca\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Sin autorización}\\
+\textbf{Dado que} no se incluye token válido\\
+\textbf{cuando} se realiza la solicitud\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP02 \\
+\hline
+
+TUS-08 & Actualizar datos del paciente & \textbf{Como} Developer, \textbf{quiero} un endpoint PUT/PATCH para modificar datos de paciente, \textbf{para} mantener su información actualizada. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Actualización correcta}\\
+\textbf{Dado que} se envía un PUT a /patients/{id} con datos válidos y token de nutricionista\\
+\textbf{cuando} el sistema actualiza la información\\
+\textbf{entonces} devuelve 200 OK con los datos nuevos.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} se envían campos con formato incorrecto\\
+\textbf{cuando} el sistema los valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Paciente inexistente}\\
+\textbf{Dado que} se usa un ID no registrado\\
+\textbf{cuando} el sistema busca\\
+\textbf{entonces} devuelve 404 Not Found.\\
+\end{tabular} & T-EP02 \\
+\hline
+
+TUS-09 & Desactivar paciente & \textbf{Como} Developer, \textbf{quiero} un endpoint para desactivar pacientes, \textbf{para} que el nutricionista gestione su estado. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Desactivación exitosa}\\
+\textbf{Dado que} se envía un PATCH a /patients/{id}/deactivate con token válido\\
+\textbf{cuando} el sistema procesa la acción\\
+\textbf{entonces} devuelve 200 OK confirmando desactivación.\\[0.2em]
+
+\textbf{Escenario 2: Paciente inexistente}\\
+\textbf{Dado que} el ID no corresponde a un registro válido\\
+\textbf{cuando} el sistema busca\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Usuario sin permisos}\\
+\textbf{Dado que} un rol no autorizado intenta desactivar\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP02 \\
+\hline
+
+TUS-10 & Registrar comida & \textbf{Como} Developer, \textbf{quiero} un endpoint para registrar comidas de un paciente, \textbf{para} calcular calorías y macros diarios. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} se envía un POST a /meals con datos válidos\\
+\textbf{cuando} el sistema procesa la comida\\
+\textbf{entonces} devuelve 201 Created con detalles del registro.\\[0.2em]
+
+\textbf{Escenario 2: Datos incompletos}\\
+\textbf{Dado que} faltan campos obligatorios\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario sin token}\\
+\textbf{Dado que} no se incluye token de autenticación\\
+\textbf{cuando} se envía la solicitud\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP03 \\
+\hline
+
+TUS-11 & Corregir comida existente & \textbf{Como} Developer, \textbf{quiero} un endpoint para modificar registros de comida, \textbf{para} ajustar errores en calorías o cantidades. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Corrección exitosa}\\
+\textbf{Dado que} se envía un PUT a /meals/{id} con datos corregidos\\
+\textbf{cuando} el sistema procesa la solicitud\\
+\textbf{entonces} devuelve 200 OK con datos actualizados.\\[0.2em]
+
+\textbf{Escenario 2: Registro inexistente}\\
+\textbf{Dado que} el ID no corresponde a ningún registro\\
+\textbf{cuando} el sistema busca\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autorizado}\\
+\textbf{Dado que} un usuario intenta editar un registro ajeno\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP03 \\
+\hline
+
+TUS-12 & Consultar comidas diarias & \textbf{Como} Developer, \textbf{quiero} un endpoint GET para consultar comidas del día, \textbf{para} mostrar al nutricionista y paciente el consumo diario. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta correcta}\\
+\textbf{Dado que} se envía un GET a /meals?date=YYYY-MM-DD\\
+\textbf{cuando} el sistema encuentra registros\\
+\textbf{entonces} devuelve 200 OK con la lista de comidas.\\[0.2em]
+
+\textbf{Escenario 2: Sin registros}\\
+\textbf{Dado que} no existen comidas en esa fecha\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 200 OK con lista vacía.\\[0.2em]
+
+\textbf{Escenario 3: Token inválido}\\
+\textbf{Dado que} se envía un token incorrecto\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP03 \\
+\hline
+
+TUS-13 & Registrar actividad física & \textbf{Como} Developer, \textbf{quiero} un endpoint POST para registrar actividades físicas, \textbf{para} calcular calorías quemadas. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} se envía un POST a /activities con datos válidos\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 201 Created con detalles de la actividad.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} se envían valores negativos de duración o calorías\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autorizado}\\
+\textbf{Dado que} se intenta registrar actividad sin token válido\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP04 \\
+\hline
+
+TUS-14 & Registrar pasos diarios & \textbf{Como} Developer, \textbf{quiero} un endpoint POST para registrar pasos diarios, \textbf{para} complementar el balance energético. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro correcto}\\
+\textbf{Dado que} se envía un POST a /steps con número positivo de pasos\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 201 Created con el conteo almacenado.\\[0.2em]
+
+\textbf{Escenario 2: Número inválido}\\
+\textbf{Dado que} se envían pasos negativos o en formato incorrecto\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Token inválido}\\
+\textbf{Dado que} se usa un token incorrecto\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP04 \\
+\hline
+
+TUS-15 & Consultar resumen diario de pasos & \textbf{Como} Developer, \textbf{quiero} un endpoint GET para obtener el resumen de pasos y calorías, \textbf{para} que el usuario vea su balance energético. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta exitosa}\\
+\textbf{Dado que} se envía un GET a /steps/summary?date=YYYY-MM-DD\\
+\textbf{cuando} el sistema encuentra datos\\
+\textbf{entonces} devuelve 200 OK con pasos y calorías quemadas.\\[0.2em]
+
+\textbf{Escenario 2: Sin datos}\\
+\textbf{Dado que} no hay registros para la fecha indicada\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 200 OK con resumen vacío.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autorizado}\\
+\textbf{Dado que} el token es inválido\\
+\textbf{cuando} se realiza la consulta\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP04 \\
+\hline
+
+TUS-16 & Registrar peso del usuario & \textbf{Como} Developer, \textbf{quiero} un endpoint POST para registrar el peso del usuario, \textbf{para} calcular métricas de progreso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro correcto}\\
+\textbf{Dado que} se envía un POST a /weight con un valor positivo y token válido\\
+\textbf{cuando} el sistema guarda el registro\\
+\textbf{entonces} devuelve 201 Created con los datos del peso.\\[0.2em]
+
+\textbf{Escenario 2: Valor inválido}\\
+\textbf{Dado que} se envía un peso negativo o en formato incorrecto\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autenticado}\\
+\textbf{Dado que} no se incluye token válido\\
+\textbf{cuando} el sistema procesa la solicitud\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP05 \\
+\hline
+
+TUS-17 & Calcular y consultar IMC & \textbf{Como} Developer, \textbf{quiero} un endpoint GET para calcular y consultar el IMC, \textbf{para} mostrar al usuario su estado de salud. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cálculo exitoso}\\
+\textbf{Dado que} se envía un GET a /bmi con peso y altura válidos\\
+\textbf{cuando} el sistema procesa los datos\\
+\textbf{entonces} devuelve 200 OK con el valor del IMC.\\[0.2em]
+
+\textbf{Escenario 2: Datos faltantes}\\
+\textbf{Dado que} no se envía la altura en la solicitud\\
+\textbf{cuando} el sistema intenta calcular\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autorizado}\\
+\textbf{Dado que} no se incluye token válido\\
+\textbf{cuando} se procesa la petición\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP05 \\
+\hline
+
+TUS-18 & Gestionar metas nutricionales & \textbf{Como} Developer, \textbf{quiero} un endpoint PUT para establecer metas de calorías y macros, \textbf{para} que el usuario tenga objetivos claros. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Metas establecidas}\\
+\textbf{Dado que} se envía un PUT a /goals con calorías y macros válidos\\
+\textbf{cuando} el sistema guarda la configuración\\
+\textbf{entonces} devuelve 200 OK confirmando las metas.\\[0.2em]
+
+\textbf{Escenario 2: Valores fuera de rango}\\
+\textbf{Dado que} se envían calorías o macros inválidos\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario sin permisos}\\
+\textbf{Dado que} un rol distinto al paciente intenta configurar metas\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP05 \\
+\hline
+
+TUS-19 & Programar recordatorios & \textbf{Como} Developer, \textbf{quiero} un endpoint POST para programar recordatorios, \textbf{para} enviar alertas sobre comidas y peso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Programación correcta}\\
+\textbf{Dado que} se envía un POST a /reminders con hora válida\\
+\textbf{cuando} el sistema registra el recordatorio\\
+\textbf{entonces} devuelve 201 Created con detalles.\\[0.2em]
+
+\textbf{Escenario 2: Hora inválida}\\
+\textbf{Dado que} se envía un formato de hora incorrecto\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autenticado}\\
+\textbf{Dado que} no se incluye token válido\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP06 \\
+\hline
+
+TUS-20 & Generar alertas por exceso o déficit & \textbf{Como} Developer, \textbf{quiero} un endpoint para detectar excesos o déficits calóricos, \textbf{para} notificar al usuario. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Detección correcta}\\
+\textbf{Dado que} se envía un POST a /alerts con el balance diario\\
+\textbf{cuando} el sistema detecta desviación\\
+\textbf{entonces} devuelve 200 OK con alerta generada.\\[0.2em]
+
+\textbf{Escenario 2: Balance dentro de rango}\\
+\textbf{Dado que} el balance está dentro de la meta\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 204 No Content.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autenticado}\\
+\textbf{Dado que} no se envía token válido\\
+\textbf{cuando} se procesa la petición\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP06 \\
+\hline
+
+TUS-21 & Publicar contrato OpenAPI & \textbf{Como} Developer, \textbf{quiero} publicar el contrato OpenAPI 3.1, \textbf{para} documentar los endpoints disponibles. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Acceso exitoso}\\
+\textbf{Dado que} se envía un GET a /docs/openapi\\
+\textbf{cuando} el sistema expone la documentación\\
+\textbf{entonces} devuelve 200 OK con JSON OpenAPI.\\[0.2em]
+
+\textbf{Escenario 2: Ruta inexistente}\\
+\textbf{Dado que} se consulta un endpoint distinto\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autenticado}\\
+\textbf{Dado que} no hay token válido\\
+\textbf{cuando} se consulta la documentación\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-22 & Manejo de errores con Problem Details & \textbf{Como} Developer, \textbf{quiero} que los errores usen Problem Details RFC 9457, \textbf{para} estandarizar respuestas. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Error 400}\\
+\textbf{Dado que} el sistema recibe una solicitud inválida\\
+\textbf{cuando} responde\\
+\textbf{entonces} devuelve 400 con objeto Problem Details.\\[0.2em]
+
+\textbf{Escenario 2: Error 404}\\
+\textbf{Dado que} el recurso no existe\\
+\textbf{cuando} el sistema responde\\
+\textbf{entonces} devuelve 404 con Problem Details.\\[0.2em]
+
+\textbf{Escenario 3: Error 500}\\
+\textbf{Dado que} ocurre una falla interna\\
+\textbf{cuando} se genera la respuesta\\
+\textbf{entonces} devuelve 500 con Problem Details.\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-23 & Controles de autorización por recurso & \textbf{Como} Developer, \textbf{quiero} implementar controles de autorización, \textbf{para} restringir acceso según rol y propiedad. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Acceso permitido}\\
+\textbf{Dado que} un nutricionista consulta sus pacientes\\
+\textbf{cuando} el rol coincide\\
+\textbf{entonces} devuelve 200 OK.\\[0.2em]
+
+\textbf{Escenario 2: Acceso denegado}\\
+\textbf{Dado que} un usuario intenta acceder a un recurso ajeno\\
+\textbf{cuando} el sistema valida permisos\\
+\textbf{entonces} devuelve 403 Forbidden.\\[0.2em]
+
+\textbf{Escenario 3: Token inválido}\\
+\textbf{Dado que} no se incluye token válido\\
+\textbf{cuando} se procesa la petición\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-24 & Paginación y orden en listados & \textbf{Como} Developer, \textbf{quiero} endpoints con paginación y orden, \textbf{para} mejorar rendimiento en listados grandes. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Listado con parámetros válidos}\\
+\textbf{Dado que} se envía un GET a /patients?page=1\&size=10\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 200 OK con resultados paginados.\\[0.2em]
+
+\textbf{Escenario 2: Parámetros inválidos}\\
+\textbf{Dado que} se envía un valor negativo en page o size\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\[0.2em]
+
+\textbf{Escenario 3: Sin parámetros}\\
+\textbf{Dado que} no se envían parámetros de paginación\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve resultados por defecto (ej. 20 elementos).\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-25 & Versionado de API & \textbf{Como} Developer, \textbf{quiero} implementar versionado en los endpoints, \textbf{para} garantizar compatibilidad entre clientes y backend. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Acceso a versión específica}\\
+\textbf{Dado que} se consulta GET /api/v1/patients\\
+\textbf{cuando} la versión existe\\
+\textbf{entonces} devuelve 200 OK con la respuesta correspondiente.\\[0.2em]
+
+\textbf{Escenario 2: Versión inexistente}\\
+\textbf{Dado que} se consulta GET /api/v3/patients\\
+\textbf{cuando} la versión no está soportada\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Cliente sin especificar versión}\\
+\textbf{Dado que} no se incluye prefijo de versión\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 400 Bad Request indicando versión requerida.\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-26 & Observabilidad con métricas & \textbf{Como} Developer, \textbf{quiero} exponer métricas del sistema, \textbf{para} monitorear rendimiento y uso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Acceso válido}\\
+\textbf{Dado que} se consulta GET /metrics con token de admin\\
+\textbf{cuando} el sistema responde\\
+\textbf{entonces} devuelve 200 OK con métricas en formato Prometheus.\\[0.2em]
+
+\textbf{Escenario 2: Usuario sin permisos}\\
+\textbf{Dado que} un rol paciente intenta acceder a /metrics\\
+\textbf{cuando} el sistema valida permisos\\
+\textbf{entonces} devuelve 403 Forbidden.\\[0.2em]
+
+\textbf{Escenario 3: Fallo interno}\\
+\textbf{Dado que} ocurre un error en la recolección\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 500 Internal Server Error con Problem Details.\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-27 & Auditoría y trazabilidad & \textbf{Como} Developer, \textbf{quiero} registrar acciones críticas en logs auditables, \textbf{para} cumplir normativas y revisar historial. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro correcto}\\
+\textbf{Dado que} un nutricionista actualiza datos de paciente\\
+\textbf{cuando} el sistema guarda la acción\\
+\textbf{entonces} devuelve 200 OK y registra auditoría con timestamp.\\[0.2em]
+
+\textbf{Escenario 2: Consulta de auditoría}\\
+\textbf{Dado que} un admin consulta GET /audit/logs\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 200 OK con historial paginado.\\[0.2em]
+
+\textbf{Escenario 3: Usuario sin permisos}\\
+\textbf{Dado que} un paciente intenta consultar logs\\
+\textbf{cuando} el sistema valida rol\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP07 \\
+\hline
+
+TUS-28 & Reconocer alimentos desde imagen & \textbf{Como} Developer, \textbf{quiero} un endpoint POST para subir imágenes, \textbf{para} identificar alimentos automáticamente. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Imagen válida}\\
+\textbf{Dado que} se envía un POST a /food/recognize con foto en formato válido\\
+\textbf{cuando} el sistema procesa la imagen\\
+\textbf{entonces} devuelve 200 OK con lista de alimentos detectados.\\[0.2em]
+
+\textbf{Escenario 2: Formato no soportado}\\
+\textbf{Dado que} se envía imagen en formato no válido (ej. .txt)\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 415 Unsupported Media Type.\\[0.2em]
+
+\textbf{Escenario 3: Imagen corrupta}\\
+\textbf{Dado que} el archivo está dañado\\
+\textbf{cuando} el sistema intenta procesarlo\\
+\textbf{entonces} devuelve 422 Unprocessable Entity.\\
+\end{tabular} & T-EP08 \\
+\hline
+
+TUS-29 & Estimar cantidad de alimento & \textbf{Como} Developer, \textbf{quiero} estimar gramos de alimento detectado, \textbf{para} calcular macros aproximados. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Estimación exitosa}\\
+\textbf{Dado que} el sistema detecta arroz en la imagen\\
+\textbf{cuando} procesa el tamaño de la porción\\
+\textbf{entonces} devuelve 200 OK con gramos estimados.\\[0.2em]
+
+\textbf{Escenario 2: Sin confianza suficiente}\\
+\textbf{Dado que} la IA no supera 50\% de confianza\\
+\textbf{cuando} se procesa la imagen\\
+\textbf{entonces} devuelve 200 OK con “porción desconocida”.\\[0.2em]
+
+\textbf{Escenario 3: Datos faltantes}\\
+\textbf{Dado que} no se incluyó categoría de referencia\\
+\textbf{cuando} se procesa la estimación\\
+\textbf{entonces} devuelve 400 Bad Request.\\
+\end{tabular} & T-EP08 \\
+\hline
+
+TUS-30 & Puntuaciones de confianza & \textbf{Como} Developer, \textbf{quiero} devolver score de confianza por alimento, \textbf{para} validar resultados al usuario. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Respuesta válida}\\
+\textbf{Dado que} se detectan múltiples alimentos\\
+\textbf{cuando} el sistema genera la salida\\
+\textbf{entonces} devuelve 200 OK con cada alimento y su porcentaje de confianza.\\[0.2em]
+
+\textbf{Escenario 2: IA sin resultados}\\
+\textbf{Dado que} no se detecta ningún alimento\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 204 No Content.\\[0.2em]
+
+\textbf{Escenario 3: Usuario no autenticado}\\
+\textbf{Dado que} no hay token válido\\
+\textbf{cuando} el sistema responde\\
+\textbf{entonces} devuelve 401 Unauthorized.\\
+\end{tabular} & T-EP08 \\
+\hline
+
+TUS-31 & Corrección manual de alimentos & \textbf{Como} Developer, \textbf{quiero} permitir correcciones de alimentos detectados, \textbf{para} que el usuario ajuste errores de la IA. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Corrección exitosa}\\
+\textbf{Dado que} se envía un PUT a /food/corrections con ID válido\\
+\textbf{cuando} el usuario actualiza nombre y cantidad\\
+\textbf{entonces} devuelve 200 OK confirmando cambios.\\[0.2em]
+
+\textbf{Escenario 2: Alimento no encontrado}\\
+\textbf{Dado que} se envía un ID inexistente\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 404 Not Found.\\[0.2em]
+
+\textbf{Escenario 3: Formato inválido}\\
+\textbf{Dado que} el payload está incompleto\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\
+\end{tabular} & T-EP08 \\
+\hline
+
+TUS-32 & Catálogo de alimentos soportados & \textbf{Como} Developer, \textbf{quiero} publicar un catálogo de alimentos soportados, \textbf{para} guiar a la IA y al usuario en el registro. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta exitosa}\\
+\textbf{Dado que} se consulta GET /food/catalog\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve 200 OK con lista de categorías y porciones.\\[0.2em]
+
+\textbf{Escenario 2: Catálogo vacío}\\
+\textbf{Dado que} no hay categorías registradas\\
+\textbf{cuando} se procesa la consulta\\
+\textbf{entonces} devuelve 204 No Content.\\[0.2em]
+
+\textbf{Escenario 3: Usuario sin permisos}\\
+\textbf{Dado que} un rol no autorizado consulta /food/catalog\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP08 \\
+\hline
+
+TUS-33 & Gestión de consentimientos & \textbf{Como} Developer, \textbf{quiero} un endpoint para registrar consentimientos por finalidad de uso, \textbf{para} cumplir con normativas de privacidad. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro exitoso}\\
+\textbf{Dado que} se envía POST /consents con datos válidos\\
+\textbf{cuando} el sistema guarda el consentimiento\\
+\textbf{entonces} devuelve 201 Created con ID del consentimiento.\\[0.2em]
+
+\textbf{Escenario 2: Consentimiento duplicado}\\
+\textbf{Dado que} ya existe consentimiento para el mismo usuario y finalidad\\
+\textbf{cuando} se intenta registrar de nuevo\\
+\textbf{entonces} devuelve 409 Conflict.\\[0.2em]
+
+\textbf{Escenario 3: Datos inválidos}\\
+\textbf{Dado que} falta información en el payload\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 400 Bad Request.\\
+\end{tabular} & T-EP09 \\
+\hline
+
+TUS-34 & Cifrado en tránsito y en reposo & \textbf{Como} Developer, \textbf{quiero} que los datos estén cifrados en tránsito y reposo, \textbf{para} garantizar seguridad de la información. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Comunicación segura}\\
+\textbf{Dado que} se realiza petición HTTPS\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} la conexión está cifrada con TLS.\\[0.2em]
+
+\textbf{Escenario 2: Datos en reposo}\\
+\textbf{Dado que} se guarda información sensible en BD\\
+\textbf{cuando} el sistema persiste\\
+\textbf{entonces} los datos quedan cifrados AES-256.\\[0.2em]
+
+\textbf{Escenario 3: Intento de acceso inseguro}\\
+\textbf{Dado que} un cliente envía HTTP sin TLS\\
+\textbf{cuando} el sistema recibe\\
+\textbf{entonces} devuelve 426 Upgrade Required.\\
+\end{tabular} & T-EP09 \\
+\hline
+
+TUS-35 & Limpieza de metadatos en imágenes & \textbf{Como} Developer, \textbf{quiero} eliminar metadatos de imágenes, \textbf{para} proteger la privacidad de los usuarios. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Imagen procesada}\\
+\textbf{Dado que} se sube imagen con EXIF\\
+\textbf{cuando} el sistema guarda la imagen\\
+\textbf{entonces} elimina metadatos antes de almacenar.\\[0.2em]
+
+\textbf{Escenario 2: Imagen sin metadatos}\\
+\textbf{Dado que} la foto no tiene EXIF\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} la guarda directamente.\\[0.2em]
+
+\textbf{Escenario 3: Error en limpieza}\\
+\textbf{Dado que} ocurre un fallo al limpiar\\
+\textbf{cuando} se procesa la imagen\\
+\textbf{entonces} devuelve 500 Internal Server Error.\\
+\end{tabular} & T-EP09 \\
+\hline
+
+TUS-36 & Registro de uso de datos & \textbf{Como} Developer, \textbf{quiero} registrar el uso de datos sensibles, \textbf{para} auditoría y cumplimiento legal. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro válido}\\
+\textbf{Dado que} un nutricionista accede a datos de paciente\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} se registra en logs con timestamp.\\[0.2em]
+
+\textbf{Escenario 2: Consulta de registros}\\
+\textbf{Dado que} un admin consulta GET /data-usage\\
+\textbf{cuando} el sistema responde\\
+\textbf{entonces} devuelve historial auditable.\\[0.2em]
+
+\textbf{Escenario 3: Usuario sin permisos}\\
+\textbf{Dado que} un rol paciente consulta /data-usage\\
+\textbf{cuando} el sistema valida\\
+\textbf{entonces} devuelve 403 Forbidden.\\
+\end{tabular} & T-EP09 \\
+\hline
+
+TUS-37 & Estado de sincronización en cliente & \textbf{Como} Developer, \textbf{quiero} mostrar indicadores de sincronización, \textbf{para} informar al usuario del progreso. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Sincronización activa}\\
+\textbf{Dado que} se inicia sincronización diaria\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} devuelve status=“In Progress”.\\[0.2em]
+
+\textbf{Escenario 2: Sincronización exitosa}\\
+\textbf{Dado que} se completó envío\\
+\textbf{cuando} el backend confirma\\
+\textbf{entonces} devuelve status=“Completed”.\\[0.2em]
+
+\textbf{Escenario 3: Fallo de red}\\
+\textbf{Dado que} no hay conexión estable\\
+\textbf{cuando} el sistema intenta sincronizar\\
+\textbf{entonces} devuelve status=“Failed”.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-38 & Cola local de cambios del día & \textbf{Como} Developer, \textbf{quiero} almacenar cambios en cola local, \textbf{para} enviarlos al backend en lote. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Registro en cola}\\
+\textbf{Dado que} el usuario guarda comidas offline\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} agrega cambios a cola local.\\[0.2em]
+
+\textbf{Escenario 2: Vaciar cola}\\
+\textbf{Dado que} se completó sincronización\\
+\textbf{cuando} se marca recibido\\
+\textbf{entonces} la cola se vacía.\\[0.2em]
+
+\textbf{Escenario 3: Error al persistir cola}\\
+\textbf{Dado que} ocurre fallo en almacenamiento local\\
+\textbf{cuando} se guarda cambio\\
+\textbf{entonces} devuelve error al usuario.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-39 & Cierre de jornada & \textbf{Como} Developer, \textbf{quiero} implementar cierre de jornada con sello de corte, \textbf{para} definir datos diarios. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Corte exitoso}\\
+\textbf{Dado que} se llega a la hora configurada\\
+\textbf{cuando} el sistema procesa corte\\
+\textbf{entonces} asigna sello diario.\\[0.2em]
+
+\textbf{Escenario 2: Corte manual}\\
+\textbf{Dado que} el admin ejecuta POST /cutoff\\
+\textbf{cuando} el sistema procesa\\
+\textbf{entonces} asigna sello inmediato.\\[0.2em]
+
+\textbf{Escenario 3: Error en corte}\\
+\textbf{Dado que} ocurre fallo en operación\\
+\textbf{cuando} se ejecuta\\
+\textbf{entonces} devuelve 500 Internal Server Error.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-40 & Envío en lote de registros & \textbf{Como} Developer, \textbf{quiero} enviar registros en lote al final del día, \textbf{para} optimizar recursos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Lote exitoso}\\
+\textbf{Dado que} hay datos en cola\\
+\textbf{cuando} el sistema ejecuta POST /sync/batch\\
+\textbf{entonces} devuelve 200 OK confirmando recepción.\\[0.2em]
+
+\textbf{Escenario 2: Lote duplicado}\\
+\textbf{Dado que} se reenvía mismo lote\\
+\textbf{cuando} el backend valida\\
+\textbf{entonces} devuelve 409 Conflict.\\[0.2em]
+
+\textbf{Escenario 3: Error de red}\\
+\textbf{Dado que} no hay conexión\\
+\textbf{cuando} se intenta enviar lote\\
+\textbf{entonces} se reprograma envío.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-41 & Reintentos con backoff exponencial & \textbf{Como} Developer, \textbf{quiero} reintentos con backoff, \textbf{para} asegurar entrega de datos. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Primer reintento}\\
+\textbf{Dado que} el envío falla\\
+\textbf{cuando} se reprograma\\
+\textbf{entonces} se ejecuta en 30s.\\[0.2em]
+
+\textbf{Escenario 2: Segundo reintento}\\
+\textbf{Dado que} falla de nuevo\\
+\textbf{cuando} se reprograma\\
+\textbf{entonces} se ejecuta en 60s.\\[0.2em]
+
+\textbf{Escenario 3: Éxito tras reintento}\\
+\textbf{Dado que} tercer envío es exitoso\\
+\textbf{cuando} el backend confirma\\
+\textbf{entonces} el sistema marca lote como enviado.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-42 & Idempotencia en lotes & \textbf{Como} Developer, \textbf{quiero} claves únicas en cada lote, \textbf{para} evitar duplicados. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Lote único}\\
+\textbf{Dado que} se envía POST /sync/batch con clave X\\
+\textbf{cuando} backend valida\\
+\textbf{entonces} lo guarda.\\[0.2em]
+
+\textbf{Escenario 2: Reenvío mismo lote}\\
+\textbf{Dado que} se envía misma clave X\\
+\textbf{cuando} backend valida\\
+\textbf{entonces} devuelve 200 OK sin duplicar.\\[0.2em]
+
+\textbf{Escenario 3: Clave inválida}\\
+\textbf{Dado que} se omite clave\\
+\textbf{cuando} se procesa\\
+\textbf{entonces} devuelve 400 Bad Request.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-43 & Confirmación de backend & \textbf{Como} Developer, \textbf{quiero} confirmar recepción de datos, \textbf{para} marcar localmente enviados. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Confirmación exitosa}\\
+\textbf{Dado que} backend recibe lote\\
+\textbf{cuando} responde 200 OK\\
+\textbf{entonces} cliente marca datos como enviados.\\[0.2em]
+
+\textbf{Escenario 2: Sin confirmación}\\
+\textbf{Dado que} backend no responde\\
+\textbf{cuando} pasa timeout\\
+\textbf{entonces} cliente mantiene datos en cola.\\[0.2em]
+
+\textbf{Escenario 3: Error backend}\\
+\textbf{Dado que} responde 500\\
+\textbf{cuando} procesa lote\\
+\textbf{entonces} cliente reintenta envío.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-44 & Descarte de duplicados & \textbf{Como} Developer, \textbf{quiero} descartar duplicados en servidor, \textbf{para} mantener integridad. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Duplicado detectado}\\
+\textbf{Dado que} lote tiene misma clave\\
+\textbf{cuando} backend procesa\\
+\textbf{entonces} ignora duplicado.\\[0.2em]
+
+\textbf{Escenario 2: Registro único}\\
+\textbf{Dado que} clave es nueva\\
+\textbf{cuando} se procesa\\
+\textbf{entonces} guarda datos.\\[0.2em]
+
+\textbf{Escenario 3: Error en validación}\\
+\textbf{Dado que} clave está corrupta\\
+\textbf{cuando} se valida\\
+\textbf{entonces} devuelve 400.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-45 & Manejo de timestamps & \textbf{Como} Developer, \textbf{quiero} timestamps en RFC3339, \textbf{para} asegurar consistencia temporal. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Timestamp válido}\\
+\textbf{Dado que} cliente envía timestamp RFC3339\\
+\textbf{cuando} backend valida\\
+\textbf{entonces} guarda registro.\\[0.2em]
+
+\textbf{Escenario 2: Timestamp inválido}\\
+\textbf{Dado que} cliente envía formato incorrecto\\
+\textbf{cuando} backend valida\\
+\textbf{entonces} devuelve 400.\\[0.2em]
+
+\textbf{Escenario 3: Diferencia de zona}\\
+\textbf{Dado que} timestamp incluye zona UTC-5\\
+\textbf{cuando} backend procesa\\
+\textbf{entonces} normaliza a UTC.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-46 & Reprogramación de envío & \textbf{Como} Developer, \textbf{quiero} reprogramar envío fallido, \textbf{para} lograr sincronización eventual. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Fallo inicial}\\
+\textbf{Dado que} POST /sync falla\\
+\textbf{cuando} pasa timeout\\
+\textbf{entonces} sistema agenda nuevo intento.\\[0.2em]
+
+\textbf{Escenario 2: Reintento exitoso}\\
+\textbf{Dado que} backend responde 200 en segundo intento\\
+\textbf{cuando} cliente reenvía\\
+\textbf{entonces} marca lote como enviado.\\[0.2em]
+
+\textbf{Escenario 3: Fallo persistente}\\
+\textbf{Dado que} backend sigue respondiendo error\\
+\textbf{cuando} se alcanzan 3 intentos\\
+\textbf{entonces} se registra error crítico.\\
+\end{tabular} & T-EP10 \\
+\hline
+
+TUS-47 & Estado visible de sincronización & \textbf{Como} Developer, \textbf{quiero} mostrar estado de sincronización, \textbf{para} dar transparencia al usuario. &
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Estado progresivo}\\
+\textbf{Dado que} proceso está corriendo\\
+\textbf{cuando} cliente consulta /sync/status\\
+\textbf{entonces} devuelve “In Progress”.\\[0.2em]
+
+\textbf{Escenario 2: Estado completado}\\
+\textbf{Dado que} lote ya se envió\\
+\textbf{cuando} cliente consulta /sync/status\\
+\textbf{entonces} devuelve “Completed”.\\[0.2em]
+
+\textbf{Escenario 3: Estado fallido}\\
+\textbf{Dado que} envío falló\\
+\textbf{cuando} cliente consulta /sync/status\\
+\textbf{entonces} devuelve “Failed”.\\
+\end{tabular} & T-EP10 \\ \hline
+\hline
+\end{longtable}
+
+\newpage
+
 ## Impact Mapping  
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis erat urna at fringilla aptent interdum, pharetra sagittis aliquam inceptos venenatis cum vivamus. Curae maecenas aliquam venenatis urna ligula integer mollis ullamcorper et dis vehicula, purus eu ridiculus blandit cubilia cursus imperdiet convallis eget feugiat. Ornare montes sem potenti risus a cum felis nec, proin phasellus est lacinia primis nisl iaculis posuere, torquent curabitur egestas aptent imperdiet integer vestibulum.
+El Impact Map es una herramienta de planificación estratégica que permite alinear los objetivos de negocio con las necesidades de los usuarios y las funcionalidades del sistema. Su propósito es asegurar que cada característica del producto contribuya de forma clara y medible al cumplimiento de un objetivo central.
+
+A partir del objetivo principal del sistema —mejorar el seguimiento nutricional y la adherencia del paciente mediante una solución tecnológica accesible y confiable— se identifican los actores involucrados, los cambios de comportamiento esperados y las funcionalidades clave que permitirán alcanzar dicho resultado.
+
+Este enfoque visual permite priorizar funcionalidades, evitando el desarrollo de características irrelevantes, y garantiza que cada acción dentro del sistema esté respaldada por una lógica de impacto real en la experiencia del usuario y los resultados clínicos.
+
+A continuación, se presentan los Impact Maps para los dos segmentos principales:
+
+**Impact Map – Segmento 1: Nutricionistas Clínicos y Deportivos**
+
+![Artefacto creado en UXPressia](src/img/cap3/ImpactMapping1.png)
+
+\newpage
+
+**Impact Map – Segmento 2: Pacientes interesados en mejorar su alimentación**
+
+![Artefacto creado en UXPressia](src/img/cap3/ImpactMapping2.png)
+
+\newpage
+
 
 ## Product Backlog
+
+Una de las técnicas más utilizadas para estimar el esfuerzo necesario para completar cada tarea es la escala de Fibonacci, la cual permite asignar puntos de historia de manera proporcional a la complejidad y tiempo requerido. 
+
+\vspace{1em}
+
+\begin{quote}
+Como señala Smith (2020), esta escala no lineal facilita la identificación de tareas que requieren un mayor esfuerzo, lo que resulta en una planificación más precisa y eficiente.
+\end{quote}
+
+\vspace{1em}
+
+A continuación, se presentan la tablas de nuestros *Product Backlog* para cada segmento objetivo, demostrando cómo se alinean nuestros recursos con las necesidades más urgentes de nuestros usuarios.
 
 \begin{longtable}{|c|p{1cm}|p{3.5cm}|p{7cm}|p{1cm}|}
 \hline
@@ -615,3 +2722,5 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, nullam felis e
 103 & \textbf{TUS-48} & Hora de corte configurable & \textbf{Como} developer, \textbf{quiero} configurar hora de corte por zona, \textbf{para} adaptar sincronización. & 3 \\
 \hline
 \end{longtable}
+
+\newpage

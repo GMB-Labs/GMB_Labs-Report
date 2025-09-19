@@ -130,34 +130,28 @@ A continuación se detalla los avances y las correciones relevantes durante el d
 
 ***Project Report Collaboration Insights***
 
-Github Collaboration Insights proporciona un cronograma que muestra las principales ramas y los procesos de fusión que han ocurrido. Todas las ramas se han generado siguiendo los principios de GitFlow, lo que garantiza una organización efectiva al utilizar un sistema de control de versiones. 
-
 **Entregable TB1:**
 
 ::: warn
 Para acceder los insights de este proyecto, haga click a la [URL](https://github.com/GMB-Labs/GMB_Labs-Report/pulse)
 :::
 
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el repositorio de nuestro primer sprint. Estos gráficos ofrecen una representación visual de la cantidad de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado en cada uno de los commits.
-
 
 **Tablero Kanban:**
 
-![Organización GMB Labs, imagen extraída de Github](src/img/cap1/insights-kanban-todo.png){ width=85% }
+![Organización GMB Labs, imagen extraída de Github [URL](https://github.com/orgs/GMB-Labs/projects/1/views/1)](src/img/cap1/insights-kanban-todo.png){ width=85% }
 
 **Kanban List:**
 
-![Organización GMB Labs, imagen extraída de Github](src/img/cap1/insights-kanban-list.png){ width=85% }
+![Organización GMB Labs, imagen extraída de Github [URL](https://github.com/orgs/GMB-Labs/projects/1/views/2)](src/img/cap1/insights-kanban-list.png){ width=85% }
 
 \newpage
-
-**Network Graph:**
-
-![Organización GMB Labs, imagen extraída de Github](src/img/cap1/insights-network-graph.png){ width=85% }
 
 **Traffic Map:**
 
 ![Organización GMB Labs, imagen extraída de Github](src/img/cap1/insights-traffic.png){ width=85% }
+
+El informe del proyecto se desarrolla de manera colaborativa en el repositorio de la organización GMB-Labs en GitHub. En la Figura 1 se muestra el tablero Kanban, en el cual se gestionaron todas las secciones del entregable. Para la presente entrega, todas las tareas asignadas se encuentran completadas (“Done”), lo cual refleja la finalización de los apartados definidos en la planificación. Asimismo, en las Figuras 2 y 3 se presentan los analíticos de colaboración y evidencias de commits, que demuestran la participación activa de cada integrante del equipo en la construcción del informe. Finalmente, esta evidencia es consistente con el Registro de Versiones del Informe.
 
 \newpage
 
