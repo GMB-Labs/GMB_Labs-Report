@@ -545,7 +545,7 @@ Entre los beneficios más importantes identifica el ahorro de tiempo en la atenc
 \textbf{Edad}                 & 50 años \\ \hline
 \textbf{Ubicación geográfica} & Lima, Perú \\ \hline
 \textbf{Cargo}                & Nutricionista especializada en nutrición deportiva \\ \hline
-\textbf{Tiempo de entrevista} & 20:41 - 30:34 \\ \hline
+\textbf{Tiempo de entrevista} & 20:41 - 25:41 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -581,7 +581,7 @@ Finalmente, advierte que el éxito de Foodlytics dependerá de su facilidad de u
 \textbf{Edad}                 & 59 años \\ \hline
 \textbf{Ubicación geográfica} & Lima, Perú \\ \hline
 \textbf{Cargo}                & Contadora \\ \hline
-\textbf{Tiempo de entrevista} & 30:34 - 35:14 \\ \hline
+\textbf{Tiempo de entrevista} & 25:45 - 30:25 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -611,7 +611,7 @@ Finalmente, Elizabeth enfatiza que una aplicación como Foodlytics no solo simpl
 \textbf{Edad}                 & 22 años \\ \hline
 \textbf{Ubicación geográfica} & Lima, Perú \\ \hline
 \textbf{Cargo}                & Estudiante de Ingeniería en la UPC \\ \hline
-\textbf{Tiempo de entrevista} & 00:00 - 10:34 \\ \hline
+\textbf{Tiempo de entrevista} & 30:27 - 37:21 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -638,18 +638,24 @@ Concluye que su permanencia en el uso de la aplicación dependería de que los c
 \begin{center}
 \begin{tabular}{|p{5cm}|p{6cm}|}
 \hline
-\textbf{Nombre y Apellido}    & n \\ \hline
-\textbf{Edad}                 & n \\ \hline
-\textbf{Ubicación geográfica} & n \\ \hline
-\textbf{Cargo}                & n \\ \hline
-\textbf{Tiempo de entrevista} & 00:00 - 10:34 \\ \hline
+\textbf{Nombre y Apellido}    & Luciana \\ \hline
+\textbf{Edad}                 & 20 años \\ \hline
+\textbf{Ubicación geográfica} & Lima, Perú \\ \hline
+\textbf{Cargo}                & Estudiante de Odontología \\ \hline
+\textbf{Tiempo de entrevista} & 37:21 - 41:57 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 
 **Resumen de la entrevista**
 
+Luciana, estudiante de odontología de 20 años, visita al nutricionista de manera esporádica (aproximadamente una vez al año) y nunca ha usado aplicaciones móviles para el control de su dieta o peso. Suele registrar sus comidas de manera básica en su celular, aunque admite que su alimentación es balanceada en general, salvo fines de semana en los que se descontrola un poco.
 
+No percibe grandes dificultades en mantener sus hábitos durante la semana, pero reconoce que sería útil contar con una aplicación que calcule calorías y macronutrientes automáticamente a partir de fotos. Valora positivamente la idea de recibir notificaciones y recordatorios de comidas o metas, ya que podrían ayudarle a organizar mejor su alimentación.
+
+Respecto a la confianza en una app, considera indispensable que esté respaldada por nutricionistas profesionales, pues eso garantizaría su validez. Señala que dejaría de usar la aplicación si los cálculos resultaran poco precisos. También menciona que prefiere recibir reportes semanales de su progreso, en lugar de diarios o mensuales, ya que le resultaría más práctico.
+
+En cuanto a la disposición de pago, afirma que sí estaría dispuesta a invertir en una aplicación siempre que tenga el respaldo de especialistas y combine facilidad de uso con información confiable. Concluye que la app sería más valiosa si le permitiera organizarse en coordinación con un nutricionista.
 
 ![Imagen extraída del video de entrevistas](src/img/cap2/EntrevistaS23.png)
 
@@ -793,7 +799,160 @@ Alertas y recordatorios motivacionales, percibidos como esenciales para combatir
 En síntesis, los datos muestran que existe una brecha clara entre el nivel de digitalización actual y las necesidades clínicas de los nutricionistas. Aunque cuentan con herramientas básicas, la falta de precisión y personalización limita su efectividad. Una solución como Foodlytics, que combine IA para reconocimiento de alimentos, paneles clínicos adaptados al contexto peruano y mecanismos de motivación para pacientes, podría cerrar esta brecha y posicionarse como una herramienta estratégica para el sector.
 :::
 
+\newpage
 
+:::
+**Segmento Objetivo 2:** Pacientes con interés en mejorar su alimentación
+:::
+
+**Perfil Demográfico**
+
+- **Edades:** Entre 20 y 59 años, con un promedio de 33.6 años.
+
+- **Ubicación geográfica:** Principalmente en Lima, Perú.
+
+**Cargos ocupados:**
+
+- Contadora (trabajadora adulta con vida laboral activa).
+
+- Estudiante de Ingeniería en la UPC (joven universitario).
+
+- Estudiante de Odontología (joven universitaria).
+
+Este segmento incluye a adultos y jóvenes que buscan mejorar sus hábitos alimenticios, pero con distintos niveles de disciplina y familiaridad tecnológica. Mientras los adultos tienden a basarse en recetas tradicionales y rutinas intuitivas, los jóvenes muestran mayor disposición a usar herramientas digitales, aunque enfrentan dificultades de tiempo, organización y constancia.
+
+**Experiencia y Conocimientos sobre Alimentación Digital**
+
+El uso de tecnología es variado. Algunos pacientes nunca han empleado aplicaciones móviles para registrar su dieta, mientras que otros recurren a plataformas globales como MyFitnessPal, balanzas digitales con apps vinculadas o pulseras inteligentes.
+
+- **Los principales problemas mencionados fueron:**
+
+  - Falta de constancia para registrar comidas (olvidos, desorganización, falta de tiempo).
+
+  - Registros poco precisos, ya que los pacientes no suelen medir cantidades con exactitud.
+
+  - Alimentación desordenada en fines de semana, lo que interrumpe hábitos saludables.
+
+  - Desconfianza en la precisión de las aplicaciones actuales, especialmente cuando los cálculos difieren de la información de etiquetas o recomendaciones profesionales.
+
+**Herramientas y Tecnología Actual**
+
+  - Parte del segmento no utiliza aplicaciones digitales, organizando sus dietas de forma intuitiva.
+
+  - Otro grupo combina distintas herramientas como apps de registro, dispositivos inteligentes y balanzas digitales.
+
+Este contraste revela una brecha tecnológica: aunque existe interés por digitalizar los hábitos, las soluciones actuales no satisfacen plenamente la necesidad de precisión, facilidad de uso y adaptación cultural.
+
+**Intereses y Necesidades Tecnológicas**
+
+Los pacientes coinciden en que una aplicación como Foodlytics sería de gran utilidad si responde a necesidades concretas:
+
+- **Necesidades principales:**
+
+  - Registro automático de alimentos con fotos y cálculo confiable de calorías y macronutrientes.
+
+  - Notificaciones y recordatorios para organizar horarios de comidas.
+
+  - Reportes periódicos de progreso (con preferencia por reportes semanales).
+
+  - Respaldo profesional que garantice la confiabilidad de la información.
+
+  - Recomendaciones personalizadas adaptadas a distintos contextos, incluyendo presupuesto en el caso de estudiantes.
+
+- **Valor percibido:**
+
+  - Simplificación en la rutina de registro alimentario.
+
+  - Motivación para mantener la adherencia a planes nutricionales.
+
+  - Ahorro de tiempo en cálculos manuales.
+
+  - Mayor confianza en datos validados por especialistas.
+
+- **Viabilidad económica:**
+
+  Existe disposición a pagar por el servicio siempre que ofrezca precisión, facilidad de uso y credibilidad profesional.
+
+
+**Preferencias y Comportamientos**
+
+- **Comportamientos actuales:**
+
+  - Registro manual, intuitivo o uso limitado de apps globales sin personalización cultural.
+
+  - Organización parcial de rutinas, con tendencia a romper hábitos saludables durante fines de semana.
+
+- **Cambios que buscan:**
+
+  - Automatización del registro alimentario.
+
+  - Recordatorios constantes que ayuden a sostener la disciplina.
+
+  - Funcionalidades que combinen confiabilidad, simplicidad y pertinencia cultural (incluyendo alimentos locales).
+
+En síntesis, este segmento muestra una alta disposición a adoptar soluciones digitales, siempre que sean fáciles de usar, confiables y adaptadas al contexto peruano. Foodlytics puede posicionarse como una herramienta estratégica para transformar el interés en mejorar la alimentación en resultados sostenibles y medibles.
+
+**Estadísticas y Porcentajes**
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico5.png)
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico6.png)
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico7.png)
+
+![Creado en base a los datos recolectados en las entrevistas](src/img/cap2/grafico8.png)
+
+\newpage
+
+**Análisis de datos**
+
+Las entrevistas realizadas a pacientes interesados en mejorar su alimentación permiten identificar patrones de comportamiento, brechas tecnológicas y oportunidades de diseño para la solución propuesta.
+
+En términos de uso tecnológico, se observan diferencias generacionales: los pacientes jóvenes (19 a 30 años) tienden a utilizar principalmente iOS en sus dispositivos móviles, mientras que los de mayor edad prefieren Android. En cuanto a laptops, el sistema más común es Windows, con una presencia menor de MacOS, lo que confirma la necesidad de garantizar compatibilidad multiplataforma con prioridad en entornos de mayor uso.
+
+Respecto a los hábitos de registro, la mayoría de los pacientes no emplea aplicaciones de manera constante. Algunos utilizan apps globales como MyFitnessPal o dispositivos inteligentes vinculados a balanzas y pulseras, mientras que otros llevan un control básico o incluso intuitivo, sin registros sistemáticos. Esto evidencia una brecha clara: el interés por digitalizar sus hábitos existe, pero las herramientas actuales no logran generar confianza ni fomentar la constancia.
+
+En relación con los problemas más recurrentes, se destacan la falta de constancia en el registro de comidas, la poca precisión de los reportes, la dificultad para organizar tiempos y la tendencia a descuidar la dieta los fines de semana. Estos hallazgos refuerzan la importancia de incorporar recordatorios automáticos y reportes periódicos que motiven la adherencia al plan nutricional.
+
+En cuanto a las funcionalidades más valoradas, los pacientes coinciden en la utilidad del registro automático de comidas con fotos y análisis por IA, acompañado de notificaciones personalizadas y reportes semanales de progreso. Asimismo, resaltan la necesidad de contar con el respaldo profesional para validar la confiabilidad de los cálculos, y algunos sugieren la incorporación de recomendaciones adaptadas al presupuesto como valor agregado.
+
+::: note
+En síntesis, los datos muestran que los pacientes tienen una alta disposición a adoptar soluciones digitales siempre que estas sean precisas, fáciles de usar, validadas por profesionales y adaptadas a su contexto. Foodlytics puede posicionarse como un puente entre el interés por mejorar la alimentación y la falta de herramientas locales que acompañen de manera constante y confiable la rutina de los usuarios.
+:::
+
+\newpage
+
+**Comparación entre Segmentos**
+
+El análisis de entrevistas a nutricionistas y pacientes evidencia tanto necesidades compartidas como demandas específicas, lo que permite entender cómo debe posicionarse Foodlytics como una solución integral.
+
+1) **Similitudes identificadas:**
+
+Ambos segmentos coinciden en la importancia de contar con datos precisos y confiables sobre la alimentación.
+
+Existe un interés común en que la aplicación incorpore reconocimiento automático de alimentos mediante IA, reduciendo errores de registro y tiempos de cálculo.
+
+Tanto pacientes como profesionales valoran la existencia de reportes claros y periódicos, que permitan visualizar progresos de manera sencilla y motivadora.
+
+En ambos casos, la adherencia a los planes nutricionales aparece como un reto central que puede resolverse con notificaciones, recordatorios y retroalimentación continua.
+
+2) **Diferencias principales:**
+
+  - Los nutricionistas priorizan la existencia de un panel clínico web que centralice información de múltiples pacientes, con capacidad de integrar datos antropométricos, antecedentes médicos y reportes automáticos para la toma de decisiones.
+
+  - Los pacientes, en cambio, demandan principalmente facilidad de uso, recordatorios personalizados y motivación constante, elementos que les ayuden a sostener la disciplina en su vida diaria.
+
+  - En términos tecnológicos, los profesionales ya interactúan con sistemas institucionales (como SGSS o apps en fase piloto), aunque limitados; mientras que los pacientes muestran un uso heterogéneo: algunos recurren a apps globales y dispositivos inteligentes, y otros carecen de experiencia digital en el control de la dieta.
+
+3) **Complementariedad de los segmentos:**
+Las entrevistas confirman que la efectividad de Foodlytics dependerá de su capacidad para articular la experiencia del paciente con las necesidades clínicas del profesional. Mientras los pacientes requieren una aplicación intuitiva y motivadora, los nutricionistas demandan una herramienta robusta que garantice confiabilidad y respaldo científico.
+
+::: note
+En conclusión, la solución debe diseñarse bajo un enfoque de doble valor: para los pacientes, simplicidad y motivación; para los nutricionistas, precisión y control clínico. Esta integración permitirá que Foodlytics se posicione no solo como una aplicación de registro alimentario, sino como un ecosistema digital que fortalece la relación paciente–profesional y contribuye a la mejora sostenible de los hábitos nutricionales en el Perú.
+:::
+
+
+\newpage
 
 ## Needfinding
 
