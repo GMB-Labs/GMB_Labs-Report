@@ -111,6 +111,8 @@ Para construir una solución digital que responda de manera efectiva al dominio 
 
 En esta fase se identifican y analizan los requerimientos del público objetivo, se estudia la oferta existente en el mercado y se emplean técnicas como entrevistas, análisis competitivo, mapeo de tareas y escenarios de uso. Todo ello permite definir de manera clara los requisitos funcionales y no funcionales del sistema. La información obtenida en este capítulo constituye la base sólida para el diseño y la implementación de una solución tecnológica innovadora, con capacidad de mejorar la adherencia a los planes nutricionales y optimizar el trabajo de los especialistas.
 
+\newpage
+
 ## Competidores
 
 ![Recurso extraído de Canva](src/img/cap2/competidores-introduccion.png)
@@ -118,6 +120,9 @@ En esta fase se identifican y analizan los requerimientos del público objetivo,
 Después de realizar un análisis del mercado, se identificaron diversas plataformas y aplicaciones que ofrecen servicios vinculados a la nutrición digital, el seguimiento alimenticio y la salud preventiva. Estas soluciones constituyen referencias relevantes, ya que presentan características orientadas a resolver problemas similares a los abordados por Foodlytics, tales como el registro de la dieta diaria, la adherencia a planes nutricionales y la interacción entre pacientes y profesionales de la salud.
 
 El estudio de estos competidores permite reconocer fortalezas y limitaciones en sus propuestas, lo cual representa un insumo fundamental para identificar oportunidades de mejora y diseñar una propuesta de valor diferencial. De esta manera, Foodlytics podrá posicionarse como una alternativa innovadora y adaptada al contexto local, aportando beneficios concretos tanto a pacientes como a especialistas en nutrición y medicina deportiva.
+
+\newpage
+
 
 **Competidores:**
 
