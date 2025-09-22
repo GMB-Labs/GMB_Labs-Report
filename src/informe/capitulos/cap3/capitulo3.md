@@ -167,35 +167,41 @@ En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear e
 \hline
 \textbf{ID} & \textbf{Requisito funcional} \\
 \hline
-\textbf{RF-01} & El paciente debe poder registrarse con sus datos básicos, para crear su cuenta. \\
+\textbf{RF-01} & El paciente debe poder registrarse proporcionando nombres, apellidos, correo electrónico válido y contraseña, para crear su cuenta en la aplicación. \\
 \hline
-\textbf{RF-03} & El usuario debe poder iniciar y cerrar sesión de forma segura, para proteger su información. \\
+\textbf{RF-02} & El usuario (paciente o nutricionista) debe poder iniciar y cerrar sesión de forma segura mediante autenticación con credenciales, para proteger su información personal. \\
 \hline
-\textbf{RF-05} & El paciente debe poder editar su perfil con edad, peso, talla y objetivos, para mantener datos actualizados. \\
+\textbf{RF-03} & El paciente debe poder editar su perfil con edad, peso, talla y objetivos de salud, para mantener sus datos actualizados. \\
 \hline
-\textbf{RF-07} & El paciente debe poder registrar comidas mediante foto con reconocimiento por IA, para acelerar el ingreso de alimentos. \\
+\textbf{RF-04} & El paciente debe poder registrar comidas mediante fotografía con reconocimiento automático por IA, para acelerar el ingreso de alimentos. \\
 \hline
-\textbf{RF-08} & El paciente debe poder corregir manualmente alimentos o porciones detectadas, para asegurar precisión. \\
+\textbf{RF-05} & El paciente debe poder corregir manualmente alimentos o porciones detectadas por la IA, para asegurar precisión en el registro. \\
 \hline
-\textbf{RF-10} & El paciente debe poder ver un resumen diario de calorías y macros, para monitorear su consumo. \\
+\textbf{RF-06} & El paciente debe poder visualizar un resumen diario de calorías y macronutrientes consumidos, para monitorear su ingesta. \\
 \hline
-\textbf{RF-11} & El paciente debe poder consultar un historial semanal de comidas y balance calórico, para revisar tendencias. \\
+\textbf{RF-07} & El paciente debe poder consultar un historial semanal de comidas y balance calórico, para identificar tendencias de consumo. \\
 \hline
-\textbf{RF-12} & El paciente debe poder registrar actividad física manual con tipo, duración e intensidad, para completar su gasto energético. \\
+\textbf{RF-08} & El paciente debe poder registrar actividad física manual con tipo, duración e intensidad, para completar el cálculo de su gasto energético. \\
 \hline
-\textbf{RF-15} & El paciente debe poder registrar su peso periódicamente, para hacer seguimiento de su progreso. \\
+\textbf{RF-09} & El paciente debe poder registrar periódicamente su peso corporal, para hacer seguimiento de su progreso. \\
 \hline
-\textbf{RF-16} & El paciente debe poder ver el cálculo automático del IMC, para conocer su clasificación. \\
+\textbf{RF-10} & El paciente debe poder visualizar el cálculo automático del IMC en base a su peso y talla, para conocer su clasificación nutricional. \\
 \hline
-\textbf{RF-18} & El nutricionista debe poder crear planes de dieta personalizados, para guiar al paciente. \\
+\textbf{RF-11} & El nutricionista debe poder crear planes de dieta personalizados asignados a cada paciente, para guiar su progreso nutricional. \\
 \hline
-\textbf{RF-22} & El nutricionista debe poder visualizar un dashboard con métricas semanales por paciente, para evaluar el progreso. \\
+\textbf{RF-12} & El nutricionista debe poder visualizar un dashboard con métricas semanales de cada paciente (calorías, macros, peso, actividad), para evaluar su evolución. \\
 \hline
-\textbf{RF-24} & El nutricionista debe poder generar reportes descargables en PDF o CSV, para compartir o archivar resultados. \\
+\textbf{RF-13} & El nutricionista debe poder generar reportes históricos descargables en PDF o CSV, para compartirlos o archivarlos como evidencia de progreso. \\
 \hline
-\textbf{RF-25} & El paciente debe poder recibir notificaciones para registrar comidas, para mantener constancia diaria. \\
+\textbf{RF-14} & El paciente debe poder recibir notificaciones automáticas para registrar comidas y hábitos, para mantener constancia diaria en el uso de la aplicación. \\
 \hline
-\textbf{RF-28} & El paciente debe poder sincronizar en un envío diario sus datos locales al backend, para actualizar su historial. \\
+\textbf{RF-15} & El paciente debe poder sincronizar en un único envío diario sus datos locales al backend, para actualizar su historial sin generar duplicados. \\
+\hline
+\textbf{RF-16} & El nutricionista debe poder suscribirse a planes de pago según la cantidad de pacientes gestionados (por ejemplo: básico, intermedio, avanzado), para ajustar la plataforma a sus necesidades. \\
+\hline
+\textbf{RF-17} & El nutricionista debe poder cancelar su suscripción en cualquier momento desde la plataforma web, para evitar cobros adicionales. \\
+\hline
+\textbf{RF-18} & El sistema debe permitir pagos en línea a través de pasarelas seguras (tarjeta de crédito/débito, billeteras digitales, transferencias), para facilitar el acceso a los planes de nutricionista. \\
 \hline
 \end{longtable}
 
@@ -207,45 +213,37 @@ En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear e
 \hline
 \textbf{ID} & \textbf{Requisito no funcional} & \textbf{Atributo de calidad} \\
 \hline
-RNF-01 & El sistema debe soportar hasta 10,000 usuarios concurrentes con una latencia menor a 300 ms en operaciones críticas. & Rendimiento \\
+\textbf{RNF-01} & El sistema debe detectar hasta 10,000 usuarios concurrentes activos y mantener una latencia menor a 300 ms en operaciones críticas (login, registro de comidas, sincronización). & Rendimiento \\
 \hline
-RNF-02 & Toda comunicación de datos entre cliente, servidor y dispositivos debe realizarse mediante HTTPS con TLS 1.3. & Seguridad \\
+\textbf{RNF-02} & Toda comunicación de datos entre cliente, servidor y dispositivos debe realizarse mediante HTTPS con TLS 1.3. & Seguridad \\
 \hline
-RNF-03 & El sistema debe estar disponible al menos el 99.9\% del tiempo durante horario laboral. & Disponibilidad \\
+\textbf{RNF-03} & El sistema debe estar disponible al menos el 99.9\% del tiempo durante el horario laboral definido de 6:00 a 23:00 (hora Perú). & Disponibilidad \\
 \hline
-RNF-04 & Los tiempos de carga de la interfaz móvil y web no deben superar los 2 segundos en conexión 4G promedio. & Rendimiento \\
+\textbf{RNF-04} & La interfaz móvil y web debe cargar en menos de 2 segundos únicamente en conexiones de red 4G o superiores (LTE, 5G o WiFi equivalente). En conexiones menores (3G o inferiores) no se garantiza este tiempo de respuesta. & Rendimiento \\
 \hline
-RNF-05 & El sistema debe registrar eventos críticos en logs estructurados, accesibles y auditables. & Observabilidad \\
+\textbf{RNF-05} & El sistema debe registrar métricas de eventos críticos (errores 4xx/5xx, fallos de autenticación, tiempo de respuesta promedio, tasa de sincronización fallida) en logs estructurados, accesibles y auditables. & Observabilidad \\
 \hline
-RNF-06 & El backend debe ser escalable horizontalmente para soportar el crecimiento de usuarios sin caídas notables. & Escalabilidad \\
+\textbf{RNF-06} & El backend debe ser escalable horizontalmente y soportar un incremento del 100\% de usuarios en picos de demanda, manteniendo latencia < 500 ms en operaciones críticas. & Escalabilidad \\
 \hline
-RNF-07 & Los datos sensibles de pacientes y nutricionistas deben almacenarse cifrados en reposo con AES-256. & Seguridad \\
+\textbf{RNF-07} & Los datos sensibles de pacientes y nutricionistas deben almacenarse cifrados en reposo con AES-256. El acceso debe estar limitado al 0\% para personal no autorizado. & Seguridad \\
 \hline
-RNF-08 & La interfaz debe ser intuitiva y accesible, cumpliendo con las pautas WCAG 2.1 AA. & Usabilidad/Accesibilidad \\
+\textbf{RNF-08} & La infraestructura debe contar con redundancia al fallo (failover automático con RPO $\leq$ 15 min y RTO $\leq$ 1 hora). & Confiabilidad/Disponibilidad \\
 \hline
-RNF-09 & El sistema debe ser compatible con navegadores modernos (Chrome, Firefox, Edge, Safari) y dispositivos iOS/Android. & Compatibilidad \\
+\textbf{RNF-09} & La interfaz debe ser intuitiva y accesible, cumpliendo con las pautas WCAG 2.1 AA (contraste mínimo, navegación por teclado, texto alternativo en imágenes). & Usabilidad/Accesibilidad \\
 \hline
-RNF-10 & El sistema debe permitir recuperación ante fallos con RPO \(\leq 15\) min y RTO \(\leq 1\) hora. & Disponibilidad/Confiabilidad \\
+\textbf{RNF-10} & El sistema debe ser compatible con navegadores modernos (Chrome, Firefox, Edge, Safari en sus dos últimas versiones) y dispositivos iOS/Android con versiones no mayores a 3 años. & Compatibilidad \\
 \hline
-RNF-11 & El código debe estar modularizado para facilitar mantenibilidad y despliegue de nuevas funciones. & Mantenibilidad \\
+\textbf{RNF-11} & El código del backend debe estar modularizado en microservicios documentados, con métricas de cobertura de pruebas unitarias $\geq$ 80\%. & Mantenibilidad \\
 \hline
-RNF-12 & Se deben realizar copias de seguridad automáticas de la base de datos al menos una vez al día. & Confiabilidad \\
+\textbf{RNF-12} & Se deben realizar copias de seguridad automáticas de la base de datos al menos una vez al día, garantizando una tasa de éxito del 100\%. & Confiabilidad \\
 \hline
-RNF-13 & El sistema debe implementar control de acceso basado en roles (RBAC) para diferenciar permisos entre pacientes y nutricionistas. & Seguridad \\
+\textbf{RNF-13} & El sistema debe implementar control de acceso basado en roles (RBAC) garantizando que ningún usuario sin permisos pueda acceder a recursos restringidos. & Seguridad \\
 \hline
-RNF-14 & El sistema debe garantizar integridad de datos evitando duplicados en procesos de sincronización. & Confiabilidad \\
+\textbf{RNF-14} & El sistema debe garantizar integridad de datos asegurando 0\% de duplicados en procesos de sincronización diaria. & Confiabilidad \\
 \hline
-RNF-15 & El sistema debe cumplir con la Ley de Protección de Datos Personales (Perú) y estándares internacionales como GDPR. & Regulatorio/Seguridad \\
+\textbf{RNF-15} & El sistema debe cumplir con la Ley de Protección de Datos Personales (Perú) y GDPR, garantizando que el 100\% de los datos personales se procesen bajo consentimiento informado. & Regulatorio/Seguridad \\
 \hline
-RNF-16 & El sistema debe permitir monitoreo en tiempo real de métricas de rendimiento, uso de CPU, memoria y errores. & Observabilidad \\
-\hline
-RNF-17 & El diseño debe considerar modo oscuro y opciones de personalización sin afectar la usabilidad. & Usabilidad \\
-\hline
-RNF-18 & El sistema debe estar preparado para soportar integración futura con wearables (ej. smartbands). & Escalabilidad/Compatibilidad \\
-\hline
-RNF-19 & El sistema debe soportar despliegue en contenedores Docker para facilitar portabilidad entre entornos. & Portabilidad \\
-\hline
-RNF-20 & El sistema debe contar con documentación técnica y manuales de usuario claros y actualizados. & Mantenibilidad/Usabilidad \\
+\textbf{RNF-16} & La aplicación debe ofrecer modo oscuro y claro, garantizando que todos los elementos mantengan un contraste mínimo de 4.5:1 en ambos modos. & Usabilidad \\
 \hline
 \end{longtable}
 
@@ -329,6 +327,20 @@ WEB-US18 & Registro de recomendaciones específicas \\ \hline
 WEB-US19 & Reporte de evolución de peso \\ \hline
 WEB-US20 & Dashboard de progreso con gráficas \\ \hline
 WEB-US21 & Generación de reportes descargables \\ \hline
+
+\textbf{WEB-EP07 (Gestión de planes y pagos)} & 
+\textbf{Como} nutricionista, \textbf{quiero} gestionar mi suscripción a planes de la plataforma, \textbf{para} acceder a funcionalidades avanzadas según la cantidad de pacientes que administro. \\
+\hline
+WEB-US22 & Selección de plan de suscripción según cantidad de pacientes \\
+\hline
+WEB-US23 & Pago en línea con métodos disponibles (tarjeta, billetera digital, etc.) \\
+\hline
+WEB-US24 & Cancelación de suscripción en cualquier momento \\
+\hline
+WEB-US25 & Visualización del historial de pagos \\
+\hline
+WEB-US26 & Ver la \textit{fecha del próximo cobro} y el estado actual de la suscripción \\
+\hline
 
 \textbf{MOB-EP01 (Gestión de cuenta y autenticación)} &
 \textbf{Como} paciente, \textbf{quiero} acceder de forma segura a la app y administrar mi perfil, \textbf{para} proteger mi información y usar la aplicación con mis datos correctos. \\
@@ -461,6 +473,18 @@ TUS-45 & Timestamps en RFC 3339 y manejo de zona horaria \\ \hline
 TUS-46 & Reprogramación de envío si falla el lote final \\ \hline
 TUS-47 & Estado de sincronización visible para el usuario \\ \hline
 TUS-48 & Parámetro de hora de corte configurable por zona \\ \hline
+
+\textbf{T-EP12 (Integración de pagos/Suscripciones Culqi)} & 
+\textbf{Como} developer, \textbf{quiero} integrar la suscripción con Culqi, webhooks y verificación del estado, \textbf{para} manejar pagos, facturación y suscripciones de nutricionistas de forma segura. \\
+\hline
+TUS-49 & Crear endpoint para iniciar suscripción en Culqi con plan seleccionado \\
+\hline
+TUS-50 & Verificar transacción / callback de Culqi para confirmar pago \\
+\hline
+TUS-51 & Registrar estado de suscripción del nutricionista en base al pago (activo, vencido, cancelado) \\
+\hline
+TUS-52 & Servicio para que el nutricionista vea fecha del próximo cobro y estado actual \\
+\hline
 \end{longtable}
 
 \newpage
@@ -1176,6 +1200,106 @@ WEB-US21 & Generación de reportes descargables & \textbf{Como} nutricionista, \
 \textbf{cuando} se intenta descargar el archivo\\
 \textbf{entonces} se muestra un mensaje de error.\\
 \end{tabular} & WEB-EP06 \\
+\hline
+
+WEB-US22 & Selección de plan de suscripción & 
+\textbf{Como} nutricionista, \textbf{quiero} seleccionar un plan de suscripción según la cantidad de pacientes que administro, \textbf{para} acceder a las funcionalidades adecuadas. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Selección exitosa}\\
+\textbf{Dado que} el nutricionista accede a la sección de planes disponibles\\
+\textbf{cuando} selecciona un plan válido y confirma su elección\\
+\textbf{entonces} el sistema registra el plan seleccionado en su cuenta.\\[0.2em]
+
+\textbf{Escenario 2: Plan no disponible}\\
+\textbf{Dado que} el nutricionista intenta seleccionar un plan inexistente o inactivo\\
+\textbf{cuando} confirma su selección\\
+\textbf{entonces} el sistema muestra un mensaje de error indicando la indisponibilidad.\\[0.2em]
+
+\textbf{Escenario 3: Cambio de plan}\\
+\textbf{Dado que} el nutricionista ya tiene un plan activo\\
+\textbf{cuando} selecciona un nuevo plan superior\\
+\textbf{entonces} el sistema actualiza la suscripción al nuevo plan y ajusta el ciclo de pago.\\
+\end{tabular} & WEB-EP07 \\
+\hline
+
+WEB-US23 & Pago en línea & 
+\textbf{Como} nutricionista, \textbf{quiero} pagar en línea mi suscripción usando métodos disponibles (tarjeta, billetera digital, etc.), \textbf{para} activar o renovar mi plan. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Pago exitoso}\\
+\textbf{Dado que} el nutricionista selecciona un plan válido y un método de pago disponible\\
+\textbf{cuando} confirma el pago\\
+\textbf{entonces} el sistema procesa la transacción y activa la suscripción.\\[0.2em]
+
+\textbf{Escenario 2: Pago rechazado}\\
+\textbf{Dado que} el nutricionista selecciona un método de pago\\
+\textbf{cuando} el sistema recibe una respuesta de rechazo del proveedor de pagos\\
+\textbf{entonces} el sistema muestra un mensaje de error e invita a reintentar con otro método.\\[0.2em]
+
+\textbf{Escenario 3: Error de conexión}\\
+\textbf{Dado que} el nutricionista intenta realizar un pago\\
+\textbf{cuando} ocurre un error de conexión con el servicio de pagos (ej. Culqi)\\
+\textbf{entonces} el sistema notifica el error y conserva el estado pendiente del pago.\\
+\end{tabular} & WEB-EP07 \\
+\hline
+
+WEB-US24 & Cancelación de suscripción & 
+\textbf{Como} nutricionista, \textbf{quiero} cancelar mi suscripción en cualquier momento, \textbf{para} dejar de usar funcionalidades avanzadas sin cargos posteriores. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Cancelación exitosa}\\
+\textbf{Dado que} el nutricionista tiene una suscripción activa\\
+\textbf{cuando} solicita la cancelación desde la sección de gestión de cuenta\\
+\textbf{entonces} el sistema cancela la suscripción y confirma la fecha de finalización.\\[0.2em]
+
+\textbf{Escenario 2: Cancelación tardía}\\
+\textbf{Dado que} el nutricionista cancela luego de haberse realizado el cobro del ciclo actual\\
+\textbf{cuando} confirma la cancelación\\
+\textbf{entonces} el sistema informa que el plan se mantendrá activo hasta el final del ciclo pagado.\\[0.2em]
+
+\textbf{Escenario 3: Error en cancelación}\\
+\textbf{Dado que} el nutricionista solicita la cancelación\\
+\textbf{cuando} ocurre un error con el proveedor de pagos\\
+\textbf{entonces} el sistema notifica al usuario y mantiene el estado de la suscripción sin cambios.\\
+\end{tabular} & WEB-EP07 \\
+\hline
+
+WEB-US25 & Historial de pagos & 
+\textbf{Como} nutricionista, \textbf{quiero} visualizar el historial de mis pagos realizados, \textbf{para} llevar control de mis transacciones y facturación. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Visualización exitosa}\\
+\textbf{Dado que} el nutricionista tiene pagos registrados en la plataforma\\
+\textbf{cuando} accede a la sección de historial\\
+\textbf{entonces} el sistema muestra la lista de pagos con fecha, monto y método.\\[0.2em]
+
+\textbf{Escenario 2: Sin historial}\\
+\textbf{Dado que} el nutricionista aún no ha realizado pagos\\
+\textbf{cuando} accede a la sección de historial\\
+\textbf{entonces} el sistema muestra un mensaje indicando “No se encontraron pagos registrados”.\\[0.2em]
+
+\textbf{Escenario 3: Error de consulta}\\
+\textbf{Dado que} el nutricionista accede a la sección de historial\\
+\textbf{cuando} ocurre un error en la base de datos o en la integración con Culqi\\
+\textbf{entonces} el sistema muestra un mensaje de error temporal.\\
+\end{tabular} & WEB-EP07 \\
+\hline
+
+WEB-US26 & Estado de suscripción & 
+\textbf{Como} nutricionista, \textbf{quiero} ver la fecha del próximo cobro y el estado actual de mi suscripción, \textbf{para} estar informado sobre mi plan activo. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Visualización de estado activo}\\
+\textbf{Dado que} el nutricionista tiene una suscripción activa\\
+\textbf{cuando} accede a la sección de estado de suscripción\\
+\textbf{entonces} el sistema muestra la fecha del próximo cobro y el estado “Activo”.\\[0.2em]
+
+\textbf{Escenario 2: Suscripción cancelada}\\
+\textbf{Dado que} el nutricionista canceló su suscripción\\
+\textbf{cuando} consulta el estado\\
+\textbf{entonces} el sistema muestra el estado “Cancelada” con la fecha de finalización.\\[0.2em]
+
+\textbf{Escenario 3: Error en la consulta de estado}\\
+\textbf{Dado que} el nutricionista consulta el estado de su suscripción\\
+\textbf{cuando} ocurre un error de comunicación con Culqi\\
+\textbf{entonces} el sistema muestra un mensaje de error temporal indicando que intente más tarde.\\
+\end{tabular} & WEB-EP07 \\
 \hline
 \end{longtable}
 
@@ -2470,6 +2594,87 @@ TUS-47 & Estado visible de sincronización & \textbf{Como} Developer, \textbf{qu
 \textbf{entonces} devuelve “Failed”.\\
 \end{tabular} & T-EP10 \\ \hline
 \hline
+
+TUS-49 & Endpoint para iniciar suscripción & 
+\textbf{Como} developer, \textbf{quiero} crear un endpoint que inicie una suscripción en Culqi con el plan seleccionado, \textbf{para} procesar el alta de forma segura. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Suscripción iniciada exitosamente}\\
+\textbf{Dado que} el nutricionista selecciona un plan válido\\
+\textbf{cuando} se realiza un POST al endpoint con el ID del plan y datos de pago\\
+\textbf{entonces} el sistema responde 201 con el ID de la suscripción generada en Culqi.\\[0.2em]
+
+\textbf{Escenario 2: Datos inválidos}\\
+\textbf{Dado que} el request no contiene datos obligatorios (ej. ID de plan, token de pago)\\
+\textbf{cuando} se procesa el request\\
+\textbf{entonces} el sistema responde 400 indicando campos faltantes.\\[0.2em]
+
+\textbf{Escenario 3: Error en Culqi}\\
+\textbf{Dado que} el endpoint se comunica con Culqi\\
+\textbf{cuando} Culqi devuelve un error en la transacción\\
+\textbf{entonces} el sistema responde 502 con el detalle del fallo externo.\\
+\end{tabular} & T-EP12 \\
+\hline
+
+TUS-50 & Verificación de transacción & 
+\textbf{Como} developer, \textbf{quiero} verificar el callback de Culqi para confirmar el pago, \textbf{para} validar la suscripción del nutricionista. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Callback válido}\\
+\textbf{Dado que} Culqi envía un webhook con firma válida\\
+\textbf{cuando} el sistema recibe la notificación\\
+\textbf{entonces} marca la transacción como confirmada y activa la suscripción.\\[0.2em]
+
+\textbf{Escenario 2: Firma inválida}\\
+\textbf{Dado que} Culqi envía un webhook con firma incorrecta o manipulada\\
+\textbf{cuando} el sistema valida la firma\\
+\textbf{entonces} descarta la notificación y responde 401.\\[0.2em]
+
+\textbf{Escenario 3: Evento desconocido}\\
+\textbf{Dado que} Culqi envía un webhook con un evento no soportado\\
+\textbf{cuando} el sistema procesa el evento\\
+\textbf{entonces} registra un log de advertencia y responde 200 sin cambios.\\
+\end{tabular} & T-EP12 \\
+\hline
+
+TUS-51 & Registro de estado de suscripción & 
+\textbf{Como} developer, \textbf{quiero} registrar el estado de la suscripción del nutricionista en base al pago (activo, vencido, cancelado), \textbf{para} mantener coherencia en la base de datos. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Activación correcta}\\
+\textbf{Dado que} un pago es confirmado por Culqi\\
+\textbf{cuando} el sistema procesa la transacción\\
+\textbf{entonces} actualiza el estado de la suscripción a “Activo”.\\[0.2em]
+
+\textbf{Escenario 2: Suscripción cancelada}\\
+\textbf{Dado que} el nutricionista solicita la cancelación desde la plataforma\\
+\textbf{cuando} el sistema procesa la orden\\
+\textbf{entonces} cambia el estado de la suscripción a “Cancelado”.\\[0.2em]
+
+\textbf{Escenario 3: Suscripción vencida}\\
+\textbf{Dado que} el ciclo de pago del nutricionista expira\\
+\textbf{cuando} el sistema detecta la falta de pago en la fecha de corte\\
+\textbf{entonces} actualiza el estado a “Vencido”.\\
+\end{tabular} & T-EP12 \\
+\hline
+
+TUS-52 & Servicio de consulta de estado & 
+\textbf{Como} developer, \textbf{quiero} implementar un servicio que muestre la fecha del próximo cobro y el estado actual, \textbf{para} que el nutricionista consulte su suscripción. & 
+\begin{tabular}[t]{@{}p{5cm}@{}}
+\textbf{Escenario 1: Consulta exitosa}\\
+\textbf{Dado que} el nutricionista tiene una suscripción activa\\
+\textbf{cuando} realiza un GET al servicio de estado\\
+\textbf{entonces} el sistema devuelve 200 con el estado “Activo” y la fecha del próximo cobro.\\[0.2em]
+
+\textbf{Escenario 2: Suscripción inexistente}\\
+\textbf{Dado que} el nutricionista no posee suscripción activa\\
+\textbf{cuando} realiza un GET al servicio de estado\\
+\textbf{entonces} el sistema devuelve 404 indicando que no existe suscripción registrada.\\[0.2em]
+
+\textbf{Escenario 3: Error en la consulta}\\
+\textbf{Dado que} el nutricionista realiza una consulta\\
+\textbf{cuando} ocurre un fallo en la base de datos o en la integración con Culqi\\
+\textbf{entonces} el sistema responde 500 con un mensaje de error temporal.\\
+\end{tabular} & T-EP12 \\
+\hline
+
 \end{longtable}
 
 \newpage
