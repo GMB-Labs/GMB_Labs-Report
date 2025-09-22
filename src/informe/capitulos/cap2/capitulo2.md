@@ -359,7 +359,7 @@ Las entrevistas fueron diseñadas como técnica principal de recolección cualit
 ![Recurso extraído de Canva](src/img/cap2/entrevistas-introduccion.png)
 
 ::: note
-Para acceder al video de las entrevistas, haga click en la [URL](enlace entrevistas)
+Para acceder al video de las entrevistas, haga click en la [URL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211212_upc_edu_pe/EUSHZe96_IJCpJ01PldFNykBAJ6ZEiuDjDqJJdvSMM-YyA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YFJYGO)
 :::
 
 \newpage
@@ -470,6 +470,11 @@ Entender cómo los pacientes perciben el control de su dieta, sus frustraciones 
 \newpage
 
 ### Registro de entrevistas 
+
+::: note
+Para acceder al video de las entrevistas, haga click en la [URL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211212_upc_edu_pe/EUSHZe96_IJCpJ01PldFNykBAJ6ZEiuDjDqJJdvSMM-YyA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YFJYGO)
+:::
+
 
 ::: box
 **Segmento Objetivo 1:** Médicos Nutricionistas o del deporte
@@ -664,7 +669,7 @@ En cuanto a la disposición de pago, afirma que sí estaría dispuesta a inverti
 
 ### Análisis de entrevistas
 
-:::
+::: box
 **Segmento Objetivo 1:** Médicos nutricionistas o del deporte
 :::
 
@@ -801,7 +806,7 @@ En síntesis, los datos muestran que existe una brecha clara entre el nivel de d
 
 \newpage
 
-:::
+::: box
 **Segmento Objetivo 2:** Pacientes con interés en mejorar su alimentación
 :::
 
