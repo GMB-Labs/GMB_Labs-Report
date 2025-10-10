@@ -191,11 +191,27 @@ Unit of Work & \code{SQLAlchemyUnitOfWork} & Coordina transacciones en operacion
 \bottomrule
 \end{tabularx}
 
-### Bounded Context Software Architecture Component Level Diagrams  
+### Bounded Context Software Architecture Component Level Diagrams 
+
+Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
+
+![Image Recognition (Component Level Diagram)](src/img/cap5/Recognition/Componente.png)
+
 ### Bounded Context Software Architecture Code Level Diagrams  
 
 #### Bounded Context Domain Layer Class Diagrams  
+
+**Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.**
+
+*En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
+
+![Image Recognition (Layer Class Diagram)](src/img/cap5/Recognition/Clases.png)
+
 #### Bounded Context Database Design Diagram  
+
+*Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
+
+![Image Recognition (Database Design Diagram)](src\img\cap5\Recognition\ERD _ recognition.png)
 
 ## Bounded Context: Diet Tracking 
 
@@ -299,11 +315,27 @@ Unit of Work & \code{SQLAlchemyUnitOfWork} & Coordina transacciones de repositor
 \end{tabularx}
 \end{table}
 
-### Bounded Context Software Architecture Component Level Diagrams  
+### Bounded Context Software Architecture Component Level Diagrams 
+
+Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
+
+![Diet Tracking (Component Level Diagram)](src/img/cap5/Diet Tracking/Componentes.png)
+
 ### Bounded Context Software Architecture Code Level Diagrams  
 
 #### Bounded Context Domain Layer Class Diagrams  
+
+**Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.**
+
+*En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
+
+![Diet Tracking (Layer Class Diagram)](src/img/cap5/Diet Tracking/Clases.png)
+
 #### Bounded Context Database Design Diagram  
+
+*Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
+
+![Diet Tracking (Database Design Diagram)](src/img/cap5/Diet Tracking/ERD.png)
 
 ## Bounded Context: Notification
 
@@ -377,11 +409,27 @@ Unit of Work & \code{SQLAlchemyUnitOfWork} & Coordina transacciones de repositor
 \end{tabularx}
 \end{table}
 
-### Bounded Context Software Architecture Component Level Diagrams  
+### Bounded Context Software Architecture Component Level Diagrams 
+
+Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
+
+![Notifications (Component Level Diagram)](src/img/cap5/Notifications/Componentes.png)
+
 ### Bounded Context Software Architecture Code Level Diagrams  
 
 #### Bounded Context Domain Layer Class Diagrams  
+
+**Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.**
+
+*En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
+
+![Notifications (Layer Class Diagram)](src/img/cap5/Notifications/Clases.png)
+
 #### Bounded Context Database Design Diagram  
+
+*Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
+
+![Notifications (Database Design Diagram )](src/img/cap5/Notifications/ERD.png)
 
 ## Bounded Context: Payments
 
@@ -493,11 +541,27 @@ Unit of Work & \code{SQLAlchemyUnitOfWork} & Maneja transacciones y persistencia
 \end{tabularx}
 \end{table}
 
-### Bounded Context Software Architecture Component Level Diagrams  
+### Bounded Context Software Architecture Component Level Diagrams 
+
+Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
+
+![Payments (Component Level Diagram)](src/img/cap5/Notifications/Componente.png)
+
 ### Bounded Context Software Architecture Code Level Diagrams  
 
 #### Bounded Context Domain Layer Class Diagrams  
+
+**Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.**
+
+*En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
+
+![Payments (Layer Class Diagram)](src/img/cap5/Notifications/Clases.png)
+
 #### Bounded Context Database Design Diagram  
+
+*Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
+
+![Payments (Database Design Diagram )](src/img/cap5/Notifications/ERD.png)
 
 ## Bounded Context: Identity and Access Management 
 
@@ -567,11 +631,27 @@ File Storage & \code{Cloud Storage (e.g., S3/GCS)} & Servicio para almacenar arc
 \bottomrule
 \end{tabularx}
 
-### Bounded Context Software Architecture Component Level Diagrams  
+### Bounded Context Software Architecture Component Level Diagrams 
+
+Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
+
+![Identity and Access Management (Component Level Diagram)](src/img/cap5/Notifications/Componente.png)
+
 ### Bounded Context Software Architecture Code Level Diagrams  
 
 #### Bounded Context Domain Layer Class Diagrams  
+
+**Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.**
+
+*En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
+
+![Identity and Access Management (Layer Class Diagram)](src/img/cap5/Notifications/Clases.png)
+
 #### Bounded Context Database Design Diagram  
+
+*Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
+
+![Identity and Access Management (Database Design Diagram )](src/img/cap5/Notifications/ERD.png)
 
 ## Bounded Context: Profile
 
@@ -630,11 +710,27 @@ ACL Adapter & \code{UserClientAdapter} & Conector hacia el contexto \code{IAM} p
 \bottomrule
 \end{tabularx}
 
-### Bounded Context Software Architecture Component Level Diagrams  
+### Bounded Context Software Architecture Component Level Diagrams 
+
+Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
+
+![Profile (Component Level Diagram)](src\img\cap5\Profile\Emergentes-Profile.drawio.png)
+
 ### Bounded Context Software Architecture Code Level Diagrams  
 
 #### Bounded Context Domain Layer Class Diagrams  
+
+**Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.**
+
+*En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
+
+![Profile (Layer Class Diagram)](src/img/cap5/Profile/CLASES.png)
+
 #### Bounded Context Database Design Diagram  
+
+*Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
+
+![Profile (Database Design Diagram )](src/img/cap5/Profile/ERD.png)
 
 ## Bounded Context: <Bounded Context Name>  
 
