@@ -783,12 +783,12 @@ Al finalizar el Quality Attribute Workshop, el equipo priorizó los escenarios d
 
 ### EventStorming
 
-La sesión de Event Storming permitió mapear de manera colaborativa el flujo completo de la aplicación de seguimiento nutricional, identificando los eventos clave, los actores involucrados y las interacciones entre ellos. Se definieron los procesos principales: Onboarding del Paciente, Análisis de Datos Nutricionales mediante IA, Seguimiento y Registro de Comidas, Notificaciones y Feedback al Paciente, y el Dashboard para Paciente. 
+La sesión de Event Storming permitió mapear de manera colaborativa el flujo completo de la aplicación de seguimiento nutricional, identificando los eventos clave, los actores involucrados y las interacciones entre ellos. Se definieron los procesos pr incipales: Onboarding del Paciente, Análisis de Datos Nutricionales mediante IA, Seguimiento y Registro de Comidas, Notificaciones y Feedback al Paciente, y el Dashboard para Paciente. 
 
 En cada proceso se visualizaron los eventos disparadores, los comandos, los servicios implicados y las métricas que alimentan el análisis nutricional, facilitando la detección de dependencias, la definición de bounded contexts y la comprensión integral del dominio para guiar el diseño de la solución. 
 
 
-![Recurso realizado en Miro - EventStorming](src/img/cap4/EventStorming.png)
+![Recurso realizado en Miro - EventStorming](src\img\cap4\Event Storming.png)
 
 \newpage
 
@@ -810,64 +810,87 @@ La sesión de Candidate Context Discovery permitió descomponer el dominio de Fo
 
 **Detalle de bounded contexts dilimitados en la sesión**
 
-1. **Contexto de Onboarding del Paciente**
+1. **Contexto de Identity and Access Management**
 
-  - **Límite:** Abarca desde el registro inicial hasta la asignación de un nutricionista.
+  - **Límite:** Abarca desde el registro y autenticación de usuarios hasta la gestión de sesiones y recuperación de credenciales.
 
-  - **Eventos clave:** Creación de cuenta, validación de datos, asignación de nutricionista.
+  - **Eventos clave:** Registro de usuario, verificación de correo electrónico, inicio de sesión, restablecimiento de contraseña, cierre de sesión.
 
-  - **Justificación:** Este bounded context se centra en la identidad y perfil del paciente. Su independencia asegura integridad en la gestión de usuarios y facilita la interoperabilidad con los demás módulos.
+  - **Justificación:** Este bounded context centraliza la seguridad y el control de acceso de los usuarios, asegurando la integridad de las credenciales y la protección de datos sensibles. Su independencia garantiza un manejo coherente de la identidad a través de los demás módulos del sistema.
 
-![EventStorming - Bounded Context Onboarding del Paciente ](src/img/cap4/EventStorming1.png)
-
-\newpage
-
-
-2. **Contexto de Análisis Nutricional (IA)**
-
-  - **Límite:** Procesamiento de datos nutricionales, cálculos de calorías/nutrientes y generación de alertas.
-
-  - **Eventos clave:** Solicitar registro de comidas, análisis automático de fotos, emisión de alertas de hábitos críticos.
-
-  - **Justificación:** Representa el corazón de la propuesta de valor de Foodlytics. Mantenerlo aislado permite escalar los algoritmos de IA sin afectar otros procesos.
-
-![EventStorming - Bounded Context Análisis Nutricional (IA)](src/img/cap4/EventStorming2.png)
+![EventStorming - Bounded Context Identity and Access Management](src/img/cap4/Event Storming 1.png)
 
 \newpage
 
-3. **Contexto de Seguimiento y Registro de Comidas**
+2. **Contexto de Diet Tracking**
 
-  - **Límite:** Captura y almacenamiento del historial alimenticio de cada paciente.
+  - **Límite:** Incluye el registro de comidas, seguimiento de peso, cálculo automático de balance calórico y evaluación del progreso nutricional del paciente.
 
-  - **Eventos clave:** Registro de comida por foto o texto, validación de la entrada, consolidación de histórico.
+  - **Eventos clave:** Registro de comida, actualización de macros, registro de peso diario, generación de historial y dashboard de progreso.
 
-  - **Justificación:** Actúa como repositorio de datos de consumo, asegurando consistencia y sirviendo de insumo directo para el análisis nutricional.
+  - **Justificación:** Este bounded context permite al paciente monitorear su alimentación y evolución física mediante datos procesados en tiempo real, lo que facilita al nutricionista el seguimiento personalizado del plan dietético.
 
-![EventStorming - Bounded Context Seguimiento y Registro de Comidas](src/img/cap4/EventStorming3.png)
-
-\newpage
-
-4. **Contexto de Notificaciones y Feedback**
-
-  - **Límite:** Comunicación personalizada con el paciente en base a resultados y hábitos detectados.
-
-  - **Eventos clave:** Envío de recordatorios, alertas de progreso, mensajes motivacionales.
-
-  - **Justificación:** Se mantiene independiente para poder adaptar canales de comunicación (app, email, SMS) sin modificar la lógica de negocio central.
-
-![EventStorming - Bounded Context Notificaciones y Feedback](src/img/cap4/EventStorming4.png)
+![EventStorming - Bounded Context Diet Tracking](src/img/cap4/Event Storming 2.png)
 
 \newpage
 
-5. **Contexto de Dashboard para Paciente**
+3. **Contexto de Payments**
 
-  - **Límite:** Visualización de métricas, reportes de progreso y estado nutricional.
+  - **Límite:** Abarca la gestión de pagos, validación de suscripciones y control de servicios activos del nutricionista.
 
-  - **Eventos clave:** Generación de reportes, consulta de métricas de consumo, feedback visual.
+  - **Eventos clave:** Inicio de pago, confirmación de transacción, reembolso, generación de comprobante y reporte mensual de ingresos.
 
-  - **Justificación:** Constituye la capa de presentación del sistema hacia el paciente, desacoplada de la lógica de análisis para asegurar flexibilidad en la interfaz.
+  - **Justificación:** Este bounded context permite la administración financiera del sistema, garantizando que los servicios de los nutricionistas se mantengan activos según el estado de sus pagos y suscripciones.
 
-![EventStorming - Bounded Context Dashboard para Paciente](src/img/cap4/EventStorming5.png)
+![EventStorming - Bounded Context Payments](src/img/cap4/Event Storming 3.png)
+
+\newpage
+
+4. **Contexto de Profile**
+
+  - **Límite:** Cubre la actualización de datos personales, objetivos, preferencias y configuración de idioma o tema de los usuarios.
+
+  - **Eventos clave:** Actualización de perfil, modificación de objetivo, validación de datos, notificación de cambios al nutricionista.
+
+  - **Justificación:** Este bounded context permite mantener la información personal y los objetivos del usuario actualizados, asegurando coherencia con los planes nutricionales y facilitando la personalización de la experiencia.
+
+![EventStorming - Bounded Context Profile](src/img/cap4/Event Storming 4.png)
+
+\newpage
+
+5. **Contexto de Coaching**
+
+  - **Límite:** Abarca la creación de planes nutricionales y rutinas de ejercicios, el seguimiento semanal del progreso y la generación de reportes.
+
+  - **Eventos clave:** Creación de plan, evaluación de progreso semanal, ajuste de calorías, exportación de reporte PDF.
+
+  - **Justificación:** Este bounded context define la interacción directa entre el nutricionista y el paciente mediante planes personalizados, asegurando un acompañamiento estructurado y medible.
+
+![EventStorming - Bounded Context Coaching](src/img/cap4/Event Storming 5.png)
+
+\newpage
+
+6. **Contexto de Notifications**
+
+  - **Límite:** Cubre la gestión y envío de recordatorios, notificaciones automáticas y alertas críticas.
+
+  - **Eventos clave:** Programación de notificación, envío de push o correo, confirmación de entrega, cancelación o lectura.
+
+  - **Justificación:** Este bounded context mantiene la comunicación activa entre el sistema y los usuarios, reforzando la adherencia a los planes nutricionales y garantizando la entrega oportuna de información importante.
+
+![EventStorming - Bounded Context Notifications](src/img/cap4/Event Storming 6.png)
+
+\newpage
+
+7. **Contexto de Recognition (IA de reconocimiento de alimentos)**
+
+  - **Límite:** Abarca la detección automática de alimentos mediante visión computacional, el cálculo de calorías estimadas y la corrección manual de los resultados.
+
+  - **Eventos clave:** Carga de imagen, ejecución del reconocimiento, detección de alimentos, ajuste manual, actualización de base de datos.
+
+  - **Justificación:** Este bounded context incorpora inteligencia artificial para simplificar el registro de comidas del paciente, mejorando la precisión y reduciendo el tiempo de registro en el seguimiento dietético.
+
+![EventStorming - Bounded Context Recognition (IA de reconocimiento de alimentos)](src/img/cap4/Event Storming 7.png)
 
 La identificación de estos bounded contexts permitió reducir complejidad, delimitar responsabilidades y sentar las bases para un diseño modular escalable de la solución.
 
@@ -938,23 +961,23 @@ La elaboración de los Bounded Context Canvases permitió plasmar en detalle el 
 
 **Canvas 1 — Food Tracking (Registro de Comidas)**
 
-![1: Food Tracking (Registro de Comidas)](src/img/cap4/Bounded_Context_Canvases_1.png)
+![1: Food Tracking (Registro de Comidas)](src/img/cap4/Bounded Context Canvases 1.png)
 
 **Canvas 2 — Nutrition Analysis (Motor IA/ML)**
 
-![2: Nutrition Analysis (Motor IA/ML)](src/img/cap4/Bounded_Context_Canvases_2.png)
+![2: Nutrition Analysis (Motor IA/ML)](src/img/cap4/Bounded Context Canvases 2.png)
 
 **Canvas 3 — Clinician Dashboard**
 
-![3: Clinician Dashboard](src/img/cap4/Bounded_Context_Canvases_3.png)
+![3: Clinician Dashboard](src/img/cap4/Bounded Context Canvases 3.png)
 
 **Canvas 4 — User & Access (Autenticación y Consentimiento)**
 
-![4: User & Access (Autenticación y Consentimiento)](src/img/cap4/Bounded_Context_Canvases_4.png)
+![4: User & Access (Autenticación y Consentimiento)](src/img/cap4/Bounded Context Canvases 4.png)
 
 **Canvas 5 — Notifications & Reminders**
 
-![5: Notifications & Reminders](src/img/cap4/Bounded_Context_Canvases_5.png)
+![5: Notifications & Reminders](src/img/cap4/Bounded Context Canvases 5.png)
 
 \newpage
 
@@ -980,7 +1003,7 @@ A partir de este análisis se identificaron y aplicaron distintos patrones de re
 
   - Conformist / ACL, en la relación del Clinician Dashboard al consumir reportes y proyecciones de otros contextos.
 
-![Context Mapping](src/img/cap4/ContextMapping.png)
+![Context Mapping](src/img/cap4/Context mapping.png)
 
 El context map resultante proporciona un marco claro para comprender las dependencias y flujos de datos entre módulos, facilita la identificación de puntos críticos de acoplamiento y sirve como guía práctica para la posterior implementación técnica de integraciones entre microservicios.
 
@@ -1000,7 +1023,7 @@ En este caso, se optó por un monolito modular con arquitectura en capas y princ
 
 La primera imagen muestra cómo los pacientes y nutricionistas interactúan con Foodlytics. El paciente registra su consumo y recibe un cálculo aproximado de calorías, mientras que el nutricionista accede a la misma plataforma para hacer seguimiento. Foodlytics se integra con un servicio externo de autenticación (Auth0) que gestiona accesos y con un servicio de IA (GPT4) que procesa imágenes de alimentos. Las fotos enviadas no se almacenan, solo se procesan para devolver información nutricional. El sistema actúa como punto central de interacción entre usuarios y servicios externos. 
 
-![C4 - System context diagram ](src/img/cap4/Emergentes-Contexto.png)
+![C4 - System context diagram ](src/img/cap4/Emergentes-Contexto.drawio.png)
 
 \newpage
 
@@ -1008,11 +1031,11 @@ La primera imagen muestra cómo los pacientes y nutricionistas interactúan con 
 
 La segunda imagen describe la arquitectura por contenedores de Foodlytics. Los usuarios acceden a través de una aplicación móvil y una aplicación web, que se conectan con una landing page que redirige según el perfil. La API en Flask recibe datos, envía imágenes al servicio de IA y maneja autenticación con Auth0. La base de datos en Postgres guarda perfiles e históricos pero no imágenes. El servicio externo de IA procesa las fotos y devuelve calorías y macros. Cada contenedor cumple un rol definido y se conecta con los demás para mantener el flujo de información. 
 
-![C4 - Container diagram ](src/img/cap4/Emergentes-Contenedores.png)
+![C4 - Container diagram ](src/img/cap4/Emergentes-Contenedores.drawio.png)
 
 Al tener una arquitectura monolítica, las instrucciones del docente fue incluir los datos adicionales de los bounded contexts a modo de componentes 
 
-![C4 - Component diagram ](src/img/cap4/Emergentes-Componentes.png)
+![C4 - Component diagram ](src/img/cap4/Emergentes-Componentes.drawio.png)
 
 El diagrama muestra la arquitectura de Foodlytics dividida en bounded contexts y componentes conectados. Los actores son paciente y nutricionista, quienes acceden por aplicación web y móvil. El sistema usa un servicio externo de autenticación (Auth0) y un servicio externo de IA para procesar imágenes de comida. 
 
@@ -1024,7 +1047,7 @@ El almacenamiento está en Foodlytics DB con soporte de un ORM, que guarda infor
 
 ### Software Architecture Deployment Diagrams
 
-![Software Architecture Deployment Diagrams](src/img/cap4/SoftwareArchitectureDeploymentDiagrams.png)
+![Software Architecture Deployment Diagrams](src/img/cap4/Diagrama despliegue emergentes.drawio.png)
 
 El diagrama muestra la arquitectura de despliegue de la solución, donde la aplicación móvil desarrollada en React Native y publicada en App Store y Play Store se conecta mediante una API al servidor de Hostinger, que aloja un backend monolítico en Python Flask encargado de procesar las solicitudes, ejecutar comandos SQL y comunicarse con la base de datos PostgreSQL desplegada en Railway. En el mismo servidor se encuentra el frontend web en Angular, que interactúa con la API a través de HTTPS/JSON, mientras que la Landing Page informativa se aloja de forma independiente en GitHub Pages usando React, permitiendo así que las aplicaciones móviles y web compartan los mismos servicios centralizados y se garantice consistencia de datos y escalabilidad. 
 
