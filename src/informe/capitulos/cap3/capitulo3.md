@@ -167,7 +167,16 @@ En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear e
 \hline
 \textbf{ID} & \textbf{Requisito funcional} \\
 \hline
-\textbf{RF-01} & El paciente debe poder registrarse proporcionando nombres, apellidos, correo electrónico válido y contraseña, para crear su cuenta en la aplicación. \\
+\endfirsthead
+\hline
+\textbf{ID} & \textbf{Requisito funcional} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\textbf{RF-01} & El \textbf{paciente} debe poder registrarse proporcionando nombres, apellidos, correo electrónico válido y contraseña, para crear su cuenta en la aplicación. \\
 \hline
 \textbf{RF-02} & El usuario (paciente o nutricionista) debe poder iniciar y cerrar sesión de forma segura mediante autenticación con credenciales, para proteger su información personal. \\
 \hline
@@ -175,33 +184,69 @@ En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear e
 \hline
 \textbf{RF-04} & El paciente debe poder registrar comidas mediante fotografía con reconocimiento automático por IA, para acelerar el ingreso de alimentos. \\
 \hline
-\textbf{RF-05} & El paciente debe poder corregir manualmente alimentos o porciones detectadas por la IA, para asegurar precisión en el registro. \\
+\textbf{RF-05} & El paciente debe poder \textbf{corregir manualmente} alimentos o porciones detectadas por la IA, para asegurar precisión en el registro. \\
 \hline
-\textbf{RF-06} & El paciente debe poder visualizar un resumen diario de calorías y macronutrientes consumidos, para monitorear su ingesta. \\
+\textbf{RF-06} & El paciente debe poder visualizar un \textbf{resumen diario} de calorías y macronutrientes consumidos, para monitorear su ingesta. \\
 \hline
-\textbf{RF-07} & El paciente debe poder consultar un historial semanal de comidas y balance calórico, para identificar tendencias de consumo. \\
+\textbf{RF-07} & El paciente debe poder consultar un \textbf{historial semanal} de comidas y balance calórico, para identificar tendencias de consumo. \\
 \hline
-\textbf{RF-08} & El paciente debe poder registrar actividad física manual con tipo, duración e intensidad, para completar el cálculo de su gasto energético. \\
+\textbf{RF-08} & El paciente debe poder registrar \textbf{actividad física manual} con tipo, duración e intensidad, para completar el cálculo de su gasto energético. \\
 \hline
-\textbf{RF-09} & El paciente debe poder registrar periódicamente su peso corporal, para hacer seguimiento de su progreso. \\
+\textbf{RF-09} & El paciente debe poder registrar periódicamente su \textbf{peso corporal}, para hacer seguimiento de su progreso. \\
 \hline
-\textbf{RF-10} & El paciente debe poder visualizar el cálculo automático del IMC en base a su peso y talla, para conocer su clasificación nutricional. \\
+\textbf{RF-10} & El paciente debe poder visualizar el \textbf{cálculo automático del IMC} en base a su peso y talla, para conocer su clasificación nutricional. \\
 \hline
-\textbf{RF-11} & El nutricionista debe poder crear planes de dieta personalizados asignados a cada paciente, para guiar su progreso nutricional. \\
+\textbf{RF-12} & El nutricionista debe poder visualizar un \textbf{dashboard} con métricas semanales de cada paciente (calorías, macros, peso, actividad), para evaluar su evolución. \\
 \hline
-\textbf{RF-12} & El nutricionista debe poder visualizar un dashboard con métricas semanales de cada paciente (calorías, macros, peso, actividad), para evaluar su evolución. \\
+\textbf{RF-13} & El nutricionista debe poder \textbf{generar reportes históricos} descargables en PDF o CSV, para compartirlos o archivarlos como evidencia de progreso. \\
 \hline
-\textbf{RF-13} & El nutricionista debe poder generar reportes históricos descargables en PDF o CSV, para compartirlos o archivarlos como evidencia de progreso. \\
+\textbf{RF-14} & El paciente debe poder recibir \textbf{notificaciones automáticas} para registrar comidas y hábitos, para mantener constancia diaria en el uso de la aplicación. \\
 \hline
-\textbf{RF-14} & El paciente debe poder recibir notificaciones automáticas para registrar comidas y hábitos, para mantener constancia diaria en el uso de la aplicación. \\
+\textbf{RF-16} & El nutricionista debe poder \textbf{suscribirse a planes de pago} según la cantidad de pacientes gestionados (básico, intermedio, avanzado), para ajustar la plataforma a sus necesidades. \\
 \hline
-\textbf{RF-15} & El paciente debe poder sincronizar en un único envío diario sus datos locales al backend, para actualizar su historial sin generar duplicados. \\
+\textbf{RF-17} & El nutricionista debe poder \textbf{cancelar su suscripción} en cualquier momento desde la plataforma web, para evitar cobros adicionales. \\
 \hline
-\textbf{RF-16} & El nutricionista debe poder suscribirse a planes de pago según la cantidad de pacientes gestionados (por ejemplo: básico, intermedio, avanzado), para ajustar la plataforma a sus necesidades. \\
+\textbf{RF-18} & El sistema debe \textbf{permitir pagos en línea} a través de pasarelas seguras (tarjeta de crédito/débito, billeteras digitales, transferencias), para facilitar el acceso a los planes de nutricionista. \\
 \hline
-\textbf{RF-17} & El nutricionista debe poder cancelar su suscripción en cualquier momento desde la plataforma web, para evitar cobros adicionales. \\
+\textbf{RF-19} & La \textbf{Landing Page} debe mostrar la \textbf{propuesta de valor} y rutas por segmento (médico/paciente) de forma clara. \\
 \hline
-\textbf{RF-18} & El sistema debe permitir pagos en línea a través de pasarelas seguras (tarjeta de crédito/débito, billeteras digitales, transferencias), para facilitar el acceso a los planes de nutricionista. \\
+\textbf{RF-20} & La Landing Page debe permitir \textbf{ver/reproducir una demo} del producto. \\
+\hline
+\textbf{RF-21} & La Landing Page debe incluir \textbf{formulario de contacto} con validaciones y mecanismo anti-abuso (captcha). \\
+\hline
+\textbf{RF-22} & La Landing Page debe permitir \textbf{compartir en redes sociales} (deep links/metatags sociales). \\
+\hline
+\textbf{RF-23} & La plataforma debe publicar y permitir \textbf{acceso a Políticas y Privacidad vigentes}. \\
+\hline
+\textbf{RF-24} & La Landing Page debe \textbf{exponer metadatos SEO} (title, description, canonical) y estructura semántica para descubrimiento. \\
+\hline
+\textbf{RF-25} & El \textbf{nutricionista} debe poder \textbf{registrar su cuenta} con datos profesionales mínimos (nombre, correo, contraseña). \\
+\hline
+\textbf{RF-26} & El usuario debe poder \textbf{recuperar/restablecer} su contraseña mediante correo con token seguro. \\
+\hline
+\textbf{RF-27} & El nutricionista debe poder \textbf{crear pacientes nuevos}. \\
+\hline
+\textbf{RF-28} & El nutricionista debe poder \textbf{editar información} de pacientes. \\
+\hline
+\textbf{RF-29} & El nutricionista debe poder \textbf{desactivar/eliminar} pacientes (con resguardo de integridad histórica). \\
+\hline
+\textbf{RF-30} & El nutricionista debe poder \textbf{buscar y filtrar} pacientes por nombre o estado. \\
+\hline
+\textbf{RF-31} & El nutricionista debe poder \textbf{ver la dieta diaria} y alimentos del paciente. \\
+\hline
+\textbf{RF-32} & El nutricionista debe poder \textbf{ver macros/calorías} del paciente por día y semana. \\
+\hline
+\textbf{RF-33} & El nutricionista debe poder \textbf{ver actividades} y calorías gastadas del paciente. \\
+\hline
+\textbf{RF-38} & El nutricionista debe poder \textbf{ver el historial de pagos}. \\
+\hline
+\textbf{RF-39} & El nutricionista debe poder \textbf{ver el estado de su suscripción} y la \textbf{fecha del próximo cobro}. \\
+\hline
+\textbf{RF-40} & El paciente debe poder \textbf{registrar/sincronizar pasos diarios} desde el dispositivo o proveedor compatible. \\
+\hline
+\textbf{RF-41} & La app debe mostrar el \textbf{balance diario} (calorías consumidas vs gastadas). \\
+\hline
+\textbf{RF-42} & El sistema debe \textbf{gestionar consentimientos} por finalidad (crear/actualizar/revocar) y \textbf{registrar evidencias} de aceptación. \\
 \hline
 \end{longtable}
 
@@ -213,37 +258,88 @@ En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear e
 \hline
 \textbf{ID} & \textbf{Requisito no funcional} & \textbf{Atributo de calidad} \\
 \hline
-\textbf{RNF-01} & El sistema debe detectar hasta 10,000 usuarios concurrentes activos y mantener una latencia menor a 300 ms en operaciones críticas (login, registro de comidas, sincronización). & Rendimiento \\
+\endfirsthead
 \hline
-\textbf{RNF-02} & Toda comunicación de datos entre cliente, servidor y dispositivos debe realizarse mediante HTTPS con TLS 1.3. & Seguridad \\
+\textbf{ID} & \textbf{Requisito no funcional} & \textbf{Atributo de calidad} \\
 \hline
-\textbf{RNF-03} & El sistema debe estar disponible al menos el 99.9\% del tiempo durante el horario laboral definido de 6:00 a 23:00 (hora Perú). & Disponibilidad \\
+\endhead
 \hline
-\textbf{RNF-04} & La interfaz móvil y web debe cargar en menos de 2 segundos únicamente en conexiones de red 4G o superiores (LTE, 5G o WiFi equivalente). En conexiones menores (3G o inferiores) no se garantiza este tiempo de respuesta. & Rendimiento \\
+\endfoot
 \hline
-\textbf{RNF-05} & El sistema debe registrar métricas de eventos críticos (errores 4xx/5xx, fallos de autenticación, tiempo de respuesta promedio, tasa de sincronización fallida) en logs estructurados, accesibles y auditables. & Observabilidad \\
+\endlastfoot
+\textbf{RNF-01} & El sistema debe \textbf{soportar} hasta 1\,000 usuarios concurrentes activos y mantener latencia $< 300$ ms en operaciones críticas (login, registro de comidas, sincronización). & Rendimiento \\
 \hline
-\textbf{RNF-06} & El backend debe ser escalable horizontalmente y soportar un incremento del 100\% de usuarios en picos de demanda, manteniendo latencia < 500 ms en operaciones críticas. & Escalabilidad \\
+\textbf{RNF-02} & Toda comunicación de datos entre cliente, servidor y dispositivos debe realizarse mediante \textbf{HTTPS con TLS 1.3}. & Seguridad \\
 \hline
-\textbf{RNF-07} & Los datos sensibles de pacientes y nutricionistas deben almacenarse cifrados en reposo con AES-256. El acceso debe estar limitado al 0\% para personal no autorizado. & Seguridad \\
+\textbf{RNF-03} & El sistema debe estar disponible al menos el \textbf{99.9\%} del tiempo durante el horario 6{:}00–23{:}00 (hora Perú). & Disponibilidad \\
 \hline
-\textbf{RNF-08} & La infraestructura debe contar con redundancia al fallo (failover automático con RPO $\leq$ 15 min y RTO $\leq$ 1 hora). & Confiabilidad/Disponibilidad \\
+\textbf{RNF-04} & La interfaz móvil y web debe cargar en \textbf{$< 2$ s} en conexiones 4G o superiores (LTE, 5G o WiFi equivalente). En 3G o inferior no se garantiza este tiempo. & Rendimiento \\
 \hline
-\textbf{RNF-09} & La interfaz debe ser intuitiva y accesible, cumpliendo con las pautas WCAG 2.1 AA (contraste mínimo, navegación por teclado, texto alternativo en imágenes). & Usabilidad/Accesibilidad \\
+\textbf{RNF-05} & Registrar \textbf{métricas de eventos críticos} (errores 4xx/5xx, fallos de autenticación, tiempo de respuesta promedio, tasa de sincronización fallida) en logs estructurados, accesibles y auditables. & Observabilidad \\
 \hline
-\textbf{RNF-10} & El sistema debe ser compatible con navegadores modernos (Chrome, Firefox, Edge, Safari en sus dos últimas versiones) y dispositivos iOS/Android con versiones no mayores a 3 años. & Compatibilidad \\
+\textbf{RNF-06} & El backend debe \textbf{escalar} para absorber $+100\%$ de usuarios en picos manteniendo latencia $< 500$ ms en operaciones críticas, mediante \textbf{escalado vertical u horizontal del monolito}, \textbf{cachés}, y \textbf{pooling} eficiente de recursos. & Escalabilidad \\
 \hline
-\textbf{RNF-11} & El código del backend debe estar modularizado en microservicios documentados, con métricas de cobertura de pruebas unitarias $\geq$ 80\%. & Mantenibilidad \\
+\textbf{RNF-07} & Datos sensibles \textbf{cifrados en reposo} con \textbf{AES-256}; acceso regido por \textbf{deny-by-default} y controles de autorización. & Seguridad \\
 \hline
-\textbf{RNF-12} & Se deben realizar copias de seguridad automáticas de la base de datos al menos una vez al día, garantizando una tasa de éxito del 100\%. & Confiabilidad \\
+\textbf{RNF-08} & \textbf{Redundancia al fallo} (failover automático) con \textbf{RPO $\leq$ 15 min} y \textbf{RTO $\leq$ 1 hora}. & Confiabilidad/Disponibilidad \\
 \hline
-\textbf{RNF-13} & El sistema debe implementar control de acceso basado en roles (RBAC) garantizando que ningún usuario sin permisos pueda acceder a recursos restringidos. & Seguridad \\
+\textbf{RNF-09} & Interfaz \textbf{accesible} cumpliendo \textbf{WCAG 2.1 AA} (contraste, navegación por teclado, texto alternativo). & Usabilidad/Accesibilidad \\
 \hline
-\textbf{RNF-14} & El sistema debe garantizar integridad de datos asegurando 0\% de duplicados en procesos de sincronización diaria. & Confiabilidad \\
+\textbf{RNF-10} & Compatibilidad con navegadores modernos (Chrome, Firefox, Edge, Safari últimas 2 versiones) y dispositivos iOS/Android con versiones \textbf{no mayores a 3 años}. & Compatibilidad \\
 \hline
-\textbf{RNF-15} & El sistema debe cumplir con la Ley de Protección de Datos Personales (Perú) y GDPR, garantizando que el 100\% de los datos personales se procesen bajo consentimiento informado. & Regulatorio/Seguridad \\
+\textbf{RNF-11} & Backend con \textbf{arquitectura de monolito modular} (módulos bien delimitados, dependencias explícitas, límites de dominio), \textbf{documentado}, con \textbf{cobertura de pruebas unitarias $\geq$ 80\%} y \textbf{tests de contrato} entre módulos. & Mantenibilidad \\
 \hline
-\textbf{RNF-16} & La aplicación debe ofrecer modo oscuro y claro, garantizando que todos los elementos mantengan un contraste mínimo de 4.5:1 en ambos modos. & Usabilidad \\
+\textbf{RNF-12} & \textbf{Backups} automáticos de la base de datos al menos 1 vez al día, con \textbf{tasa de éxito 100\%}. & Confiabilidad \\
+\hline
+\textbf{RNF-13} & \textbf{RBAC}: control de acceso basado en roles; impedir acceso a recursos restringidos sin permisos. & Seguridad \\
+\hline
+\textbf{RNF-14} & \textbf{Integridad de datos}: asegurar \textbf{0\% de duplicados} en procesos de sincronización diaria. & Confiabilidad \\
+\hline
+\textbf{RNF-15} & Cumplimiento de \textbf{Ley de Protección de Datos Personales (Perú)} y \textbf{GDPR}; 100\% de datos personales con consentimiento informado. & Regulatorio/Seguridad \\
+\hline
+\textbf{RNF-16} & \textbf{Modo oscuro/claro} con \textbf{contraste mínimo 4.5{:}1} en ambos modos. & Usabilidad \\
+\hline
+\textbf{RNF-17} & \textbf{Pagos/PCI}: cumplimiento \textbf{PCI DSS}; no almacenar PAN/CVV; \textbf{tokenización} con la pasarela. & Seguridad/Regulatorio \\
+\hline
+\textbf{RNF-18} & \textbf{Rate limiting}: límites por IP/usuario/cliente OAuth; respuestas \textbf{429} con ventana deslizante y cabeceras de cuota. & Seguridad/Rendimiento \\
+\hline
+\textbf{RNF-19} & \textbf{Versionado de API}: \textbf{semver}, deprecaciones con preaviso $\geq 90$ días y \textbf{2 versiones} activas soportadas. & Mantenibilidad/Evolutividad \\
+\hline
+\textbf{RNF-20} & \textbf{i18n y tiempo}: \texttt{es-PE} por defecto; fechas en \textbf{RFC 3339/ISO{-}8601}. & Usabilidad/Compatibilidad \\
+\hline
+\textbf{RNF-22} & \textbf{Calidad IA}: precisión mínima Top{-}1 $\geq$ X\% en dataset validado; latencia p95 $\leq 1.5$ s por inferencia en dispositivo medio. & Rendimiento/Exactitud \\
+\hline
+\textbf{RNF-26} & Contratos de API generados automáticamente con \textbf{OpenAPI 3.1} y documentación interactiva en \texttt{/docs} y \texttt{/redoc}; \textbf{esquemas Pydantic} versionados por recurso. & Mantenibilidad \\
+\hline
+\textbf{RNF-27} & \textbf{Validación estricta} de entrada y salida con \textbf{Pydantic} (\textit{request} y \textit{response models}); respuestas 422 coherentes y mensajes de error estandarizados. & Correctitud/Usabilidad \\
+\hline
+\textbf{RNF-28} & \textbf{Seguridad OAuth 2.0} con \textbf{JWT Bearer}; \textbf{scopes} por recurso; contraseñas con \textbf{bcrypt}; rotación de claves y expiración configurable. & Seguridad \\
+\hline
+\textbf{RNF-29} & \textbf{CORS} restrictivo por \textbf{orígenes}, \textbf{métodos} y \textbf{headers} permitidos; denegar por defecto. & Seguridad \\
+\hline
+\textbf{RNF-30} & \textbf{Problem Details} RFC 9457 para errores; códigos y tipos de problema consistentes; correlación mediante \textbf{X-Request-ID}. & Fiabilidad/Observabilidad \\
+\hline
+\textbf{RNF-31} & \textbf{ASGI} con \textbf{Uvicorn} y \textbf{uvloop}; \textbf{workers} configurables (\texttt{gunicorn + uvicorn.workers.UvicornWorker}) \\
+\hline
+\textbf{RNF-32} & \textbf{Rate limiting} por IP y usuario; respuestas 429 con cabeceras de cuota; protección ante fuerza bruta en \texttt{/auth}. & Seguridad/Rendimiento \\
+\hline
+\textbf{RNF-33} & \textbf{Compresión} \texttt{GZip}/\texttt{Brotli} y \textbf{caché HTTP} donde aplique; \textbf{ETag} o \textbf{Last-Modified} para recursos idempotentes. & Rendimiento \\
+\hline
+\textbf{RNF-34} & \textbf{Conexión a BD} con \textbf{pooling} y \textbf{timeouts}; transacciones por solicitud; manejo seguro de sesiones en entorno asincrónico. & Rendimiento/Confiabilidad \\
+\hline
+\textbf{RNF-37} & \textbf{Versionado de API por ruta} (\texttt{/v1}) y \textbf{cabeceras de deprecación}; dos versiones activas simultáneas. & Evolutividad \\
+\hline
+\textbf{RNF-38} & \textbf{Paginación}, \textbf{orden} y \textbf{filtros} consistentes en listados; límites y desplazamiento con validación de rangos. & Usabilidad/Rendimiento \\
+\hline
+\textbf{RNF-39} & \textbf{Configuración 12-factor} con \textbf{Pydantic Settings}; secretos por variables de entorno y almacén seguro. & Mantenibilidad/Seguridad \\
+\hline
+\textbf{RNF-41} & \textbf{Health checks} \texttt{/health} y \texttt{/ready}; verificación de dependencias críticas (BD, caché, colas). & Operabilidad \\
+\hline
+\textbf{RNF-42} & \textbf{Migraciones} controladas (p.ej. Alembic) con \textbf{rollbacks} y \textbf{semillas} por entorno. & Mantenibilidad \\
+\hline
+\textbf{RNF-43} & \textbf{Pruebas} con \texttt{pytest} y \texttt{httpx}; \textbf{pytest-asyncio} para rutas \texttt{async}; \textbf{cobertura $\geq$ 80\%}. & Calidad \\
+\hline
+\textbf{RNF-44} & \textbf{Seguridad de cabeceras} HTTP: \texttt{X-Content-Type-Options}, \texttt{X-Frame-Options}, \texttt{Referrer-Policy}, \texttt{Content-Security-Policy} adecuada al contexto. & Seguridad \\
 \hline
 \end{longtable}
 
