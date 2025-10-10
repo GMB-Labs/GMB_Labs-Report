@@ -1418,9 +1418,31 @@ Cada pantalla fue organizada en torno a flujos de trabajo frecuentes del usuario
 En el caso de la aplicación móvil, los wireframes se centraron en escenarios de uso cotidianos del paciente: registrar comidas mediante fotografía, revisar calorías ingeridas, consultar su progreso diario y recibir recordatorios personalizados. La organización visual prioriza la claridad, el contraste y la navegación táctil, asegurando una experiencia fluida y comprensible incluso para usuarios con poca familiaridad tecnológica.
 
 
+### Applications Wireflow Diagrams 
 
-### Applications Wireflow Diagrams  
+Los wireflows combinan pantallas clave con sus transiciones para mostrar, de forma compacta, cómo navega el usuario y qué decisiones toma en cada paso. Sirven como puente entre la arquitectura de información y los prototipos, ayudando a validar el flujo antes de diseñar visualmente.
 
+#### *Web Wireflow Diagrams*
+
+Este diagrama resume los recorridos principales de la aplicación web, destacando puntos de entrada, decisiones y resultados esperados en cada módulo.
+
+![Artefacto creado en Figma - Flujo Principal](src\img\cap6\flow\Flow.pdf)
+
+Describe el acceso seguro del usuario: ingreso de credenciales, manejo de errores, recuperación de contraseña y redirección a la vista inicial tras un inicio de sesión exitoso.
+
+![Artefacto creado en Figma - Flujo Inicio de Sesion](src\img\cap6\flow\FlowSignIn.pdf)
+
+Cubre la gestión de pacientes: búsqueda y filtros, alta y edición, desactivación con resguardo histórico, y navegación al detalle para revisar dieta, actividad y métricas.
+
+![Artefacto creado en Figma - Flujo Pacientes](src\img\cap6\flow\FlowPatients.pdf)
+
+Expone la planificación temporal: visualización por semana y mes.
+
+![Artefacto creado en Figma - Flujo Calendario](src\img\cap6\flow\FlowCalendar.pdf)
+
+Muestra el tablero de tareas del nutricionista: creación y edición rápida, cambio de estado por arrastre, vistas por paciente o categoría, y confirmaciones ligeras.
+
+![Artefacto creado en Figma - Flujo Kanban Board](src\img\cap6\flow\FlowKanban.pdf)
 
 ### Applications Mock-ups  
 
