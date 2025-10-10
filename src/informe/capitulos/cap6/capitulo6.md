@@ -1307,15 +1307,98 @@ La arquitectura de navegación de integra una experiencia consistente entre plat
 
 ## Landing Page UI Design  
 
+
+::: warn
+Para acceder a la landing page desplegada, haga click en la [URL](https://foodlytics-landingpage.vercel.app/)
+:::
+
+
+El diseño de la interfaz de usuario de la landing page de Foodlytics se desarrolló con un enfoque centrado en el usuario, priorizando la claridad, accesibilidad y jerarquía visual. Su objetivo principal es comunicar de forma inmediata el valor del producto a los dos segmentos clave: nutricionistas y pacientes. La estructura se diseñó para guiar al visitante desde la comprensión del problema hasta la acción de conversión, integrando elementos visuales coherentes con la identidad de la marca.
+
+La landing presenta una distribución modular con secciones diferenciadas: propuesta de valor, beneficios por segmento, testimonios, demo del producto y formulario de contacto. Cada bloque fue diseñado bajo principios de diseño limpio y legible, utilizando espacios amplios, contrastes de color bien definidos y una tipografía moderna que refuerza la confianza y profesionalismo del producto.
+
+El proceso de diseño se desarrolló en Figma, siguiendo una línea de coherencia visual con la aplicación web y móvil. Se construyeron wireframes de baja fidelidad para definir la arquitectura y el flujo de información, los cuales sirvieron de base para los mockups de alta fidelidad que reflejan la versión visual final.
+
+::: warn
+Para acceder a los wireframes de la landing page, haga click en la [URL](https://www.figma.com/design/Q2iA0fbCJIkimHlBRaP9T4/Landing-and-Mobile?node-id=0-1&t=asNFuL2nqvhc6N6W-1)
+:::
+
+Este proceso permitió validar la disposición de elementos, la legibilidad y la efectividad de los llamados a la acción antes de su implementación técnica. El resultado es una landing page funcional, persuasiva y alineada con la estrategia de comunicación de GMB Labs.
+
+\newpage
+
 ### Landing Page Wireframe 
+
+Los wireframes de la landing page definen la estructura general de la interfaz, mostrando la disposición jerárquica de los componentes principales: encabezado con CTA, secciones informativas para cada público objetivo, galería de evidencias y pie de página con políticas y contacto. Este esquema permitió asegurar la coherencia entre los objetivos de negocio y la experiencia del usuario antes del desarrollo visual.
+
+**Landing Page Wireframe - Pacientes**
+
+En el caso del segmento paciente, la experiencia se enfoca en mostrar los beneficios inmediatos del uso de la app: reconocimiento de alimentos por IA, registro rápido de comidas, seguimiento de peso y evolución en tiempo real.
+
+![Figma GMBLabs Wireframe](src/img/cap6/LandingPage-PacientesW.png)
+
+
+**Landing Page Wireframe - Nutricionistas**
+
+En el segmento nutricionista, el contenido resalta el valor profesional del sistema: visualización de métricas de pacientes, panel de seguimiento y generación de reportes automáticos. Ambos flujos comparten una arquitectura coherente, diseñada para mantener consistencia entre versiones web y móvil.
+
+![Figma GMBLabs Wireframe](src/img/cap6/LandingPage-PacientesW.png)
+
+\newpage
 
 ### Landing Page Mock-up  
 
+Los mockups incorporan la identidad visual definitiva del producto. Se aplicaron sombras sutiles, bordes redondeados y fotografías en tonos naturales para generar cercanía. Los botones principales, como “Solicitar demo” y “Ver más”, se presentan en verde menta con contraste sobre fondo blanco, reforzando la acción principal de conversión.
+
+**Landing Page Mock-up - Pacientes**
+
+![Figma GMBLabs Wireframe](src/img/cap6/LandingPage-PacientesM.png)
+
+
+**Landing Page Mock-up - Nutricionistas**
+
+![Figma GMBLabs Wireframe](src/img/cap6/LandingPage-NutricionistasM.png)
+
+\newpage
+
 ## Applications UX/UI Design  
+
+El diseño UX/UI de las aplicaciones de Foodlytics se desarrolló bajo los principios de simplicidad, consistencia y enfoque en el usuario final. Cada interfaz fue concebida para ofrecer una experiencia fluida y coherente entre las distintas plataformas que integran el ecosistema del producto: aplicación móvil para pacientes y aplicación web para nutricionistas.
+
+El objetivo principal fue garantizar que cada segmento de usuario encuentre la información y las acciones relevantes en el menor número de pasos posible. Para lograrlo, se definió un sistema visual común que mantiene la identidad de marca en colores, tipografía, iconografía y tono comunicacional. Este sistema permite una transición natural entre dispositivos y asegura accesibilidad en distintos contextos de uso.
+
+El diseño se construyó de forma iterativa, combinando la arquitectura de información con los hallazgos del proceso de needfinding. Esto permitió que las decisiones visuales respondan a comportamientos reales de los usuarios, priorizando la claridad en las tareas frecuentes, la legibilidad en pantallas pequeñas y la reducción de fricción en procesos clave como el registro de comidas o el seguimiento de métricas.
+
+La experiencia de Foodlytics busca transmitir confianza, inmediatez y control, reflejando el propósito central del producto: hacer que la nutrición digital sea más precisa, personalizada y accesible.
+
+\newpage
+
 
 ### Applications Wireframes
 
-**Web Application**
+Los wireframes de las aplicaciones de Foodlytics representan la estructura funcional y jerárquica de las pantallas principales antes del desarrollo visual. Su propósito fue validar los flujos de interacción, la disposición de los elementos y la coherencia de la navegación en cada versión del producto.
+
+Durante esta etapa, se definieron las secciones base y los componentes reutilizables de la interfaz, como menús, tarjetas de datos, botones de acción y paneles de progreso. Cada wireframe se diseñó siguiendo el principio de “una tarea por pantalla”, buscando minimizar la carga cognitiva y mantener la atención del usuario en un solo objetivo a la vez.
+
+
+#### *Web Application*
+
+Los wireframes de la aplicación web de Foodlytics definen la estructura base del entorno profesional dirigido a nutricionistas. Este canal fue diseñado para optimizar la gestión de pacientes, la visualización de métricas y la generación de reportes, manteniendo una interfaz limpia y centrada en la productividad.
+
+Cada pantalla fue organizada en torno a flujos de trabajo frecuentes del usuario, con el objetivo de reducir pasos innecesarios y facilitar la toma de decisiones clínicas basadas en datos. Las vistas principales comprenden
+
+- **Sign In:** pantalla de acceso con validación segura y opción de recuperación de credenciales.
+
+- **Dashboard:** vista general con indicadores clave de rendimiento, calorías promedio, progreso de pacientes y notificaciones recientes.
+
+- **Patients:** listado con filtros por nombre, estado y objetivos, permitiendo acceder a la ficha individual de cada usuario.
+
+- **Overview:** resumen detallado de la evolución de un paciente, incluyendo peso, calorías consumidas y balance energético semanal.
+
+- **Calendar:** planificación de sesiones y recordatorios, con vista por semana y mes.
+
+- **Kanban Board:** tablero visual para el seguimiento de tareas clínicas y nutricionales, organizado por estados (Pendiente, En curso, Completado).
+
 
 ![Artefacto creado en Figma - Web Application (Sign In)](src\img\cap6\web-wireframes\SignIn.pdf)
 
@@ -1328,6 +1411,13 @@ La arquitectura de navegación de integra una experiencia consistente entre plat
 ![Artefacto creado en Figma - Web Application (Calendar)](src\img\cap6\web-wireframes\Calendar.pdf)
 
 ![Artefacto creado en Figma - Web Application (Kanban Board)](src\img\cap6\web-wireframes\KanbanBoard.pdf)
+
+
+#### *Mobile Aplication*
+
+En el caso de la aplicación móvil, los wireframes se centraron en escenarios de uso cotidianos del paciente: registrar comidas mediante fotografía, revisar calorías ingeridas, consultar su progreso diario y recibir recordatorios personalizados. La organización visual prioriza la claridad, el contraste y la navegación táctil, asegurando una experiencia fluida y comprensible incluso para usuarios con poca familiaridad tecnológica.
+
+
 
 ### Applications Wireflow Diagrams  
 
