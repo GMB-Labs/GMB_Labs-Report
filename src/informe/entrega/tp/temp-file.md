@@ -1841,7 +1841,7 @@ En conjunto, ambos tipos de requisitos permiten reducir ambigüedades, alinear e
 \hline
 \textbf{RNF-30} & \textbf{Problem Details} RFC 9457 para errores; códigos y tipos de problema consistentes; correlación mediante \textbf{X-Request-ID}. & Fiabilidad/Observabilidad \\
 \hline
-\textbf{RNF-31} & \textbf{ASGI} con \textbf{Uvicorn} y \textbf{uvloop}; \textbf{workers} configurables (\texttt{gunicorn + uvicorn.workers.UvicornWorker}) \\
+\textbf{RNF-31} & \textbf{ASGI} con \textbf{Uvicorn} y \textbf{uvloop}; \textbf{workers} configurables (\texttt{gunicorn + uvicorn.workers.UvicornWorker}) y \textbf{keep-alive} optimizado. & Rendimiento \\
 \hline
 \textbf{RNF-32} & \textbf{Rate limiting} por IP y usuario; respuestas 429 con cabeceras de cuota; protección ante fuerza bruta en \texttt{/auth}. & Seguridad/Rendimiento \\
 \hline
