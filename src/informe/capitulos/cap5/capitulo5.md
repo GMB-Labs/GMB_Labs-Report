@@ -545,7 +545,7 @@ Unit of Work & \code{SQLAlchemyUnitOfWork} & Maneja transacciones y persistencia
 
 Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
 
-![Payments (Component Level Diagram)](src/img/cap5/Notifications/Componente.png)
+![Payments (Component Level Diagram)](src\img\cap5\Payments\Foodlytics - Payment Module C4.png)
 
 ### Bounded Context Software Architecture Code Level Diagrams  
 
@@ -555,13 +555,13 @@ Debido a que se está planteando una arquitectura monolitica, se están repartie
 
 *En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
 
-![Payments (Layer Class Diagram)](src/img/cap5/Notifications/Clases.png)
+![Payments (Layer Class Diagram)](src\img\cap5\Payments\Foodlytics - Payment Module Domain Class Diagram.png)
 
 #### Bounded Context Database Design Diagram  
 
 *Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
 
-![Payments (Database Design Diagram )](src/img/cap5/Notifications/ERD.png)
+![Payments (Database Design Diagram )](src\img\cap5\Payments\Foodlytics - Payment Module Database.png)
 
 ## Bounded Context: Identity and Access Management 
 
@@ -635,7 +635,7 @@ File Storage & \code{Cloud Storage (e.g., S3/GCS)} & Servicio para almacenar arc
 
 Debido a que se está planteando una arquitectura monolitica, se están repartiendo los componentes mediante los *Bounded Context*. 
 
-![Identity and Access Management (Component Level Diagram)](src/img/cap5/Notifications/Componente.png)
+![Identity and Access Management (Component Level Diagram)](src/img/cap5/Iam/Componentes.png)
 
 ### Bounded Context Software Architecture Code Level Diagrams  
 
@@ -645,13 +645,13 @@ Debido a que se está planteando una arquitectura monolitica, se están repartie
 
 *En este diagrama se crearon las clases necesarias para el desarrollo de un bounded context*
 
-![Identity and Access Management (Layer Class Diagram)](src/img/cap5/Notifications/Clases.png)
+![Identity and Access Management (Layer Class Diagram)](src/img/cap5/Iam/Clases.png)
 
 #### Bounded Context Database Design Diagram  
 
 *Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
 
-![Identity and Access Management (Database Design Diagram )](src/img/cap5/Notifications/ERD.png)
+![Identity and Access Management (Database Design Diagram )](src/img/cap5/Iam/BD.png)
 
 ## Bounded Context: Profile
 
@@ -731,16 +731,3 @@ Debido a que se está planteando una arquitectura monolitica, se están repartie
 *Python no cuenta con interfaces ni records, por lo que se opta por usar Abstract Classes y Dataclasses.*
 
 ![Profile (Database Design Diagram )](src/img/cap5/Profile/ERD.png)
-
-## Bounded Context: <Bounded Context Name>  
-
-### Domain Layer  
-### Interface Layer  
-### Application Layer  
-### Infrastructure Layer  
-
-### Bounded Context Software Architecture Component Level Diagrams  
-### Bounded Context Software Architecture Code Level Diagrams  
-
-#### Bounded Context Domain Layer Class Diagrams  
-#### Bounded Context Database Design Diagram  
