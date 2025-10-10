@@ -132,11 +132,21 @@ A continuación se detalla los avances y las correciones relevantes durante el d
   \hline
   tb1 & 15/09/2025 & Poma Espinoza, Gustavo Poma  & Desarrollé el diseño de entrevistas, el registro de resultados y su respectivo análisis. Además, apoyé en la elaboración de los apartados relacionados con el modelado de dominios (EventStorming y Context Mapping) \\
   \hline
-  tb1 & 25/04/2025 & Del Castillo Bueno, Daniel Mateo & Redacté los apartados relacionados con las decisiones técnicas y arquitectónicas, incluyendo escenarios de calidad, restricciones y drivers de diseño. También colaboré en la estructuración del backlog arquitectónico. \\
+  tb1 & 25/09/2025 & Del Castillo Bueno, Daniel Mateo & Redacté los apartados relacionados con las decisiones técnicas y arquitectónicas, incluyendo escenarios de calidad, restricciones y drivers de diseño. También colaboré en la estructuración del backlog arquitectónico. \\
   \hline
-  tb1 & 25/04/2025 & Ramos Rios, Belén del Rocio & Integré todos los apartados del documento en LaTeX, asegurando uniformidad en la redacción, formato y referencias. Además, coordiné la coherencia entre secciones y la presentación final del entregable. \\
+  tb1 & 25/09/2025 & Ramos Rios, Belén del Rocio & Integré todos los apartados del documento en LaTeX, asegurando uniformidad en la redacción, formato y referencias. Además, coordiné la coherencia entre secciones y la presentación final del entregable. \\
   \hline
-  tb1 & 25/04/2025 & Vilchez Rios, Mateo Alejandro & Redacté los antecedentes y la problemática inicial, así como los objetivos del proyecto. También elaboré las secciones de User Stories y Product Backlog, contribuyendo a la definición de requerimientos del sistema.. \\
+  tb1 & 25/09/2025 & Vilchez Rios, Mateo Alejandro & Redacté los antecedentes y la problemática inicial, así como los objetivos del proyecto. También elaboré las secciones de User Stories y Product Backlog, contribuyendo a la definición de requerimientos del sistema.. \\
+  \hline
+  tp & 30/09/2025 & Zavala Quedena, Gonzalo Andre & Tactical-Level Software Design of Payments \\
+  \hline
+  tp & 30/09/2025 & Poma Espinoza, Gustavo Poma  & Tactical-Level Software Design of IAM \\
+  \hline
+  tp & 02/10/2025 & Del Castillo Bueno, Daniel Mateo & Tactical-Level Software Design of Diet Tracking, Profile, Notifications and Image Recognition\\
+  \hline
+  tp & 05/09/2025 & Ramos Rios, Belén del Rocio & Solution UX Design of Landing Page and Mobile Application \\
+  \hline
+  tp & 10/09/2025 & Vilchez Rios, Mateo Alejandro & Solution UX Design of Web Application \\
   \hline
 
 \end{longtable}
@@ -170,7 +180,6 @@ El informe del proyecto se desarrolla de manera colaborativa en el repositorio d
 
 \newpage
 
-
 ***Student Outcome***
 
 El curso contribuye al cumplimiento del ***Student Outcome ABET:*** *ABET-EAC - Student Outcome 3*
@@ -179,59 +188,95 @@ El curso contribuye al cumplimiento del ***Student Outcome ABET:*** *ABET-EAC - 
 
 En el siguiente cuadro se describe las acciones realizadas y enunciadas de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro de ***ABET - EAC - Student Outcome 3.***
 
-
-\begin{longtable}{|p{4cm}|p{6cm}|p{5cm}|}
+% Usa tus tipos L{..} ya definidos
+\begin{longtable}{|L{4cm}|L{6cm}|L{5cm}|}
 \hline
-\multicolumn{1}{|c|}{\textbf{Criterio Específico}} & \multicolumn{1}{c|}{\textbf{Acciones Realizadas}} & \multicolumn{1}{c|}{\textbf{Conclusiones}} \\
+\multicolumn{1}{|c|}{\textbf{Criterio Específico}} &
+\multicolumn{1}{c|}{\textbf{Acciones Realizadas}} &
+\multicolumn{1}{c|}{\textbf{Conclusiones}} \\
 \hline
 \endfirsthead
-\parbox[t]{4cm}{
-\textit{Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería.}
-} 
-&  
-\parbox[t]{6cm}{
-\textbf{TB1:} \\
-\textbf{Zavala Quedena, Gonzalo Andre} \\
-Presenté los resultados del análisis de mercado y la propuesta de valor, comunicando con objetividad la ventaja. \\
-\textbf{Poma Espinoza, Gustavo} \\
-Expliqué los hallazgos de la investigación y cómo estos influyeron en la definición de los requerimientos y la arquitectura inicial. \\
-\textbf{Del Castillo Bueno, Daniel Mateo} \\
-Me encargué de exponer las decisiones técnicas y de diseño, explicando los fundamentos y la relevancia de cada elección para el desarrollo del proyecto. \\
-\textbf{Vilchez Ríos, Mateo Alejandro} \\
-Desarrollé la presentación de los avances iniciales del proyecto, exponiendo de forma clara los objetivos y alcances de la propuesta. \\
-\textbf{Ramos Ríos, Belén del Rocío} \\
-Coordiné y aseguré la presentación global del proyecto, reforzando la coherencia del discurso del grupo. \\
-}
+\hline
+\multicolumn{1}{|c|}{\textbf{Criterio Específico}} &
+\multicolumn{1}{c|}{\textbf{Acciones Realizadas}} &
+\multicolumn{1}{c|}{\textbf{Conclusiones}} \\
+\hline
+\endhead
+\endfoot
+\endlastfoot
+
+\textit{Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.}
 &
-\parbox[t]{5cm}{
-\textbf{TB1:} \\
-Como grupo, concluimos que la comunicación oral de nuestras ideas y resultados fue esencial para validar el proyecto frente a diferentes públicos. Se logró transmitir tanto la visión estratégica como los aspectos técnicos de manera comprensible, lo cual facilitó la retroalimentación, redujo ambigüedades y fortaleció la confianza en el trabajo presentado.
-} \\ 
+\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\textbf{TB1:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Presenté los resultados del análisis de mercado y la propuesta de valor.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Expliqué hallazgos de investigación y su impacto en requisitos y arquitectura.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Exposé decisiones técnicas y de diseño con sus fundamentos.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Presenté avances y alcances de la propuesta.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Coordiné la presentación global del proyecto.\\[0.3em]
+\textbf{TP:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Expuse objetivamente el \textit{Tactical Level Software Design}.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Presenté flujos y contratos del diseño táctico.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Comuniqué decisiones y riesgos del diseño táctico.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Exposé el \textit{Solution UX Design} conectando hallazgos y pantallas.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Aseguré la coherencia de la exposición del grupo.
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\textbf{TB1:}\\
+La comunicación oral permitió validar la propuesta con públicos diversos y obtener retroalimentación útil, reduciendo ambigüedades.\\[0.3em]
+\textbf{TP:}\\
+La exposición del diseño táctico y del UX fue clara para perfiles técnicos y no técnicos, facilitando decisiones y alineamiento.
+\end{minipage}
+\\
 \hline
 
-\parbox[t]{4cm}{
-\textit{Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería.}
-}
-&  
-\parbox[t]{6cm}{
-\textbf{TB1:} \\
-\textbf{Zavala Quedena, Gonzalo Andre} \\
-Elaboré los apartados de análisis de mercado y justifiqué las ventajas competitivas del proyecto. \\
-\textbf{Poma Espinoza, Gustavo} \\
-Redacté los hallazgos de las entrevistas y la interpretación de los resultados para guiar las decisiones del proyecto. \\
-\textbf{Del Castillo Bueno, Daniel Mateo} \\
-Documenté las decisiones técnicas y justifiqué los criterios empleados en el diseño, manteniendo precisión y claridad. \\
-\textbf{Vilchez Ríos, Mateo Alejandro} \\
-Redacté los apartados que describen la propuesta y los objetivos del proyecto, estructurando de manera clara los resultados. \\
-\textbf{Ramos Ríos, Belén del Rocío} \\
-Integré todos los apartados en LaTeX, asegurando uniformidad en redacción, formato y referencias. \\
-}
-& 
-\parbox[t]{5cm}{
-\textbf{TB1:} \\
-Concluimos que la documentación escrita permitió plasmar los avances con claridad y objetividad, generando un entregable académico y técnico que refleja el esfuerzo colectivo. La escritura consolidó tanto la justificación del proyecto como la evidencia de los análisis realizados, facilitando que los resultados sean comprendidos y evaluados por distintos perfiles (académicos, técnicos y de negocio). Además, el uso de LaTeX aportó uniformidad, profesionalismo y rigurosidad en la presentación del documento.
-} \\
+\textit{Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.}
+&
+\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\textbf{TB1:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Redacté análisis de mercado y ventajas competitivas.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Documenté hallazgos de entrevistas y su interpretación.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Justifiqué criterios técnicos y de diseño con precisión.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Describí propuesta y objetivos con estructura clara.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Integré en \LaTeX{} con uniformidad y referencias.\\[0.3em]
+\textbf{TP:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Documenté el \textit{Tactical Level Software Design} para audiencias mixtas.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Redacté flujos y contratos del diseño táctico con trazabilidad.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Escribí decisiones y riesgos del diseño táctico con sustento.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Normalicé guías y criterios de accesibilidad del \textit{Solution UX Design}.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Unifiqué estilo y precisión del \textit{Solution UX Design}.
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\textbf{TB1:}\\
+La redacción consolidó evidencia y resultados con objetividad; \LaTeX{} aportó rigor y consistencia.\\[0.3em]
+\textbf{TP:}\\
+Los entregables escritos de diseño táctico y UX aseguraron claridad, trazabilidad y consistencia para todas las audiencias.
+\end{minipage}
+\\
 \hline
+
 \end{longtable}
 
 \newpage
