@@ -561,22 +561,22 @@ Large & 16 px & 48 px & 18 px \\
 
 \begin{longtable}{|c|p{10cm}|}
 \hline
-\textbf{Tipo} & \textbf{Uso previsto} \\ 
+\textbf{Tipo} & \textbf{Uso previsto} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Tipo} & \textbf{Uso previsto} \\ 
+\textbf{Tipo} & \textbf{Uso previsto} \\
 \hline
 \endhead
-Texto simple & Entradas básicas como nombre, correo, peso o meta calórica. \\ 
+Texto simple & Entradas básicas como nombre, correo, peso o meta calórica. \\
 \hline
-Ícono a la derecha & Permite ejecutar acciones contextuales (ej. mostrar/ocultar contraseña o activar búsqueda de alimentos). \\ 
+Ícono a la derecha & Permite ejecutar acciones contextuales (ej. mostrar/ocultar contraseña o activar búsqueda de alimentos). \\
 \hline
-Etiquetado & Refuerza el propósito del campo mediante texto flotante o persistente sobre el borde superior. \\ 
+Etiquetado & Refuerza el propósito del campo mediante texto flotante o persistente sobre el borde superior. \\
 \hline
-Texto asistivo & Muestra reglas de validación, tips nutricionales o mensajes de ayuda sobre formato o unidades. \\ 
+Texto asistivo & Muestra reglas de validación, tips nutricionales o mensajes de ayuda sobre formato o unidades. \\
 \hline
-Redimensionable & Se usa para comentarios o anotaciones personalizadas dentro del registro diario. \\ 
+Redimensionable & Se usa para comentarios o anotaciones personalizadas dentro del registro diario. \\
 \hline
 \end{longtable}
 
@@ -585,19 +585,19 @@ Redimensionable & Se usa para comentarios o anotaciones personalizadas dentro de
 
 \begin{longtable}{|c|p{10cm}|}
 \hline
-\textbf{Estado} & \textbf{Función} \\ 
+\textbf{Estado} & \textbf{Función} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Estado} & \textbf{Función} \\ 
+\textbf{Estado} & \textbf{Función} \\
 \hline
 \endhead
-Normal & Campo vacío, disponible para recibir datos. Indica su propósito de manera visual y clara. \\ 
-Focus & Se activa al seleccionar el campo. Resalta el borde con el color de marca para guiar la atención del usuario. \\ 
+Normal & Campo vacío, disponible para recibir datos. Indica su propósito de manera visual y clara. \\
+Focus & Se activa al seleccionar el campo. Resalta el borde con el color de marca para guiar la atención del usuario. \\
 \hline
-Error (Status color) & Indica información incorrecta o faltante. Aplica color rojo y texto auxiliar con mensaje descriptivo. \\ 
+Error (Status color) & Indica información incorrecta o faltante. Aplica color rojo y texto auxiliar con mensaje descriptivo. \\
 \hline
-Disabled & Campo deshabilitado o bloqueado. Útil para datos autogenerados por el sistema o configuraciones avanzadas. \\ 
+Disabled & Campo deshabilitado o bloqueado. Útil para datos autogenerados por el sistema o configuraciones avanzadas. \\
 \hline
 \end{longtable}
 
@@ -640,22 +640,22 @@ Disabled & Campo deshabilitado o bloqueado. Útil para datos autogenerados por e
 
 \begin{longtable}{|c|p{10cm}|}
 \hline
-\textbf{Tamaño} & \textbf{Uso seleccionado} \\ 
+\textbf{Tamaño} & \textbf{Uso seleccionado} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Tamaño} & \textbf{Uso seleccionado} \\ 
+\textbf{Tamaño} & \textbf{Uso seleccionado} \\
 \hline
 \endhead
-XS & Confirmaciones simples o mensajes informativos (ej. “Cambios guardados correctamente”). \\ 
+XS & Confirmaciones simples o mensajes informativos (ej. “Cambios guardados correctamente”). \\
 \hline
-SM & Acciones rápidas o formularios mínimos (ej. “¿Deseas eliminar este registro?”). \\ 
+SM & Acciones rápidas o formularios mínimos (ej. “¿Deseas eliminar este registro?”). \\
 \hline
-MD & Diálogos estándar con campos de validación o selección (ej. “Editar datos del paciente”). \\ 
+MD & Diálogos estándar con campos de validación o selección (ej. “Editar datos del paciente”). \\
 \hline
-LG & Formularios con múltiples acciones o configuración avanzada (ej. “Actualizar plan nutricional”). \\ 
+LG & Formularios con múltiples acciones o configuración avanzada (ej. “Actualizar plan nutricional”). \\
 \hline
-XL & Visualización de reportes o datos analíticos (ej. “Detalle de progreso semanal”). \\ 
+XL & Visualización de reportes o datos analíticos (ej. “Detalle de progreso semanal”). \\
 \hline
 \end{longtable}
 
@@ -754,20 +754,20 @@ Vertical & Full Height & Ocupa toda la altura disponible del contenedor. \\
 
 \begin{longtable}{|c|p{11cm}|}
 \hline
-\textbf{Plataforma} & \textbf{Uso y propósito} \\ 
+\textbf{Plataforma} & \textbf{Uso y propósito} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Plataforma} & \textbf{Uso y propósito} \\ 
+\textbf{Plataforma} & \textbf{Uso y propósito} \\
 \hline
 \endhead
-Web App (Nutricionistas) & Elemento fundamental en vistas jerárquicas del dashboard, especialmente en la gestión de pacientes, análisis de reportes y configuración de planes alimentarios. Mejora la orientación y reduce pasos innecesarios. \\ 
+Web App (Nutricionistas) & Elemento fundamental en vistas jerárquicas del dashboard, especialmente en la gestión de pacientes, análisis de reportes y configuración de planes alimentarios. Mejora la orientación y reduce pasos innecesarios. \\
 \hline
-App Móvil (Pacientes) & Uso mínimo, ya que la navegación se mantiene superficial e intuitiva mediante tabs y cards. Se reserva para vistas donde el usuario profundiza en reportes o historial detallado. \\ 
+App Móvil (Pacientes) & Uso mínimo, ya que la navegación se mantiene superficial e intuitiva mediante tabs y cards. Se reserva para vistas donde el usuario profundiza en reportes o historial detallado. \\
 \hline
-Tablet (Versión híbrida) & Emplea el mismo patrón que la aplicación web, adaptando el espaciado y tipografía para mejorar la visibilidad táctil y lectura en orientación horizontal. \\ 
+Tablet (Versión híbrida) & Emplea el mismo patrón que la aplicación web, adaptando el espaciado y tipografía para mejorar la visibilidad táctil y lectura en orientación horizontal. \\
 \hline
-IA / Backend & No aplica, dado que el sistema de inteligencia artificial no presenta navegación visual jerárquica. \\ 
+IA / Backend & No aplica, dado que el sistema de inteligencia artificial no presenta navegación visual jerárquica. \\
 \hline
 \end{longtable}
 
@@ -799,20 +799,20 @@ IA / Backend & No aplica, dado que el sistema de inteligencia artificial no pres
 
 \begin{longtable}{|c|c|p{8cm}|}
 \hline
-\textbf{Tipo} & \textbf{Color} & \textbf{Uso recomendado} \\ 
+\textbf{Tipo} & \textbf{Color} & \textbf{Uso recomendado} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Tipo} & \textbf{Color} & \textbf{Uso recomendado} \\ 
+\textbf{Tipo} & \textbf{Color} & \textbf{Uso recomendado} \\
 \hline
 \endhead
-Success & \#05C168 & Confirma acciones completadas con éxito, como guardar un registro o generar un reporte. \\ 
+Success & \#05C168 & Confirma acciones completadas con éxito, como guardar un registro o generar un reporte. \\
 \hline
-Info & \#1D88FE & Comunica información general, actualizaciones o recordatorios no críticos. \\ 
+Info & \#1D88FE & Comunica información general, actualizaciones o recordatorios no críticos. \\
 \hline
-Warning & \#FDB52A & Advierte sobre acciones que podrían requerir revisión, como datos incompletos o configuraciones pendientes. \\ 
+Warning & \#FDB52A & Advierte sobre acciones que podrían requerir revisión, como datos incompletos o configuraciones pendientes. \\
 \hline
-Error & \#FF5A65 & Indica errores en formularios, fallas de conexión o acciones no permitidas. \\ 
+Error & \#FF5A65 & Indica errores en formularios, fallas de conexión o acciones no permitidas. \\
 \hline
 \end{longtable}
 
@@ -827,7 +827,6 @@ Error & \#FF5A65 & Indica errores en formularios, fallas de conexión o acciones
 ![Artefacto creado en Figma](src/img/cap6/Notifications.png)
 
 \newpage
-
 
 ## Information Architecture  
 
@@ -872,7 +871,6 @@ La aplicación móvil fue diseñada con una estructura lineal que permite al pac
 
 \newpage
 
-
 **Arquitectura de Información – Landing Page**
 
 La arquitectura de la landing page cumple una función informativa y promocional. Está diseñada para presentar el producto, detallar beneficios y facilitar la conversión de visitantes en usuarios.
@@ -909,7 +907,7 @@ En el caso de *Foodlytics*, se han definido tres sistemas de organización princ
 \hline
 \endfirsthead
 \hline
-\textbf{Tópico} & \ textbf{Sistema de Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\textbf{Tópico} & \textbf{Sistema de Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
 \hline
 \endhead
 Inicio & Jerárquico visual & Cronológica & Presenta el resumen diario del paciente con calorías consumidas, macros e IMC actual. \\
@@ -1067,7 +1065,7 @@ El sistema de etiquetado de Foodlytics se construyó sobre una lógica semántic
 
   En Foodlytics, la búsqueda activa está implementada principalmente en la plataforma web de nutricionistas, donde se gestionan múltiples perfiles, reportes y métricas. En cambio, la aplicación móvil para pacientes presenta información ya personalizada y filtrada automáticamente, evitando la necesidad de búsquedas manuales.
 
-- **Filtros y herramientas de búsqueda en la Web App**
+**Filtros y herramientas de búsqueda en la Web App**
 
 \begin{longtable}{|p{5cm}|p{9.5cm}|}
 \hline
@@ -1086,7 +1084,7 @@ Estado del plan nutricional & Permite visualizar únicamente a los pacientes con
 \hline
 Fecha de registro / actualización & Filtra según la fecha de creación del paciente o la última modificación de su plan. \\
 \hline
-Indicador de progreso & Muestra pacientes con progreso superior o inferior a un umbral definido (ej. +10% o –5%). \\
+Indicador de progreso & Muestra pacientes con progreso superior o inferior a un umbral definido (ej. +10\% o –5\%). \\
 \hline
 Tipo de reporte generado & Filtra informes nutricionales, calóricos o antropométricos según categoría. \\
 \hline
@@ -1103,10 +1101,9 @@ Búsqueda avanzada combinada & Combina varios criterios (ej. paciente + fecha + 
   - Cada resultado permite acceso directo al perfil del paciente, reporte o tarea asociada.
   - Los resultados se muestran en tablas interactivas o tarjetas con métricas resumidas, optimizando la lectura visual.
 
+**App móvil – Pacientes**
 
-- **App móvil – Pacientes**
-
-  En la aplicación móvil, el sistema no requiere un buscador manual, ya que el contenido se muestra automáticamente filtrado por perfil. El usuario solo accede a sus propios datos y métricas, con vistas separadas según el tipo de información.
+En la aplicación móvil, el sistema no requiere un buscador manual, ya que el contenido se muestra automáticamente filtrado por perfil. El usuario solo accede a sus propios datos y métricas, con vistas separadas según el tipo de información.
 
 \begin{longtable}{|p{5cm}|p{9.5cm}|}
 \hline
@@ -1127,15 +1124,11 @@ Alertas contextuales & El sistema prioriza notificaciones relevantes según comp
 \hline
 \end{longtable}
 
-
 Esta combinación de sistemas garantiza que tanto nutricionistas como pacientes puedan acceder de forma ágil a la información más relevante, manteniendo la coherencia visual y funcional en todo el ecosistema Foodlytics. La búsqueda avanzada en la web y la presentación automatizada en la app móvil contribuyen a mejorar la eficiencia, precisión y satisfacción del usuario.
 
 \newpage
 
-
-
 ### SEO Tags, Meta Tags y ASO Elements 
-
 
 - **Propósito**
 
@@ -1264,9 +1257,7 @@ Como afirma Garrett (2011), “la navegación efectiva proporciona al usuario un
 
 En Foodlytics, los sistemas de navegación se adaptan al contexto de uso y tipo de usuario. En la aplicación móvil, se prioriza la simplicidad y el flujo lineal, mientras que en la plataforma web se optimiza la exploración de información analítica y la gestión de pacientes. Ambos mantienen coherencia visual con la guía de estilo general y con los principios de accesibilidad definidos para el producto.
 
-
-
-- **App móvil – Pacientes**
+**App móvil – Pacientes**
 
 \begin{longtable}{|p{5cm}|p{9.5cm}|}
 \hline
@@ -1281,7 +1272,7 @@ Menú inferior (tab bar) & Contiene accesos directos a: Inicio, Comidas, Activid
 \hline
 Navegación jerárquica & Desde cada sección principal se puede acceder a pantallas secundarias (por ejemplo, ver detalle de comida registrada o progreso semanal). \\
 \hline
-Retroalimentación visual & Íconos activos cambian de color al seleccionarse (verde menta #2FCBAC). Se incluyen notificaciones visibles en el ícono de “Perfil” para alertas de progreso o recordatorios. \\
+Retroalimentación visual & Íconos activos cambian de color al seleccionarse (verde menta \#2FCBAC). Se incluyen notificaciones visibles en el ícono de “Perfil” para alertas de progreso o recordatorios. \\
 \hline
 Navegación simplificada & El diseño prioriza la experiencia rápida y directa. Solo se muestran funciones esenciales: registrar, visualizar y revisar métricas. \\
 \hline
@@ -1289,8 +1280,7 @@ Gestos táctiles & Permite desplazamiento lateral entre secciones y cierre de fo
 \hline
 \end{longtable}
 
-
-- **Aplicación Web – Nutricionistas**
+**Aplicación Web – Nutricionistas**
 
 \begin{longtable}{|p{5cm}|p{9.5cm}|}
 \hline
@@ -1315,9 +1305,7 @@ Breadcrumbs (rutas jerárquicas) & Indican la ubicación actual dentro del siste
 \hline
 \end{longtable}
 
-
-
-- **Landing Page – Público general**
+**Landing Page – Público general**
 
 \begin{longtable}{|p{5cm}|p{9.5cm}|}
 \hline
@@ -1330,9 +1318,9 @@ Breadcrumbs (rutas jerárquicas) & Indican la ubicación actual dentro del siste
 \endhead
 Navbar superior fijo & Incluye enlaces a secciones: Pacientes, Nutricionistas, Nosotros y Descargar App. Permanece visible al hacer scroll. \\
 \hline
-Scroll guiado (anclajes) & Permite desplazarse entre secciones mediante anclas internas (“#pacientes”, “#nutricionistas”, etc.). \\
+Scroll guiado (anclajes) & Permite desplazarse entre secciones mediante anclas internas (“\#pacientes”, “\#nutricionistas”, etc.). \\
 \hline
-Botones de llamada a la acción (CTA) & Elementos de navegación destacados en color de marca (#2FCBAC), ubicados en secciones clave. Ejemplo: “Probar ahora” o “Ver demo”. \\
+Botones de llamada a la acción (CTA) & Elementos de navegación destacados en color de marca (\#2FCBAC), ubicados en secciones clave. Ejemplo: “Probar ahora” o “Ver demo”. \\
 \hline
 Navegación jerárquica visual & Los encabezados (H1–H3) organizan el contenido según su relevancia informativa. \\
 \hline
@@ -1340,13 +1328,9 @@ Footer navegable & Contiene accesos secundarios a políticas de privacidad, cont
 \hline
 \end{longtable}
 
-
-La arquitectura de navegación de integra una experiencia consistente entre plataformas. Mientras la versión móvil prioriza la inmediatez, fluidez y accesibilidad táctil, la versión web enfatiza control, gestión de datos y análisis avanzado.
-Ambos entornos comparten un mismo lenguaje visual y estructura cognitiva, asegurando una experiencia coherente y predecible para todos los usuarios.
+La arquitectura de navegación de integra una experiencia consistente entre plataformas. Mientras la versión móvil prioriza la inmediatez, fluidez y accesibilidad táctil, la versión web enfatiza control, gestión de datos y análisis avanzado. Ambos entornos comparten un mismo lenguaje visual y estructura cognitiva, asegurando una experiencia coherente y predecible para todos los usuarios.
 
 \newpage
-
-
 
 ## Landing Page UI Design  
 
@@ -1354,14 +1338,25 @@ Ambos entornos comparten un mismo lenguaje visual y estructura cognitiva, asegur
 
 ### Landing Page Mock-up  
 
-
 ## Applications UX/UI Design  
 
-### Applications Wireframes  
+### Applications Wireframes
+
+**Web Application**
+
+![Artefacto creado en Figma - Web Application (Sign In)](src\img\cap6\web-wireframes\SignIn.pdf)
+
+![Artefacto creado en Figma - Web Application (Dashboard)](src\img\cap6\web-wireframes\Dashboard.pdf)
+
+![Artefacto creado en Figma - Web Application (Patients)](src\img\cap6\web-wireframes\Patients.pdf)
+
+![Artefacto creado en Figma - Web Application (Overview)](src\img\cap6\web-wireframes\Overview.pdf)
+
+![Artefacto creado en Figma - Web Application (Calendar)](src\img\cap6\web-wireframes\Calendar.pdf)
+
+![Artefacto creado en Figma - Web Application (Kanban Board)](src\img\cap6\web-wireframes\KanbanBoard.pdf)
 
 ### Applications Wireflow Diagrams  
-
-
 
 
 ### Applications Mock-ups  
@@ -1375,3 +1370,7 @@ este no va
 ## Applications Prototyping  
 
 este no va 
+
+
+
+
