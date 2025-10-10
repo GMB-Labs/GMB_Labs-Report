@@ -841,36 +841,510 @@ Morville y Rosenfeld (2023) sostienen que una arquitectura de información efica
 
 \vspace{1em}
 
-En el desarrollo de Foodlytics, la arquitectura de información se diseñó a partir de los perfiles identificados en la etapa de investigación: nutricionistas y pacientes. La estructura se centra en jerarquías simples y accesibles, priorizando las tareas más frecuentes de cada usuario para mantener una navegación fluida y coherente.
+Durante el desarrollo de Foodlytics, se diseñaron tres arquitecturas de información diferenciadas, alineadas con los objetivos funcionales de cada entorno: Landing Page, Aplicación Web para Nutricionistas y Aplicación Móvil para Pacientes. Todas comparten los principios de jerarquía clara, coherencia visual y accesibilidad transversal definidos en las guías de estilo del producto.
 
 A continuación se presentan los mapas generales de arquitectura de información correspondientes a cada tipo de usuario:
 
 
-**Arquitectura de Información – App Móvil para Pacientes**
-
-![Artefacto creado en Figma](src/img/cap5/AppPadres.png)
-
-
 **Arquitectura de Información – Plataforma Web para Nutricionistas**
 
-![Artefacto creado en Figma](src/img/cap5/AppWeb.png)
+La versión web está orientada a los profesionales de la salud que gestionan la información de múltiples pacientes. La jerarquía prioriza el acceso rápido a los módulos analíticos, tareas y gestión personalizada.
+
+- **Objetivo:** Facilitar el trabajo analítico y la toma de decisiones mediante una navegación por módulos bien definidos.
+
+- **Características:** Grillas de datos, filtros avanzados, secciones de exportación y dashboards dinámicos.
+
+![Artefacto creado en Figma](src/img/cap6/AppNutricionistas.png)
+
+
+\newpage
+
+
+**Arquitectura de Información – App Móvil para Pacientes**
+
+La aplicación móvil fue diseñada con una estructura lineal que permite al paciente registrar información de manera rápida y visualizar su progreso diario.
+
+- **Objetivo:** Permitir al usuario realizar acciones rápidas (registrar comidas, peso o actividad) y acceder fácilmente a métricas y reportes.
+
+- **Características:** Navegación inferior por tabs, campos de registro simplificados e integración con IA para detección visual de alimentos.
+
+![Artefacto creado en Figma](src/img/cap6/AppPacientes.png)
+
+\newpage
 
 
 **Arquitectura de Información – Landing Page**
 
-![Artefacto creado en Figma](src/img/cap5/Landing_Page.png)
+La arquitectura de la landing page cumple una función informativa y promocional. Está diseñada para presentar el producto, detallar beneficios y facilitar la conversión de visitantes en usuarios.
+
+- **Objetivo:** Transmitir la propuesta de valor de manera clara y motivar la descarga de la aplicación.
+
+- **Características:** Jerarquía de información simple, secciones breves con scroll continuo y puntos de acción destacados.
+
+![Artefacto creado en Figma](src/img/cap6/Landing_Page.png)
 
 
-### Organization Systems.
+Las secciones siguientes profundizan en los sistemas implementados para organización, etiquetado, navegación y búsqueda, así como en los elementos de SEO (Search Engine Optimization) y ASO (App Store Optimization) que fortalecen la visibilidad del producto.
 
-### Labeling Systems  
+
+\newpage
+
+### Organization Systems
+
+**Propósito**
+
+La arquitectura organizativa en *Foodlytics* permite estructurar la información de manera que los usuarios accedan rápida y eficientemente a los contenidos más relevantes, según su perfil y propósito de uso.
+
+Según Morville y Rosenfeld (2023), “los sistemas de organización son esenciales para transformar el caos en claridad, facilitando que los usuarios comprendan la lógica detrás del contenido digital”.
+
+En el caso de *Foodlytics*, se han definido tres sistemas de organización principales, adaptados a las necesidades de los nutricionistas, pacientes y usuarios informativos de la landing page.
+
+- **Organización para Pacientes (App móvil)**
+
+  La aplicación móvil está diseñada para mostrar la información más relevante sobre el progreso diario del paciente, manteniendo un flujo jerárquico y secuencial en la navegación. El contenido prioriza la simplicidad y la inmediatez, permitiendo registrar alimentos, visualizar métricas y acceder al historial en pocos pasos.
+
+\begin{longtable}{|p{3cm}|p{4.5cm}|p{3.5cm}|p{5cm}|}
+\hline
+\textbf{Tópico} & \textbf{Sistema de Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tópico} & \ textbf{Sistema de Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\hline
+\endhead
+Inicio & Jerárquico visual & Cronológica & Presenta el resumen diario del paciente con calorías consumidas, macros e IMC actual. \\
+\hline
+Registro de comidas & Secuencial (paso a paso) & Por tópico (tiempo de comida) & Flujo guiado para registrar desayuno, almuerzo, cena o snack con opción de foto o ingreso manual. \\
+\hline
+Actividad física & Jerárquico visual & Cronológica & Organiza actividades por tipo y fecha, mostrando progreso semanal y cumplimiento de metas. \\
+\hline
+Historial & Lista jerárquica ordenada & Cronológica & Permite consultar registros pasados de comidas, peso o actividad, organizados por días o semanas. \\
+\hline
+Perfil del paciente & Modular & Por tópico & Contiene datos personales, preferencias y configuraciones de notificaciones. \\
+\hline
+\end{longtable}
+
+
+- **Organización para Nutricionistas (Aplicación Web)**
+
+  La aplicación web para nutricionistas emplea una estructura modular y jerárquica. Cada módulo responde a una categoría funcional (pacientes, reportes, tareas o configuración), facilitando el análisis de información y la administración eficiente de los datos.
+
+\begin{longtable}{|p{3cm}|p{3.5cm}|p{3.5cm}|p{4.5cm}|}
+\hline
+\textbf{Tópico} & \textbf{Sistema de Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tópico} & \textbf{Sistema de Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\hline
+\endhead
+Dashboard & Jerárquico (panel con KPIs) & Por tópico & Muestra métricas clave como evolución de pacientes, progreso y cumplimiento de metas nutricionales. \\
+\hline
+Gestión de pacientes & Visual matricial & Por audiencia & Agrupa a los pacientes por tipo de plan o nivel de avance. Permite filtrado por nombre o estado. \\
+\hline
+Reportes y métricas & Jerárquico + secuencial & Cronológica / temática & Organiza reportes por fechas o indicadores (peso, calorías, balance nutricional). \\
+\hline
+Tareas y recordatorios & Secuencial (flujo Kanban) & Por estado & Permite gestionar tareas en estados “Por hacer”, “En progreso” y “Hecho”. \\
+\hline
+Configuración & Modular & Por tópico & Centraliza funciones de exportación, idioma, notificaciones y autenticación (Auth0). \\
+\hline
+\end{longtable}
+
+- **Organización en la Landing Page (Sitio informativo)**
+
+  La landing page de Foodlytics está diseñada para guiar al visitante a través de un flujo informativo que presenta la propuesta de valor, los beneficios del sistema y los enlaces de descarga. La organización sigue un orden secuencial con énfasis en las llamadas a la acción (CTAs).
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{3.5cm}|p{5cm}|}
+\hline
+\textbf{Tópico} & \textbf{Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tópico} & \textbf{Organización Visual} & \textbf{Categorización Aplicada} & \textbf{Descripción} \\
+\hline
+\endhead
+Menú principal & Jerárquico visual horizontal & Por audiencia & Pacientes, Nutricionistas y Nosotros. Cada ruta presenta secciones propias con información adaptada. \\
+\hline
+Flujo de contenido & Secuencial (scroll vertical guiado) & Por tópico & Presenta beneficios, funcionamiento, características y testimonios en un recorrido continuo. \\
+\hline
+Call to Action (CTA) & Jerárquico visual final & Ninguna & Botones destacados de “Descargar App” o “Ver demo” al final de cada sección. \\
+\hline
+Contacto & Modular & Por audiencia & Canaliza consultas hacia el equipo de nutricionistas o el soporte técnico. \\
+\hline
+\end{longtable}
+
+Esta organización garantiza que cada tipo de usuario —nutricionista, paciente o visitante informativo— pueda acceder a la información que necesita de forma clara, eficiente y sin fricción. La coherencia entre los tres sistemas refuerza la identidad digital de *Foodlytics*, mejora la comprensión del contenido y facilita la navegación en todo su ecosistema digital.
+
+\newpage
+
+### Labeling Systems
+
+- **Propósito**
+
+  Los sistemas de etiquetado son fundamentales para la claridad, coherencia y navegación dentro de un producto digital. Una nomenclatura precisa y uniforme permite que los usuarios comprendan de inmediato qué acciones pueden realizar, qué tipo de información están observando y cómo desplazarse por el sistema sin confusión.
+
+  En *Foodlytics*, las etiquetas se desarrollaron bajo tres principios principales: simplicidad, consistencia y significado contextual. Cada palabra o ícono fue elegido con el fin de guiar a los usuarios (nutricionistas, pacientes o visitantes de la web) hacia sus objetivos de manera intuitiva y eficiente, reduciendo la carga cognitiva y favoreciendo una experiencia coherente entre plataformas.
+
+- **App móvil – Pacientes**
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Tópico} & \textbf{Definición} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tópico} & \textbf{Definición} \\
+\hline
+\endhead
+Inicio & Pantalla principal donde el usuario visualiza su resumen diario con calorías consumidas, metas alcanzadas, y alertas generadas por el sistema. \\
+\hline
+Comidas & Sección donde el paciente registra sus alimentos, clasificados por desayuno, almuerzo, cena o snack. Incluye opción de reconocimiento por foto o registro manual. \\
+\hline
+Actividad & Módulo que permite registrar peso, calorías quemadas o ejercicio físico, además de mostrar métricas semanales de actividad. \\
+\hline
+Historial & Vista consolidada que organiza los registros anteriores (alimentación, peso y actividad) por día o semana. Facilita el seguimiento a largo plazo. \\
+\hline
+Perfil & Sección donde el usuario puede actualizar datos personales, preferencias de idioma, notificaciones y privacidad. \\
+\hline
+\end{longtable}
+
+- **Aplicación Web – Nutricionistas**
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Tópico} & \textbf{Definición} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tópico} & \textbf{Definición} \\
+\hline
+\endhead
+Dashboard & Vista general del sistema con métricas agregadas, gráficos comparativos y panel de progreso por paciente. \\
+\hline
+Pacientes & Módulo donde se gestionan los perfiles individuales de los usuarios. Permite buscar, editar, eliminar o visualizar el historial nutricional. \\
+\hline
+Reportes & Sección destinada a generar informes automáticos en PDF o Excel. Incluye exportaciones filtradas por fechas, indicadores o tipo de plan. \\
+\hline
+Tareas & Panel de control tipo Kanban donde se gestionan pendientes y recordatorios asociados a pacientes o análisis de datos. \\
+\hline
+Configuración & Espacio de personalización del sistema: idioma, temas de color, notificaciones y credenciales seguras mediante Auth0. \\
+\hline
+\end{longtable}
+
+- **Landing Page – Público general**
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Tópico} & \textbf{Definición} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tópico} & \textbf{Definición} \\
+\hline
+\endhead
+Pacientes & Sección informativa orientada al usuario final. Presenta beneficios de la app, ejemplos visuales y acceso al botón de descarga. \\
+\hline
+Nutricionistas & Espacio dedicado a los profesionales. Explica las herramientas analíticas de la plataforma y su impacto en la gestión nutricional. \\
+\hline
+Nosotros & Contiene la descripción institucional de GMB Labs, los valores del proyecto y un enlace de contacto general. \\
+\hline
+Demo / Descargar app & Botón principal de acción (CTA) que redirige al enlace de descarga o visualización de la versión de prueba. \\
+\hline
+Preguntas frecuentes & Sección de soporte básico que responde dudas comunes sobre uso, registro, privacidad y compatibilidad. \\
+\hline
+\end{longtable}
+
+
+El sistema de etiquetado de Foodlytics se construyó sobre una lógica semántica clara, evitando redundancias y tecnicismos innecesarios. Cada etiqueta se probó en flujos de navegación reales para garantizar que fuera comprensible para ambos perfiles de usuario. Esto contribuye a una experiencia más accesible y homogénea en todo el ecosistema digital del producto.
+
+\newpage
 
 ### Searching Systems  
 
+- **Propósito**
+
+  Los sistemas de búsqueda en productos digitales permiten al usuario navegar entre grandes volúmenes de información de forma eficiente, reduciendo la fricción y optimizando el tiempo de interacción.
+
+  En Foodlytics, la búsqueda activa está implementada principalmente en la plataforma web de nutricionistas, donde se gestionan múltiples perfiles, reportes y métricas. En cambio, la aplicación móvil para pacientes presenta información ya personalizada y filtrada automáticamente, evitando la necesidad de búsquedas manuales.
+
+- **Filtros y herramientas de búsqueda en la Web App**
+
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+\hline
+\textbf{Filtro / Función} & \textbf{Definición} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Filtro / Función} & \textbf{Definición} \\
+\hline
+\endhead
+Nombre del paciente & Permite localizar rápidamente a un paciente específico mediante la entrada parcial o completa del nombre. \\
+\hline
+Correo electrónico o ID de usuario & Filtra pacientes registrados por correo o identificador único asignado por el sistema. \\
+\hline
+Estado del plan nutricional & Permite visualizar únicamente a los pacientes con planes activos, en revisión o finalizados. \\
+\hline
+Fecha de registro / actualización & Filtra según la fecha de creación del paciente o la última modificación de su plan. \\
+\hline
+Indicador de progreso & Muestra pacientes con progreso superior o inferior a un umbral definido (ej. +10% o –5%). \\
+\hline
+Tipo de reporte generado & Filtra informes nutricionales, calóricos o antropométricos según categoría. \\
+\hline
+Intervalo temporal & Permite consultar métricas específicas por rango de fechas (última semana, mes, trimestre). \\
+\hline
+Búsqueda avanzada combinada & Combina varios criterios (ej. paciente + fecha + tipo de plan) para obtener resultados más precisos. \\
+\hline
+\end{longtable}
+
+- **Diseño de resultados y experiencia de búsqueda**
+
+  - Los resultados se ordenan por nombre o fecha de actualización, según el contexto del módulo.
+  - Los campos de búsqueda incluyen autocompletado inteligente que sugiere coincidencias parciales.
+  - Cada resultado permite acceso directo al perfil del paciente, reporte o tarea asociada.
+  - Los resultados se muestran en tablas interactivas o tarjetas con métricas resumidas, optimizando la lectura visual.
+
+
+- **App móvil – Pacientes**
+
+  En la aplicación móvil, el sistema no requiere un buscador manual, ya que el contenido se muestra automáticamente filtrado por perfil. El usuario solo accede a sus propios datos y métricas, con vistas separadas según el tipo de información.
+
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+\hline
+\textbf{Característica} & \textbf{Función} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Característica} & \textbf{Función} \\
+\hline
+\endhead
+Vista personalizada por paciente & Cada usuario visualiza únicamente sus datos nutricionales, objetivos y progreso diario. \\
+\hline
+Historial por fecha & Los registros de comidas, peso o actividad se organizan automáticamente por orden cronológico. \\
+\hline
+Métricas destacadas & Se muestran valores resumidos como calorías, macros y porcentaje de cumplimiento diario. \\
+\hline
+Alertas contextuales & El sistema prioriza notificaciones relevantes según comportamiento alimentario o nivel de actividad. \\
+\hline
+\end{longtable}
+
+
+Esta combinación de sistemas garantiza que tanto nutricionistas como pacientes puedan acceder de forma ágil a la información más relevante, manteniendo la coherencia visual y funcional en todo el ecosistema Foodlytics. La búsqueda avanzada en la web y la presentación automatizada en la app móvil contribuyen a mejorar la eficiencia, precisión y satisfacción del usuario.
+
+\newpage
+
+
+
 ### SEO Tags, Meta Tags y ASO Elements 
 
-### Navigation Systems  
 
+- **Propósito**
+
+  En la plataforma *Foodlytics*, los SEO Tags y Meta Tags desempeñan un papel esencial para mejorar la visibilidad digital y garantizar que tanto los usuarios potenciales como los profesionales de la salud puedan encontrar el producto fácilmente a través de motores de búsqueda y tiendas de aplicaciones.
+
+  Aunque *Foodlytics* cuenta con una aplicación web y una aplicación móvil, la landing page es el principal punto de entrada y posicionamiento orgánico, por lo que ha sido optimizada con etiquetas cuidadosamente estructuradas para maximizar el alcance y reforzar la identidad de marca de GMB Labs.
+
+
+- **SEO Tags**
+
+  Los SEO Tags ayudan a mejorar el posicionamiento orgánico de la landing page de *Foodlytics* en motores de búsqueda como Google, optimizando el descubrimiento del producto por parte de nutricionistas, pacientes y profesionales del bienestar.
+  A continuación se presentan ejemplos aplicados:
+
+  - **Title Tag**  
+    Define el título mostrado en los resultados de búsqueda.
+
+    ```html
+    <title>Foodlytics - Nutrición Inteligente Basada en Datos</title>
+    ```
+
+  - **Meta Description**  
+    Proporciona un resumen claro y atractivo del contenido de la página.
+
+    ```html
+    <meta name="description" content="Foodlytics es una plataforma de análisis nutricional inteligente que conecta a nutricionistas y pacientes para optimizar planes alimentarios con datos y métricas en tiempo real." />
+    ```
+
+  - **Header Tags**  
+    Establecen jerarquías semánticas dentro del contenido de la landing page.
+
+    ```html
+      <h1>Tu nutrición, más inteligente cada día</h1>
+      <h2>Datos, métricas y progreso en tiempo real</h2>
+      <h3>Optimiza tu salud con tecnología nutricional</h3>
+    ```
+
+
+- **Meta Tags**
+
+  Los Meta Tags transmiten información técnica a los navegadores y motores de búsqueda, mejorando la accesibilidad, el rendimiento y el SEO técnico de la página. Algunos de los implementados en *Foodlytics* son:
+
+  - **Charset Meta Tag**
+
+    ```html
+    <meta charset="UTF-8">
+    ```
+
+  - **Viewport Meta Tag**
+
+    ```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ```
+
+  - **Robots Meta Tag**
+
+    ```html
+    <meta name="robots" content="index, follow">
+    ```
+
+  - **Canonical Tag**
+
+    ```html
+    <link rel="canonical" href="https://foodlytics.com">
+    ```
+
+
+- **Landing Page SEO Tags (para la aplicación móvil)**
+
+  Además de las etiquetas básicas, Foodlytics emplea SEO tags específicos diseñados para destacar la aplicación móvil en resultados de búsqueda, fomentando su descarga directa:
+
+  ```html
+    <title>Foodlytics | Tu Nutrición Simplificada con IA</title>
+    <meta name="description" content="Foodlytics te permite registrar, analizar y optimizar tu nutrición con inteligencia artificial. Ideal para nutricionistas y pacientes. Disponible en Android e iOS.">
+    <meta name="keywords" content="app nutrición, seguimiento nutricional, dieta inteligente, inteligencia artificial, control de macros, salud digital">
+    <meta name="author" content="GMB Labs">
+    <link rel="canonical" href="https://foodlytics.app/">
+    ```
+
+- **App Store Optimization (ASO)**
+
+    Para mejorar la visibilidad de la aplicación en Google Play y App Store, Foodlytics aplica una estrategia de ASO (App Store Optimization) que incluye la optimización de títulos, descripciones y palabras clave específicas del sector nutricional.
+
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Elemento} & \textbf{Valor propuesto} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Elemento} & \textbf{Valor propuesto} \\
+\hline
+\endhead
+App Title & Foodlytics: Nutrición Inteligente Basada en Datos \\
+\hline
+App Subtitle & Seguimiento nutricional con inteligencia artificial \\
+\hline
+App Description & Con Foodlytics, los nutricionistas pueden crear y monitorear planes personalizados mientras los pacientes registran su alimentación y progreso con datos en tiempo real. Incluye análisis automáticos de macros, alertas de hábitos y reportes exportables en PDF. Ideal para una nutrición moderna y basada en evidencia. \\
+\hline
+Keywords & app nutrición, seguimiento alimenticio, IA nutricional, control de macros, salud digital, dieta personalizada \\
+\hline
+Developer & GMB Labs \\
+\hline
+Categoría & Salud y Bienestar / Nutrición \\
+\hline
+URL descarga Android & \url{https://play.google.com/store/apps/details?id=com.foodlytics}
+ \\
+\hline
+URL descarga iOS & \url{https://apps.apple.com/app/foodlytics/id987654321}
+ \\
+\hline
+\end{longtable}
+
+
+El uso estratégico de SEO Tags y Meta Tags en Foodlytics potencia el posicionamiento de la marca en buscadores y redes sociales, asegurando una primera impresión profesional y coherente con la identidad visual del producto.
+Asimismo, las prácticas de ASO garantizan un mejor rendimiento en las tiendas de aplicaciones, aumentando la tasa de descarga y fortaleciendo la presencia digital del ecosistema Foodlytics.
+
+\newpage
+
+### Navigation Systems
+
+- **Propósito**
+
+Los sistemas de navegación son el conjunto de elementos y patrones que permiten al usuario desplazarse de forma lógica, intuitiva y eficiente dentro de una interfaz digital. Una navegación bien diseñada no solo facilita el acceso a la información, sino que también refuerza la sensación de control y orientación dentro del sistema.
+
+Como afirma Garrett (2011), “la navegación efectiva proporciona al usuario una sensación de lugar, dirección y control dentro de un producto digital”.
+
+En Foodlytics, los sistemas de navegación se adaptan al contexto de uso y tipo de usuario. En la aplicación móvil, se prioriza la simplicidad y el flujo lineal, mientras que en la plataforma web se optimiza la exploración de información analítica y la gestión de pacientes. Ambos mantienen coherencia visual con la guía de estilo general y con los principios de accesibilidad definidos para el producto.
+
+
+
+- **App móvil – Pacientes**
+
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+\hline
+\textbf{Elemento de navegación} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Elemento de navegación} & \textbf{Descripción} \\
+\hline
+\endhead
+Menú inferior (tab bar) & Contiene accesos directos a: Inicio, Comidas, Actividad, Historial y Perfil. Visible en toda la aplicación. \\
+\hline
+Navegación jerárquica & Desde cada sección principal se puede acceder a pantallas secundarias (por ejemplo, ver detalle de comida registrada o progreso semanal). \\
+\hline
+Retroalimentación visual & Íconos activos cambian de color al seleccionarse (verde menta #2FCBAC). Se incluyen notificaciones visibles en el ícono de “Perfil” para alertas de progreso o recordatorios. \\
+\hline
+Navegación simplificada & El diseño prioriza la experiencia rápida y directa. Solo se muestran funciones esenciales: registrar, visualizar y revisar métricas. \\
+\hline
+Gestos táctiles & Permite desplazamiento lateral entre secciones y cierre de formularios mediante “swipe down”. \\
+\hline
+\end{longtable}
+
+
+- **Aplicación Web – Nutricionistas**
+
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+\hline
+\textbf{Elemento de navegación} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Elemento de navegación} & \textbf{Descripción} \\
+\hline
+\endhead
+Menú lateral persistente & Acceso permanente a módulos principales: Dashboard, Pacientes, Reportes, Tareas y Configuración. Se mantiene fijo en todas las vistas. \\
+\hline
+Submenús plegables & Permite desplegar subcategorías (por ejemplo, “Reportes → Individuales / Comparativos / Exportaciones”). \\
+\hline
+Navegación contextual & Acciones como “Editar paciente”, “Generar reporte” o “Agregar recordatorio” aparecen junto a los datos relevantes. \\
+\hline
+Navegación matricial & Distribución tipo grid utilizada en listados de pacientes y paneles de progreso. Facilita la lectura de múltiples registros simultáneamente. \\
+\hline
+Accesos rápidos & Botones flotantes o destacados dentro del dashboard para tareas frecuentes como “Añadir paciente” o “Generar informe semanal”. \\
+\hline
+Breadcrumbs (rutas jerárquicas) & Indican la ubicación actual dentro del sistema (por ejemplo: Dashboard > Pacientes > Juan Pérez > Reporte mensual). \\
+\hline
+\end{longtable}
+
+
+
+- **Landing Page – Público general**
+
+\begin{longtable}{|p{5cm}|p{9.5cm}|}
+\hline
+\textbf{Elemento de navegación} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Elemento de navegación} & \textbf{Descripción} \\
+\hline
+\endhead
+Navbar superior fijo & Incluye enlaces a secciones: Pacientes, Nutricionistas, Nosotros y Descargar App. Permanece visible al hacer scroll. \\
+\hline
+Scroll guiado (anclajes) & Permite desplazarse entre secciones mediante anclas internas (“#pacientes”, “#nutricionistas”, etc.). \\
+\hline
+Botones de llamada a la acción (CTA) & Elementos de navegación destacados en color de marca (#2FCBAC), ubicados en secciones clave. Ejemplo: “Probar ahora” o “Ver demo”. \\
+\hline
+Navegación jerárquica visual & Los encabezados (H1–H3) organizan el contenido según su relevancia informativa. \\
+\hline
+Footer navegable & Contiene accesos secundarios a políticas de privacidad, contacto y redes sociales oficiales de Foodlytics. \\
+\hline
+\end{longtable}
+
+
+La arquitectura de navegación de integra una experiencia consistente entre plataformas. Mientras la versión móvil prioriza la inmediatez, fluidez y accesibilidad táctil, la versión web enfatiza control, gestión de datos y análisis avanzado.
+Ambos entornos comparten un mismo lenguaje visual y estructura cognitiva, asegurando una experiencia coherente y predecible para todos los usuarios.
+
+\newpage
 
 
 
@@ -887,8 +1361,17 @@ A continuación se presentan los mapas generales de arquitectura de información
 
 ### Applications Wireflow Diagrams  
 
+
+
+
 ### Applications Mock-ups  
+
+este no va 
 
 ### Applications User Flow Diagrams  
 
+este no va 
+
 ## Applications Prototyping  
+
+este no va 
