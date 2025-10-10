@@ -200,7 +200,6 @@ La paleta de colores está estructurada en tres grupos principales: los colores 
 
  ![Artefacto creado en Figma](src/img/cap6/BrandColors1.png)
 
-
 \newpage
 
 - **Colores Secundarios (*Secondary Colors*)**
@@ -214,7 +213,6 @@ La paleta de colores está estructurada en tres grupos principales: los colores 
   - **Verde Desaturado (#82D9B0)** Complementa el verde principal en interfaces minimalistas o de baja carga visual.
   
   - **Verde Claro (#A4E5C6):** Aplicado en fondos suaves, tarjetas informativas y espacios de descanso visual.
-  
   
   ![Artefacto creado en Figma](src/img/cap6/BrandColors2.png)
 
@@ -265,7 +263,6 @@ El sistema de color para texto asegura legibilidad y jerarquía en todas las int
 \vspace{1em}
 
   ![Artefacto creado en Figma](src/img/cap6/TextColors.png)
-
 
 \newpage
 
@@ -319,7 +316,6 @@ La identidad tipográfica de Foodlytics ha sido cuidadosamente definida para gar
 
   ![Artefacto creado en Figma](src/img/cap6/Typography_Outfit_landingWeb.png)
 
-
 - ***Roboto* (Google Fonts)**
   
   - Peso utilizado: *Light, Regular, Regular* 
@@ -328,7 +324,6 @@ La identidad tipográfica de Foodlytics ha sido cuidadosamente definida para gar
 
   ![Artefacto creado en Figma](src/img/cap6/Typography_Roboto.png)
 
-
 - ***Material Symbols Outlined***
   
   - Sistema de íconos oficial de Google Material.
@@ -336,7 +331,6 @@ La identidad tipográfica de Foodlytics ha sido cuidadosamente definida para gar
   Este set tipográfico se utiliza para representar íconos en botones, paneles y menús de navegación, manteniendo un lenguaje visual coherente con la estética general del sistema.
 
   ![Artefacto creado en Figma](src/img/cap6/material.png)
-
 
 \newpage
 
@@ -350,9 +344,7 @@ La identidad tipográfica de Foodlytics ha sido cuidadosamente definida para gar
 
   ![Artefacto creado en Figma](src/img/cap6/Typography_Poppins_app.png)
 
-
 \newpage
-
 
 **Tonos de Comunicación**
 
@@ -370,9 +362,7 @@ El lenguaje se mantiene respetuoso, amigable y claro, evitando tecnicismos innec
 
 ![Artefacto creado en Figma](src/img/cap6/ToneOfVoice.png)
 
-
 \vspace{1em}
-
 
 **Eslogan**
 
@@ -422,7 +412,6 @@ La versión web prioriza la claridad en la presentación de información analít
 
   A continuación, se muestra una tabla con las configuraciones técnicas definidas para cada tipo de plataforma:
 
-  
 \begin{longtable}{|c|c|c|c|c|}
 \hline
 \textbf{Plataforma} & \textbf{Resolución} & \textbf{Columnas} & \textbf{Gutter (px)} & \textbf{Ancho de columna (px)} \\
@@ -446,7 +435,6 @@ Estas configuraciones permiten distribuir el contenido de manera eficiente y vis
 
 \newpage
 
-
 - **Aplicación por plataforma**
 
   - **Aplicación Web (Nutricionistas):** Implementa una estructura modular basada en 12 columnas para soportar paneles analíticos, tablas y formularios extensos. El objetivo es maximizar el uso del espacio manteniendo claridad y jerarquía visual.
@@ -458,7 +446,6 @@ Estas configuraciones permiten distribuir el contenido de manera eficiente y vis
 
 
   - **Dashboard Administrativo:** Usa una grilla adaptable para manejar reportes, métricas y visualización de progreso, conservando uniformidad con la interfaz principal.
-
 
 ![Artefacto creado en Figma](src/img/cap6/Grid.png)
 
@@ -530,7 +517,6 @@ Large & 16 px & 48 px & 18 px \\
 
   - **Tablet (Modo híbrido):**  Combina elementos de ambas interfaces, priorizando botones medianos y espacios amplios. Ideal para nutricionistas en consulta o revisión de planes en campo.
 
-
 ![Artefacto creado en Figma](src/img/cap6/Button_Link.png)
 
 \newpage
@@ -579,7 +565,6 @@ Texto asistivo & Muestra reglas de validación, tips nutricionales o mensajes de
 Redimensionable & Se usa para comentarios o anotaciones personalizadas dentro del registro diario. \\
 \hline
 \end{longtable}
-
 
 - **Estados definidos y su propósito**
 
@@ -634,7 +619,6 @@ Disabled & Campo deshabilitado o bloqueado. Útil para datos autogenerados por e
   - **Tamaños escalables:** Se definen cinco tamaños (de XS a XL) según el nivel de complejidad de la acción o cantidad de información que contienen.
 
   - **Retroalimentación inmediata:** Cada acción dentro de un diálogo genera una respuesta visual o una notificación que confirma su ejecución, reforzando la sensación de control del usuario.
-
 
 - **Tamaños disponibles**
 
@@ -844,7 +828,6 @@ Durante el desarrollo de Foodlytics, se diseñaron tres arquitecturas de informa
 
 A continuación se presentan los mapas generales de arquitectura de información correspondientes a cada tipo de usuario:
 
-
 **Arquitectura de Información – Plataforma Web para Nutricionistas**
 
 La versión web está orientada a los profesionales de la salud que gestionan la información de múltiples pacientes. La jerarquía prioriza el acceso rápido a los módulos analíticos, tareas y gestión personalizada.
@@ -855,9 +838,7 @@ La versión web está orientada a los profesionales de la salud que gestionan la
 
 ![Artefacto creado en Figma](src/img/cap6/AppNutricionistas.png)
 
-
 \newpage
-
 
 **Arquitectura de Información – App Móvil para Pacientes**
 
@@ -883,7 +864,6 @@ La arquitectura de la landing page cumple una función informativa y promocional
 
 
 Las secciones siguientes profundizan en los sistemas implementados para organización, etiquetado, navegación y búsqueda, así como en los elementos de SEO (Search Engine Optimization) y ASO (App Store Optimization) que fortalecen la visibilidad del producto.
-
 
 \newpage
 
@@ -921,7 +901,6 @@ Historial & Lista jerárquica ordenada & Cronológica & Permite consultar regist
 Perfil del paciente & Modular & Por tópico & Contiene datos personales, preferencias y configuraciones de notificaciones. \\
 \hline
 \end{longtable}
-
 
 - **Organización para Nutricionistas (Aplicación Web)**
 
@@ -1052,7 +1031,6 @@ Preguntas frecuentes & Sección de soporte básico que responde dudas comunes so
 \hline
 \end{longtable}
 
-
 El sistema de etiquetado de Foodlytics se construyó sobre una lógica semántica clara, evitando redundancias y tecnicismos innecesarios. Cada etiqueta se probó en flujos de navegación reales para garantizar que fuera comprensible para ambos perfiles de usuario. Esto contribuye a una experiencia más accesible y homogénea en todo el ecosistema digital del producto.
 
 \newpage
@@ -1136,7 +1114,6 @@ Esta combinación de sistemas garantiza que tanto nutricionistas como pacientes 
 
   Aunque *Foodlytics* cuenta con una aplicación web y una aplicación móvil, la landing page es el principal punto de entrada y posicionamiento orgánico, por lo que ha sido optimizada con etiquetas cuidadosamente estructuradas para maximizar el alcance y reforzar la identidad de marca de GMB Labs.
 
-
 - **SEO Tags**
 
   Los SEO Tags ayudan a mejorar el posicionamiento orgánico de la landing page de *Foodlytics* en motores de búsqueda como Google, optimizando el descubrimiento del producto por parte de nutricionistas, pacientes y profesionales del bienestar.
@@ -1164,7 +1141,6 @@ Esta combinación de sistemas garantiza que tanto nutricionistas como pacientes 
       <h2>Datos, métricas y progreso en tiempo real</h2>
       <h3>Optimiza tu salud con tecnología nutricional</h3>
     ```
-
 
 - **Meta Tags**
 
@@ -1194,7 +1170,6 @@ Esta combinación de sistemas garantiza que tanto nutricionistas como pacientes 
     <link rel="canonical" href="https://foodlytics.com">
     ```
 
-
 - **Landing Page SEO Tags (para la aplicación móvil)**
 
   Además de las etiquetas básicas, Foodlytics emplea SEO tags específicos diseñados para destacar la aplicación móvil en resultados de búsqueda, fomentando su descarga directa:
@@ -1210,7 +1185,6 @@ Esta combinación de sistemas garantiza que tanto nutricionistas como pacientes 
 - **App Store Optimization (ASO)**
 
     Para mejorar la visibilidad de la aplicación en Google Play y App Store, Foodlytics aplica una estrategia de ASO (App Store Optimization) que incluye la optimización de títulos, descripciones y palabras clave específicas del sector nutricional.
-
 
 \begin{longtable}{|p{4cm}|p{10.5cm}|}
 \hline
@@ -1240,7 +1214,6 @@ URL descarga iOS & \url{https://apps.apple.com/app/foodlytics/id987654321}
  \\
 \hline
 \end{longtable}
-
 
 El uso estratégico de SEO Tags y Meta Tags en Foodlytics potencia el posicionamiento de la marca en buscadores y redes sociales, asegurando una primera impresión profesional y coherente con la identidad visual del producto.
 Asimismo, las prácticas de ASO garantizan un mejor rendimiento en las tiendas de aplicaciones, aumentando la tasa de descarga y fortaleciendo la presencia digital del ecosistema Foodlytics.
