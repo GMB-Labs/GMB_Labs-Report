@@ -1413,9 +1413,60 @@ Cada pantalla fue organizada en torno a flujos de trabajo frecuentes del usuario
 ![Artefacto creado en Figma - Web Application (Kanban Board)](src\img\cap6\web-wireframes\KanbanBoard.pdf)
 
 
-#### *Mobile Aplication*
+#### *Mobile Application Wireframes*
 
-En el caso de la aplicación móvil, los wireframes se centraron en escenarios de uso cotidianos del paciente: registrar comidas mediante fotografía, revisar calorías ingeridas, consultar su progreso diario y recibir recordatorios personalizados. La organización visual prioriza la claridad, el contraste y la navegación táctil, asegurando una experiencia fluida y comprensible incluso para usuarios con poca familiaridad tecnológica.
+Los wireframes de la aplicación móvil de Foodlytics representan la estructura base de la experiencia del paciente. La interfaz se diseñó priorizando simplicidad, navegación táctil y claridad visual, permitiendo registrar y monitorear información nutricional en tiempo real. Cada grupo de pantallas se centra en una función principal, optimizando el flujo de interacción para reducir fricción y reforzar el sentido de progreso.
+
+1. **Calcular IMC (Onboarding Nutricional)**
+Permite recopilar los datos iniciales del usuario para calcular su Índice de Masa Corporal y definir sus metas diarias de calorías, proteínas, carbohidratos y grasas. Incluye preguntas sobre edad, género, altura, peso actual, peso objetivo y nivel de actividad. El resultado genera un plan calórico automático que se actualiza conforme al progreso del usuario.
+
+![Artefacto creado en Figma - Mobile Application (Onboarding Nutricional)](src\img\cap6\CalcularIMC.png)
+
+2. **Pantalla Principal (Dashboard del Paciente)**
+Funciona como el punto de entrada a la aplicación. Muestra un resumen de calorías consumidas, quemadas y restantes, el IMC actual, los macronutrientes diarios y el registro de comidas del día. También incluye notificaciones contextuales que orientan al usuario en sus primeras acciones dentro de la app.
+
+![Artefacto creado en Figma - Mobile Application (Dashboard del Paciente)](src\img\cap6\Pantallaprincipal.png)
+
+3. **Registro de Comidas**
+Integra el flujo de captura y análisis de alimentos mediante visión artificial. El usuario enfoca su plato, la IA detecta los alimentos y calcula su composición nutricional. Luego, puede editar cantidades, asignar la comida (desayuno, almuerzo o cena) y guardar el registro. Este flujo reduce el tiempo de registro manual y mejora la precisión calórica.
+
+![Artefacto creado en Figma - Mobile Application (Registro de Comidas)](src\img\cap6\ComidasRegistradas.png)
+
+4. **Actividad y Progreso**
+Permite registrar y visualizar datos relacionados con la actividad física. Las pantallas muestran calorías quemadas, duración de ejercicios y estadísticas de progreso semanal. Se incluyen gráficos de evolución del peso, cumplimiento de metas y adherencia al plan.
+
+![Artefacto creado en Figma - Mobile Application (Actividad y Progreso)](src\img\cap6\Actividad.png)
+
+
+5. **Acciones Rápidas**
+Facilita accesos directos desde cualquier parte de la app. El usuario puede registrar comida, peso, actividad o metas desde un panel emergente. Este diseño mejora la eficiencia y mantiene la continuidad del flujo principal sin necesidad de regresar a la pantalla inicial.
+
+![Artefacto creado en Figma - Mobile Application (Acciones Rápidas)](src\img\cap6\AccionesRapidas.png)
+
+6. **Registrar Actividad**
+Permite ingresar actividades físicas específicas indicando tipo, duración e intensidad. El sistema calcula las calorías quemadas y muestra una confirmación al completar el registro. Este flujo mantiene coherencia con la vista de progreso semanal.
+
+![Artefacto creado en Figma - Mobile Application (Registrar Actividad)](src\img\cap6\ractividad.png)
+
+
+7. **Registrar Peso**
+El usuario puede actualizar su peso actual, ver la diferencia con su meta y el progreso acumulado. Los datos se reflejan automáticamente en los gráficos del panel de progreso y en las metas nutricionales diarias.
+
+![Artefacto creado en Figma - Mobile Application (Registrar Peso)](src\img\cap6\rpeso.png)
+
+
+8. **Perfil y Configuración de Cuenta**
+Reúne los apartados de datos personales, objetivos, idioma, notificaciones, privacidad y control de datos. Cada subpantalla está organizada bajo el principio de claridad y jerarquía visual, garantizando que el usuario entienda el propósito de cada opción sin sobrecarga cognitiva.
+
+![Artefacto creado en Figma - Mobile Application (Perfil y Configuración de Cuenta)](src\img\cap6\Perfil.png)
+
+
+9. **Pantallas de Autenticación (Carga, Login, Registro y Recuperación)**
+Incluyen el flujo de inicio de sesión y registro de nuevos usuarios. Se prioriza la legibilidad y el acceso rápido, con formularios simplificados y validaciones visuales claras. La pantalla de carga refuerza la identidad visual de Foodlytics y anticipa la experiencia personalizada del sistema.
+
+![Artefacto creado en Figma - Mobile Application (Pantallas de Autenticación)](src\img\cap6\Inicio.png)
+
+Todos los wireframes fueron elaborados en Figma, siguiendo la cuadrícula de diseño adaptativo y el sistema de componentes de Foodlytics. La estructura garantiza coherencia visual con la aplicación web, manteniendo la misma lógica de colores, tipografía y jerarquía.
 
 
 ### Applications Wireflow Diagrams 
@@ -1443,6 +1494,115 @@ Expone la planificación temporal: visualización por semana y mes.
 Muestra el tablero de tareas del nutricionista: creación y edición rápida, cambio de estado por arrastre, vistas por paciente o categoría, y confirmaciones ligeras.
 
 ![Artefacto creado en Figma - Flujo Kanban Board](src\img\cap6\flow\FlowKanban.pdf)
+
+
+#### *Mobile Wireflow Diagrams*
+
+Los wireflows de la aplicación móvil de Foodlytics representan los recorridos de usuario dentro del sistema, desde la autenticación hasta la gestión completa de sus hábitos alimenticios y progreso físico.
+Cada diagrama muestra la secuencia de pantallas, decisiones y puntos de interacción que permiten al paciente registrar su información nutricional, monitorear su salud y personalizar su experiencia.
+Los flujos fueron diseñados en Figma, manteniendo consistencia visual con la interfaz final, y priorizando la simplicidad en la navegación táctil.
+
+
+**Wireflow Diagram 1: Inicio de Sesión**
+
+- **User Goal**
+
+  El usuario desea acceder a la aplicación móvil o crear una cuenta nueva para iniciar el seguimiento nutricional personalizado.
+
+- **Task Flow (Flujo de tareas del usuario)**
+
+  1. Abre la aplicación y visualiza la pantalla de carga con el logo de Foodlytics.
+  2. Accede a la pantalla de inicio de sesión e ingresa su correo electrónico y contraseña.
+  3. Si olvida su contraseña, selecciona la opción “Recuperar contraseña” y recibe un enlace por correo.
+  4. En caso de no tener cuenta, elige “Registrarse” e ingresa los datos requeridos (nombre, correo, contraseña).
+  5. Una vez validada la información, el sistema redirige al flujo de configuración inicial del usuario (cálculo del IMC).
+
+
+**Wireflow Diagram 2: Cálculo de IMC y Configuración Inicial**
+
+- **User Goal**
+
+  El usuario desea registrar su información básica (edad, género, altura, peso y nivel de actividad) para obtener su plan calórico personalizado.
+
+- **Task Flow (Flujo de tareas del usuario)**
+
+  1. Luego del registro, la app guía al usuario por una secuencia de pantallas que recopilan sus datos físicos.
+  2. Ingresar edad, género, altura y peso actual.
+  3. Definir el peso objetivo y seleccionar el nivel de actividad física semanal.
+  4. El sistema calcula automáticamente el IMC y muestra las metas diarias personalizadas (calorías, proteínas, carbohidratos y grasas).
+  5. Al finalizar, el usuario accede al panel principal con sus objetivos establecidos.
+
+![Artefacto creado en Figma](src/img/cap6/WD_i.png)
+
+\newpage
+
+**Wireflow Diagram 3: Registro de Comidas mediante IA**
+
+- **User Goal**
+
+  El usuario desea registrar sus comidas diarias tomando una foto y dejar que la IA de Foodlytics identifique los alimentos y calcule los valores nutricionales.
+
+- **Task Flow (Flujo de tareas del usuario)**
+
+  1. Desde la pantalla principal, selecciona la sección “Comidas”.
+  2. Enfoca el plato con la cámara del dispositivo.
+  3. El sistema analiza la imagen e identifica los alimentos detectados.
+  4. Se muestra un resumen nutricional con calorías, proteínas, carbohidratos y grasas.
+  5. El usuario puede ajustar cantidades, clasificar el registro (desayuno, almuerzo o cena) y guardar los datos.
+  6. La comida registrada se agrega automáticamente al resumen del día.
+
+
+![Artefacto creado en Figma](src/img/cap6/WD_c.png)
+
+**Wireflow Diagram 4: Acciones Rápidas**
+
+- **User Goal**
+
+  El usuario desea acceder rápidamente a las funciones principales (registrar comida, peso, actividad o nueva meta) desde cualquier pantalla de la aplicación.
+
+- **Task Flow (Flujo de tareas del usuario)**
+
+  1. Desde la barra inferior, selecciona el ícono “+” para abrir el menú de acciones rápidas
+  2. Elige entre las opciones: Registrar comida, Registrar actividad, Registrar peso o Nueva meta.
+  3. El sistema redirige directamente al flujo correspondiente según la acción seleccionada.
+  4. Al completar la acción, el usuario vuelve automáticamente al dashboard principal.
+
+![Artefacto creado en Figma](src/img/cap6/WD_ar.png)
+
+
+**Wireflow Diagram 5: Registro de Actividad y Peso**
+
+- **User Goal**
+
+  El usuario desea registrar sus actividades físicas y peso actual para actualizar su progreso y mantener sus métricas al día.
+
+- **Task Flow (Flujo de tareas del usuario)**
+
+  1. Desde el menú inferior, selecciona “Actividad”.
+  2. Ingresa el tipo de ejercicio, duración e intensidad.
+  3. El sistema calcula las calorías quemadas y muestra una confirmación visual.
+  4. En la opción “Progreso”, el usuario actualiza su peso y visualiza la evolución de los últimos días.
+  5. Los datos actualizados se reflejan automáticamente en los gráficos y metas diarias.
+
+![Artefacto creado en Figma](src/img/cap6/WD_registrar.png)
+
+**Wireflow Diagram 6: Perfil y Configuración del Usuario**
+
+- **User Goal**
+
+  El usuario desea gestionar su información personal, idioma, notificaciones, políticas de privacidad y control de datos dentro de la aplicación.
+
+- **Task Flow (Flujo de tareas del usuario)**
+
+  1. Desde la barra inferior, selecciona “Perfil”.
+  2. Accede a los apartados de datos personales, objetivos y nivel de actividad.
+  3. Configura preferencias como idioma, notificaciones o alertas.
+  4. Consulta los términos, políticas de privacidad y opciones de eliminación o exportación de datos.
+  5. Puede regresar a la pantalla principal en cualquier momento manteniendo los cambios guardados.
+
+![Artefacto creado en Figma](src/img/cap6/WD_Cp.png)
+
+
 
 ### Applications Mock-ups  
 
