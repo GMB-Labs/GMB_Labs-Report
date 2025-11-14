@@ -455,10 +455,37 @@ Las ramas y tags se nombran así:
 
 ### Software Deployment Configuration  
 
+Esta sección describe la configuración de despliegue utilizada para cada componente de la solución digital: Landing Page, Web Services y Aplicacion Web Frontend. A partir del código fuente en los repositorios, se detallan los pasos necesarios para su correcta publicación en entornos de desarrollo y producción.
 
-## teus te mete el chop
+::: warn
+Para acceder al flujo de trabajo, haga click a la [URL](https://github.com/orgs/GMB-Labs/repositories)
+:::
+
+::: warn
+Para acceder a la documentación del *API*, haga click a la [URL](https://deepwiki.com/GMB-Labs/foodlytics-api)
+:::
+
+::: warn
+Para acceder a la documentación del *Web Application*, haga click a la [URL](https://deepwiki.com/GMB-Labs/Foodlytics-Web-Application)
+:::
+
+::: warn
+Para acceder a la documentación del *Mobile Application*, haga click a la [URL](https://deepwiki.com/GMB-Labs/Foodlytics-Mobile-Application)
+:::
+
 ## Solution Implementation  
-### Sprint n  
+### Sprint 1
+#### Sprint Planning 1
+#### Sprint Backlog 1 
+#### Development Evidence for Sprint Review  
+#### Testing Suite Evidence for Sprint Review  
+#### Execution Evidence for Sprint Review  
+#### Services Documentation Evidence for Sprint Review  
+#### Software Deployment Evidence for Sprint Review  
+#### Team Collaboration Insights during Sprint  
+
+## Solution Implementation  
+### Sprint n 
 #### Sprint Planning n  
 #### Sprint Backlog n  
 #### Development Evidence for Sprint Review  
