@@ -417,6 +417,42 @@ Para el desarrollo de Foodlytics, cada solución del sistema, como la landing pa
 
 \newpage
 
+::: box  
+**Convenciones de Commits**  
+:::
+
+Adoptamos **Conventional Commits v1.0.0**:
+```text
+<type>[scope opt]: <short description>
+```
+- **type:** feat, fix, docs, style, refactor, test, chore  
+
+- **scope:** componente o módulo afectado  
+
+- **description:** resumen breve y claro  
+
+::: box  
+**Versionado Semántico**  
+:::
+
+Seguimos **Semantic Versioning 2.0.0 (X.Y.Z)**:  
+
+- **X (Major):** cambios incompatibles  
+
+- **Y (Minor):** nuevas funcionalidades compatibles  
+
+- **Z (Patch):** correcciones menores  
+
+Las ramas y tags se nombran así:  
+
+- Feature branches: `feature/<short-description>`  
+
+- Release branches: `release/vX.Y.0`  
+
+- Hotfix branches: `hotfix/vX.Y.Z`
+
+\newpage
+
 ### Software Deployment Configuration  
 
 
