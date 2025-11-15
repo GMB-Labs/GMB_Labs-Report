@@ -252,96 +252,187 @@ El curso contribuye al cumplimiento del ***Student Outcome ABET:*** *ABET-EAC - 
 
 En el siguiente cuadro se describe las acciones realizadas y enunciadas de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro de ***ABET - EAC - Student Outcome 3.***
 
-% Usa tus tipos L{..} ya definidos
-\begin{longtable}{|L{4cm}|L{6cm}|L{5cm}|}
+**TB1**
+
+\begin{longtable}{|p{4cm}|p{6cm}|p{5cm}|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Criterio Específico}} &
 \multicolumn{1}{c|}{\textbf{Acciones Realizadas}} &
 \multicolumn{1}{c|}{\textbf{Conclusiones}} \\
 \hline
 \endfirsthead
-\hline
-\multicolumn{1}{|c|}{\textbf{Criterio Específico}} &
-\multicolumn{1}{c|}{\textbf{Acciones Realizadas}} &
-\multicolumn{1}{c|}{\textbf{Conclusiones}} \\
-\hline
-\endhead
-\endfoot
-\endlastfoot
 
+\parbox[t]{4cm}{
 \textit{Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.}
+}
 &
-\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\parbox[t]{6cm}{
 \textbf{TB1:}\\
 \textbf{Zavala Quedena, Gonzalo Andre}\\
 Presenté los resultados del análisis de mercado y la propuesta de valor.\\
 \textbf{Poma Espinoza, Gustavo}\\
 Expliqué hallazgos de investigación y su impacto en requisitos y arquitectura.\\
 \textbf{Del Castillo Bueno, Daniel Mateo}\\
-Exposé decisiones técnicas y de diseño con sus fundamentos.\\
+Exposé decisiones técnicas y de diseño.\\
 \textbf{Vilchez Ríos, Mateo Alejandro}\\
 Presenté avances y alcances de la propuesta.\\
 \textbf{Ramos Ríos, Belén del Rocío}\\
-Coordiné la presentación global del proyecto.\\[0.3em]
-\textbf{TP:}\\
-\textbf{Zavala Quedena, Gonzalo Andre}\\
-Expuse objetivamente el \textit{Tactical Level Software Design}.\\
-\textbf{Poma Espinoza, Gustavo}\\
-Presenté flujos y contratos del diseño táctico.\\
-\textbf{Del Castillo Bueno, Daniel Mateo}\\
-Comuniqué decisiones y riesgos del diseño táctico.\\
-\textbf{Vilchez Ríos, Mateo Alejandro}\\
-Exposé el \textit{Solution UX Design} conectando hallazgos y pantallas.\\
-\textbf{Ramos Ríos, Belén del Rocío}\\
-Aseguré la coherencia de la exposición del grupo.
-\end{minipage}
+Coordiné la presentación global del proyecto.
+}
 &
-\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\parbox[t]{5cm}{
 \textbf{TB1:}\\
-La comunicación oral permitió validar la propuesta con públicos diversos y obtener retroalimentación útil, reduciendo ambigüedades.\\[0.3em]
-\textbf{TP:}\\
-La exposición del diseño táctico y del UX fue clara para perfiles técnicos y no técnicos, facilitando decisiones y alineamiento.
-\end{minipage}
+La comunicación oral permitió validar la propuesta con diferentes públicos, reduciendo ambigüedades y facilitando retroalimentación útil.
+}
 \\
 \hline
 
+\parbox[t]{4cm}{
 \textit{Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.}
+}
 &
-\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
+\parbox[t]{6cm}{
 \textbf{TB1:}\\
 \textbf{Zavala Quedena, Gonzalo Andre}\\
 Redacté análisis de mercado y ventajas competitivas.\\
 \textbf{Poma Espinoza, Gustavo}\\
 Documenté hallazgos de entrevistas y su interpretación.\\
 \textbf{Del Castillo Bueno, Daniel Mateo}\\
-Justifiqué criterios técnicos y de diseño con precisión.\\
+Justifiqué criterios técnicos y de diseño.\\
 \textbf{Vilchez Ríos, Mateo Alejandro}\\
-Describí propuesta y objetivos con estructura clara.\\
+Describí la propuesta y sus objetivos.\\
 \textbf{Ramos Ríos, Belén del Rocío}\\
-Integré en \LaTeX{} con uniformidad y referencias.\\[0.3em]
+Integré el documento en LaTeX con uniformidad.
+}
+&
+\parbox[t]{5cm}{
+\textbf{TB1:}\\
+La documentación escrita consolidó resultados con claridad, permitiendo evaluaciones desde perfiles académicos y técnicos.
+}
+\\
+\hline
+\end{longtable}
+
+**TP**
+\begin{longtable}{|p{4cm}|p{6cm}|p{5cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Criterio Específico}} &
+\multicolumn{1}{c|}{\textbf{Acciones Realizadas}} &
+\multicolumn{1}{c|}{\textbf{Conclusiones}} \\
+\hline
+\endfirsthead
+
+\parbox[t]{4cm}{
+\textit{Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos.}
+}
+&
+\parbox[t]{6cm}{
 \textbf{TP:}\\
 \textbf{Zavala Quedena, Gonzalo Andre}\\
-Documenté el \textit{Tactical Level Software Design} para audiencias mixtas.\\
+Expuse el \textit{Tactical Level Software Design} del módulo de pagos.\\
 \textbf{Poma Espinoza, Gustavo}\\
-Redacté flujos y contratos del diseño táctico con trazabilidad.\\
+Presenté flujos y contratos del diseño táctico del IAM.\\
 \textbf{Del Castillo Bueno, Daniel Mateo}\\
-Escribí decisiones y riesgos del diseño táctico con sustento.\\
+Comuniqué riesgos y decisiones técnicas del diseño táctico.\\
 \textbf{Vilchez Ríos, Mateo Alejandro}\\
-Normalicé guías y criterios de accesibilidad del \textit{Solution UX Design}.\\
+Exposé criterios y pantallas del \textit{Solution UX Design}.\\
 \textbf{Ramos Ríos, Belén del Rocío}\\
-Unifiqué estilo y precisión del \textit{Solution UX Design}.
-\end{minipage}
+Aseguré coherencia narrativa en la exposición del grupo.
+}
 &
-\begin{minipage}[t]{\linewidth}\small\setlength{\parskip}{2pt}
-\textbf{TB1:}\\
-La redacción consolidó evidencia y resultados con objetividad; \LaTeX{} aportó rigor y consistencia.\\[0.3em]
+\parbox[t]{5cm}{
 \textbf{TP:}\\
-Los entregables escritos de diseño táctico y UX aseguraron claridad, trazabilidad y consistencia para todas las audiencias.
-\end{minipage}
+Las exposiciones del diseño táctico y UX facilitaron la comprensión para perfiles técnicos y no técnicos.
+}
 \\
 \hline
 
+\parbox[t]{4cm}{
+\textit{Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos.}
+}
+&
+\parbox[t]{6cm}{
+\textbf{TP:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Documenté el diseño táctico.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Redacté contratos y flujos con trazabilidad.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Documenté riesgos y decisiones técnicas.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Estandaricé criterios del \textit{Solution UX Design}.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Unifiqué estilo y claridad del diseño UX.
+}
+&
+\parbox[t]{5cm}{
+\textbf{TP:}\\
+Los documentos escritos aseguraron claridad técnica y trazabilidad durante el diseño táctico y UX.
+}
+\\
+\hline
 \end{longtable}
+
+**TB2**
+\begin{longtable}{|p{4cm}|p{6cm}|p{5cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Criterio Específico}} &
+\multicolumn{1}{c|}{\textbf{Acciones Realizadas}} &
+\multicolumn{1}{c|}{\textbf{Conclusiones}} \\
+\hline
+\endfirsthead
+
+\parbox[t]{4cm}{
+\textit{Comunica oralmente ideas y resultados con objetividad a público de diferentes especialidades y niveles jerárquicos.}
+}
+&
+\parbox[t]{6cm}{
+\textbf{TB2:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Presenté avances de \textit{Product Implementation} y validación.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Expliqué resultados de implementación y despliegue.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Mostré decisiones finales de integración técnica.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Expuse el diseño y prototipado de aplicaciones.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Presenté prototipos y flujos UX.
+}
+&
+\parbox[t]{5cm}{
+\textbf{TB2:}\\
+La comunicación oral permitió presentar el estado del producto e integrar observaciones de diseño e implementación.
+}
+\\
+\hline
+
+\parbox[t]{4cm}{
+\textit{Comunica en forma escrita ideas y/o resultados con objetividad a diferentes perfiles.}
+}
+&
+\parbox[t]{6cm}{
+\textbf{TB2:}\\
+\textbf{Zavala Quedena, Gonzalo Andre}\\
+Redacté documentación de implementación y despliegue.\\
+\textbf{Poma Espinoza, Gustavo}\\
+Documenté validación e integración técnica.\\
+\textbf{Del Castillo Bueno, Daniel Mateo}\\
+Escribí evidencias de integración y despliegue.\\
+\textbf{Ramos Ríos, Belén del Rocío}\\
+Documenté diseño, prototipos y validación.\\
+\textbf{Vilchez Ríos, Mateo Alejandro}\\
+Redacté apartados de UX/UI y prototipos.
+}
+&
+\parbox[t]{5cm}{
+\textbf{TB2:}\\
+Los documentos escritos mostraron precisión técnica y claridad en el avance del producto.
+}
+\\
+\hline
+\end{longtable}
+
 
 \newpage
 
