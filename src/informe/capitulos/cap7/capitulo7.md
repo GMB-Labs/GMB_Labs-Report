@@ -651,6 +651,31 @@ Durante el sprint se definieron las tecnologías principales, los repositorios, 
 
 #### Development Evidence for Sprint Review  
 
+En esta sección se presentan las evidencias técnicas del desarrollo realizado durante el Sprint, mostrando de manera verificable el trabajo implementado en los diferentes componentes del sistema. Se incluyen capturas de los commits ejecutados en la aplicación web, la aplicación móvil y los servicios de backend, junto con los avances correspondientes en la landing page y la documentación técnica generada. Estas evidencias permiten validar la construcción interna de las funcionalidades comprometidas, reflejando la evolución del código, la estructura del proyecto y las integraciones realizadas durante este Sprint.
+
+::: norm
+*API*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-1.jpeg)
+
+::: norm
+*Mobile Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-2.jpeg)
+
+::: norm
+*Web Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-3.jpeg)
+
+::: norm
+*Landing Page*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-4.jpeg)
 
 
 #### Testing Suite Evidence for Sprint Review 
@@ -1205,6 +1230,31 @@ Feature: Endpoint de actualización de perfil de usuario
 
 #### Execution Evidence for Sprint Review  
 
+En esta sección se presentan las evidencias de ejecución correspondientes al Sprint, mostrando el sistema funcionando en su entorno real. Se incluyen capturas del despliegue de la landing page, la aplicación web y los servicios de backend, junto con una vista de la aplicación móvil en operación. Estas imágenes permiten validar visualmente las funcionalidades implementadas, confirmando la correcta navegación, interacción y disponibilidad de los módulos desarrollados durante este Sprint.
+
+::: norm
+*API*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-2.jpeg)
+
+::: norm
+*Mobile Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-4.jpeg)
+
+::: norm
+*Web Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-3.jpeg)
+
+::: norm
+*Landing Page*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-1.jpeg)
 
 #### Services Documentation Evidence for Sprint Review  
 
@@ -1243,6 +1293,43 @@ Para acceder al despliegue del *LandinPage*, haga click a la [URL](https://foodl
 :::
 
 #### Team Collaboration Insights during Sprint  
+
+Durante este Sprint el equipo trabajó de forma coordinada en los distintos componentes del proyecto, distribuyendo tareas según las responsabilidades definidas y manteniendo un flujo constante de colaboración. Cada integrante participó en la implementación de la landing page, los servicios de backend y las aplicaciones web y móvil, contribuyendo con commits, revisiones y mejoras continuas. En esta sección se presentan las capturas de los analíticos de GitHub, junto con la evidencia de actividad en los repositorios, lo que permite validar la participación efectiva de todos los miembros y la integración del trabajo realizado durante el Sprint.
+
+::: norm
+*API*
+:::
+
+![Recurso extraído de Github](src/img/cap7/git-api-1.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-api-2.jpeg)
+
+
+![Recurso extraído de Github](src/img/cap7/git-api-3.jpeg)
+
+
+::: norm
+*Mobile Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/git-mob-1.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-mob-2.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-mob-3.jpeg)
+
+
+::: norm
+*Web Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/git-web-1.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-web-2.jpeg)
+
+
+![Recurso extraído de Github](src/img/cap7/git-web-3.jpeg)
+
 
 ## Solution Implementation  
 ### Sprint n 
