@@ -1604,17 +1604,333 @@ Los flujos fueron diseñados en Figma, manteniendo consistencia visual con la in
 
 
 
-### Applications Mock-ups  
+### Applications Mock-ups 
 
-este no va 
+::: box
+**Mobile Applications Mock-ups**
+:::
+
+En esta sección se presentan los mockups de la aplicación móvil de Foodlytics. Estas pantallas muestran las funciones principales del producto y reflejan el diseño final propuesto para la experiencia del paciente. Todas las interfaces mantienen consistencia visual, accesibilidad y claridad en la interacción.
+
+![Artefacto creado en Figma - Mobile Application (Inicio)](src/img/cap6/mockups/Inicio.png)
+
+![Artefacto creado en Figma - Mobile Application (Calcular IMC)](src/img/cap6/mockups/CalcularIMC.png)
+
+![Artefacto creado en Figma - Mobile Application (Pantalla principal nuevo paciente)](src/img/cap6/mockups/Pantallaprincipal.png)
+
+![Artefacto creado en Figma - Mobile Application (Comidas registradas)](src/img/cap6/mockups/ComidasRegistradas.png)
+
+![Artefacto creado en Figma - Mobile Application (Bottom Navigation)](src/img/cap6/mockups/BottomNav.png)
+
+![Artefacto creado en Figma - Mobile Application (Actividad y Progreso)](src/img/cap6/mockups/Actividad.png)
+
+![Artefacto creado en Figma - Mobile Application (Perfil)](src/img/cap6/mockups/Perfil.png)
+
+![Artefacto creado en Figma - Mobile Application (Acciones rápidas)](src/img/cap6/mockups/AccionesRapidas.png)
+
+\newpage
+
+::: box
+**Web Applications Mock-ups**
+:::
+
+En esta sección se presentan los mockups de la aplicación web de Foodlytics. Estas pantallas muestran las funciones principales para profesionales de la salud, incluyendo la gestión de pacientes, el tablero general, el calendario, el control de notificaciones y la administración de la cuenta.
+
+![Artefacto creado en Figma - Web Application (Login y Registro)](src/img/cap6/web-mockups/login_register.png)
+
+![Artefacto creado en Figma - Web Application (Dashboard)](src/img/cap6/web-mockups/Dashboard.png)
+
+![Artefacto creado en Figma - Web Application (Pacientes)](src/img/cap6/web-mockups/Pacientes.png)
+
+![Artefacto creado en Figma - Web Application (DetallePacientes)](src/img/cap6/web-mockups/DetallePaciente.png)
+
+
+![Artefacto creado en Figma - Web Application (Notificaciones)](src/img/cap6/web-mockups/Notificaciones.png)
+
+![Artefacto creado en Figma - Web Application (Perfil)](src/img/cap6/web-mockups/Perfil.png)
+
+![Artefacto creado en Figma - Web Application (Suscripciones)](src/img/cap6/web-mockups/Suscripciones.png)
+
+![Artefacto creado en Figma - Web Application (Configuración)](src/img/cap6/web-mockups/Configuración.png)
+
+![Artefacto creado en Figma - Web Application (FAQ)](src/img/cap6/web-mockups/faqs.png)
+
+\newpage
 
 ### Applications User Flow Diagrams  
 
-este no va 
+::: box
+**Mobile Applications User Flow Diagrams**
+:::
+
+En esta sección se presentan los flujos de usuario diseñados para la aplicación móvil de Foodlytics. El objetivo es describir, paso a paso, cómo la persona usuaria interactúa con la app para registrar sus datos, monitorear su alimentación, actividad física y peso, y gestionar la configuración de su cuenta.
+
+Cada diagrama resume rutas típicas, alternativas y escenarios excepcionales, respetando las reglas de negocio definidas en la arquitectura de Foodlytics, como la creación de registros únicamente para la fecha de hoy y el uso de acciones rápidas para acceder a funciones clave.
+
+\newpage
+
+::: info
+**Inicio de sesión y creación de cuenta**
+:::
+
+**User Goal**  
+La persona usuaria desea acceder a Foodlytics e iniciar sesión o crear una cuenta para comenzar a monitorear su información.
+
+Este flujo inicia con la pantalla de carga de Foodlytics y dirige a la pantalla de inicio de sesión. La persona puede ingresar correo y contraseña, recuperar contraseña mediante enlace al correo o acceder al registro si aún no tiene cuenta.
+
+En el registro se completan nombre, correo y contraseña. Cuando el sistema valida los datos, redirige al onboarding. La condición de éxito es llegar a la primera pantalla de configuración inicial sin errores.
+
+::: info
+**Configuración inicial de perfil y metas (Onboarding)**
+:::
+
+**User Goal**  
+Registrar datos físicos y nivel de actividad para que Foodlytics calcule IMC y metas nutricionales diarias.
+
+El onboarding se ejecuta al ingresar por primera vez. Incluye pasos secuenciales: fecha de nacimiento, género, altura, peso actual, peso objetivo y nivel de actividad física.
+
+Cada pantalla captura un dato específico. Al finalizar, la app calcula IMC y metas de calorías. Cuando la persona confirma, se marca el onboarding como completado y se redirige a la pantalla principal.
+
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WD_i.png)
+
+\newpage
+
+::: info
+**Registro de comida mediante cámara e IA**
+:::
+
+**User Goal**  
+Registrar una comida de hoy usando la cámara para que la IA identifique alimentos y calcule macronutrientes.
+
+El flujo inicia en la pestaña Comidas. Si la fecha es hoy, el botón Agregar comida está disponible. Al seleccionarlo, la app abre la cámara con el parámetro dateISO y, si corresponde, mealType.
+
+Después de tomar la foto se muestra Analizando tu comida mientras la IA detecta alimentos y porciones. La vista de Alimentos Detectados permite ajustar cantidades, eliminar alimentos o seleccionar tipo de comida si no se definió al inicio.
+
+Al confirmar se ejecuta saveMeal, que valida que la fecha sea hoy. Si es correcto se registra la comida y se vuelve a la vista de comidas del día.
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WD_comidasRegistradas.png)
+
+\newpage
+
+::: info
+**Visualización y detalle de comidas registradas**
+:::
+
+**User Goal**  
+Revisar comidas registradas y ver aportes nutricionales por día.
+
+En la pestaña Comidas se puede navegar por el calendario. Si la fecha no es hoy, la interfaz funciona en modo lectura.
+
+Cada comida muestra calorías y macronutrientes. Al seleccionarla se abre una pantalla con detalles de calorías totales, proteínas, carbohidratos, grasas y lista de alimentos registrados.
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WD_comidasRegistradas.png)
+
+
+
+
+\newpage
+
+::: info
+**Registro de actividad física y actualización de estadísticas**
+:::
+
+**User Goal**  
+Registrar actividad física de hoy para actualizar calorías quemadas y estadísticas.
+
+El flujo inicia desde Actividad o desde Registrar Actividad. La persona selecciona tipo de actividad, duración e intensidad.
+
+Cambiar tipo de actividad muestra una lista de actividades con calorías por minuto. Al elegir una, se regresa al modal con el cálculo actualizado.
+
+Al confirmar se ejecuta saveActivity con validación de fecha. Si es correcto se actualiza el tablero con calorías quemadas, tiempo total y racha semanal.
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WB_registrarActvidiad_Peso.png)
+
+
+
+\newpage
+
+::: info
+**Registro de peso y seguimiento de progreso**
+:::
+
+**User Goal**  
+Registrar peso actual de hoy para actualizar historial y progreso.
+
+El flujo inicia desde Progreso o desde Acciones rápidas. La persona ingresa peso actual, revisa peso anterior y la diferencia con su meta.
+
+saveWeight valida que sea la fecha de hoy. Luego actualiza el peso actual y agrega una entrada al historial. También actualiza gráficos y cumplimiento semanal.
+
+Si se abre desde una fecha pasada, solo se muestra el historial sin opciones de creación.
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WB_registrarActvidiad_Peso.png)
+
+
+
+\newpage
+
+::: info
+**Acciones rápidas desde el botón flotante**
+:::
+
+**User Goal**  
+Acceder rápido a funciones clave sin navegar por cada pestaña.
+
+Al presionar el botón flotante más se muestra un menú con Registrar comida, Registrar actividad, Registrar peso y Nueva meta.
+
+Cada opción abre el flujo correspondiente mediante rutas modales. La aplicación asegura que dateISO sea igual a hoy cuando la acción lo requiere.
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WD_accionesRapidas.png)
+
+
+\newpage
+
+::: info
+**Gestión de cuenta, notificaciones y privacidad**
+:::
+
+**User Goal**  
+Configurar datos personales, idioma, notificaciones y privacidad.
+
+![Artefacto creado en Figma](src/img/cap6/userflowMobile/WD_Cuenta.png)
+
+Desde Perfil se muestran datos personales, metas y preferencias.  
+En Notificaciones se configuran recordatorios y alertas.  
+En Idioma se selecciona idioma preferido.  
+En Privacidad se gestionan opciones de datos, exportación y eliminación de información.
+
+También se puede cambiar contraseña y revisar Términos y Condiciones y la Política de Privacidad.
+
+\newpage
+
+::: box
+**Web Applications User Flow Diagrams**
+:::
+
+Los wireflows muestran visualmente la navegación entre las pantallas principales de la aplicación web de Foodlytics. Estos diagramas combinan las vistas de cada módulo con las conexiones funcionales que sigue la persona usuaria para cumplir tareas clave como autenticación, gestión de pacientes, revisión del calendario, seguimiento de actividades y administración de configuraciones del sistema. Los siguientes flujos permiten comprender la estructura lógica de la plataforma antes del desarrollo final.
+
+\newpage
+
+::: info
+**Inicio de sesión y autenticación**
+:::
+
+![Inicio de sesión – Foodlytics Web](src/img/cap6/userflowWeb/FlujoInicioSesion.png)
+
+Este wireflow representa el flujo completo de acceso a la plataforma. La persona usuaria inicia en la pantalla de bienvenida, donde puede ingresar con su correo y contraseña. También puede autenticarse mediante servicios externos o registrarse si no tiene cuenta.
+
+Cuando el login es exitoso, el sistema redirige al dashboard principal. Este flujo busca asegurar un acceso rápido y coherente con la estructura general del sistema.
+
+\newpage
+
+::: info
+**Página principal y navegación general**
+:::
+
+![Dashboard – Foodlytics Web](src/img/cap6/userflowWeb/FlujoPrincipal.png)
+
+Este wireflow muestra el recorrido inicial de la persona usuaria dentro del dashboard. Desde esta vista central puede acceder a los módulos del sistema como pacientes, calendario, kanban board, actividades, notificaciones, suscripciones y configuraciones.
+
+El objetivo de este flujo es presentar un control general de la plataforma con indicadores visuales, tablas de proyectos o pacientes, y accesos directos a funcionalidades clave.
+
+\newpage
+
+::: info
+**Gestión de calendario**
+:::
+
+![Calendario – Foodlytics Web](src/img/cap6/userflowWeb/FlujoCalendario.png)
+
+Este wireflow representa la navegación desde el dashboard hacia el módulo de calendario. En esta vista la persona usuaria revisa eventos por mes, consulta el panel lateral con la agenda diaria y visualiza citas programadas.
+
+El flujo también considera acciones como agregar eventos o revisar actividades por fecha, lo que facilita la planificación y organización de sesiones o tareas relacionadas con los pacientes.
+
+\newpage
+
+::: info
+**Kanban Board**
+:::
+
+![Kanban Board – Foodlytics Web](src/img/cap6/userflowWeb/FlujoKanbanBoard.png)
+
+Este diagrama muestra el acceso al tablero kanban desde el dashboard. La persona usuaria visualiza las tareas distribuidas en columnas como To Do, In Progress, To Review y Completed.
+
+El wireflow destaca la navegación entre tarjetas, la actualización del estado de cada tarea y la revisión de detalles específicos, permitiendo un seguimiento visual del progreso del trabajo.
+
+\newpage
+
+::: info
+**Gestión de pacientes**
+:::
+
+![Pacientes – Foodlytics Web](src/img/cap6/userflowWeb/FlujoPacientes.png)
+
+Este wireflow detalla la navegación entre el listado de pacientes y la vista de información individual. Desde el dashboard se accede al listado completo donde se puede consultar información personal, historial y estado actual de cada paciente.
+
+Al seleccionar un paciente, el sistema muestra una vista detallada con métricas como peso, altura, calorías diarias, distribución de macronutrientes, evolución semanal y actividades registradas. Este flujo asegura que la información clínica sea accesible y clara.
+
+\newpage
+
+::: info
+**Configuración de la cuenta y ajustes administrativos**
+:::
+
+![Configuración – Foodlytics Web](src/img/cap6/userflowWeb/FlujoConfiguracion.png)
+
+Este wireflow agrupa todas las rutas relacionadas con la administración de la cuenta de usuario. Incluye vistas como cambio de contraseña, edición de perfil, política de privacidad y términos y condiciones.
+
+El flujo parte desde el dashboard hacia la sección de configuraciones, permitiendo a la persona usuaria mantener control sobre su información, revisar políticas y gestionar sus preferencias para una mayor transparencia.
+
+\newpage
 
 ## Applications Prototyping  
 
-este no va 
+::: box
+**Mobile Applications Prototyping**
+:::
+
+Esta sección presenta los prototipos interactivos desarrollados para la aplicación móvil de Foodlytics. Estos prototipos permiten simular la experiencia real de navegación, alineada con los User Flow Diagrams previamente definidos. Su construcción se realizó en Figma, donde se diseñaron las pantallas clave y se configuraron interacciones que replican el comportamiento esperado dentro de la aplicación final.
+
+![Mobile Applications Prototyping](src/img/cap6/mobile-prototyping.png)
+
+**Diseño e interacción**
+
+El prototipado se basa en una arquitectura centrada en la claridad y eficiencia. La navegación principal utiliza una barra inferior persistente que agrupa las secciones más relevantes: Inicio, Comidas, Actividad y Perfil. Este enfoque permite que la persona usuaria acceda de manera rápida a los registros de comida, actividades físicas, peso y configuraciones personales.
+
+Las interacciones diseñadas en Figma replican acciones reales como toques, gestos de desplazamiento, apertura de modales y transiciones entre pantallas. Esto permitió validar desde etapas tempranas si los flujos eran intuitivos y si la carga visual era adecuada para un uso diario.
+
+**Compatibilidad entre plataformas**
+
+Aunque los prototipos se construyeron inicialmente sobre frames de iOS para lograr una visualización más precisa, todas las decisiones de diseño fueron tomadas considerando la implementación multiplataforma con React Native y Expo. Esto asegura consistencia en iOS y Android, con variaciones mínimas como:
+
+- Ajustes automáticos de paddings y alturas según sistema operativo.  
+- Estilos de navegación superiores adecuados para cada plataforma.  
+- Igualdad en tipografías, colores, componentes y jerarquía visual.
+
+Dado que Expo unifica el comportamiento base, el prototipo es compartido para ambas plataformas. La experiencia final es equivalente en iOS y Android, manteniendo coherencia en flujos, estructura y elementos interactivos.
+
+::: warn
+Para acceder al prototipo interactivo en Figma, haga click en la [URL](https://www.figma.com/proto/ngBMJ7Uk6oelUsci7tuoc3/Mobile?node-id=94-241&t=ocWEuJh4SnNMLHnx-1&starting-point-node-id=94%3A221)
+:::
+
+::: warn
+Para ver la demo en Microsoft Stream, haga click en la [URL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211212_upc_edu_pe/IQAMyR01JuzrSIVEofg1E_NxAa0shRE-SbIjUmG9RYNFNdw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wn20g1)
+:::
+
+![Shared Prototyping](src/img/cap6/shared-proto.png)
+
+::: box
+**Web Applications Prototyping**
+:::
+
+::: warn
+Para visualizar el video del prototipo de la aplicación,  haga click en la [URL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211212_upc_edu_pe/IQDxC1_aXX_FR5o3kRvy9oOgAQWgS2xRqsIUeYUw1mLO4wc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=r2cdl7)
+:::
+
+![Captura de Microsoft Stream](src/img/cap6/web-application-prototyping-video.png)
+
+\newpage
+
 
 
 
