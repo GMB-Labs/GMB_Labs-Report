@@ -1330,34 +1330,540 @@ Durante este Sprint el equipo trabajó de forma coordinada en los distintos comp
 
 ![Recurso extraído de Github](src/img/cap7/git-web-3.jpeg)
 
+\newpage
 
-## Solution Implementation  
-### Sprint n 
-#### Sprint Planning n  
-#### Sprint Backlog n  
-#### Development Evidence for Sprint Review  
+### Sprint 2
+
+El Sprint 2 representó la fase final del desarrollo de Foodlytics y estuvo enfocado en completar, integrar y validar todos los módulos del sistema tanto a nivel técnico como documental. En esta iteración se culminaron los últimos capítulos del informe, se perfeccionó la arquitectura definida en el Sprint 1 y se finalizaron los componentes restantes de la aplicación: backend, web app, mobile app y landing page. Todo esto permitió consolidar una versión funcional, coherente y alineada con los objetivos del proyecto.
+
+Durante este sprint se implementaron las funcionalidades críticas, se integraron los servicios expuestos por la API, se documentaron los endpoints con OpenAPI, y se realizaron pruebas de funcionamiento, navegación y despliegue. Asimismo, se ajustaron los flujos del sistema, se mejoró la experiencia de usuario y se completó la documentación técnica y académica requerida para el entregable final.
+
+El equipo trabajó de forma continua y coordinada, afinando detalles, resolviendo dependencias entre módulos y asegurando que cada componente estuviera correctamente acoplado. Gracias a la organización, el uso de repositorios independientes y la definición clara de responsabilidades, el Sprint 2 permitió entregar un producto completo y estable. Esta iteración marcó el cierre del proyecto con una solución implementada, documentada y lista para ser presentada.
+
+\newpage
+
+#### Sprint Planning 2  
+
+\begin{tabularx}{\textwidth}{p{5cm}X}
+\caption{Sprint Planning – Sprint 2}\label{tab:sprint2-planning}\\
+\toprule
+\textbf{Sprint Planning Background} & \\ 
+\midrule
+
+\textbf{Sprint} & Sprint 2 \\
+\textbf{Date} & 02/12/2025 \\
+\textbf{Time} & 21:00 \\
+\textbf{Location} & Discord Virtual Meeting \\
+\textbf{Prepared By} & Ramos Rios, Belen del Rocio \\
+\textbf{Attendees (to planning meeting)} & Del Castillo Bueno, Daniel Mateo; Poma Espinoza, Gustavo; Vilchez Rios, Mateo Alejandro; Zavala Quedena, Gonzalo Andre \\
+\textbf{Sprint 2 Review Summary} & Culminación de la documentación restante, integración completa del backend, web y mobile app, y finalización de la landing page. Se consolidó una versión funcional del sistema \\
+\textbf{Sprint 2 Retrospective Summary} & El equipo trabajó de forma ordenada y coordinada. Se completaron las tareas críticas, se integraron todos los módulos y se resolvieron dependencias sin retrasos \\
+\textbf{Sprint Goal \& User Stories} & Completar la implementación total del sistema, integrar los módulos, documentar los servicios y cerrar los entregables finales \\
+\textbf{Sprint 2 Velocity} & 1 Sprint cada semana \\
+\textbf{Sum of Story Points} & 145 \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+
+#### Sprint Backlog 2 
+
+\begin{tabularx}{\textwidth}{|c|p{1.4cm}|p{3.8cm}|X|c|}
+\hline
+\# Orden & \textbf{ID} & \textbf{Título} & \textbf{Descripción} & \textbf{Story Points} \\
+\hline
+1  & \textbf{WEB-US06} & Gestión de perfil & Como nutricionista, quiero gestionar mi perfil, para mantener actualizada mi información. & 3 \\
+\hline
+2  & \textbf{WEB-US07} & Registro de pacientes nuevos & Como nutricionista, quiero registrar pacientes, para darles seguimiento. & 5 \\
+\hline
+3  & \textbf{WEB-US08} & Edición de pacientes & Como nutricionista, quiero editar la información de pacientes, para mantener sus datos al día. & 3 \\
+\hline
+4  & \textbf{WEB-US09} & Eliminación de pacientes & Como nutricionista, quiero eliminar o desactivar pacientes, para mantener una lista limpia. & 3 \\
+\hline
+5  & \textbf{WEB-US10} & Búsqueda de pacientes & Como nutricionista, quiero buscar pacientes, para localizarlos rápidamente. & 3 \\
+\hline
+6  & \textbf{WEB-US11} & Visualizar alimentos diarios & Como nutricionista, quiero ver alimentos consumidos, para analizar su dieta. & 3 \\
+\hline
+7  & \textbf{WEB-US12} & Visualización de macros & Como nutricionista, quiero ver macros y calorías, para evaluar la dieta. & 3 \\
+\hline
+8  & \textbf{WEB-US13} & Historial diario y semanal & Como nutricionista, quiero ver historial de calorías, para evaluar progresos semanales. & 5 \\
+\hline
+9  & \textbf{WEB-US14} & Rutinas de ejercicio & Como nutricionista, quiero visualizar rutinas, para complementar la dieta. & 3 \\
+\hline
+10 & \textbf{WEB-US15} & Calorías gastadas & Como nutricionista, quiero ver calorías gastadas, para analizar balance energético. & 3 \\
+\hline
+11 & \textbf{WEB-US16} & Crear rutinas & Como nutricionista, quiero crear rutinas, para personalizar el plan del paciente. & 5 \\
+\hline
+12 & \textbf{WEB-US17} & Asignar metas & Como nutricionista, quiero asignar metas de calorías y macros, para dar objetivos personalizados. & 3 \\
+\hline
+13 & \textbf{WEB-US18} & Recomendaciones & Como nutricionista, quiero registrar recomendaciones, para guiar al paciente. & 2 \\
+\hline
+14 & \textbf{WEB-US19} & Reporte de evolución de peso & Como nutricionista, quiero generar reportes de peso, para evaluar cambios en el tiempo. & 3 \\
+\hline
+15 & \textbf{WEB-US20} & Dashboard de progreso & Como nutricionista, quiero ver gráficas de progreso, para analizar evolución de pacientes. & 5 \\
+\hline
+16 & \textbf{WEB-US21} & Reportes descargables & Como nutricionista, quiero descargar reportes, para compartir con pacientes. & 3 \\
+\hline
+17 & \textbf{MOB-US04} & Recuperación de contraseña & Como paciente, quiero recuperar mi contraseña, para acceder en caso de olvido. & 3 \\
+\hline
+18 & \textbf{MOB-US05} & Gestión de perfil & Como paciente, quiero gestionar mi perfil, para mantener mis datos correctos. & 3 \\
+\hline
+19 & \textbf{MOB-US06} & Resumen diario inicial & Como paciente, quiero ver un resumen de calorías y macros, para controlar mi día. & 3 \\
+\hline
+20 & \textbf{MOB-US08} & Historial diario/semanal & Como paciente, quiero ver mi historial diario y semanal, para analizar mi progreso. & 5 \\
+\hline
+21 & \textbf{MOB-US12} & Registro de actividad manual & Como paciente, quiero registrar actividades manualmente, para reflejar mi esfuerzo. & 3 \\
+\hline
+22 & \textbf{MOB-US13} & Balance diario & Como paciente, quiero ver el balance entre calorías consumidas y gastadas, para controlar mi salud. & 3 \\
+\hline
+23 & \textbf{MOB-US14} & Registro de pasos & Como paciente, quiero registrar mis pasos, para estimar calorías quemadas. & 3 \\
+\hline
+24 & \textbf{MOB-US15} & Registro y gráfico de peso & Como paciente, quiero registrar mi peso y ver gráficos, para analizar mi evolución. & 3 \\
+\hline
+25 & \textbf{MOB-US16} & Ajuste de metas & Como paciente, quiero ajustar mis metas, para mantenerme en el plan. & 3 \\
+\hline
+26 & \textbf{MOB-US17} & Visualización semanal & Como paciente, quiero visualizar mis resultados semanales, para revisar mi cumplimiento. & 3 \\
+\hline
+27 & \textbf{MOB-US18} & Notificaciones de comidas & Como paciente, quiero recibir notificaciones de comidas, para registrar con constancia. & 2 \\
+\hline
+28 & \textbf{MOB-US19} & Alertas de metas & Como paciente, quiero recibir alertas de exceso o déficit, para ajustar mi dieta. & 3 \\
+\hline
+29 & \textbf{MOB-US20} & Consejos personalizados & Como paciente, quiero recibir consejos personalizados, para mejorar mis hábitos. & 3 \\
+\hline
+30 & \textbf{TUS-36} & Registro de uso de datos & Como developer, quiero registrar uso de datos, para cumplir con auditorías y normativas. & 3 \\
+\hline
+31 & \textbf{TUS-37} & Indicadores de sincronización & Como developer, quiero mostrar indicadores de sincronización, para informar al usuario. & 3 \\
+\hline
+32 & \textbf{TUS-38} & Cola local de cambios & Como developer, quiero mantener cola local de cambios, para asegurar persistencia antes de envío. & 5 \\
+\hline
+33 & \textbf{TUS-39} & Cierre de jornada & Como developer, quiero implementar cierre de jornada, para definir datos a sincronizar. & 3 \\
+\hline
+34 & \textbf{TUS-40} & Envío en lote & Como developer, quiero enviar registros en lote, para optimizar red y recursos. & 5 \\
+\hline
+35 & \textbf{TUS-41} & Reintentos automáticos & Como developer, quiero reintentos con backoff, para asegurar entrega de datos. & 5 \\
+\hline
+36 & \textbf{TUS-42} & Idempotencia en lotes & Como developer, quiero usar claves únicas en lotes, para evitar duplicados. & 5 \\
+\hline
+37 & \textbf{TUS-43} & Confirmación del backend & Como developer, quiero confirmar recepción del backend, para marcar datos como enviados. & 3 \\
+\hline
+38 & \textbf{TUS-44} & Detección de duplicados & Como developer, quiero detectar duplicados en servidor, para mantener integridad. & 5 \\
+\hline
+39 & \textbf{TUS-45} & Manejo de timestamps & Como developer, quiero usar timestamps RFC 3339 con zona horaria, para asegurar consistencia. & 3 \\
+\hline
+40 & \textbf{TUS-46} & Reprogramación de envío & Como developer, quiero reprogramar envío fallido, para garantizar sincronización eventual. & 5 \\
+\hline
+41 & \textbf{TUS-47} & Estado visible & Como developer, quiero mostrar estado de sincronización, para dar transparencia al usuario. & 2 \\
+\hline
+42 & \textbf{TUS-48} & Hora de corte configurable & Como developer, quiero configurar hora de corte por zona, para adaptar sincronización. & 3 \\
+\hline
+\end{tabularx}
+
+#### Development Evidence for Sprint Review 
+
+En esta sección se presentan las evidencias técnicas del desarrollo realizado durante el Sprint, mostrando de manera verificable el trabajo implementado en los diferentes componentes del sistema. Se incluyen capturas de los commits ejecutados en la aplicación web, la aplicación móvil y los servicios de backend, junto con los avances correspondientes en la landing page y la documentación técnica generada. Estas evidencias permiten validar la construcción interna de las funcionalidades comprometidas, reflejando la evolución del código, la estructura del proyecto y las integraciones realizadas durante este Sprint.
+
+::: norm
+*API*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-1.jpeg)
+
+::: norm
+*Mobile Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-2.jpeg)
+
+::: norm
+*Web Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-3.jpeg)
+
+::: norm
+*Landing Page*
+:::
+
+![Recurso extraído de Github](src/img/cap7/dev-4.jpeg)
+
 #### Testing Suite Evidence for Sprint Review  
+
+El equipo consolidó la evidencia de pruebas generada durante el Sprint mediante los escenarios definidos en Gherkin. Estos casos validan el comportamiento esperado de las funcionalidades desarrolladas y permiten verificar que cada historia cumple sus criterios de aceptación. A continuación se registran los enlaces y archivos correspondientes a la Testing Suite del Sprint.
+
+```gherkin
+
+US: TUS-31 – Manual AI Correction
+
+Feature: Manual correction of AI-detected food items
+  As a user
+  I want to manually correct detected food items
+  So that I can adjust inaccurate detections
+
+  Scenario: Correcting a detected item
+    Given the AI has detected a food item incorrectly
+    When the user edits the detected food
+    Then the system updates the item with the corrected information
+
+  Scenario: Viewing AI confidence values
+    Given the system displays confidence scores for detections
+    When the user reviews the detected items
+    Then the user can decide whether manual correction is needed
+
+  Scenario: Persisting corrected values
+    Given the user modifies a detected food item
+    When the user confirms the correction
+    Then the corrected values are stored and override the original detection
+
+```
+
+```gherkin
+
+US: TUS-32 – Food Catalog
+
+Feature: Food catalog and standardized portions
+  As a user
+  I want to access a catalog of foods and portion sizes
+  So that my food registration is consistent and accurate
+
+  Scenario: Browsing the food catalog
+    Given the user opens the food catalog
+    When the system loads all available foods
+    Then the user sees standardized food names and portions
+
+  Scenario: Selecting a food item
+    Given the user is browsing the catalog
+    When the user selects a food item
+    Then the system displays its portion details and nutritional values
+
+  Scenario: Searching the catalog
+    Given the user wants to find a food item
+    When the user enters a search term
+    Then the system shows matching foods instantly
+
+```
+
+```gherkin
+
+US: TUS-33 – Consent Management
+
+Feature: Management of user consent
+  As a user
+  I want to manage consent for each data processing purpose
+  So that I can control how my data is used
+
+  Scenario: Granting consent
+    Given the user is on the consent settings page
+    When the user enables a consent toggle
+    Then the system registers the granted consent
+
+  Scenario: Revoking consent
+    Given the user previously granted consent
+    When the user disables the consent toggle
+    Then the system revokes the consent and updates preferences
+
+  Scenario: Viewing consent history
+    Given the system stores consent changes
+    When the user opens consent logs
+    Then the user sees timestamps and actions performed
+
+```
+
+```gherkin
+
+US: TUS-34 – Data Encryption
+
+Feature: Data encryption at rest and in transit
+  As a system
+  I want to encrypt data
+  So that user information remains protected
+
+  Scenario: Encrypting data at rest
+    Given the server stores user information
+    When the data is saved
+    Then the system encrypts it using the configured encryption standard
+
+  Scenario: Encrypting data in transit
+    Given a user sends a request to the server
+    When the request travels through the network
+    Then the communication is encrypted using HTTPS/TLS
+
+  Scenario: Rejecting unencrypted requests
+    Given an incoming request is not encrypted
+    When the server receives the request
+    Then the system rejects it with a security error
+
+```
+
+```gherkin
+
+US: TUS-35 – Metadata Cleaning
+
+Feature: Removal of sensitive image metadata
+  As a user
+  I want the app to remove metadata from images
+  So that my privacy is protected
+
+  Scenario: Cleaning metadata on upload
+    Given the user uploads an image
+    When the system processes the file
+    Then all sensitive metadata is removed automatically
+
+  Scenario: Verifying metadata removal
+    Given the system cleans metadata
+    When the user views file details
+    Then no location or device information is present
+
+  Scenario: Rejecting unsupported formats
+    Given the user uploads an unsupported image type
+    When the system detects incompatible metadata
+    Then the upload is rejected with a proper explanation
+
+```
+
+```gherkin
+
+US: TUS-36 – Data Usage Logging
+
+Feature: Logging of data usage
+  As a system
+  I want to track all data access operations
+  So that I can support auditing and compliance
+
+  Scenario: Logging read operations
+    Given the system retrieves user data
+    When an authorized user requests the information
+    Then the system logs the access with timestamp and user ID
+
+  Scenario: Logging write operations
+    Given the system updates user data
+    When a data modification occurs
+    Then the system records the change event
+
+  Scenario: Viewing usage logs
+    Given logs exist in the system
+    When an admin requests the audit records
+    Then the system displays the usage history
+
+```
+
+```gherkin
+
+US: TUS-37 – Sync Indicators
+
+Feature: Display of synchronization indicators
+  As a user
+  I want to see the sync status of my data
+  So that I know whether my information is successfully saved
+
+  Scenario: Showing pending sync indicator
+    Given changes have not yet been sent to the server
+    When the user views the UI
+    Then a “pending sync” indicator is displayed
+
+  Scenario: Showing successful sync
+    Given the system has synced all data
+    When the user opens the app
+    Then a “synced” indicator appears
+
+  Scenario: Showing sync failure
+    Given a sync error occurred
+    When the user checks the app
+    Then an error indicator appears with retry options
+
+```
+
+```gherkin
+
+US: TUS-38 – Local Change Queue
+
+Feature: Local queue for offline changes
+  As a user
+  I want the app to queue my changes locally
+  So that my data is not lost when I am offline
+
+  Scenario: Queueing offline changes
+    Given the user has no internet connection
+    When the user registers food or activity
+    Then the system saves the change in a local queue
+
+  Scenario: Processing queued changes
+    Given the user regains internet connection
+    When the system detects connectivity
+    Then queued changes are sent automatically
+
+  Scenario: Viewing queued items
+    Given the user has pending changes
+    When the user opens the sync status screen
+    Then the system shows all queued operations
+
+```
+
+```gherkin
+
+US: TUS-39 – Daily Closing
+
+Feature: Daily closing process
+  As a system
+  I want to define daily cut-off rules
+  So that user data is synchronized in controlled batches
+
+  Scenario: Triggering daily closing
+    Given the cut-off time is reached
+    When the system evaluates pending records
+    Then all changes are marked for synchronization
+
+  Scenario: Generating closing summary
+    Given the system completes the daily closing
+    When the user views the summary
+    Then the system shows processed items and pending ones
+
+  Scenario: Adjusting cut-off rules
+    Given the admin wants to change the cut-off time
+    When the admin updates the configuration
+    Then the system applies the new rules immediately
+
+```
+
+```gherkin
+
+US: TUS-40 – Batch Sending
+
+Feature: Batch sending of records
+  As a system
+  I want to send data in batches
+  So that network usage is optimized
+
+  Scenario: Sending a batch
+    Given the system has a batch of pending data
+    When the batch is ready
+    Then the server receives the entire batch in a single request
+
+  Scenario: Handling large batches
+    Given the batch size exceeds the limit
+    When the system processes it
+    Then the system splits the batch into smaller valid chunks
+
+  Scenario: Confirming batch delivery
+    Given the server receives a batch
+    When the system gets the confirmation
+    Then all items in that batch are marked as delivered
+
+```
+
 #### Execution Evidence for Sprint Review  
-#### Services Documentation Evidence for Sprint Review  
+
+En esta sección se presentan las evidencias de ejecución correspondientes al Sprint, mostrando el sistema funcionando en su entorno real. Se incluyen capturas del despliegue de la landing page, la aplicación web y los servicios de backend, junto con una vista de la aplicación móvil en operación. Estas imágenes permiten validar visualmente las funcionalidades implementadas, confirmando la correcta navegación, interacción y disponibilidad de los módulos desarrollados durante este Sprint.
+
+::: norm
+*API*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-2.jpeg)
+
+::: norm
+*Mobile Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-4.jpeg)
+
+::: norm
+*Web Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-3.jpeg)
+
+::: norm
+*Landing Page*
+:::
+
+![Recurso extraído de Github](src/img/cap7/exe-1.jpeg)
+
+#### Services Documentation Evidence for Sprint Review 
+
+Durante este Sprint se avanzó en la documentación formal de los Web Services de Foodlytics mediante el contrato OpenAPI expuesto en Swagger UI. Esta documentación permite validar que los endpoints desarrollados cumplen con los criterios funcionales establecidos y que cada ruta incluye su verbo HTTP, parámetros de entrada, esquema de request, estructura de response y códigos de estado. Como parte de la evidencia, se registran los endpoints documentados en este Sprint, junto con la interacción visual en Swagger utilizando datos de prueba. También se incluyen los enlaces al despliegue de la documentación y los commits asociados a la actualización del contrato OpenAPI.
+
+::: warn
+Para acceder al repositorio, haga click a la [URL](https://github.com/GMB-Labs/foodlytics-api)
+:::
+
+::: warn
+Para acceder al despliegue del *API*, haga click a la [URL](https://foodlytics-api-production.up.railway.app/docs#/)
+:::
+
+
+![Recurso extraído de Swagger](src/img/cap7/api-1.jpeg)
+
+![Recurso extraído de Swagger](src/img/cap7/api-2.jpeg)
+
+![Recurso extraído de Swagger](src/img/cap7/api-3.jpeg)
+
 #### Software Deployment Evidence for Sprint Review  
+
+El equipo registró la evidencia de despliegue correspondiente al Sprint, mostrando los entornos configurados y las versiones publicadas de cada componente. A continuación se presentan los enlaces directos a los despliegues realizados durante el Sprint.
+
+::: warn
+Para acceder al despliegue del *API*, haga click a la [URL](https://foodlytics-api-production.up.railway.app/docs#/)
+:::
+
+::: warn
+Para acceder al despliegue de la *Web Application*, haga click a la [URL](https://foodlytics.onrender.com)
+:::
+
+::: warn
+Para acceder al despliegue del *LandinPage*, haga click a la [URL](https://foodlytics-eight.vercel.app/pacientes#hero)
+:::
+
 #### Team Collaboration Insights during Sprint  
+
+Durante este Sprint el equipo trabajó de forma coordinada en los distintos componentes del proyecto, distribuyendo tareas según las responsabilidades definidas y manteniendo un flujo constante de colaboración. Cada integrante participó en la implementación de la landing page, los servicios de backend y las aplicaciones web y móvil, contribuyendo con commits, revisiones y mejoras continuas. En esta sección se presentan las capturas de los analíticos de GitHub, junto con la evidencia de actividad en los repositorios, lo que permite validar la participación efectiva de todos los miembros y la integración del trabajo realizado durante el Sprint.
+
+::: norm
+*API*
+:::
+
+![Recurso extraído de Github](src/img/cap7/git-api-1.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-api-2.jpeg)
+
+
+![Recurso extraído de Github](src/img/cap7/git-api-3.jpeg)
+
+
+::: norm
+*Mobile Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/git-mob-1.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-mob-2.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-mob-3.jpeg)
+
+
+::: norm
+*Web Application*
+:::
+
+![Recurso extraído de Github](src/img/cap7/git-web-1.jpeg)
+
+![Recurso extraído de Github](src/img/cap7/git-web-2.jpeg)
+
+
+![Recurso extraído de Github](src/img/cap7/git-web-3.jpeg)
+
+\newpage
 
 ## Validation Interviews  
 
-este no va 
 
 ### Diseño de Entrevistas 
 
-este no va 
 
 ### Registro de Entrevistas  
 
-este no va 
 
 ### Evaluaciones según heurísticas 
 
-este no va 
 
 ## Video About-the-Product  
 
-este no va 
