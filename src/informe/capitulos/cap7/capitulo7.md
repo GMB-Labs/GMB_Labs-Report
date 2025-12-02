@@ -2662,14 +2662,200 @@ Para acceder al video about the product, haga click a la [URL]()
 
 ## Lenguaje Ubicuo ddd estratégico
 
+The following glossary defines the core terms of the Foodlytics business domain.  
+Each term is expressed in English (ubiquitous language) followed by a Spanish definition 
+for clarity and alignment across all bounded contexts.
+
+\begin{longtable}{p{4cm}p{10cm}}
+\caption{Foodlytics Ubiquitous Language Glossary}\\
+\toprule
+\textbf{Term} & \textbf{Definition (Spanish)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Term} & \textbf{Definition (Spanish)} \\
+\midrule
+\endhead
+
+User & Persona que utiliza la aplicación para registrar su alimentación, visualizar análisis y recibir recomendaciones de salud. \\
+
+Nutritionist & Profesional de salud que gestiona, supervisa y personaliza los planes nutricionales de los usuarios conectados. \\
+
+Patient Profile & Conjunto de datos personales, biométricos y nutricionales del usuario dentro de Foodlytics. \\
+
+Meal Log & Registro diario de alimentos consumidos por el usuario, incluyendo porciones, horario y tipo de comida. \\
+
+Food Item & Unidad alimentaria registrada dentro del sistema, utilizada para componer un Meal Log y calcular valores nutricionales. \\
+
+Macro Intake & Cantidad de macronutrientes consumidos por el usuario (proteína, carbohidratos y grasas). \\
+
+Nutrition Goals & Objetivos nutricionales diarios definidos para el usuario, incluyendo calorías, macros y límites personalizados. \\
+
+Daily Summary & Vista consolidada del progreso diario del usuario respecto a sus objetivos nutricionales. \\
+
+Image Analyzer & Módulo de IA que procesa imágenes de comida para estimar nutrientes, porciones y calidad del plato. \\
+
+Anemia Risk Level & Clasificación generada por modelos de visión por computadora que estima riesgo de anemia infantil. \\
+
+Hemoglobin Estimation & Predicción del nivel probable de hemoglobina usando redes neuronales convolucionales. \\
+
+Health Indicator & Métrica derivada (IMC, calorías, anemia risk, etc.) que resume el estado nutricional del usuario. \\
+
+Progress Report & Informe generado automáticamente que resume evolución semanal o mensual del usuario. \\
+
+Subscription Plan & Modelo de suscripción (Free, Basic, Premium) que determina acceso a funcionalidades específicas. \\
+
+Mobile App & Aplicación nativa utilizada por los usuarios para registrar comidas y recibir análisis. \\
+
+Web Dashboard & Interfaz web destinada a nutricionistas para gestionar pacientes, revisar métricas y generar reportes. \\
+
+Nutritionist–Patient Code & Código único que permite conectar un paciente con su nutricionista dentro del ecosistema Foodlytics. \\
+
+Connection Request & Solicitud enviada por un paciente para vincularse a un nutricionista usando el código de conexión. \\
+
+Recommendation Engine & Motor que genera sugerencias alimentarias basadas en IA y en los objetivos del usuario. \\
+
+Meal Classification Model & Modelo de visión por computadora encargado de identificar alimentos en imágenes. \\
+
+Authentication Token & Token generado por Auth0 para iniciar sesión de forma segura en las aplicaciones de Foodlytics. \\
+
+Refresh Token & Token utilizado para renovar automáticamente la sesión sin requerir nuevo login del usuario. \\
+
+User Session & Estado de autenticación activa del usuario dentro de la aplicación. \\
+
+API Gateway & Punto de acceso unificado para las APIs del backend, responsable del ruteo y seguridad. \\
+
+Dietary Pattern & Patrón alimentario detectado a partir del análisis de hábitos del usuario. \\
+
+Nutritional Alert & Notificación enviada al usuario cuando supera límites o no cumple objetivos nutricionales. \\
+
+Foodlytics Score & Métrica compuesta que resume la consistencia alimentaria del usuario a lo largo del tiempo. \\
+
+AI Anemia Module & Subsistema dedicado al análisis temprano de anemia mediante imágenes faciales o corporales. \\
+
+Data Labeling Task & Proceso de etiquetar imágenes para entrenar modelos de visión por computadora. \\
+
+Health Event & Evento relevante en el seguimiento del usuario (cambios drásticos de peso, riesgo elevado, etc.). \\
+
+Parent User (for children) & Apoderado que registra información nutricional o imágenes de un menor para el análisis de anemia. \\
+
+Nutritional Compliance & Porcentaje de cumplimiento diario del plan nutricional establecido. \\
+
+Foodlytics Cloud Storage & Repositorio seguro donde se almacenan imágenes, reportes y registros de usuario. \\
+
+\bottomrule
+\end{longtable}
+
 ## ¿Cómo nos ayuda la tecnología emergente al problema planteado?
+
+Las tecnologías emergentes permiten abordar el problema central de Foodlytics —la falta de seguimiento nutricional confiable, accesible y automatizado— mediante herramientas que reducen la carga manual, mejoran la precisión del registro alimentario y ofrecen información clínicamente relevante en tiempo real. Los avances en visión por computadora, modelos de IA para reconocimiento de alimentos, arquitecturas modernas de backend y aplicaciones móviles inteligentes hacen posible transformar un proceso tradicionalmente subjetivo en un sistema estandarizado, trazable y basado en datos.
+
+La inteligencia artificial, especialmente mediante redes convolucionales y modelos de detección, permite identificar alimentos a partir de imágenes, estimar porciones y calcular automáticamente calorías y macronutrientes. Esto reduce errores humanos y agiliza el registro diario, un punto que limita la adherencia a los planes nutricionales. A la vez, las puntuaciones de confianza, correcciones manuales y mecanismos de auditoría fortalecen la transparencia y la mejora continua del modelo.
+
+La arquitectura moderna del backend, diseñada con enfoques como contratos OpenAPI 3.1, paginación eficiente, versionado, métricas de observabilidad y auditoría de datos, permite que el sistema sea escalable, seguro y compatible con futuras extensiones. Tecnologías emergentes asociadas a la sincronización offline, reintentos con backoff, gestión de colas locales y envío en lote aseguran que la experiencia móvil funcione incluso en condiciones de conectividad limitada.
+
+Por otro lado, la computación móvil y el ecosistema de sensores integrados en los dispositivos actuales (cámara, acelerómetros, contadores de pasos) permiten capturar actividad física y peso de forma automática, enriqueciendo los modelos de balance energético. Esto convierte a Foodlytics en una herramienta integral que combina nutrición, actividad y progreso físico.
+
+Finalmente, estas tecnologías emergentes habilitan una experiencia personalizada mediante dashboards dinámicos, recomendaciones basadas en datos y análisis históricos, lo que facilita la toma de decisiones tanto para pacientes como para nutricionistas. En conjunto, la IA, el procesamiento de imágenes, los servicios web modernos y la infraestructura móvil permiten resolver un problema real con un enfoque innovador, accesible y científicamente sustentado.
 
 # Conclusiones
 
-TB2
+1. El desarrollo de Foodlytics demuestra que la combinación de inteligencia artificial,
+   visión por computadora y arquitectura moderna de software puede resolver de manera
+   eficiente problemas reales relacionados con el seguimiento nutricional y la monitorización
+   del estado de salud de los usuarios, reduciendo la fricción en el registro alimenticio y
+   mejorando la precisión del análisis diario.
+
+2. La aplicación de modelos de reconocimiento de imágenes y estimación de macronutrientes
+   evidencia que las tecnologías emergentes tienen un impacto directo en la calidad del
+   tratamiento nutricional, permitiendo al paciente registrar su dieta de forma más rápida,
+   intuitiva y confiable, y al nutricionista obtener datos estructurados para la toma de decisiones.
+
+3. La arquitectura multiplataforma propuesta —compuesta por aplicación móvil, aplicación web
+   para nutricionistas, backend en FastAPI y contrato OpenAPI— garantiza cohesión, 
+   interoperabilidad y escalabilidad del sistema, facilitando la evolución futura del producto
+   sin comprometer estabilidad ni rendimiento.
+
+4. La implementación de principios de Domain-Driven Design y diseño táctico permitió organizar
+   el dominio de manera clara y coherente, lo que redujo la complejidad del desarrollo,
+   mejoró la comunicación del equipo y generó un modelo conceptual alineado con los
+   procesos reales de nutrición, seguimiento clínico y registro alimentario.
+
+5. Las prácticas de ingeniería aplicadas —como autenticación segura, manejo estandarizado de
+   errores, versionamiento de API, auditoría y observabilidad— fortalecieron la calidad del
+   software y establecieron una base sólida para garantizar confiabilidad, seguridad y trazabilidad
+   en un contexto donde se manejan datos sensibles de salud.
+
+6. El trabajo por Sprints permitió avanzar de manera incremental, priorizando funcionalidades
+   de mayor valor para los usuarios. El Sprint 1 estableció las bases conceptuales, técnicas y
+   documentales del proyecto, mientras que el Sprint 2 consolidó la implementación completa
+   de los módulos principales, permitiendo demostrar el funcionamiento integral del sistema.
+
+7. La documentación generada —incluyendo el contrato OpenAPI 3.1, la especificación de
+   requisitos, el diseño táctico, las métricas, el Modelado UX y la planificación ágil— permitió
+   mantener trazabilidad completa del proyecto, facilitó la colaboración entre los miembros del
+   equipo y alineó todas las decisiones técnicas con los objetivos del producto.
+
+8. El análisis del problema inicial confirmó que las herramientas actuales de registro nutricional
+   siguen siendo poco precisas, manuales o incompletas. En respuesta, Foodlytics propone un
+   enfoque más inteligente mediante IA que reduce el error humano, automatiza procesos y
+   mejora sustancialmente la adherencia del paciente al tratamiento.
+
+9. Los resultados obtenidos en el proyecto demuestran que la integración entre módulos —landing
+   page, backend, aplicación web y aplicación móvil— logró un flujo de usuario coherente y
+   funcional, lo cual refuerza el potencial del producto para ser adoptado por nutricionistas y
+   pacientes en un contexto real de uso.
+
+10. El proyecto deja una plataforma madura y preparada para escalar hacia funcionalidades más
+    avanzadas, como modelos de IA más precisos para reconocimiento de alimentos, analítica
+    predictiva del estado nutricional, integración con wearables, personalización basada en
+    aprendizaje automático y herramientas clínicas que permitan un monitoreo más completo
+    y preventivo de la salud del usuario.
+
 # Recomendaciones
 
-TB2
+1. Se recomienda continuar ampliando el modelo de visión por computadora, 
+   incorporando datasets más diversos y calibrados para mejorar la precisión en la 
+   estimación de macronutrientes y porciones, especialmente en alimentos mixtos o 
+   preparaciones complejas.
+
+2. Es importante implementar un sistema de validación clínica junto a nutricionistas
+   certificados, con el objetivo de comparar los resultados de la IA frente a registros
+   tradicionales y ajustar parámetros antes de su despliegue en entornos reales.
+
+3. Se sugiere integrar un módulo de analítica predictiva basado en machine learning 
+   que permita anticipar hábitos de riesgo, fluctuaciones nutricionales y posibles 
+   desviaciones del plan alimenticio, ofreciendo recomendaciones proactivas.
+
+4. Se recomienda reforzar la seguridad mediante autenticación multifactor (MFA), 
+   cifrado avanzado y auditoría continua, dado que el sistema maneja información 
+   sensible de salud que debe cumplir estándares elevados de privacidad.
+
+5. Sería beneficioso continuar evolucionando la arquitectura modular del backend 
+   hacia un enfoque orientado a microservicios o Serverless, con el fin de mejorar la 
+   escalabilidad, el aislamiento de componentes y la capacidad de despliegue continuo.
+
+6. Se sugiere integrar la aplicación móvil con wearables (Google Fit, Apple Health, 
+   smartbands) para obtener datos automáticos de actividad física, pasos y ritmo 
+   cardíaco, lo cual enriquecería el análisis nutricional y el balance energético diario.
+
+7. Para mejorar la experiencia del usuario, se recomienda realizar pruebas de 
+   usabilidad con grupos de pacientes y nutricionistas, identificando puntos de fricción, 
+   flujos que puedan simplificarse y mejoras en accesibilidad.
+
+8. Es conveniente establecer un pipeline automatizado de CI/CD que incluya pruebas 
+   unitarias, de integración y de performance, asegurando calidad constante del 
+   producto en cada despliegue de nuevas funcionalidades.
+
+9. Se recomienda desarrollar un módulo de educación nutricional dentro de la app, 
+   incluyendo consejos, micro-lecciones, hábitos saludables y alertas personalizadas, 
+   con el fin de fomentar adherencia a largo plazo, no solo el registro de comida.
+
+10. Finalmente, se propone crear un roadmap evolutivo del producto que incluya 
+    nuevas funcionalidades como: reconocimiento multimodal (foto + texto), 
+    soporte multilingüe, recomendaciones automáticas de menús y dashboards 
+    avanzados para profesionales de la salud, consolidando el futuro de Foodlytics 
+    como una plataforma integral de nutrición inteligente.
 
 # Video About the Team
 
