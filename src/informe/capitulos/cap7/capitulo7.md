@@ -1855,15 +1855,832 @@ Durante este Sprint el equipo trabajó de forma coordinada en los distintos comp
 
 ## Validation Interviews  
 
+Las entrevistas de validación constituyen una herramienta cualitativa fundamental en la evaluación temprana de productos digitales, ya que permiten recopilar información directa y contextualizada sobre la experiencia de uso desde la perspectiva de los usuarios finales. En el presente proyecto, se llevaron a cabo entrevistas semiestructuradas con individuos representativos de los segmentos objetivo de la solución *Foodlytics*, con el propósito de validar su adecuación funcional, facilidad de uso y grado de satisfacción percibida.
 
+Estas entrevistas se diseñaron cuidadosamente para cubrir los principales puntos de contacto del sistema, incluyendo:
+
+* La **landing page**, orientada a captar pacientes y profesionales interesados, comunicando claramente el valor nutricional y clínico de la herramienta.
+* El **dashboard del nutricionista**, que centraliza el historial alimentario, la evolución de peso y los reportes nutricionales para la toma de decisiones.
+* La **aplicación móvil del paciente**, enfocada en el registro de comidas mediante fotos, el cálculo de calorías y macros y la visualización del progreso diario.
+
+Durante las sesiones, se solicitó a los participantes que ejecuten tareas específicas previamente definidas por el equipo, como registrar una comida mediante fotografía, revisar el resumen nutricional diario, explorar el panel clínico o navegar por la landing page para comprender la propuesta de valor. Al mismo tiempo, se documentaron sus reacciones espontáneas y comentarios verbales siguiendo la técnica *think aloud*, lo que permitió identificar puntos de fricción, dudas y oportunidades de mejora relacionadas con la claridad visual, la precisión de los cálculos y la interacción entre paciente y nutricionista.
+
+::: warn
+Para acceder al video de las entrevistas, haga click en la [URL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202211212_upc_edu_pe/EUSHZe96_IJCpJ01PldFNykBAJ6ZEiuDjDqJJdvSMM-YyA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YFJYGO)
+:::
+
+![Recurso extraído de Canva](src/img/cap2/entrevistas-introduccion.png)
+
+\newpage
 ### Diseño de Entrevistas 
 
+Las entrevistas de validación fueron diseñadas considerando las necesidades, contextos de uso y tareas más importantes para cada segmento objetivo del proyecto. A cada entrevistado se le presentó un conjunto de escenarios y se le asignaron tareas concretas vinculadas con los user flows principales definidos para Foodlytics.
+
+::: box
+**Segmento Objetivo 1:** Nutricionistas y médicos del deporte
+:::
+
+**Interfaces validadas:**
+
+* Dashboard web del especialista  
+* Landing page informativa  
+* Vista del historial de comidas y métricas del paciente
+
+**Objetivo:**  
+Validar si la plataforma facilita el seguimiento nutricional, si la interfaz es clara para la toma de decisiones y si la información presentada es suficiente para ajustar planes y evaluar la adherencia del paciente.
+
+**User Flows Evaluados y Preguntas de Validación:**
+
+
+1) **Landing Page**
+
+  - **Objetivo:** Ver si la página comunica con claridad la propuesta de valor de Foodlytics para profesionales de nutrición.
+
+  - **Preguntas:**
+    - ¿La información presentada te permitió entender la solución?  
+    - ¿El mensaje de valor es claro para tu práctica profesional?  
+    - ¿Qué agregarías o cambiarías para que te interese adoptar esta herramienta?
+
+
+2) **User Flow 1: Ingreso al sistema del especialista**
+
+  - **Objetivo:** Confirmar que el inicio de sesión sea claro, seguro y rápido.
+
+  - **Preguntas:**
+    - ¿El proceso de inicio de sesión fue fácil y entendible?  
+    - ¿La interfaz te generó confianza para ingresar tus datos?  
+    - ¿Qué mejorarías para agilizar este paso?
+
+
+3) **User Flow 2: Revisión del panel clínico**
+
+  - **Objetivo:** Validar si el panel presenta datos relevantes para evaluar a un paciente en poco tiempo.
+
+  - **Preguntas:**
+    - ¿La organización del panel es clara para tu trabajo diario?  
+    - ¿Puedes identificar fácilmente calorías ingeridas, distribución de macros y evolución del peso?  
+    - ¿La información presentada es suficiente para ajustar un plan nutricional?  
+    - ¿Qué dato adicional te sería útil ver aquí?
+
+
+4) **User Flow 3: Revisión del historial de comidas**
+
+  - **Objetivo:** Evaluar si los registros generados por la app del paciente son comprensibles y confiables.
+
+  - **Preguntas:**
+    - ¿Pudiste entender rápidamente qué comió el paciente cada día?  
+    - ¿Te resulta útil ver fotos, cantidades y correcciones manuales?  
+    - ¿La información es suficiente para medir adherencia?  
+    - ¿Qué formato preferirías para revisar esta información?
+
+
+5) **User Flow 4: Generación y revisión de reportes**
+
+  - **Objetivo:** Comprobar si los reportes permiten evaluar progreso nutricional con facilidad.
+
+  - **Preguntas:**
+    - ¿Los reportes fueron fáciles de interpretar?  
+    - ¿Son útiles para consultas presenciales o virtuales?  
+    - ¿Preferirías recibir reportes automáticos por correo?  
+    - ¿Hay información innecesaria o falta algún dato clave?
+
+
+6) **User Flow 5: Ajuste del plan nutricional**
+
+  - **Objetivo:** Validar la claridad del flujo para actualizar metas y recomendaciones.
+
+  - **Preguntas:**
+    - ¿El proceso para ajustar metas y recomendaciones fue claro?  
+    - ¿Te parece útil que los cambios se sincronicen de inmediato con el paciente?  
+    - ¿Qué nivel de personalización esperas en este módulo?  
+
+\newpage
+
+::: box
+**Segmento Objetivo 2:** Pacientes jóvenes y adultos que buscan mejorar su alimentación
+:::
+
+**Interfaces validadas:**
+
+* Aplicación móvil del paciente  
+* Landing page  
+* Vista de reportes y progreso dentro de la app
+
+**Objetivo:**  
+Validar que los pacientes puedan registrar comidas con facilidad, entender su progreso y mantener motivación mediante la aplicación móvil.
+
+**User Flows Evaluados y Preguntas de Validación:**
+
+
+1) **Landing Page**
+
+  - **Objetivo:** Ver si la página comunica confianza e interés para usar la app.
+
+  - **Preguntas:**
+    - ¿La landing page te ayudó a entender qué hace Foodlytics?  
+    - ¿Confiaste en la solución después de leerla?  
+    - ¿Qué agregarías para motivarte a probar la app?
+
+
+2) **User Flow 1: Registro e inicio de sesión**
+
+  - **Objetivo:** Verificar que el registro sea simple para usuarios con distintos niveles tecnológicos.
+
+  - **Preguntas:**
+    - ¿El registro e inicio de sesión fueron fáciles de realizar?  
+    - ¿Hubo pasos confusos o innecesarios?  
+    - ¿Te sentiste seguro al ingresar tus datos personales?  
+    - ¿Qué mejorarías en este flujo?
+
+
+3) **User Flow 2: Registro de comida mediante foto**
+
+  - **Objetivo:** Evaluar la facilidad de usar la cámara, entender resultados y corregir cantidades.
+
+  - **Preguntas:**
+    - ¿Te resultó sencillo tomar la foto y registrar tu comida?  
+    - ¿La app reconoció bien el alimento?  
+    - ¿El ajuste manual de cantidades fue claro?  
+    - ¿Usarías esta función todos los días?
+
+
+4) **User Flow 3: Visualización del resumen nutricional del día**
+
+  - **Objetivo:** Validar si los pacientes entienden su progreso diario.
+
+  - **Preguntas:**
+    - ¿La pantalla te permitió entender cuántas calorías consumiste y cómo están distribuidos tus macros?  
+    - ¿Te pareció útil ver un indicador de cumplimiento diario?  
+    - ¿Agregarías alguna métrica más?  
+
+
+5) **User Flow 4: Revisión del historial de comidas y evolución**
+
+  - **Objetivo:** Confirmar si el historial es fácil de navegar y motiva al usuario.
+
+  - **Preguntas:**
+    - ¿Pudiste encontrar rápidamente tu historial de comidas?  
+    - ¿Te ayuda a visualizar tu progreso semanal o mensual?  
+    - ¿Qué información extra agregarías para motivarte más?  
+
+
+6) **User Flow 5: Recepción de notificaciones**
+
+  - **Objetivo:** Validar si las alertas son claras, oportunas y útiles para mantener hábitos.
+
+  - **Preguntas:**
+    - ¿Las notificaciones te parecieron útiles para recordarte registrar comidas o controlar metas?  
+    - ¿Te gustaría personalizar horarios y frecuencia?  
+    - ¿Hay algún tipo de alerta adicional que te gustaría recibir?
+
+
+7) **User Flow 6: Consulta del perfil y metas**
+
+  - **Objetivo:** Evaluar si el usuario entiende sus metas nutricionales y puede modificarlas.
+
+  - **Preguntas:**
+    - ¿Fue fácil encontrar tu perfil y tus metas nutricionales?  
+    - ¿Entendiste cómo están calculadas las metas?  
+    - ¿Qué cambiarías para que este módulo sea más claro?  
+
+\newpage
 
 ### Registro de Entrevistas  
 
+::: box
+**Segmento Objetivo 1:** Médicos Nutricionistas o del deporte
+:::
+
+**Entrevista #1**
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{6cm}|}
+\hline
+\textbf{Nombre y Apellido}    & Luisa Fernanda Gutiérrez Herrera \\ \hline
+\textbf{Edad}                 & 30 años \\ \hline
+\textbf{Ubicación geográfica} & La libertad, Trujillo \\ \hline
+\textbf{Cargo}                & Licenciada en Nutrición, especialista en Nutrición Clínica con mención en Oncología \\ \hline
+\textbf{Tiempo de entrevista} & 00:00 - 10:16 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+**Resumen de la entrevista**
+
+Luisa Fernanda Gutiérrez Herrera, nutricionista especializada en nutrición clínica con mención en oncología, validó la experiencia de uso a través del dashboard profesional, la aplicación móvil diseñada para pacientes y la landing page de Foodlytics. Desde el inicio comentó que uno de los problemas más frecuentes en su trabajo es la falta de registros confiables por parte de los pacientes, ya que la mayoría anota sus comidas de forma desordenada o no recuerda las cantidades consumidas. Por ello, consideró que una herramienta como Foodlytics podría cubrir una necesidad clara en el seguimiento clínico y facilitar la toma de decisiones durante las consultas.
+
+Respecto a la landing page, mencionó que comunica de forma clara la propuesta de valor, sobre todo al mostrar funciones como el reconocimiento automático de alimentos, la sincronización con el nutricionista y el análisis de calorías y macronutrientes. Señaló que incluir casos reales o ejemplos visuales del funcionamiento del sistema podría aumentar la confianza del profesional y del paciente, especialmente en contextos clínicos en los que la precisión es importante.
+
+Durante la revisión de la aplicación móvil del paciente, destacó que el flujo de registro mediante fotografía es una solución útil para mejorar la adherencia. Comentó que sus pacientes suelen tener dificultades para estimar cantidades, por lo que valoró que la app permita corregir la porción detectada por la IA. También sugirió que la app podría incluir recordatorios configurables, ya que muchos pacientes olvidan registrar sus comidas durante el día.
+
+Al validar el dashboard profesional, mencionó que le resultó intuitivo y alineado con las tareas que realiza en consulta. Resaltó la importancia de visualizar rápidamente calorías ingeridas, distribución de macronutrientes, horarios de comida y tendencias semanales. Consideró que ver la información del paciente distribuida por día y semana facilita identificar patrones como saltos de comidas, excesos nocturnos o desbalances marcados en proteínas o carbohidratos. Sugirió añadir una vista de progreso clínico para los pacientes que requieren un monitoreo más estricto, como aquellos en tratamiento oncológico.
+
+En cuanto a la sección de reportes, indicó que serían útiles para respaldar las consultas, sobre todo en centros donde se solicitan informes periódicos. Comentó que sería ideal contar con una opción para exportar los reportes en PDF con formato estándar. También mencionó que la sincronización en tiempo real entre el registro del paciente y el panel del nutricionista genera una ventaja competitiva frente a sistemas tradicionales basados en mensajes o fotografías enviadas por WhatsApp.
+
+Finalmente, Luisa afirmó que la solución presentada responde a una necesidad real dentro de la práctica nutricional. Considera que Foodlytics reduce la improvisación en consulta, mejora la precisión del seguimiento y fortalece la comunicación entre paciente y profesional. Señaló que, de mantenerse una interfaz clara y una experiencia sencilla para el usuario, estaría dispuesta a recomendar la herramienta a sus pacientes y a integrarla como apoyo rutinario en sus consultas.
+
+
+![Imagen extraída del video de entrevistas](src/img/cap7/EntrevistaS11.png)
+
+\newpage
+
+
+**Entrevista #2**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{6cm}|}
+\hline
+\textbf{Nombre y Apellido}    & Gianella Rodríguez  \\ \hline
+\textbf{Edad}                 & 29 años \\ \hline
+\textbf{Ubicación geográfica} & La Libertad, Trujillo \\ \hline
+\textbf{Cargo}                & Licenciada en Nutrición Clínica \\ \hline
+\textbf{Tiempo de entrevista} & 10:17 - 20:40 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+**Resumen de la entrevista**
+
+Gianella Rodríguez, nutricionista especializada en recomposición corporal y nutrición deportiva, evaluó la experiencia de uso del dashboard profesional, la aplicación móvil para pacientes y la landing page de Foodlytics. Desde el inicio comentó que uno de los principales problemas en su práctica diaria es que sus pacientes no registran sus comidas de forma constante o lo hacen con información incompleta, lo que dificulta analizar el progreso real. Por ello, consideró que una herramienta como Foodlytics solucionaría un vacío importante en la adherencia nutricional y en la calidad del seguimiento que puede ofrecer.
+
+Durante la revisión de la landing page, mencionó que la propuesta de valor es clara, especialmente al explicar el reconocimiento de alimentos mediante foto y el cálculo automático de calorías y macronutrientes. Señaló que agregar ejemplos visuales de comidas reales reconocidas por el sistema y testimonios de otros profesionales aumentaría la confianza y credibilidad de la herramienta. También comentó que la estructura de la página facilita entender el funcionamiento general sin necesidad de investigar demasiado.
+
+En la validación de la aplicación móvil del paciente, destacó que el proceso de registro mediante fotografía es su funcionalidad favorita, ya que reduce la fricción en el hábito de registrar comidas. Explicó que sus pacientes suelen comer fuera de casa y muchas veces olvidan anotar detalles, por lo que una app que detecte automáticamente el alimento y permita editar las porciones resolvería uno de los problemas más frecuentes en sus consultas. Añadió que sería útil contar con recordatorios configurables para incentivar la constancia en el registro diario.
+
+Al revisar el dashboard profesional, señaló que la organización visual le resultó intuitiva, especialmente la vista donde se presentan calorías totales, distribución de macronutrientes y comparaciones contra las metas del plan nutricional. Comentó que esta estructura facilita analizar rápidamente patrones alimentarios, como exceso de carbohidratos o baja ingesta de proteínas en días de entrenamiento. También sugirió incluir gráficos comparativos semanales y mensuales para evaluar el progreso de forma más amplia y evitar depender de registros manuales o fotografías enviadas por WhatsApp.
+
+Sobre la sección de reportes, indicó que le parecen útiles para respaldar consultas de seguimiento. Comentó que sería ideal que los reportes puedan descargarse o exportarse, ya que algunos pacientes requieren documentación periódica para entrenadores o preparadores físicos. Además, valoró que la sincronización en tiempo real entre la app del paciente y el dashboard haga más eficiente la consulta y permita al profesional enfocarse en recomendaciones claras basadas en datos objetivos.
+
+Gianella concluyó que Foodlytics representa una herramienta valiosa para contextos deportivos, donde el control de calorías y macronutrientes es determinante para el rendimiento. Afirmó que la solución reduce el tiempo dedicado a reconstruir la información alimentaria del paciente y aumenta la precisión de los planes nutricionales. También mencionó que recomendaría la aplicación a sus pacientes siempre que la experiencia siga siendo simple, rápida y visualmente clara.
+
+![Imagen extraída del video de entrevistas](src/img/cap7/EntrevistaS12.png)
+
+\newpage
+
+**Entrevista #3**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{6cm}|}
+\hline
+\textbf{Nombre y Apellido}    & Graciela del Rocío Alza \\ \hline
+\textbf{Edad}                 & 32 años \\ \hline
+\textbf{Ubicación geográfica} & Trujillo, Perú \\ \hline
+\textbf{Cargo}                & Licenciada en Nutrición, especialista en nutrición clínica y dietoterapia \\ \hline
+\textbf{Tiempo de entrevista} & 00:00 - 11:03 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+**Resumen de la entrevista**
+
+Graciela del Rocío Alza, nutricionista con experiencia en nutrición clínica y dietoterapia, evaluó el dashboard profesional, la aplicación móvil del paciente y la landing page de Foodlytics. Desde el inicio comentó que una de las dificultades más frecuentes en su trabajo es que los pacientes no registran sus comidas de manera completa ni ordenada. Explicó que esta falta de información afecta su capacidad para analizar patrones alimentarios reales, especialmente en pacientes con condiciones clínicas que requieren seguimiento estricto como diabetes, hipertensión o enfermedades gastrointestinales.
+
+Durante la revisión de la landing page, destacó que la descripción del sistema es clara y directa, especialmente en lo que respecta al reconocimiento de alimentos y a la sincronización entre paciente y nutricionista. Mencionó que agregar ejemplos visuales del análisis nutricional o casos de uso podría ayudar a transmitir mejor el potencial clínico de la herramienta. También señaló que incluir información sobre privacidad y manejo de datos aumentaría la confianza del profesional.
+
+Al validar la aplicación móvil, comentó que el proceso de registro mediante fotografía facilita la constancia en el seguimiento nutricional, ya que reduce el tiempo que el paciente invierte en describir lo que comió. Señaló que sus pacientes suelen tener dificultades para estimar porciones, por lo que valoró que la app permita modificar cantidades detectadas por la inteligencia artificial. Sugirió que se añadan recordatorios configurables para pacientes que deben cumplir horarios estrictos de ingesta, como los que están bajo dietoterapia.
+
+En la evaluación del dashboard profesional, mencionó que la distribución de la información es clara y que puede identificar rápidamente calorías consumidas, macros, horarios de comida y frecuencia de registros. Comentó que la posibilidad de revisar tendencias semanales y visualizar desbalances recurrentes ayudaría a personalizar planes nutricionales con mayor precisión. También señaló que sería útil incluir una vista temporal más detallada para pacientes que deben controlar horarios, como aquellos que siguen dietas fraccionadas.
+
+Respecto a la sección de reportes, afirmó que serían útiles para consultas presenciales y virtuales. Explicó que algunos centros donde trabaja solicitan documentación periódica, por lo que valoró la idea de descargar o exportar reportes en formatos estándar. También comentó que la sincronización automática entre la app del paciente y el panel profesional permitiría reducir el tiempo de consulta y concentrarse en intervenciones más efectivas.
+
+Graciela concluyó que Foodlytics representa una solución de apoyo tanto para el paciente como para el nutricionista, ya que mejora la calidad del seguimiento y permite trabajar con datos más confiables. Considera que la herramienta tiene potencial clínico real, siempre que mantenga una interfaz clara, un registro rápido y opciones que se adapten a pacientes con distintas necesidades nutricionales.
+
+
+![Imagen extraída del video de entrevistas](src/img/cap7/EntrevistaS13.png)
+
+\newpage
+
+::: box
+**Segmento Objetivo 2:** Pacientes con interés en mejorar su alimentación
+:::
+
+**Entrevista #1**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{6cm}|}
+\hline
+\textbf{Nombre y Apellido}    & Carlos Sánchez \\ \hline
+\textbf{Edad}                 & 22 años \\ \hline
+\textbf{Ubicación geográfica} & Lima, Perú \\ \hline
+\textbf{Cargo}                & Estudiante de Ingeniería en la UPC \\ \hline
+\textbf{Tiempo de entrevista} & 25:45 - 30:25 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+**Resumen de la entrevista**
+
+Carlos Sánchez, joven adulto que combina estudios universitarios y trabajo a tiempo parcial, evaluó la aplicación móvil de Foodlytics, la landing page y las funciones de monitoreo nutricional. Desde el inicio comentó que ha intentado mejorar su alimentación en varias ocasiones, pero siempre abandona el registro de comidas porque le resulta tedioso anotar todo lo que consume. Explicó que suele comer fuera de casa y que esto dificulta aún más llevar un control adecuado, ya que no siempre conoce las cantidades o ingredientes exactos de sus platos.
+
+Al revisar la landing page, mencionó que entendió con claridad la propuesta de valor del sistema, especialmente la función de reconocimiento de alimentos mediante foto. Comentó que esta característica le llamó la atención porque reduce el tiempo de registro, que para él es el principal obstáculo para mantener un hábito sostenido. Señaló que sería útil incluir ejemplos reales del antes y después del registro o una demostración breve de cómo la IA procesa la imagen, para generar más confianza en nuevos usuarios.
+
+Durante la validación de la aplicación móvil, destacó que el flujo de registro por fotografía le resultó fácil y rápido. Afirmó que, si la herramienta realmente identifica los alimentos con precisión, sería la primera app que podría usar de manera constante, ya que no necesitaría escribir ni buscar elementos manualmente. También valoró la opción de corregir porciones, ya que muchas veces recibe platos de diferentes tamaños y le sería imposible estimarlos sin apoyo visual.
+
+Sobre la pantalla de resumen nutricional diario, comentó que le pareció clara y motivadora. Explicó que le ayuda ver su consumo de calorías y macros de forma visual, porque así entiende rápidamente si está cumpliendo lo recomendado por su nutricionista. También mencionó que agradecería que la app muestre insights simples, como días en los que suele excederse o momentos del día donde consume más carbohidratos.
+
+En cuanto al historial de comidas, le pareció útil para ver su progreso semanal o mensual. Dijo que usaría esta sección para entender si está mejorando sus hábitos o si está repitiendo patrones que afectan sus objetivos físicos. Consideró que sería útil incluir un indicador de constancia para motivarlo a registrar sus comidas todos los días.
+
+Finalmente, Carlos comentó que las notificaciones discre­tas serían útiles para recordarle registrar comidas, ya que suele olvidarlo cuando está ocupado. Concluyó afirmando que Foodlytics es una solución práctica para personas con rutinas aceleradas, siempre que mantenga una experiencia rápida y simple. Indicó que estaría dispuesto a usar la app a largo plazo si el proceso de registro continúa siendo tan ágil como lo observado en la validación.
+
+![Imagen extraída del video de entrevistas](src/img/cap7/EntrevistaS21.png)
+
+\newpage
+
+**Entrevista #2**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{6cm}|}
+\hline
+\textbf{Nombre y Apellido}    & Elizabeth Quedina \\ \hline
+\textbf{Edad}                 & 59 años \\ \hline
+\textbf{Ubicación geográfica} & Lima, Perú \\ \hline
+\textbf{Cargo}                & Contadora \\ \hline
+\textbf{Tiempo de entrevista} & 30:27 - 37:21 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+**Resumen de la entrevista**
+
+Elizabeth Quedina, adulta joven que busca mejorar su alimentación por motivos de salud y bienestar personal, evaluó la aplicación móvil de Foodlytics, la landing page y las funciones de monitoreo nutricional. Comentó que en los últimos meses ha intentado seguir planes alimentarios, pero le resulta difícil mantener constancia porque suele olvidar registrar sus comidas o no sabe cómo calcular porciones. Explicó que esto la frustra y hace que pierda motivación rápidamente.
+
+Al revisar la landing page, mencionó que la información presentada le permitió entender con claridad el objetivo de Foodlytics, especialmente la idea de registrar alimentos mediante fotografía. Señaló que esta característica le resultó atractiva porque elimina el esfuerzo de tener que escribir cada comida. Sugirió que la página incluya ejemplos de usuarios reales mostrando su progreso, ya que esto podría aumentar la confianza en la herramienta.
+
+Durante la validación de la aplicación móvil, destacó que el proceso de registro con foto es rápido y sencillo. Comentó que la detección automática del alimento le pareció útil, aunque considera importante poder corregir cantidades, ya que muchas veces sus porciones varían y no se ajustan a medidas estándar. Afirmó que la app debería permitir un registro flexible para evitar que el usuario sienta que está obligado a seguir un formato rígido.
+
+Respecto al resumen de calorías y macronutrientes del día, mencionó que fue una de las funciones que más le llamó la atención. Explicó que nunca ha entendido del todo cómo se distribuyen sus macros, por lo que agradece que la información se muestre con gráficos claros. Dijo que ver estos datos la ayudaría a identificar si está comiendo de forma equilibrada o si está excediéndose en ciertos alimentos.
+
+Sobre el historial de comidas, comentó que le parece una herramienta útil para evaluar su progreso. Explicó que podría revisar semanas completas para saber si está cumpliendo sus metas o si debe modificar ciertos hábitos. Además, sugirió que la app resuma los logros semanales, como días con registro completo o mejoras en la distribución de macros, para mantener al usuario motivado.
+
+En cuanto a las notificaciones, afirmó que le servirían para recordar registrar sus comidas, ya que suele distraerse con sus actividades diarias. Le gustaría que las alertas sean personalizables en horarios y frecuencia, para que se adapten a su rutina. También mencionó que sería útil recibir mensajes breves de motivación o consejos simples sobre alimentación saludable.
+
+Elizabeth finalizó señalando que Foodlytics le parece una solución práctica para personas que buscan mejorar su alimentación sin complicarse con registros largos. Comentó que la aplicación podría ayudarla a ser más constante y a tener una visión más clara de lo que consume. Indicó que estaría dispuesta a usarla de forma continua si mantiene una experiencia intuitiva y un registro rápido mediante fotografía.
+
+![Imagen extraída del video de entrevistas](src/img/cap7/EntrevistaS22.png)
+
+\newpage
+
+**Entrevista #3**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{6cm}|}
+\hline
+\textbf{Nombre y Apellido}    & Luciana \\ \hline
+\textbf{Edad}                 & 20 años \\ \hline
+\textbf{Ubicación geográfica} & Lima, Perú \\ \hline
+\textbf{Cargo}                & Estudiante de Odontología \\ \hline
+\textbf{Tiempo de entrevista} & 37:21 - 41:57 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+**Resumen de la entrevista**
+
+Luciana Quedina, estudiante universitaria con una rutina académica y social activa, evaluó la aplicación móvil de Foodlytics, la landing page y las funciones de seguimiento nutricional. Comentó que ha intentado mejorar su alimentación en varias ocasiones, pero suele dejar de registrar sus comidas porque le resulta complicado hacerlo de forma constante. Explicó que come en distintos lugares, desde la cafetería de la universidad hasta restaurantes con amigos, lo que dificulta calcular porciones o identificar ingredientes con precisión.
+
+Durante la revisión de la landing page, mencionó que comprendió rápidamente el propósito de la app y consideró que la explicación del reconocimiento de alimentos mediante fotografía es clara y atractiva. Dijo que le gustaría ver ejemplos visuales del proceso de registro y del análisis nutricional para entender mejor cómo funciona la inteligencia artificial. Señaló que la propuesta de valor es directa y que esto facilita que usuarios jóvenes se sientan interesados.
+
+Al validar la aplicación móvil, destacó que el registro por foto fue la función que más la motivó a probar la herramienta. Explicó que este método es compatible con su estilo de vida, ya que no requiere tiempo adicional ni conocimientos sobre calorías o macronutrientes. Apreciaría que la app reconozca platos comunes de la universidad o comidas rápidas que consume con frecuencia, y valoró la posibilidad de corregir manualmente las porciones detectadas.
+
+En cuanto al resumen nutricional diario, comentó que le pareció intuitivo y fácil de interpretar. Mencionó que nunca antes había usado una herramienta que le mostrara su consumo de calorías y macros con tanta claridad. Explicó que esta información le ayudaría a detectar cuando sus comidas están desbalanceadas y le permitiría tomar decisiones más conscientes durante el día.
+
+Respecto al historial de comidas, señaló que lo usaría para revisar semanas completas y saber si está cumpliendo sus objetivos. Indicó que sería útil incluir un indicador de progreso o constancia, ya que esto la motivaría a registrar sus comidas todos los días. También mencionó que le gustaría ver pequeños resúmenes semanales, como días en los que cumplió sus metas o mejoras en ciertos nutrientes.
+
+Sobre las notificaciones, comentó que serían útiles para recordar registrar sus comidas entre clases y actividades. Dijo que preferiría alertas simples que no interrumpan su rutina, y que le gustaría elegir los horarios en los que prefiere recibir recordatorios. Señaló que un mensaje motivador ocasional podría ayudarla a mantener la constancia.
+
+Luciana concluyó que Foodlytics le parece una herramienta adecuada para personas con rutinas dinámicas que necesitan un sistema rápido y visual para registrar su alimentación. Comentó que la usaría si mantiene un diseño claro, un registro ágil mediante fotografía y funciones que la ayuden a ver su progreso sin complicaciones.
+
+![Imagen extraída del video de entrevistas](src/img/cap7/EntrevistaS23.png)
+
+\newpage
 
 ### Evaluaciones según heurísticas 
 
+#### *Landing Page Validation*
 
-## Video About-the-Product  
+\begin{center}
+\textbf{UX Heuristics \& Principles Evaluation} \\
+\textbf{Usability – Inclusive Design – Information Architecture}
+\end{center}
 
+\vspace{10pt}
+
+\begin{tabbing}
+\hspace{5cm} \= \kill
+\textbf{CARRERA:} \> Ingeniería de Software \\
+\textbf{CURSO:} \> Arquitectura de Software Emergentes \\
+\textbf{SECCIÓN:} \> 1ASI0728 \\
+\textbf{PROFESOR:} \> Ocampo Tello, Ernesto \\
+\textbf{AUDITOR:} \> CodeMinds \\
+\textbf{CLIENTE(S):} \> Nutricionistas y pacientes \\
+\end{tabbing}
+\hrule
+
+\vspace{10pt}
+
+**SITE o APP A EVALUAR:** *Landing Page – Foodlytics*
+
+\vspace{10pt}
+
+\textbf{TAREAS A EVALUAR:}  
+El alcance de esta evaluación incluye las siguientes áreas de la landing page de Foodlytics, basadas en los resultados obtenidos durante las entrevistas de validación:
+
+\begin{enumerate}
+    \item \textbf{Comunicación de la propuesta de valor}: Claridad al explicar el uso de IA, registro mediante foto y sincronización con el nutricionista.
+    \item \textbf{Accesibilidad y estructura de la información}: Organización de secciones, facilidad para encontrar detalles sobre funciones y privacidad.
+    \item \textbf{Llamados a la acción}: Visibilidad de botones como “Empieza ahora” o “Conoce la app”.
+    \item \textbf{Confianza y credibilidad}: Presencia de testimonios, respaldo profesional y percepción de seguridad.
+    \item \textbf{Compatibilidad móvil}: Accesibilidad desde celulares y comportamiento del contenido en pantallas pequeñas.
+\end{enumerate}
+
+\newpage
+
+**ESCALA DE SEVERIDAD**
+
+Los errores fueron puntuados tomando en cuenta la siguiente escala de severidad:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|p{12cm}|}
+\hline
+\textbf{Nivel} & \textbf{Descripción} \\ \hline
+1 & Problema superficial: ocurre poco o es fácil de superar. No requiere atención inmediata. \\ \hline
+2 & Problema menor: ocurre con más frecuencia o requiere algo de esfuerzo del usuario. Prioridad baja para próximas versiones. \\ \hline
+3 & Problema mayor: afecta tareas principales o genera fricción frecuente. Debe corregirse con alta prioridad. \\ \hline
+4 & Problema muy grave: impide continuar con el uso de la herramienta. Debe solucionarse antes del lanzamiento. \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\vspace{10pt}
+
+**TABLA RESUMEN**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|p{5cm}|c|p{6cm}|} \hline
+\textbf{\#} & \textbf{Problema} & \textbf{Severidad} & \textbf{Heurística/Principio violado} \\ \hline
+1 & Falta de ejemplos visuales del uso real del sistema & 2 & Information Architecture – Content Understanding \\ \hline
+2 & CTA principal con bajo contraste en secciones extensas & 2 & Usabilidad – Visibilidad del estado del sistema \\ \hline
+3 & Ausencia de elementos de confianza como testimonios o respaldo clínico & 3 & Usabilidad – Confianza y seguridad \\ \hline
+4 & En móvil, el CTA no es visible en el primer pantallazo & 2 & Inclusive Design – Responsive Design \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+
+**DESCRIPCIÓN DE PROBLEMAS**
+
+- **PROBLEMA \#1: Falta de ejemplos visuales del uso real del sistema**
+
+  **Severidad:** 2  
+  **Heurística violada:** Information Architecture – Content Understanding
+
+  **Problema:** Usuarios como nutricionistas y pacientes señalaron que la landing page explica bien la propuesta de valor, pero no muestra ejemplos visuales de cómo funciona el reconocimiento por foto ni del dashboard profesional. Esto limita la comprensión inmediata del producto.
+
+  **Recomendación:** Incluir imágenes o animaciones breves que muestren el análisis de alimentos, el registro por foto y las métricas visuales del panel profesional.
+
+\vspace{1cm}
+
+- **PROBLEMA \#2: Botón principal (CTA) con bajo contraste en secciones extensas**
+
+  **Severidad:** 2  
+  **Heurística violada:** Usabilidad – Visibilidad del estado del sistema
+
+  **Problema:** El CTA “Empieza ahora” o “Conoce la app” pierde visibilidad en zonas donde el color de fondo y el tamaño del botón no destacan lo suficiente.
+
+  **Recomendación:** Aumentar el contraste, tamaño y jerarquía visual para dirigir la atención del usuario.
+
+\vspace{1cm}
+
+- **PROBLEMA \#3: Ausencia de elementos de confianza como testimonios o respaldo clínico**
+
+  **Severidad:** 3  
+  **Heurística violada:** Usabilidad – Confianza y seguridad
+
+  **Descripción:** Nutricionistas entrevistados indicaron que sería útil ver testimonios reales o respaldos institucionales. La ausencia de estos elementos disminuye la percepción de profesionalismo y precisión clínica.
+
+  **Recomendación:** Incluir testimonios de especialistas, insignias de privacidad, certificaciones o menciones de instituciones asociadas.
+
+\vspace{1cm}
+
+- **PROBLEMA \#4: En versión móvil, el CTA queda oculto en el primer pantallazo**
+
+  **Severidad:** 2  
+  **Heurística violada:** Inclusive Design – Responsive Design
+
+  **Descripción:** El botón principal no es visible cuando se carga la página en pantalla móvil, lo que reduce la probabilidad de conversión en usuarios que no hacen scroll.
+
+  **Recomendación:** Reubicar el CTA o fijarlo en una barra superior para garantizar accesibilidad inmediata.
+
+\newpage
+
+#### *Dashboard Web Validation*
+
+\begin{center}
+\textbf{UX Heuristics \& Principles Evaluation} \\
+\textbf{Usability – Interaction Design – Information Architecture}
+\end{center}
+
+\vspace{10pt}
+
+\begin{tabbing}
+\hspace{5cm} \= \kill
+\textbf{CARRERA:} \> Ingeniería de Software \\
+\textbf{CURSO:} \> Arquitectura de Software Emergentes \\
+\textbf{SECCIÓN:} \> 1ASI0728 \\
+\textbf{PROFESOR:} \> Ocampo Tello, Ernesto \\
+\textbf{AUDITOR:} \> CodeMinds \\
+\textbf{CLIENTE(S):} \> Nutricionistas y profesionales de la salud \\
+\end{tabbing}
+\hrule
+
+\vspace{10pt}
+
+\textbf{SITE o APP A EVALUAR:} \textit{Dashboard Web – Foodlytics}
+
+\vspace{10pt}
+
+\textbf{TAREAS A EVALUAR:}  
+El alcance de esta evaluación incluye las áreas principales del dashboard de Foodlytics utilizadas por nutricionistas, basadas en los comentarios obtenidos durante las entrevistas:
+
+\begin{enumerate}
+    \item \textbf{Visualización del estado nutricional del paciente}: Claridad de métricas, tendencia semanal, calorías y distribución de macronutrientes.
+    \item \textbf{Interpretación del historial de comidas}: Comprensión de registros, precisión visual y organización cronológica.
+    \item \textbf{Navegación entre secciones}: Accesibilidad, jerarquía y consistencia visual.
+    \item \textbf{Acceso a reportes}: Facilidad para obtener, revisar y exportar documentos.
+    \item \textbf{Sincronización con la aplicación móvil}: Claridad en la actualización de datos registrados por el paciente.
+\end{enumerate}
+
+\newpage
+
+**ESCALA DE SEVERIDAD**
+
+Los errores fueron evaluados según la siguiente escala:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|p{12cm}|}
+\hline
+\textbf{Nivel} & \textbf{Descripción} \\ \hline
+1 & Problema superficial: ocurre rara vez o es fácil de sortear. \\ \hline
+2 & Problema menor: genera fricción leve pero no bloquea tareas. \\ \hline
+3 & Problema mayor: afecta tareas clave o ocurre con frecuencia. \\ \hline
+4 & Problema muy grave: impide continuar el uso del dashboard. \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\vspace{10pt}
+
+**TABLA RESUMEN**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|p{5cm}|c|p{6cm}|} \hline
+\textbf{\#} & \textbf{Problema} & \textbf{Severidad} & \textbf{Heurística/Principio violado} \\ \hline
+1 & Métricas nutricionales con poco contraste en visualizaciones clave & 2 & Usabilidad – Visibilidad del estado del sistema \\ \hline
+2 & Historial de comidas con carga cognitiva alta por exceso de detalles simultáneos & 3 & Information Architecture – Content Organization \\ \hline
+3 & Falta de indicadores temporales claros en la línea de tiempo del paciente & 2 & Usabilidad – Reconocimiento antes que recuerdo \\ \hline
+4 & Reportes no presentan opciones de exportación directa & 3 & Usabilidad – Flexibilidad y eficiencia de uso \\ \hline
+5 & Menú lateral con secciones similares que pueden generar confusión & 2 & Navigation – Findability \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+
+**DESCRIPCIÓN DE PROBLEMAS**
+
+- **PROBLEMA \#1: Métricas nutricionales con poco contraste en visualizaciones clave**
+
+  **Severidad:** 2  
+  **Heurística violada:** Usabilidad – Visibilidad del estado del sistema  
+
+  **Problema:** Algunos nutricionistas mencionaron que los colores usados para los gráficos de calorías y macronutrientes no presentan suficiente contraste, dificultando la lectura rápida.
+
+  **Recomendación:** Ajustar colores, grosor de líneas y tipografías para asegurar legibilidad inmediata en sesiones clínicas.
+
+\vspace{1cm}
+
+- **PROBLEMA \#2: Historial de comidas con carga cognitiva alta**
+
+  **Severidad:** 3  
+  **Heurística violada:** Information Architecture – Content Organization  
+
+  **Descripción:** El historial muestra simultáneamente fotos, cantidades, calorías y notas del paciente. Esto genera sobrecarga visual y hace más lenta la interpretación de datos durante la consulta.
+
+  **Recomendación:** Agrupar información por bloques, permitir colapsar elementos y añadir un modo compacto para revisión rápida.
+
+\vspace{1cm}
+
+- **PROBLEMA \#3: Falta de indicadores temporales claros en la línea de tiempo**
+
+  **Severidad:** 2  
+  **Heurística violada:** Usabilidad – Reconocimiento antes que recuerdo  
+
+  **Descripción:** La línea de tiempo del paciente presenta horarios, pero no resalta diferencias entre días, horas pico de ingesta o eventos relevantes, lo cual reduce la capacidad de identificar patrones.
+
+  **Recomendación:** Agregar etiquetas visibles por día, destacar saltos de comidas y resaltar días con registros completos.
+
+\vspace{1cm}
+
+- **PROBLEMA \#4: Reportes sin exportación directa**
+
+  **Severidad:** 3  
+  **Heurística violada:** Usabilidad – Flexibilidad y eficiencia de uso  
+
+  **Descripción:** Los profesionales indicaron que necesitan exportar reportes en PDF o enviar información al paciente o a otros especialistas. La ausencia de esta función afecta la utilidad del módulo.
+
+  **Recomendación:** Incluir exportación a PDF, descarga en Excel y botón de compartir.
+
+\vspace{1cm}
+
+- **PROBLEMA \#5: Menú lateral con secciones similares**
+
+  **Severidad:** 2  
+  **Heurística violada:** Navigation – Findability  
+
+  **Descripción:** Algunas categorías, como “Historial” y “Progreso”, presentan funciones relacionadas pero sin una distinción clara. Esto puede confundir al nutricionista al navegar rápidamente.
+
+  **Recomendación:** Reordenar el menú, agrupar secciones, renombrar opciones y aplicar iconografía consistente para diferenciar propósitos.
+
+\newpage
+
+#### *Mobile App Validation*
+
+\begin{center}
+\textbf{UX Heuristics \& Principles Evaluation} \\
+\textbf{Usability – Cognitive Load – Interaction Design}
+\end{center}
+
+\vspace{10pt}
+
+\begin{tabbing}
+\hspace{5cm} \= \kill
+\textbf{CARRERA:} \> Ingeniería de Software \\
+\textbf{CURSO:} \> Arquitectura de Software Emergentes \\
+\textbf{SECCIÓN:} \> 1ASI0728 \\
+\textbf{PROFESOR:} \> Ocampo Tello, Ernesto \\
+\textbf{AUDITOR:} \> CodeMinds \\
+\textbf{CLIENTE(S):} \> Pacientes jóvenes y adultos \\
+\end{tabbing}
+\hrule
+
+\vspace{10pt}
+
+\textbf{SITE o APP A EVALUAR:} \textit{Aplicación Móvil – Foodlytics}
+
+\vspace{10pt}
+
+\textbf{TAREAS A EVALUAR:}  
+El alcance de esta evaluación considera las áreas más utilizadas por los pacientes dentro de la app, según las entrevistas:
+
+\begin{enumerate}
+    \item \textbf{Registro de comidas mediante fotografía}: claridad del flujo, velocidad y precisión del reconocimiento.
+    \item \textbf{Corrección manual de porciones}: facilidad para editar cantidades detectadas.
+    \item \textbf{Visualización del resumen diario}: comprensión de calorías, macros y cumplimiento de metas.
+    \item \textbf{Historial de comidas}: navegación, carga cognitiva y motivación.
+    \item \textbf{Notificaciones y recordatorios}: oportunidad, personalización y claridad.
+\end{enumerate}
+
+\newpage
+
+**ESCALA DE SEVERIDAD**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|p{12cm}|}
+\hline
+\textbf{Nivel} & \textbf{Descripción} \\ \hline
+1 & Problema superficial: mínimo impacto en la experiencia. \\ \hline
+2 & Problema menor: genera fricción leve pero no afecta tareas críticas. \\ \hline
+3 & Problema mayor: afecta funciones principales o comprensión del usuario. \\ \hline
+4 & Problema grave: bloquea o interrumpe el uso normal de la app. \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\vspace{10pt}
+
+**TABLA RESUMEN**
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|p{5cm}|c|p{6cm}|} \hline
+\textbf{\#} & \textbf{Problema} & \textbf{Severidad} & \textbf{Heurística/Principio violado} \\ \hline
+1 & Reconocimiento de alimentos carece de retroalimentación visual clara & 2 & Usabilidad – Visibilidad del estado del sistema \\ \hline
+2 & Editor de porciones poco intuitivo para usuarios sin conocimientos nutricionales & 3 & Cognitive Load – Simplicidad en tareas \\ \hline
+3 & Resumen diario presenta métricas sin explicar significado para el usuario & 3 & Usabilidad – Correspondencia entre sistema y mundo real \\ \hline
+4 & Historial de comidas no muestra indicadores de constancia o progreso & 2 & Motivation Design – Feedback inmediato \\ \hline
+5 & Notificaciones poco personalizables según horarios del usuario & 2 & Usabilidad – Control y libertad del usuario \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+
+**DESCRIPCIÓN DE PROBLEMAS**
+
+- **PROBLEMA \#1: Falta de retroalimentación visual en el reconocimiento de alimentos**
+
+  **Severidad:** 2  
+  **Heurística violada:** Usabilidad – Visibilidad del estado del sistema
+
+  **Problema:** Usuarios comentaron que, tras tomar una foto, la app no muestra un indicador claro de que la imagen está siendo procesada, lo que genera incertidumbre.
+
+  **Recomendación:** Añadir animaciones breves o un estado de carga que confirme el análisis en curso.
+
+\vspace{1cm}
+
+- **PROBLEMA \#2: Editor de porciones poco intuitivo para usuarios sin experiencia**
+
+  **Severidad:** 3  
+  **Heurística violada:** Cognitive Load – Simplicidad en tareas
+
+  **Descripción:** Algunos pacientes no comprendieron inmediatamente cómo ajustar cantidades detectadas por la IA. Esto afecta la precisión del registro.
+
+  **Recomendación:** Incluir controles más simples, ejemplos visuales y descripciones cortas de porciones.
+
+\vspace{1cm}
+
+- **PROBLEMA \#3: Métricas del resumen diario difíciles de interpretar**
+
+  **Severidad:** 3  
+  **Heurística violada:** Usabilidad – Correspondencia entre sistema y mundo real
+
+  **Descripción:** Conceptos como distribución de macronutrientes o metas de proteínas no fueron completamente entendidos por usuarios principiantes.
+
+  **Recomendación:** Añadir etiquetas explicativas, glosarios breves y mensajes automáticos de interpretación.
+
+\vspace{1cm}
+
+- **PROBLEMA \#4: Historial sin indicadores de constancia**
+
+  **Severidad:** 2  
+  **Heurística violada:** Motivation Design – Feedback inmediato
+
+  **Descripción:** El historial muestra comidas pasadas pero no señala días completos, hábitos o logros, lo que reduce la motivación del usuario.
+
+  **Recomendación:** Incluir indicadores como “día completado”, rachas de registro y semanas destacadas.
+
+\vspace{1cm}
+
+- **PROBLEMA \#5: Notificaciones limitadas en personalización**
+
+  **Severidad:** 2  
+  **Heurística violada:** Usabilidad – Control y libertad del usuario
+
+  **Descripción:** Los usuarios expresaron que prefieren ajustar horarios y frecuencia de recordatorios según su rutina diaria.
+
+  **Recomendación:** Incluir un panel de preferencias donde puedan elegir horarios, frecuencia y tipo de alerta.
+
+\newpage
+
+### About-the-Product
+
+Se desarrolló un video que presenta de manera clara y visual las funcionalidades principales de Foodlytics, así como los beneficios y el valor diferencial que ofrece tanto a pacientes como a nutricionistas. Este material funciona como un recurso de comunicación previo al lanzamiento oficial, ya que permite explicar de forma rápida cómo la plataforma integra el registro inteligente de comidas mediante fotografía, el análisis automático de calorías y macronutrientes y la sincronización en tiempo real entre la app móvil y el dashboard profesional.
+
+El video muestra los flujos esenciales de uso, incluye ejemplos reales de reconocimiento de alimentos y evidencia cómo los nutricionistas pueden visualizar el progreso del paciente a través de métricas claras y reportes estructurados. También destaca la experiencia del usuario en la aplicación móvil, enfocada en la simplicidad del registro diario y la comprensión visual de objetivos y tendencias nutricionales.
+
+Este recurso sirve como apoyo para la presentación del producto ante usuarios finales, profesionales de la salud y partes interesadas. Facilita que cada grupo entienda el propósito del software y su importancia dentro del proceso de acompañamiento nutricional.
+
+::: warn
+Para acceder al video about the product, haga click a la [URL]()
+:::
+
+![Imagen extraída del video about the product](src/img/cap7/about.png)
+
+\newpage
+
+
+## Lenguaje Ubicuo ddd estratégico
+
+## ¿Cómo nos ayuda la tecnología emergente al problema planteado?
+
+# Conclusiones
+
+TB2
+# Recomendaciones
+
+TB2
+
+# Video About the Team
+
+Durante el Sprint 2, el equipo de desarrollo de Foodlytics elaboró un video en el que se presenta a cada integrante del grupo, junto con sus roles y las responsabilidades asumidas durante esta etapa del proyecto. El material muestra el trabajo colaborativo realizado y la forma en que se organizaron las tareas relacionadas con el diseño, la implementación y la validación del sistema.
+
+El video resume las funciones principales del equipo, como el desarrollo de la aplicación móvil, el diseño del dashboard web para nutricionistas, la integración de los módulos de reconocimiento de alimentos mediante inteligencia artificial, la construcción de microservicios backend y la preparación del entorno de despliegue. También evidencia la coordinación interna realizada durante el sprint para asegurar el cumplimiento de los entregables requeridos.
+
+Este recurso permite mostrar de manera transparente el esfuerzo del equipo, la distribución de roles y la dinámica de trabajo aplicada en Foodlytics. Además, sirve como evidencia de la organización y avance del proyecto durante el ciclo de desarrollo.
+
+::: warn
+Para visualizar el video del equipo, haga click en el siguiente enlace [URL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210059_upc_edu_pe/IQCZ75QtruaFTodXA_bO1rHgAeiR6In9otu2OGe4wR56a1o?e=X9QSb4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+:::
+
+![Imagen extraída del Video About the team](src/img/cap7/about-the-team.png)
